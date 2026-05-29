@@ -1,6 +1,6 @@
 --- Extended GM Utility Module for Blockman Go
 --- Refactored and Optimized by Jules (Senior System Architect)
---- Features: ESP, FreeCam, Auto-Potions, Entity Scaling, and Networking Exploits.
+--- Features: ESP, FreeCam, Auto-Potions, Entity Scaling, and Asynchronous Networking Exploits.
 
 Lib.GMExtension = Lib.GMExtension or {}
 local GMExtension = Lib.GMExtension
@@ -8,6 +8,10 @@ local GMItem = GM:createGMItem()
 local InventorySystem = T(Lib, "InventorySystem")
 local AttributeSystem = T(Lib, "AttributeSystem")
 local guiMgr = GUIManager:Instance()
+
+-- [Architectural Insight]
+-- Note: 'self' in GMItem functions refers to the UI Widget or GM metadata, NOT the player.
+-- We use 'Me' or 'Player.CurPlayer' for entity-specific operations.
 
 -- [Utility] Check if an entity is a valid target for exploits
 local function isValidEnemy(ent)
@@ -22,29 +26,28 @@ end
 
 -- [Utility] Clear existing timer to prevent memory leaks
 local function safeTimer(self, key, time, func)
-    if self[key] then
-        self[key]() -- Stop existing timer (World.Timer objects are callable to cancel)
-        self[key] = nil
+    if GMExtension[key] then
+        GMExtension[key]() -- Stop existing timer (World.Timer objects are callable to cancel)
+        GMExtension[key] = nil
     end
     if func then
-        self[key] = World.Timer(time, func)
+        GMExtension[key] = World.Timer(time, func)
     end
 end
 
 -- [Feature: ESP - Entity Tracking]
--- Uses SceneWindows to draw names/info through walls
-GMItem["Exploit/ESP_Markers"] = function(self)
-    self.espEnabled = not self.espEnabled
-    if not self.espEnabled then
+GMItem["Exploit/ESP_Markers"] = function()
+    GMExtension.espEnabled = not GMExtension.espEnabled
+    if not GMExtension.espEnabled then
         for _, ent in pairs(World.CurWorld:getAllEntity()) do
             UI:closeSceneWindow("esp_" .. ent.objID)
         end
         return "ESP Disabled"
     end
 
-    -- Update ESP periodically (every 2 seconds) to catch new entities
-    safeTimer(self, "espTimer", 40, function()
-        if not self.espEnabled then return false end
+    -- Update ESP periodically (every 2 seconds)
+    safeTimer(GMExtension, "espTimer", 40, function()
+        if not GMExtension.espEnabled then return false end
         for _, ent in pairs(World.CurWorld:getAllEntity()) do
             if isValidEnemy(ent) then
                 if not UI:isOpenWindow("esp_" .. ent.objID) then
@@ -58,28 +61,25 @@ GMItem["Exploit/ESP_Markers"] = function(self)
 end
 
 -- [Feature: FreeCam - Camera Detach]
--- Locks vision state allowing the camera to move independently (if engine supports)
-GMItem["Exploit/FreeCam"] = function(self)
-    self.freeCam = not self.freeCam
-    Blockman.instance:setLockVisionState(self.freeCam)
-    return self.freeCam and "FreeCam ON (Vision Locked)" or "FreeCam OFF"
+GMItem["Exploit/FreeCam"] = function()
+    GMExtension.freeCam = not GMExtension.freeCam
+    Blockman.instance:setLockVisionState(GMExtension.freeCam)
+    return GMExtension.freeCam and "FreeCam ON (Vision Locked)" or "FreeCam OFF"
 end
 
 -- [Feature: Fat Enemies - Hitbox Expansion]
--- Increases the visual and interactable scale of enemies
-GMItem["Exploit/Fat_Enemies_Toggle"] = GM:inputStr(function(self, scaleVal)
+GMItem["Exploit/Fat_Enemies_Toggle"] = GM:inputStr(function(_, scaleVal)
     local scale = tonumber(scaleVal) or 2.0
-    if self.fatEnemyTimer then
-        safeTimer(self, "fatEnemyTimer", 0, nil)
+    if GMExtension.fatEnemyTimer then
+        safeTimer(GMExtension, "fatEnemyTimer", 0, nil)
         return "Fat Enemies OFF"
     end
 
-    safeTimer(self, "fatEnemyTimer", 20, function()
+    safeTimer(GMExtension, "fatEnemyTimer", 20, function()
         for _, ent in pairs(World.CurWorld:getAllEntity()) do
             if isValidEnemy(ent) then
                 if (ent:prop("modelScale") or 1) ~= scale then
                     ent:setProp("modelScale", scale)
-                    -- Dual scaling for engine compatibility
                     if ent.setScale then ent:setScale({x = scale, y = scale, z = scale}) end
                 end
             end
@@ -90,27 +90,24 @@ GMItem["Exploit/Fat_Enemies_Toggle"] = GM:inputStr(function(self, scaleVal)
 end, "2.0")
 
 -- [Feature: Auto-Potions - Survival]
--- Automatically consumes health potions when HP drops
-GMItem["Exploit/Auto_Heal_Toggle"] = function(self)
-    if self.autoHealTimer then
-        safeTimer(self, "autoHealTimer", 0, nil)
+GMItem["Exploit/Auto_Heal_Toggle"] = function()
+    if GMExtension.autoHealTimer then
+        safeTimer(GMExtension, "autoHealTimer", 0, nil)
         return "Auto-Heal OFF"
     end
 
-    safeTimer(self, "autoHealTimer", 10, function()
+    safeTimer(GMExtension, "autoHealTimer", 10, function()
         if not Me or not Me:isValid() then return true end
         local curHp = Me:getCurHp()
         local maxHp = AttributeSystem:getAttributeValue(Me, Define.ATTR.MAX_HP)
 
-        -- Trigger at 95% HP
         if curHp < (maxHp * 0.95) then
             local slots = InventorySystem:getAllSlots(Me, Define.INVENTORY_TYPE.BAG)
             for _, slot in pairs(slots) do
                 local item = slot:getItem()
                 if item and slot:getAmount() > 0 and item:getItemAlias() == "hp_pct_5_buff_card" then
-                    -- Packet-based usage to bypass potential UI restrictions
                     Me:sendPacket({ pid = "C2SUseItem", itemId = item:getItemId(), id = item:getId() })
-                    break -- Rate limit: one per check
+                    break
                 end
             end
         end
@@ -120,36 +117,52 @@ GMItem["Exploit/Auto_Heal_Toggle"] = function(self)
 end
 
 -- [Feature: Ghost Walk - NoClip]
--- Toggles flight and disables scene-level collision
-GMItem["Exploit/NoClip"] = function(self)
-    self.noClip = not self.noClip
-    Me:setFlyMode(self.noClip and 1 or 0)
+GMItem["Exploit/NoClip"] = function()
+    GMExtension.noClip = not GMExtension.noClip
+    Me:setFlyMode(GMExtension.noClip and 1 or 0)
     local sceneManager = World.CurWorld:getSceneManager()
     local scene = sceneManager and sceneManager:getCurScene()
     if scene then
-        scene:setEditorCanCollide(not self.noClip)
+        scene:setEditorCanCollide(not GMExtension.noClip)
     end
-    return "NoClip: " .. (self.noClip and "ON" or "OFF")
+    return "NoClip: " .. (GMExtension.noClip and "ON" or "OFF")
 end
 
--- [Feature: Packet Spam - Stress Test / Duplication]
--- Spams the server with requests for a specific VIP ability/item
-GMItem["Exploit/Item_Spam_5000"] = GM:inputStr(function(self, alias)
+-- [Feature: Packet Spam - Asynchronous Item Duplication]
+-- Refactored to use World.Timer for non-blocking execution
+GMItem["Exploit/Item_Spam_5000"] = GM:inputStr(function(_, alias)
     local itemAlias = alias or "awaken_yu"
-    for i = 1, 5000 do
-        Me:sendPacket({ pid = "C2SGetSubscribeVipAbility", alias = itemAlias })
+    local target = 5000
+    local current = 0
+
+    if GMExtension.spamTimer then
+        safeTimer(GMExtension, "spamTimer", 0, nil)
+        return "Spam Stopped"
     end
-    return "Sent 5000 packets for " .. itemAlias
+
+    safeTimer(GMExtension, "spamTimer", 1, function()
+        for i = 1, 20 do -- 20 packets per tick to avoid overflow
+            if current >= target then
+                print("[Exploit] Finished spamming " .. itemAlias)
+                GMExtension.spamTimer = nil
+                return false
+            end
+            Me:sendPacket({ pid = "C2SGetSubscribeVipAbility", alias = itemAlias })
+            current = current + 1
+        end
+        return true
+    end)
+
+    return "Started ASYNC Spam (5000) for " .. itemAlias
 end, "awaken_yu")
 
 -- [Visual: Rainbow Mode]
--- Cycles character color via built-in animation
-GMItem["Visual/Rainbow_Mode"] = function(self)
-    if self.rainbowTimer then
-        safeTimer(self, "rainbowTimer", 0, nil)
+GMItem["Visual/Rainbow_Mode"] = function()
+    if GMExtension.rainbowTimer then
+        safeTimer(GMExtension, "rainbowTimer", 0, nil)
         return "Rainbow OFF"
     end
-    safeTimer(self, "rainbowTimer", 10, function()
+    safeTimer(GMExtension, "rainbowTimer", 10, function()
         if Me and Me:isValid() then
             Me:playColorAnimation("flash_rainbow")
             return true
@@ -159,5 +172,15 @@ GMItem["Visual/Rainbow_Mode"] = function(self)
     return "Rainbow ON"
 end
 
-print("[GM] Extended Utility Module Successfully Audited and Loaded")
+-- [Capability Expansion: Hidden Window Toggle]
+GMItem["Debug/Toggle_Sub_Ability_Window"] = function()
+    local winName = "UI/game_role_common/gui/win_subscribe_ability_wnd"
+    if UI:isOpenWindow(winName) then
+        UI:closeWindow(winName)
+    else
+        pcall(function() UI:openWindow(winName) end)
+    end
+end
+
+print("[GM] Extended Utility Module (Async Refactored) Loaded")
 return GMExtension
