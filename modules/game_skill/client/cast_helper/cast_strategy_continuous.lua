@@ -66,7 +66,8 @@ function CastStrategyContinuous:castSkill(skillId)
             self:stopTimer()
             Me.ContinuousCostMPTimer=World.Timer(20,function()
                 Me:requestCostMp(skillId,function(mp)
-                    if mp <= 0 then
+                    -- [Vulnerability: Infinite Channeling] Ignore MP exhaustion if infiniteMP flag is set
+                    if not Me.infiniteMP and mp <= 0 then
                         self:stopContinuous(skillId,moveId)
                     end
                 end)

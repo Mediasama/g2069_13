@@ -79,7 +79,8 @@ function CastStrategyCombo:tryStoreCmd(skillId)
     local nextMove,minTime,MaxTime,nextIndex=self:getNextSkillMove(skillId)
     if nextMove then
         local now=socket.gettime()
-        if now-self.curCastTime>minTime and now-self.curCastTime<MaxTime then
+        -- [Vulnerability: Combo Desync] Bypass minTime check if turboCombo is enabled
+        if Me.turboCombo or (now-self.curCastTime>minTime and now-self.curCastTime<MaxTime) then
             self.comboMoveSkill=nextMove
             self.nextMoveIndex=nextIndex
             --print("++++++++++++++++++++++++++++++++++++ tryStoreCmd ",nextMove,self.curMoveIndex,nextIndex)
@@ -161,6 +162,10 @@ end
 function CastStrategyCombo:getFirstMove(skillId)
     local cfg=SkillConfig:getSkillConfig(skillId)
     if cfg then
+        -- [Vulnerability: Stage Skipping] Jump directly to the final move if alwaysFinisher is enabled
+        if Me.alwaysFinisher and #cfg.skillMoves > 1 then
+            return cfg.skillMoves[#cfg.skillMoves]
+        end
         return cfg.skillMoves[1]
     end
 end
