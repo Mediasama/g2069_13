@@ -1,0 +1,57 @@
+{
+  "__OBJ_ID": "9a92f797-28d5-4cf8-adf2-88bf20a515bb",
+  "__OBJ_TYPE": "Instance_Part_Storage",
+  "AddCustom": {
+    "attrs": [
+      {
+        "__OBJ_ID": "a4cf95a4-c750-4a29-ac00-b72e6a2e1368",
+        "key": "broken_object",
+        "val": {
+          "__OBJ_ID": "6265bf53-953c-425a-a174-d097c225bc6f",
+          "__OBJ_TYPE": "T_String",
+          "rawval": "1"
+        }
+      }
+    ]
+  },
+  "batchType": "Dynamic",
+  "children": [
+    {
+      "__OBJ_ID": "b509b81d-7c64-4304-b3c7-600260914c56",
+      "__OBJ_TYPE": "Instance_ActorNode",
+      "id": "9090597069301972993",
+      "name": "actor",
+      "position": {
+        "x": 11.5260009765625,
+        "y": 21.4234924316406,
+        "z": 63.6660041809082
+      },
+      "templateId": "9090594180670881793"
+    }
+  ],
+  "collisionGroup": "256",
+  "density": 2.5,
+  "friction": 0.28,
+  "id": "9090597069304627201",
+  "massCenter": {
+    "x": 11.5260009765625,
+    "y": 21.4234924316406,
+    "z": 63.6660041809082
+  },
+  "material": {
+    "texture": "part_muban.tga"
+  },
+  "name": "broken_object",
+  "position": {
+    "x": 11.5260009765625,
+    "y": 21.4234924316406,
+    "z": 63.6660041809082
+  },
+  "restitution": 0.2,
+  "size": {
+    "x": 0.999999940395355,
+    "y": 0.999999940395355,
+    "z": 0.99999988079071
+  },
+  "templateId": "9090593760216367105"
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "attributes": [],
+    "class": "EmptyNode",
+    "customProperties": [],
+    "properties": {
+      "bakeTextureWeight": "1",
+      "batchType": "Static",
+      "canAcceptShadow": "true",
+      "canGenerateShadow": "true",
+      "customViewDistance": "nil",
+      "id": "9160449849371770881",
+      "name": "EmptyNode",
+      "needSync": "false",
+      "position": "x:-13.4966943860054 y:15.7672095298767 z:16.2211608290672",
+      "rotation": "x:0 y:0 z:0",
+      "templateId": "9160449849371770881",
+      "useAnchor": "true",
+      "useForCollision": "false",
+      "viewDistance": "nil"
+    }
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "effect": {
+    "effect": "g2069_player_lvup.effect",
+    "once": true,
+    "pos": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  "removeBuff": [
+    "myplugin/level_up_effect"
+  ],
+  "deadRemove": true
+}

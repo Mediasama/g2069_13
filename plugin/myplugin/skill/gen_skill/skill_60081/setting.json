@@ -1,0 +1,42 @@
+{
+  "castAction": "g2069_skill_peien_a2",
+  "castSceneEffect": {
+    "delay": 0,
+    "effect": "g2069_skill_peien_a.effect",
+    "isFixedPosition": true,
+    "pos": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": {
+      "x": 1.4,
+      "y": 1.4,
+      "z": 1.4
+    },
+    "time": 6000,
+    "yaw": 0
+  },
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 50,
+    "sound": "g2069_skill_peien_a.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_60081",
+  "missileCount": 1,
+  "skillId": 60081,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": -5,
+    "z": 0
+  },
+  "startWait": 2,
+  "startYaw": 0,
+  "type": "Missile"
+}

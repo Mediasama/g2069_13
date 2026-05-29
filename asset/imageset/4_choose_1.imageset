@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="4_choose_1" imagefile="4_choose_1.png" nativeHorzRes="319" nativeVertRes="130" autoScaled="vertical">
+	<Image name="img_9_big_bottom" xPos="1" yPos="1" height="128" width="300"/>
+	<Image name="img_9_bottom" xPos="302" yPos="1" height="16" width="16"/>
+</Imageset>

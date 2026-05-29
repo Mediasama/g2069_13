@@ -1,0 +1,32 @@
+{
+  "autoRotateColliderBox": true,
+  "collideEntity": 1,
+  "collider": {
+    "extent": {
+      "x": 14,
+      "y": 6,
+      "z": 5
+    },
+    "height": 0,
+    "radius": 0,
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "type": "Box"
+  },
+  "collisionGroup": 32,
+  "followTarget": false,
+  "gravity": 0,
+  "hitEntitySkill": "myplugin/gen_skill/damage_skill_36083",
+  "hitInterval": 99,
+  "lifeTime": 10,
+  "moveAcc": 0,
+  "moveSpeed": 0.01,
+  "rotateSpeed": 0,
+  "skillId": 36083,
+  "startSkill": "myplugin/gen_skill/skill_360832",
+  "vanishOnHitPart": true,
+  "vanishTime": 0
+}

@@ -1,0 +1,91 @@
+n_replyId	s_replyText	n_replyType	n_shopId	s_deliverMap	s_deliverCoordinate	n_taskId	s_dialogRewards	s_itemCounts	n_jumpDialogId	n_replySuccess	n_replyFail	CCC	AAA
+回复id	回复文本	功能类型	商品id	传送地图	传送坐标	任务id	物品id	物品数量	跳转的对话id	回复成功	回复失败	任务奖励示例	功能类型 说明
+				 条件1$条件2	x#y#z		奖励1#奖励2#	数量#数量		需要跳转的对话ID	需要跳转的对话ID	填物品别名	
+11004	g2069_dialog_reply_5001	5				11001				1001	1002		1 关闭对话
+11003	g2069_dialog_reply_5001	5				11002				1001	1002	gold_coin 金币	2 购买商品
+11002	g2069_dialog_reply_7001	7										role_exp 角色经验	3 继续
+11001	g2069_dialog_reply_1001	1										ability_exp 能力经验	4 场景传送
+21004	g2069_dialog_reply_5001	5				21001				1001	1002		5 任务接取
+21003	g2069_dialog_reply_5001	5				21002				1001	1002		6 奖励领取
+21002	g2069_dialog_reply_7001	7											7 返回
+21001	g2069_dialog_reply_1001	1											8 跳转对话
+31003	g2069_dialog_reply_5001	5				31001				1001	1002		9 抽奖
+31004	g2069_dialog_reply_5001	5				31002				1001	1002		10 打开觉醒选择
+31005	g2069_dialog_reply_5001	5				31003				1001	1002		
+31002	g2069_dialog_reply_7001	7											
+31001	g2069_dialog_reply_1001	1											
+41003	g2069_dialog_reply_5001	5				41001				1001	1002		
+41004	g2069_dialog_reply_5001	5				41002				1001	1002		
+41005	g2069_dialog_reply_5001	5				41003				1001	1002		
+41002	g2069_dialog_reply_7001	7											
+41001	g2069_dialog_reply_1001	1											
+51003	g2069_dialog_reply_5001	5				51001				1001	1002		
+51004	g2069_dialog_reply_5001	5				51002				1001	1002		
+51005	g2069_dialog_reply_5001	5				51003				1001	1002		
+51002	g2069_dialog_reply_7001	7											
+51001	g2069_dialog_reply_1001	1											1 关闭对话
+61003	g2069_dialog_reply_5001	5				61001				1001	1002		
+61004	g2069_dialog_reply_5001	5				61002				1001	1002		
+61005	g2069_dialog_reply_5001	5				61003				1001	1002		
+61002	g2069_dialog_reply_7001	7											
+61001	g2069_dialog_reply_1001	1											1 关闭对话
+71003	g2069_dialog_reply_5001	5				71001				1001	1002		
+71004	g2069_dialog_reply_5001	5				71002				1001	1002		
+71005	g2069_dialog_reply_5001	5				71003				1001	1002		
+71002	g2069_dialog_reply_7001	7											
+71001	g2069_dialog_reply_1001	1											1 关闭对话
+81003	g2069_dialog_reply_5001	5				81001				1001	1002		
+81004	g2069_dialog_reply_5001	5				81002				1001	1002		
+81005	g2069_dialog_reply_5001	5				81003				1001	1002		
+81002	g2069_dialog_reply_8001	7											
+81001	g2069_dialog_reply_1001	1											1 关闭对话
+91003	g2069_dialog_reply_5001	5				91001				1001	1002		
+91004	g2069_dialog_reply_5001	5				91002				1001	1002		
+91005	g2069_dialog_reply_5001	5				91003				1001	1002		
+91002	g2069_dialog_reply_9001	7											
+91001	g2069_dialog_reply_1001	1											1 关闭对话
+1	g2069_dialog_reply_1001	1											7 返回
+3	g2069_dialog_reply_7001	7											
+111001	g2069_dialog_reply_11001	8							1100101				
+111002	g2069_dialog_reply_11002	8							1100102				
+211001	g2069_dialog_reply_21001	8							2100101				
+211002	g2069_dialog_reply_21002	8							2100102				
+311001	g2069_dialog_reply_31001	8							3100101				
+311002	g2069_dialog_reply_31002	8							3100102				
+311003	g2069_dialog_reply_31003	8							3100103				
+411001	g2069_dialog_reply_41001	8							4100101				
+411002	g2069_dialog_reply_41002	8							4100102				
+411003	g2069_dialog_reply_41003	8							4100103				
+511001	g2069_dialog_reply_51001	8							5100101				
+511002	g2069_dialog_reply_51002	8							5100102				
+511003	g2069_dialog_reply_51003	8							5100103				
+611001	g2069_dialog_reply_61001	8							6100101				
+611002	g2069_dialog_reply_61002	8							6100102				
+611003	g2069_dialog_reply_61003	8							6100103				
+711001	g2069_dialog_reply_71001	8							7100101				
+711002	g2069_dialog_reply_71002	8							7100102				
+711003	g2069_dialog_reply_71003	8							7100103				
+811001	g2069_dialog_reply_81001	8							8100101				
+811002	g2069_dialog_reply_81002	8							8100102				
+811003	g2069_dialog_reply_81003	8							8100103				
+911001	g2069_dialog_reply_910011	8							9100101				
+911002	g2069_dialog_reply_91002	8							9100102				
+911003	g2069_dialog_reply_91003	8							9100103				
+11005	g2069_dialog_reply_11005	8	14						1100103				
+11006	g2069_dialog_reply_1002	2	14										
+21005	g2069_dialog_reply_11005	8	14						2100103				
+21006	g2069_dialog_reply_1002	2	14										
+31006	g2069_dialog_reply_31006	8	2						3100104				
+31007	g2069_dialog_reply_1002	2	2										
+31008	g2069_dialog_reply_31008	8	4						3100105				
+31009	g2069_dialog_reply_1002	2	4										
+41006	g2069_dialog_reply_41006	8	3						4100104				
+41007	g2069_dialog_reply_1002	2	3										
+41008	g2069_dialog_reply_41008	8	5						4100105				
+41009	g2069_dialog_reply_1002	2	5										
+51006	g2069_dialog_reply_51006	8	6						5100104				
+51007	g2069_dialog_reply_1002	2	6										
+51008	g2069_dialog_reply_51008	8	9						5100105				
+51009	g2069_dialog_reply_1002	2	9										
+91001	g2069_dialog_reply_91001	9											
+92210001	g2069_dialog_reply_3001	10											

@@ -1,0 +1,38 @@
+{
+  "autoRotateColliderBox": true,
+  "collideEntity": 1,
+  "collider": {
+    "extent": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "height": 6,
+    "radius": 9.5,
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "type": "Cylinder"
+  },
+  "collisionGroup": 32,
+  "dragTarget": {
+    "dragTargetTime": 6,
+    "dragTargetType": 0,
+    "dragToMissileCenter": false
+  },
+  "followTarget": false,
+  "gravity": 0,
+  "hitBuff": "36081",
+  "hitEntitySkill": "myplugin/gen_skill/damage_skill_37081",
+  "hitInterval": 4,
+  "lifeTime": 22,
+  "moveAcc": 0,
+  "moveSpeed": 0.8,
+  "rotateSpeed": 0,
+  "skillId": 37081,
+  "vanishOnHitPart": true,
+  "vanishSkill": "myplugin/gen_skill/skill_370812",
+  "vanishTime": 0
+}

@@ -1,0 +1,17 @@
+<ActorTemplates>
+	<ActorTemplate Alpha="1" AttackScale="1" IntervalTime="2" IsShowShadow="true" MaxDistance="16" MinDistance="1" name="111.actor" Originalscale="1 1 1" SelectedRingSize="1" Skeleton="g2065_model_equip_box_01.skel" SoundFileNum="0" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" TextHeight="0" Volume="0.8" WoundAngle="25" WoundBone="">
+		<Anims>
+			<Anim Name="asset/Mesh/equip_box/g2065_model_equip_box_01.anim"/>
+		</Anims>
+		<BodyParts>
+			<BodyPart ColorParams="1 1 1 1" DefaultUse="true" EdgeColor="1 1 1 1" MasterName="mutex_name_0" SlaveName="g2065_model_equip_box_01">
+				<Skin ChangeColor="1.4013e-45 -0.487196 0.0893673 -0.567287" DiscardAlpha="0" EdgeColor="1.0 0 0 1.0" LocalAlpha="1" LocalBrightnessScale="1.0" MeshName="asset/Mesh/equip_box/g2065_model_equip_box_01.skin" OverlayColor="1 1 1 1" SpecularCoef="0.15" SpecularColor="1.0 1.0 1.0 1.0" SpecularStrength="1.0" type_name="g2065_model_equip_box_01" UseBloom="false" UseEdge="false" UseOriginalcolor="false" UseOverlayColorReplaceMode="false" UseReflect="false" UseTransparentNearestSlice="false" UVSpeed="0 0"/>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill EnableWound="false" Name="g2065_model_equip_box_01" TextMode="0" UserDefineTime="-2">
+				<Animation BeginTime="0" Channel="" FadeTime="0.25" Length="0.7" Name="asset/Mesh/equip_box/g2065_model_equip_box_01.anim" Times="1" TimeScale="1"/>
+			</Skill>
+		</Skills>
+	</ActorTemplate>
+</ActorTemplates>

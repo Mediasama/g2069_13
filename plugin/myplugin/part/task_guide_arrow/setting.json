@@ -1,0 +1,22 @@
+{
+  "attributes": [],
+  "class": "EffectPart",
+  "customProperties": [],
+  "properties": {
+    "bakeTextureWeight": "1",
+    "batchType": "Static",
+    "canAcceptShadow": "true",
+    "canGenerateShadow": "true",
+    "effectFilePath": "asset/custom_effect/g2069_task_guide.effect",
+    "isVisible": "true",
+    "loopInterval": "0.0",
+    "name": "taskArrowEffect",
+    "position": "x:0 y:0.0 z:0.0",
+    "rotation": "x:0 y:0.0 z:0",
+    "scale": "x:1 y:1 z:1",
+    "scaleByParent": "false",
+    "selectable": "false",
+    "useAnchor": "false",
+    "useForCollision": "false"
+  }
+}

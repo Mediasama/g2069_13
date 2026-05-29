@@ -1,0 +1,86 @@
+n_id	n_item_id	s_item_alias	s_name	s_desc	s_type_alias	s_sub_type_alias	s_quality_alias	s_icon	s_small_icon	s_res_name	n_isOverlay	n_isUse	n_isDiscard	s_params	n_recycling_time
+序号	物品id	物品id别称	物品名	物品描述	物品类型别称	子类型别称	物品品质别称	物品icon	物品icon	零件库文件名	是否堆叠	是否使用	是否丢弃	自定义属性	场景回收秒
+1	501	ability_noob	ability_noob	g2069_items_1	ability		rare	asset/imageset/icon:prop_wulitiequanshu_icon		ability_item	1	1	0		
+2	601	ability_luffy	ability_luffy	g2069_items_1	ability		rare	asset/imageset/icon:prop_lufeishu_icon		prop_lufei	1	1	0		
+3	602	ability_sauron	ability_sauron	g2069_items_1	ability		epic	asset/imageset/icon:prop_suolongshu_icon		prop_suolong	1	1	0		
+4	603	ability_naruto	ability_naruto	g2069_items_1	ability		rare	asset/imageset/icon:prop_mingrenshu_icon		prop_mingren	1	1	0		
+5	604	ability_sasuke	ability_sasuke	g2069_items_2	ability		epic	asset/imageset/icon:prop_zuozhushu_icon		prop_zuozhu	1	1	0		
+6	605	ability_ace	ability_ace	g2069_items_2	ability		legendary	asset/imageset/icon:prop_aisishu_icon		prop_aisi	1	1	0		
+7	606	ability_enel	ability_enel	g2069_items_2	ability		legendary	asset/imageset/icon:prop_ainilushu_icon		prop_ainilu	1	1	0		
+8	607	ability_gaara	ability_gaara	g2069_items_2	ability		legendary	asset/imageset/icon:prop_woailuoshu_icon		prop_woailuo	1	1	0		
+9	608	ability_konan	ability_konan	g2069_items_1	ability		legendary	asset/imageset/icon:prop_xiaonanshu_icon		prop_xiaonan	1	1	0		
+10	609	ability_baihuzi	ability_baihuzi	g2069_items_1	ability		legendary	asset/imageset/icon:prop_baihuzishu_icon		prop_baihuzi	1	1	0		
+11	610	ability_peien	ability_peien	g2069_items_1	ability		legendary	asset/imageset/icon:prop_peienshu_icon		prop_peien	1	1	0		
+12	5011	ability_noobshu	ability_noobshu	g2069_items_11	book		rare	asset/imageset/icon:prop_wulitiequan_icon		ability_item	1	1	0	ability_id#501	
+13	6011	ability_luffyshu	ability_luffyshu	g2069_items_11	book		rare	asset/imageset/icon:prop_lufei_icon		prop_lufei	1	1	0	ability_id#601	
+14	6021	ability_sauronshu	ability_sauronshu	g2069_items_11	book		epic	asset/imageset/icon:prop_suolong_icon		prop_suolong	1	1	0	ability_id#602	
+15	6031	ability_narutoshu	ability_narutoshu	g2069_items_11	book		rare	asset/imageset/icon:prop_mingren_icon		prop_mingren	1	1	0	ability_id#603	
+16	6041	ability_sasukeshu	ability_sasukeshu	g2069_items_12	book		epic	asset/imageset/icon:prop_zuozhu_icon		prop_zuozhu	1	1	0	ability_id#604	
+17	6051	ability_aceshu	ability_aceshu	g2069_items_12	book		legendary	asset/imageset/icon:prop_aisi_icon		prop_aisi	1	1	0	ability_id#605	
+18	6061	ability_enelshu	ability_enelshu	g2069_items_12	book		legendary	asset/imageset/icon:prop_ainilu_icon		prop_ainilu	1	1	0	ability_id#606	
+19	6071	ability_gaarashu	ability_gaarashu	g2069_items_12	book		legendary	asset/imageset/icon:prop_woailuo_icon		prop_woailuo	1	1	0	ability_id#607	
+20	6081	ability_konanshu	ability_konanshu	g2069_items_11	book		legendary	asset/imageset/icon:prop_xiaonan_icon		prop_xiaonan	1	1	0	ability_id#608	
+21	6091	ability_baihuzishu	ability_baihuzishu	g2069_items_11	book		legendary	asset/imageset/icon:prop_baihuzi_icon		prop_baihuzi	1	1	0	ability_id#609	
+22	6101	ability_peienshu	ability_peienshu	g2069_items_11	book		legendary	asset/imageset/icon:prop_peien_icon		prop_peien	1	1	0	ability_id#610	
+23	9999	awaken_yu	awaken_yu	g2069_items_9999	awaken_consume		legendary	asset/imageset/icon:prop_yu_icon			1	0	0		
+24	10001	chest_1	chest_1		chest		common			treasure_box	1	0	1	box_id#1	
+25	10002	chest_2	chest_2		chest		common			treasure_box	1	0	1	box_id#2	
+26	10003	chest_3	chest_3		chest		common			treasure_box	1	0	1	box_id#3	
+27	10004	chest_4	chest_4		chest		common			treasure_box	1	0	1	box_id#4	
+28	10005	chest_5	chest_5		chest		common			treasure_box	1	0	1	box_id#5	
+29	10006	chest_6	chest_6		chest		common			treasure_box	1	0	1	box_id#6	
+30	10007	chest_7	chest_7		chest		common			treasure_box	1	0	1	box_id#7	
+31	97001	ability_exp	ability_exp		ability_exp		common				1	0	1		
+32	98001	role_exp	role_exp		role_exp		common				1	0	1		
+33	99001	gold_coin	g2069_item_name_gold	g2069_items_9	currency		common	gameres|asset/imageset/icon:prop_gold_icon	gameres|asset/imageset/common:btn_0_gold		1	0	1		
+34	99002	gDiamonds	g2069_item_name_golden_cube		currency		common	gameres|asset/imageset/common:btn_0_magic_cube	gameres|asset/imageset/common:btn_0_magic_cube		1	0	1		
+35	1000001	tree1	tree1		broken		common				0	0	0		
+36	11000001	exp_2_buff_card	exp_2_buff_card	g2069_items_11000001	buff_card	exp_buff	rare	asset/imageset/icon:prop_exp2_icon			1	1	0	buff_id#11000001	
+37	11000002	exp_15000_buff_card	exp_15000_buff_card	g2069_items_11000002	buff_card	exp_buff	rare	asset/imageset/icon:prop_xiaonan_icon			1	1	0	buff_id#11000002	
+38	12000001	ap_2_buff_card	ap_2_buff_card	g2069_items_12000001	buff_card	ap_buff	rare	asset/imageset/icon:prop_ap2_icon			1	1	0	buff_id#12000001	
+39	12000002	ap_15000_buff_card	ap_15000_buff_card	g2069_items_12000002	buff_card	ap_buff	rare	asset/imageset/icon:prop_xiaonan_icon			1	1	0	buff_id#12000002	
+40	13000001	hp_50_buff_card	hp_50_buff_card	g2069_items_13000001	buff_card	hp_regen_buff	rare	asset/imageset/icon:prop_hp1_icon			1	1	0	buff_id#13000001	
+41	13100001	hp_pct_5_buff_card	hp_pct_5_buff_card	g2069_items_13100001	buff_card	hp_regen_buff	rare	asset/imageset/icon:prop_hp2_icon			1	1	0	buff_id#13100001	
+42	14000001	mp_100_buff_card	mp_100_buff_card	g2069_items_14000001	buff_card	mp_regen_buff	rare	asset/imageset/icon:prop_mp1_icon			1	1	0	buff_id#14000001	
+43	14100001	mp_pct_5_buff_card	mp_pct_5_buff_card	g2069_items_14100001	buff_card	mp_regen_buff	rare	asset/imageset/icon:prop_mp2_icon			1	1	0	buff_id#14100001	
+44	15000001	gift_pack	gift_pack	g2069_items_15000001	gift_pack		rare	asset/imageset/icon:prop_xiaonan_icon			1	1	0	box_id#10001	
+45	16011	ability_luffy1	ability_luffy	g2069_items_1	ability		rare	asset/imageset/icon:prop_lufeishu_icon		prop_lufei	1	1	0		
+46	16012	ability_luffy2	ability_luffy	g2069_items_1	ability		rare	asset/imageset/icon:prop_lufeishu_icon		prop_lufei	1	1	0		
+47	16013	ability_luffy3	ability_luffy	g2069_items_1	ability		rare	asset/imageset/icon:prop_lufeishu_icon		prop_lufei	1	1	0		
+48	16014	ability_luffy4	ability_luffy	g2069_items_1	ability		rare	asset/imageset/icon:prop_lufeishu_icon		prop_lufei	1	1	0		
+49	16021	ability_sauron1	ability_sauron	g2069_items_1	ability		epic	asset/imageset/icon:prop_suolongshu_icon		prop_suolong	1	1	0		
+50	16022	ability_sauron2	ability_sauron	g2069_items_1	ability		epic	asset/imageset/icon:prop_suolongshu_icon		prop_suolong	1	1	0		
+51	16023	ability_sauron3	ability_sauron	g2069_items_1	ability		epic	asset/imageset/icon:prop_suolongshu_icon		prop_suolong	1	1	0		
+52	16024	ability_sauron4	ability_sauron	g2069_items_1	ability		epic	asset/imageset/icon:prop_suolongshu_icon		prop_suolong	1	1	0		
+53	16031	ability_naruto1	ability_naruto	g2069_items_1	ability		rare	asset/imageset/icon:prop_mingrenshu_icon		prop_mingren	1	1	0		
+54	16032	ability_naruto2	ability_naruto	g2069_items_1	ability		rare	asset/imageset/icon:prop_mingrenshu_icon		prop_mingren	1	1	0		
+55	16033	ability_naruto3	ability_naruto	g2069_items_1	ability		rare	asset/imageset/icon:prop_mingrenshu_icon		prop_mingren	1	1	0		
+56	16034	ability_naruto4	ability_naruto	g2069_items_1	ability		rare	asset/imageset/icon:prop_mingrenshu_icon		prop_mingren	1	1	0		
+57	16041	ability_sasuke1	ability_sasuke	g2069_items_2	ability		epic	asset/imageset/icon:prop_zuozhushu_icon		prop_zuozhu	1	1	0		
+58	16042	ability_sasuke2	ability_sasuke	g2069_items_2	ability		epic	asset/imageset/icon:prop_zuozhushu_icon		prop_zuozhu	1	1	0		
+59	16043	ability_sasuke3	ability_sasuke	g2069_items_2	ability		epic	asset/imageset/icon:prop_zuozhushu_icon		prop_zuozhu	1	1	0		
+60	16044	ability_sasuke4	ability_sasuke	g2069_items_2	ability		epic	asset/imageset/icon:prop_zuozhushu_icon		prop_zuozhu	1	1	0		
+61	16051	ability_ace1	ability_ace	g2069_items_2	ability		legendary	asset/imageset/icon:prop_aisishu_icon		prop_aisi	1	1	0		
+62	16052	ability_ace2	ability_ace	g2069_items_2	ability		legendary	asset/imageset/icon:prop_aisishu_icon		prop_aisi	1	1	0		
+63	16053	ability_ace3	ability_ace	g2069_items_2	ability		legendary	asset/imageset/icon:prop_aisishu_icon		prop_aisi	1	1	0		
+64	16054	ability_ace4	ability_ace	g2069_items_2	ability		legendary	asset/imageset/icon:prop_aisishu_icon		prop_aisi	1	1	0		
+65	16061	ability_enel1	ability_enel	g2069_items_2	ability		legendary	asset/imageset/icon:prop_ainilushu_icon		prop_ainilu	1	1	0		
+66	16062	ability_enel2	ability_enel	g2069_items_2	ability		legendary	asset/imageset/icon:prop_ainilushu_icon		prop_ainilu	1	1	0		
+67	16063	ability_enel3	ability_enel	g2069_items_2	ability		legendary	asset/imageset/icon:prop_ainilushu_icon		prop_ainilu	1	1	0		
+68	16064	ability_enel4	ability_enel	g2069_items_2	ability		legendary	asset/imageset/icon:prop_ainilushu_icon		prop_ainilu	1	1	0		
+69	16071	ability_gaara1	ability_gaara	g2069_items_2	ability		legendary	asset/imageset/icon:prop_woailuoshu_icon		prop_woailuo	1	1	0		
+70	16072	ability_gaara2	ability_gaara	g2069_items_2	ability		legendary	asset/imageset/icon:prop_woailuoshu_icon		prop_woailuo	1	1	0		
+71	16073	ability_gaara3	ability_gaara	g2069_items_2	ability		legendary	asset/imageset/icon:prop_woailuoshu_icon		prop_woailuo	1	1	0		
+72	16074	ability_gaara4	ability_gaara	g2069_items_2	ability		legendary	asset/imageset/icon:prop_woailuoshu_icon		prop_woailuo	1	1	0		
+73	16081	ability_konan1	ability_konan	g2069_items_1	ability		legendary	asset/imageset/icon:prop_xiaonanshu_icon		prop_xiaonan	1	1	0		
+74	16082	ability_konan2	ability_konan	g2069_items_1	ability		legendary	asset/imageset/icon:prop_xiaonanshu_icon		prop_xiaonan	1	1	0		
+75	16083	ability_konan3	ability_konan	g2069_items_1	ability		legendary	asset/imageset/icon:prop_xiaonanshu_icon		prop_xiaonan	1	1	0		
+76	16084	ability_konan4	ability_konan	g2069_items_1	ability		legendary	asset/imageset/icon:prop_xiaonanshu_icon		prop_xiaonan	1	1	0		
+77	16091	ability_baihuzi1	ability_baihuzi	g2069_items_1	ability		legendary	asset/imageset/icon:prop_baihuzishu_icon		prop_baihuzi	1	1	0		
+78	16092	ability_baihuzi2	ability_baihuzi	g2069_items_1	ability		legendary	asset/imageset/icon:prop_baihuzishu_icon		prop_baihuzi	1	1	0		
+79	16093	ability_baihuzi3	ability_baihuzi	g2069_items_1	ability		legendary	asset/imageset/icon:prop_baihuzishu_icon		prop_baihuzi	1	1	0		
+80	16094	ability_baihuzi4	ability_baihuzi	g2069_items_1	ability		legendary	asset/imageset/icon:prop_baihuzishu_icon		prop_baihuzi	1	1	0		
+81	16101	ability_peien1	ability_peien	g2069_items_1	ability		legendary	asset/imageset/icon:prop_peienshu_icon		prop_peien	1	1	0		
+82	16102	ability_peien2	ability_peien	g2069_items_1	ability		legendary	asset/imageset/icon:prop_peienshu_icon		prop_peien	1	1	0		
+83	16103	ability_peien3	ability_peien	g2069_items_1	ability		legendary	asset/imageset/icon:prop_peienshu_icon		prop_peien	1	1	0		
+84	16104	ability_peien4	ability_peien	g2069_items_1	ability		legendary	asset/imageset/icon:prop_peienshu_icon		prop_peien	1	1	0		

@@ -1,0 +1,50 @@
+
+
+language_start:g2055_lang_chat
+
+new_chat_new_msg_tips=Nowa wiadomość{.}
+new_chat_world=świat
+new_chat_system=system
+new_chat_gang=banda
+new_chat_private=prywatny czat
+new_chat_crossServer=między serwerami
+new_chat_friend=przyjaciel
+new_chat_emoji=wyrażenie
+new_chat_short_msg=wyrażenie
+new_chat_input_tips=Kliknij, aby wejść
+new.chat.send.voice=Zwolnij, aby wysłać głos
+new.chat.cancel.send.voice=Zwolnij, aby anulować wysyłanie
+new.chat.voice.fail=Nie udało się wysłać głosu, spróbuj ponownie
+new.chat.can.not.send=Mówiąc zbyt często, proszę porozmawiaj później
+new.chat.voice.time.limit=najdłuższe nagranie
+new.chat.voice.time.too.short=Niewystarczające nagranie
+new.chat.recent.private.chat=ostatni kontakt
+new.chat.tips.unable_display=Nie można wyświetlić typu wiadomości
+new.chat.friend.applyFriend=Nowa przyjaciółka
+new.chat.friend.gameFriend=zabawa z przyjaciółmi
+new.chat.friend.platformFriend=przyjaciele z platformy
+new.chat.status.online=online
+new.chat.status.offline=offline
+new.chat.player_delFriend=usuń przyjaciela
+new.chat.player_addFriend=Dodaj znajomego
+new.chat.shopTitle =Pakiet głosowy
+new.chat.voiceless=Twoja liczba głosów jest niewystarczająca, wysyłanie nie powiodło się
+new.chat.buyNum={.} głośniki
+new.chat.voiceBuySucc=udany zakup
+new.chat.voiceBuyFail=Nieudany zakup
+new.chat.moonCard=Nieograniczona karta miesięczna głosowa
+new.chat.moonTime={.}niebo
+new.chat.moonLess=Pozostał mniej niż 1 dzień
+new.chat.sureBuy=Czy wydajesz {.} kostek złota na zakup?
+
+new.chat.invite=zapraszać
+new.chat.invite.isExist=Gracz jest już w grze
+new.chat.invite.toofast=Zapraszaj zbyt często
+new.chat.invite.succ=Zaproszenie powiodło się
+
+new_chat_input_tips_voice=poczekaj, żeby mówić
+
+new_chat_reject_all=odrzuć wszystko
+new_chat_accept_all=zgadzam się wszystkim
+
+language_end:g2055_lang_chat

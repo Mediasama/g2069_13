@@ -1,0 +1,18 @@
+{
+  "actionMap": {
+    "fly": "g2069_xiaonan_run",
+    "idle": "g2069_xiaonan_idle",
+    "run": "g2069_xiaonan_run"
+  },
+  "actionPriority": 9999,
+  "attribute_pct": {
+    "moveSpeed": 0.9
+  },
+  "buffId": 36085,
+  "buffName": "myplugin/gen_buff/skill_buff_36085",
+  "buffSoundKey": "s36085",
+  "deadRemove": true,
+  "flyMode": true,
+  "needSave": false,
+  "partChange": "g2069_buff#xiaonan_fly"
+}

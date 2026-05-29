@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="skill" imagefile="skill.png" nativeHorzRes="165" nativeVertRes="256" autoScaled="vertical">
+	<Image name="img_0_perating_virtualkey_bg" xPos="1" yPos="1" height="80" width="71"/>
+	<Image name="img_0_skill_bg" xPos="73" yPos="1" height="90" width="90"/>
+	<Image name="img_9_perating_virtualkey_bg" xPos="1" yPos="92" height="163" width="163"/>
+</Imageset>

@@ -1,0 +1,9 @@
+{
+  "attribute": {
+    "mpRegen": 0.01
+  },
+  "buffId": 16030,
+  "buffName": "myplugin/gen_buff/skill_buff_16030",
+  "deadRemove": false,
+  "needSave": false
+}

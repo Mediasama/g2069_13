@@ -1,0 +1,5 @@
+n_pool_id	n_poolGroup	s_openLevel	n_kValue	n_bValue	s_item_alias	n_coolTime	n_isFirstDraw
+奖池id	所属奖池组	开放等级min#max	消耗配置k	消耗配置b	消耗物品别称	冷却时间秒	是否首抽 1是 默认0
+1001	1	1#50	0	10000	gold_coin	7200	
+1002	1	51#100	0	30000	gold_coin	7200	
+1003	1	101#999999	0	50000	gold_coin	7200	

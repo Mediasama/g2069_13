@@ -1,0 +1,74 @@
+{
+  "__OBJ_ID": "dba6b0fa-59a3-4e9c-aa61-107ba40cd64a",
+  "__OBJ_TYPE": "Instance_MeshPart_Storage",
+  "anchorPoint": {
+    "x": 3.35600066184998,
+    "y": 1.38269639015198,
+    "z": 10.9180021286011
+  },
+  "batchType": "Dynamic",
+  "children": [
+    {
+      "__OBJ_ID": "0cba700f-8a30-41ef-a712-10ba8daabcfd",
+      "__OBJ_TYPE": "Instance_EffectPart",
+      "csgShapeEffect": {
+        "asset": "asset/custom_effect/g2069_item_01.effect",
+        "selector": "editor/g2069/asset/custom_effect/g2069_item_01.effect"
+      },
+      "id": "9110888368473063425",
+      "position": {
+        "x": 3.35600066184998,
+        "y": 1.00324630737305,
+        "z": 10.9180021286011
+      },
+      "size": {
+        "x": 2.99999976158142,
+        "y": 3.02671360969543,
+        "z": 2.99999952316284
+      },
+      "templateId": "9110887781910642689",
+      "transform": {
+        "pos": {
+          "y": -0.589879870414734
+        }
+      }
+    }
+  ],
+  "collisionGroup": "8",
+  "collisionUniqueKey": "9110888368475521025",
+  "density": 2.2,
+  "friction": 0.37,
+  "id": "9110888368475521025",
+  "massCenter": {
+    "x": 3.35600066184998,
+    "y": 1.38269639015198,
+    "z": 10.9180021286011
+  },
+  "mesh": "asset/custom_effect/ability_woailuo/g2069_woailuo_hulu.mesh",
+  "mesh_selector": {
+    "asset": "asset/custom_effect/ability_woailuo/g2069_woailuo_hulu.mesh",
+    "selector": "asset/custom_effect/ability_woailuo/g2069_woailuo_hulu.mesh"
+  },
+  "name": "prop_woailuo",
+  "position": {
+    "x": 3.35600066184998,
+    "y": 1.38269639015198,
+    "z": 10.9180021286011
+  },
+  "restitution": 0.3,
+  "rotation": {
+    "y": 158.999984741211
+  },
+  "scale": {
+    "x": 0.643267,
+    "y": 0.643267,
+    "z": 0.643266
+  },
+  "size": {
+    "x": 0.481276452541351,
+    "y": 0.780794560909271,
+    "z": 0.481367200613022
+  },
+  "staticBatchNo": "1",
+  "templateId": "9110876551162462209"
+}

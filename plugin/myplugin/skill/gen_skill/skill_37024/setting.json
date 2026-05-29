@@ -1,0 +1,44 @@
+{
+  "castAction": "g2069_skill_suolong_d2",
+  "castSceneEffect": {
+    "delay": 0,
+    "effect": "g2069_skill_suolong_dd.effect",
+    "isFixedPosition": true,
+    "pos": {
+      "x": 0,
+      "y": 0.1,
+      "z": 0
+    },
+    "scale": {
+      "x": 2.2,
+      "y": 2.2,
+      "z": 2.2
+    },
+    "time": 6000,
+    "yaw": 0
+  },
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 70,
+    "sound": "g2069_skill_suolong_d.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_37024",
+  "missileCount": 1,
+  "skillId": 37024,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": -15,
+    "z": 0
+  },
+  "startWait": 2,
+  "startYaw": 0,
+  "target": "self",
+  "targetType": "Self",
+  "type": "Missile"
+}

@@ -1,0 +1,9 @@
+{
+  "?playFallDistance": "播放落地动作的最小落地高度",
+  "playFallDistance": 3,
+  "?fallEffectName": "落地特效",
+  "fallEffectName": "g2069_jump_end.effect",
+  "?fallEffectTime": "特效时长 毫秒",
+  "fallEffectTime": 500,
+  "fallEffectScale": 1
+}

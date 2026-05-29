@@ -1,0 +1,43 @@
+{
+  "__OBJ_ID": "dbac91bd-6ff0-4399-b950-c7ec4717f52d",
+  "__OBJ_TYPE": "Instance_Part_Storage",
+  "AddCustom": {
+    "attrs": [
+      {
+        "__OBJ_ID": "009e08ab-5d4d-4fa1-a136-7737b6097120",
+        "key": "teleport_map",
+        "val": {
+          "__OBJ_ID": "74c36a30-455d-4ee0-b6ae-12c961125489",
+          "__OBJ_TYPE": "T_String",
+          "rawval": "map_windmilltown"
+        }
+      }
+    ]
+  },
+  "cameraCollideEnable": false,
+  "collisionGroup": "8",
+  "density": 2.2,
+  "friction": 0.37,
+  "id": "9078067257835012097",
+  "massCenter": {
+    "x": -1.37999832630157,
+    "y": 1.58353734016418,
+    "z": 20.2400074005127
+  },
+  "name": "teleport_gate",
+  "position": {
+    "x": -1.37999832630157,
+    "y": 1.58353734016418,
+    "z": 20.2400074005127
+  },
+  "restitution": 0.3,
+  "size": {
+    "x": 0.999999940395355,
+    "y": 0.999999940395355,
+    "z": 0.99999988079071
+  },
+  "staticBatchNo": "auto_batch_0",
+  "templateId": "9078009578701357057",
+  "useCollide": false,
+  "useGravity": false
+}

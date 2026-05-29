@@ -1,0 +1,24 @@
+{
+  "castAction": "g2069_skill_fly_3",
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 30,
+    "sound": "g2069_skill_woailuo_fly.mp3",
+    "volume": 1
+  },
+  "missileCount": 0,
+  "skillId": 36075,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "startWait": 0,
+  "startYaw": 0,
+  "type": "State"
+}

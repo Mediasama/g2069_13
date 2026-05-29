@@ -1,0 +1,25 @@
+{
+  "buffId": 40002,
+  "buffName": "myplugin/gen_buff/skill_buff_40002",
+  "deadRemove": true,
+  "dizziness": true,
+  "duration": 20,
+  "effect": {
+    "effect": "g2069_buff_xuanyun.effect",
+    "once": true,
+    "pos": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "needSave": false,
+  "removeBuff": [
+    "myplugin/gen_buff/skill_buff_40002"
+  ]
+}

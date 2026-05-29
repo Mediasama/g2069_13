@@ -1,0 +1,51 @@
+{
+  "autoRotateColliderBox": true,
+  "collideEntity": 1,
+  "collider": {
+    "extent": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "height": 25,
+    "radius": 13,
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "type": "Cylinder"
+  },
+  "collisionGroup": 32,
+  "dragTarget": {
+    "dragTargetTime": 8,
+    "dragTargetType": 0,
+    "dragToMissileCenter": false
+  },
+  "followTarget": false,
+  "gravity": 0,
+  "hitBuff": "40001",
+  "hitEntityEffectCustomName": "hit_effect_custom_37053",
+  "hitEntitySkill": "myplugin/gen_skill/damage_skill_37053",
+  "hitInterval": 6,
+  "lifeTime": 31,
+  "moveAcc": 0.1,
+  "moveSpeed": 1.2,
+  "rotateSpeed": 0,
+  "skillId": 37053,
+  "startEffect": {
+    "effect": "g2069_skill_aisi_cc.effect",
+    "pos": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": {
+      "x": 1.5,
+      "y": 1.5,
+      "z": 1.5
+    }
+  },
+  "vanishOnHitPart": true,
+  "vanishTime": 0
+}

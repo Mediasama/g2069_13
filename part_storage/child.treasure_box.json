@@ -1,0 +1,53 @@
+{
+  "attributes": [],
+  "children": [
+    {
+      "attributes": [],
+      "class": "ActorNode",
+      "customProperties": [],
+      "properties": {
+        "actorTemplate": "asset/Actor/item/g2069_scene_item_chest.actor",
+        "bakeTextureWeight": "1",
+        "batchType": "Static",
+        "canAcceptShadow": "true",
+        "canGenerateShadow": "true",
+        "id": "9090598855028277249",
+        "name": "actor",
+        "position": "x:-6.45000028610229 y:-11.598 z:117.302001953125",
+        "templateId": "9090598734180597761",
+        "useAnchor": "true",
+        "useForCollision": "false"
+      }
+    }
+  ],
+  "class": "Part",
+  "customProperties": [],
+  "properties": {
+    "batchType": "Dynamic",
+    "btsKey": "",
+    "canAcceptShadow": "true",
+    "canGenerateShadow": "true",
+    "collisionGroup": "8",
+    "density": "2.5",
+    "discardAlpha": "0.0",
+    "exists_baked_data": "false",
+    "friction": "0.28",
+    "id": "9090598855030816769",
+    "massCenter": "x:-6.45000028610229 y:-11.5976600646973 z:117.302001953125",
+    "materialAlpha": "0",
+    "materialColor": "r:1.0 g:1.0 b:1.0 a:1.0",
+    "materialOffset": "x:1 y:1 z:1.0",
+    "materialTexture": "part_muban.tga",
+    "name": "treasure_box",
+    "partNavMeshType": "1",
+    "position": "x:-6.45000028610229 y:-11.5976600646973 z:117.302001953125",
+    "restitution": "0.2",
+    "simpleEmissiveIntensity": "1.0",
+    "templateId": "9090598734182875137",
+    "useAnchor": "true",
+    "useCollide": "false",
+    "useForCollision": "false",
+    "useGravity": "false",
+    "useTextureAlpha": "false"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "__OBJ_ID": "2de8e0eb-a40a-46f3-a8bd-5bf2dd552430",
+  "__OBJ_TYPE": "Instance_MeshPart_Storage",
+  "anchorPoint": {
+    "x": 0.186999961733818,
+    "y": 1.25789606571198,
+    "z": 11.0419988632202
+  },
+  "batchType": "Dynamic",
+  "children": [
+    {
+      "__OBJ_ID": "91924283-bc6f-4e09-a3fc-775d59dde331",
+      "__OBJ_TYPE": "Instance_EffectPart",
+      "csgShapeEffect": {
+        "asset": "asset/custom_effect/g2069_item_01.effect",
+        "selector": "editor/g2069/asset/custom_effect/g2069_item_01.effect"
+      },
+      "id": "9110886455412228097",
+      "position": {
+        "x": 0.187,
+        "y": 0.918187,
+        "z": 11.042
+      },
+      "size": {
+        "x": 2.99999976158142,
+        "y": 3.02671360969543,
+        "z": 2.99999952316284
+      },
+      "templateId": "9110886092218679297",
+      "transform": {
+        "pos": {
+          "y": -0.75
+        }
+      }
+    }
+  ],
+  "collisionGroup": "8",
+  "collisionUniqueKey": "9110886455414849537",
+  "density": 2.2,
+  "friction": 0.37,
+  "id": "9110886455414849537",
+  "massCenter": {
+    "x": 0.186999961733818,
+    "y": 1.25789606571198,
+    "z": 11.0419988632202
+  },
+  "mesh": "asset/Mesh/prop/g2069_prop_peien.mesh",
+  "mesh_selector": {
+    "asset": "asset/Mesh/prop/g2069_prop_peien.mesh",
+    "selector": "asset/Mesh/prop/g2069_prop_peien.mesh"
+  },
+  "name": "prop_peien",
+  "position": {
+    "x": 0.186999961733818,
+    "y": 1.25789606571198,
+    "z": 11.0419988632202
+  },
+  "restitution": 0.3,
+  "scale": {
+    "x": 0.452946,
+    "y": 0.452946,
+    "z": 0.452945
+  },
+  "size": {
+    "x": 0.45,
+    "y": 0.451495081186295,
+    "z": 0.448847472667694
+  },
+  "staticBatchNo": "1",
+  "templateId": "9110868225633828865"
+}

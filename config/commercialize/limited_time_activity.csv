@@ -1,0 +1,8 @@
+n_id	n_type	n_sortId	s_startTime	s_endTime	s_updateTime	n_commonWnd	s_tabName	s_tabJson	s_tabBgRes	s_textColorLeftTop	s_textColorRightTop	s_textColorLeftBottom	s_textColorRightBottom
+活动id	活动类型 1限时抽奖 2必中抽奖  3组合限时 4独立限时 5月礼包 6周礼包 7折扣礼包 8周月卡 9可选礼包 10金币转盘	排序	开始时间 默认 0-0-0-0-0-0 	结束时间 默认 0-0-0-0-0-0 	刷新时间 0-0-0-0 天-时-分-秒	通用大窗口 1 限时活动	标签名	打开界面 lua名 去win_	按钮图片	标签文字颜色  左上	 右上	 左下	 右下
+100001	10	1	2023-04-17	2023-04-24		1	gui.limit.time.activity.gold.wheel.title	limitedTimeGoldWheel	set:limited_time_activity.json image:btn_0_turntable00	1 1 1 1	1 1 1 1	0.93 0.82 0.51 1	0.93 0.82 0.51 1
+100002	10	1	2023-04-24	2023-04-24		1	gui.limit.time.activity.gold.wheel.title	limitedTimeGoldWheel	set:limited_time_activity.json image:btn_0_turntable00	1 1 1 1	1 1 1 1	0.93 0.82 0.51 1	0.93 0.82 0.51 1
+300001	3	2	2023-04-17	2023-04-24									
+300002	3	2	2023-04-24	2023-05-01									
+300003	3	2	2023-05-03	2023-05-05									
+300004	3	2	2023-05-05	2023-05-12									

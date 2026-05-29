@@ -1,0 +1,46 @@
+{
+  "autoRotateColliderBox": true,
+  "collideEntity": 1,
+  "collider": {
+    "extent": {
+      "x": 1.5,
+      "y": 1.5,
+      "z": 1.5
+    },
+    "height": 0,
+    "radius": 0,
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "type": "Box"
+  },
+  "collisionGroup": 16,
+  "followTarget": false,
+  "gravity": 0,
+  "hitEntityCount": 1,
+  "hitEntitySkill": "myplugin/gen_skill/damage_skill_360341",
+  "hitInterval": 99,
+  "lifeTime": 7,
+  "moveAcc": 0,
+  "moveSpeed": 2.5,
+  "rotateSpeed": 0,
+  "skillId": 360341,
+  "startEffect": {
+    "effect": "g2069_skill_mingren_c2.effect",
+    "pos": {
+      "x": 0,
+      "y": 1,
+      "z": 0
+    },
+    "scale": {
+      "x": 0.6,
+      "y": 0.6,
+      "z": 0.6
+    }
+  },
+  "vanishOnHitPart": true,
+  "vanishSkill": "myplugin/gen_skill/skill_360344",
+  "vanishTime": 0
+}

@@ -1,0 +1,50 @@
+
+
+language_start:g2055_lang_chat
+
+new_chat_new_msg_tips=새로운 메시지{.}
+new_chat_world=세계
+new_chat_system=체계
+new_chat_gang=한 떼
+new_chat_private=개인 채팅
+new_chat_crossServer=크로스 서버
+new_chat_friend=친구
+new_chat_emoji=표현
+new_chat_short_msg=구절
+new_chat_input_tips=클릭하여 입력
+new.chat.send.voice=음성을 보내려면 손을 떼십시오.
+new.chat.cancel.send.voice=보내기를 취소하려면 손을 뗍니다.
+new.chat.voice.fail=음성을 보내지 못했습니다. 다시 시도해 주세요.
+new.chat.can.not.send=너무 자주 말하니 나중에 말해주세요
+new.chat.voice.time.limit=가장 긴 녹음
+new.chat.voice.time.too.short=불충분한 녹음
+new.chat.recent.private.chat=최근 연락
+new.chat.tips.unable_display=메시지 유형을 표시할 수 없습니다.
+new.chat.friend.applyFriend=새 친구
+new.chat.friend.gameFriend=친구들과 놀다
+new.chat.friend.platformFriend=플랫폼 친구
+new.chat.status.online=온라인
+new.chat.status.offline=오프라인
+new.chat.player_delFriend=친구 삭제
+new.chat.player_addFriend=친구 추가
+new.chat.shopTitle =보이스팩
+new.chat.voiceless=음성 수가 부족하여 전송에 실패했습니다.
+new.chat.buyNum={.} 스피커
+new.chat.voiceBuySucc=성공적인 구매
+new.chat.voiceBuyFail=구매 실패
+new.chat.moonCard=무제한 음성 월간 카드
+new.chat.moonTime={.}하늘
+new.chat.moonLess=1일 미만 남음
+new.chat.sureBuy=구매하는 데 {.} 골드 큐브를 사용합니까?
+
+new.chat.invite=초대
+new.chat.invite.isExist=플레이어는 이미 게임에 있습니다.
+new.chat.invite.toofast=너무 자주 초대
+new.chat.invite.succ=초대 성공
+
+new_chat_input_tips_voice=말을 참다
+
+new_chat_reject_all=모두 거부
+new_chat_accept_all=모두 동의
+
+language_end:g2055_lang_chat

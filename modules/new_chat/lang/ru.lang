@@ -1,0 +1,50 @@
+
+
+language_start:g2055_lang_chat
+
+new_chat_new_msg_tips=Новое сообщение {.}
+new_chat_world=Мир
+new_chat_system=Система
+new_chat_gang=Банда
+new_chat_private=Приватный чат
+new_chat_crossServer=Межсерверный
+new_chat_friend=Друг
+new_chat_emoji=Эмоции
+new_chat_short_msg=Короткое сообщение
+new_chat_input_tips=Нажмите, чтобы войти
+new.chat.send.voice=Отпустите, чтобы отправить голосовое сообщение
+new.chat.cancel.send.voice=Отпустите, чтобы отменить отправку
+new.chat.voice.fail=Не удалось отправить голосовое сообщение. Повторите попытку
+new.chat.can.not.send=Вы отправляете сообщения слишком часто, повторите попытку позже
+new.chat.voice.time.limit=Максимальное время записи
+new.chat.voice.time.too.short=Время записи слишком короткое
+new.chat.recent.private.chat=Недавние контакты
+new.chat.tips.unable_display=Тип сообщения не может быть отображен
+new.chat.friend.applyFriend=Новый друг
+new.chat.friend.gameFriend=Играть с друзьями
+new.chat.friend.platformFriend=Друзья
+new.chat.status.online=Онлайн
+new.chat.status.offline=Оффлайн
+new.chat.player_delFriend=Удалить друзей
+new.chat.player_addFriend=Добавить друзей
+new.chat.shopTitle =Голосовой пакет
+new.chat.voiceless=Недостаточно голосовых сообщений, отправка не удалась
+new.chat.buyNum={.} динамики
+new.chat.voiceBuySucc=Успешная покупка
+new.chat.voiceBuyFail=Покупка не удалась
+new.chat.moonCard=Безлимитная карта голосовых сообщений на месяц
+new.chat.moonTime={.} день(дней)
+new.chat.moonLess=Осталось менее 1 дня
+new.chat.sureBuy=Вы хотите потратить {.} З-кубов на покупку?
+
+new.chat.invite=приглашать
+new.chat.invite.isExist=Игрок уже в игре
+new.chat.invite.toofast=Приглашайте слишком часто
+new.chat.invite.succ=Приглашение выполнено
+
+new_chat_input_tips_voice=держать, чтобы говорить
+
+new_chat_reject_all=отвергнуть все
+new_chat_accept_all=согласен со всеми
+
+language_end:g2055_lang_chat

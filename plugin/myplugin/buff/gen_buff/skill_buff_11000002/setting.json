@@ -1,0 +1,15 @@
+{
+  "appendTime": 18000,
+  "attribute": {
+    "expRate": 1
+  },
+  "buffId": 11000002,
+  "buffName": "myplugin/gen_buff/skill_buff_11000002",
+  "deadRemove": false,
+  "duration": 18000,
+  "fixTime": "append",
+  "icon": "gameres|asset/imageset/main:img_0_x2",
+  "location": 1,
+  "name": "buff_name_11000002",
+  "needSave": true
+}

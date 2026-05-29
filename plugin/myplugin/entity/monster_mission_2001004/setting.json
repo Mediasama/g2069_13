@@ -1,0 +1,15 @@
+{
+  "enableAI": true,
+  "name": "monster_mission_2001004",
+  "monsterId": 2001004,
+  "actorName": "asset/Actor/monster/g2069_enemy_heianmingren2.actor",
+  "base": "base_monster",
+  "?reviveTime": "复活时间(帧数)",
+  "reviveTime": 100,
+  "textHeight": 2.8,
+  "?homeSize": "领地范围",
+
+  "hurtAction": "g2069_boy_hurt",
+  "deadAction": "g2069_boy_die",
+  "flyWordOffset": 2
+}

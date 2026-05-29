@@ -1,0 +1,192 @@
+n_awardId	name	n_awardType	n_itemId	s_itemName	n_itemCount	n_quality	s_itemIcon	s_showName	s_showDesc	s_extraParams
+奖励物品ID	备注	物品类型 1物品 2金币 3宠物	相关货物全名	相关货物全名	奖励物品数	品质	图标	物品名多语言	物品描述多语言	游戏的额外参数
+		各游戏自己定义	物品数据是根据ID读表的	物品数据是根据路径的			是否使用配置图标			
+1		1		myplugin/item_revive_03	10					
+2		3	10300501		1					
+3		1		myplugin/item_ticket_02	12					
+4		1		myplugin/pokeball_04	1					
+5		3	10400601		5					
+6		1		myplugin/item_revive_03	1					
+7		1		myplugin/item_ticket_02	8					
+8		1		myplugin/pokeball_04	9					
+9		1		myplugin/pokeball_04	2					
+10		1		myplugin/pokeball_08	2					
+11		1		myplugin/item_ticket_02	10					
+12		1		myplugin/potion_hp_005	2					
+13		1		myplugin/item_ether_04	2					
+14		1		myplugin/potion_hp_004	5					
+15		1		myplugin/item_ether_03	5					
+16		1		myplugin/item_levelup_01	1					
+17		1		myplugin/item_ticket_03	10					
+18		1		myplugin/potion_all	20					
+19		2			10000		set:pokemonRechargeAward.json image:goldIcon			
+20		2			5000		set:pokemonRechargeAward.json image:goldIcon			
+21		1		myplugin/item_bless_07	1					
+22		1		myplugin/item_bless_13	1					
+23		1		myplugin/item_bless_04	1					
+10001	大师球*1	1		myplugin/pokeball_04	1		set:g2038_pokemon_ball.json image:ball_04			
+10002	超能球*1	1		myplugin/pokeball_08	1		set:g2038_pokemon_ball.json image:ball_psy			
+10003	高级物攻糖果*50	1		myplugin/item_bless_07	50					
+10004	高级法攻糖果*50	1		myplugin/item_bless_13	50					
+10005	高级速度糖果*50	1		myplugin/item_bless_04	50					
+10006	高级物防糖果*50	1		myplugin/item_bless_10	50					
+10007	高级法防糖果*50	1		myplugin/item_bless_16	50					
+10008	高级生命糖果*50	1		myplugin/item_bless_01	50					
+10009	中级物攻糖果*10	1		myplugin/item_bless_08	10					
+10010	中级法攻糖果*10	1		myplugin/item_bless_14	10					
+10011	中级速度糖果*10	1		myplugin/item_bless_05	10					
+10012	中级物防糖果*10	1		myplugin/item_bless_11	10					
+10013	中级法防糖果*10	1		myplugin/item_bless_17	10					
+10014	中级生命糖果*10	1		myplugin/item_bless_02	10					
+10015	雷可犬(3星)	3	10401101		1					
+10016	霹雳熊(3星)	3	10100101		1					
+10017	旋风隼(3星)	3	10100201		1					
+10018	罗比兔(3星)	3	10200101		1					
+10019	小咬鲨(3星)	3	10200201		1					
+10020	凯希(3星)	3	10200501		1					
+10021	小火羊(3星)	3	10300101		1					
+10022	火苗熊(3星)	3	10300201		1					
+10023	格斗小子(2星)	3	10100301		1					2
+10024	拉肯(2星)	3	10200301		1					2
+10025	小居蟹(2星)	3	10200401		1					2
+10026	小娜拉(2星)	3	10300401		1					2
+10027	小紫驹(2星)	3	10300501		1					2
+10028	月芽鼠(2星)	3	10400301		1					2
+10029	小荷蛙(2星)	3	10400501		1					2
+10030	阿波菲斯(4星)	3	10500501		1					
+10031	瓦尔基里(4星)	3	10301301		1					
+10032	卡纳尔(4星)	3	10301401		1					
+10033	伯鲁斯(4星)	3	10500401		1					
+20001	人鱼公主	3	10200602		1					
+20002	贝尔	3	10200601		1					
+20003	神奇抽奖券*10	1		myplugin/item_ticket_02	10					
+20004	升级蛋糕*10	1		myplugin/item_levelup_01	10					
+20005	普通抽奖券*20	1		myplugin/item_ticket_03	20					
+20006	暴嗜鲨	3	10200203		1					
+20007	超级生命药水*5	1		myplugin/potion_hp_004	5					
+20008	升级蛋糕*5	1		myplugin/item_levelup_01	5					
+20009	普通抽奖券**10	1		myplugin/item_ticket_03	10					
+20010	神奇抽奖券*2	1		myplugin/item_ticket_02	2					
+20011	长尾蟹	3	10200402		1					
+20012	金币*5000	2			5000		set:pokemonRechargeAward.json image:goldIcon			
+80001	神奇抽奖券*5	1		myplugin/item_ticket_02	5		set:g2038_pokemon_ticket.json image:item_ticket_02			
+80002	金币*5000	2			5000		set:pokemonRechargeAward.json image:goldIcon			
+70011	普通抽奖券*1	1		myplugin/item_ticket_03	1		set:g2038_pokemon_ticket.json image:item_ticket_03			
+70012	升级蛋糕*6	1		myplugin/item_levelup_01	6		set:g2038_pokemon_item.json image:g2038_item_level_001			
+70013	超级球*3	1		myplugin/pokeball_03	3		set:g2038_pokemon_ball.json image:ball_03			
+70014	超能球*1	1		myplugin/pokeball_08	1		set:g2038_pokemon_ball.json image:ball_psy			
+70015	大师球*1	1		myplugin/pokeball_04	1		set:g2038_pokemon_ball.json image:ball_04			
+70016	高级物攻糖果*10	1		myplugin/item_bless_07	10					
+70017	高级法攻糖果*10	1		myplugin/item_bless_13	10					
+70018	神奇抽奖券*10	1		myplugin/item_ticket_02	10		set:g2038_pokemon_ticket.json image:item_ticket_02			
+70021	升级蛋糕*1	1		myplugin/item_levelup_01	1		set:g2038_pokemon_item.json image:g2038_item_level_001			
+70022	神奇抽奖券*1	1		myplugin/item_ticket_02	1		set:g2038_pokemon_ticket.json image:item_ticket_02			
+70023	超级生命药水*6	1		myplugin/potion_hp_004	6		set:g2038_pokemon_potion.json image:g2038_potion_hp_004			
+70024	群体恢复药水*5	1		myplugin/potion_hp_005	5		set:g2038_pokemon_potion.json image:g2038_potion_hp_005			
+70025	金币*30000	2			30000		set:pokemonRechargeAward.json image:goldIcon			
+70026	超能球*1	1		myplugin/pokeball_08	1		set:g2038_pokemon_ball.json image:ball_psy			
+70027	普通抽奖券*10	1		myplugin/item_ticket_03	10		set:g2038_pokemon_ticket.json image:item_ticket_03			
+70028	普通抽奖券*30	1		myplugin/item_ticket_03	30		set:g2038_pokemon_ticket.json image:item_ticket_03			
+70031	普通抽奖券*1	1		myplugin/item_ticket_03	1		set:g2038_pokemon_ticket.json image:item_ticket_03			
+70032	高级球*6	1		myplugin/pokeball_02	6		set:g2038_pokemon_ball.json image:ball_02			
+70033	复活宝石*6	1		myplugin/item_revive_02	6		set:g2038_pokemon_item.json image:g2038_item_revive_002			
+70034	全复宝石*5	1		myplugin/item_revive_03	5		set:g2038_pokemon_item.json image:g2038_item_revive_003			
+70035	大师球*1	1		myplugin/pokeball_04	1		set:g2038_pokemon_ball.json image:ball_04			
+70036	升级蛋糕*6	1		myplugin/item_levelup_01	6		set:g2038_pokemon_item.json image:g2038_item_level_001			
+70037	变异碎片*10	1		myplugin/item_mutate	10		set:g2038_pokemon_ticket.json image:item_mutate			
+70038	神奇抽奖券*10	1		myplugin/item_ticket_02	10		set:g2038_pokemon_ticket.json image:item_ticket_02			
+70041	高级球*1	1		myplugin/pokeball_02	1		set:g2038_pokemon_ball.json image:ball_02			
+70042	神奇抽奖券*1	1		myplugin/item_ticket_02	1		set:g2038_pokemon_ticket.json image:item_ticket_02			
+70043	高级技能回复*6	1		myplugin/item_ether_03	6		set:g2038_pokemon_item.json image:g2038_item_ether_003			
+70044	群体技能回复*5	1		myplugin/item_ether_04	5		set:g2038_pokemon_item.json image:g2038_item_ether_004			
+70045	金币*30000	2			30000		set:pokemonRechargeAward.json image:goldIcon			
+70046	超能球*1	1		myplugin/pokeball_08	1		set:g2038_pokemon_ball.json image:ball_psy			
+70047	普通抽奖券*10	1		myplugin/item_ticket_03	10		set:g2038_pokemon_ticket.json image:item_ticket_03			
+70048	普通抽奖券*30	1		myplugin/item_ticket_03	30		set:g2038_pokemon_ticket.json image:item_ticket_03			
+70051	普通抽奖券*1	1		myplugin/item_ticket_03	1		set:g2038_pokemon_ticket.json image:item_ticket_03			
+70052	升级蛋糕*6	1		myplugin/item_levelup_01	6		set:g2038_pokemon_item.json image:g2038_item_level_001			
+70053	超级球*3	1		myplugin/pokeball_03	3		set:g2038_pokemon_ball.json image:ball_03			
+70054	超能球*1	1		myplugin/pokeball_08	1		set:g2038_pokemon_ball.json image:ball_psy			
+70055	大师球*1	1		myplugin/pokeball_04	1		set:g2038_pokemon_ball.json image:ball_04			
+70056	群体恢复药水*5	1		myplugin/potion_hp_005	5		set:g2038_pokemon_potion.json image:g2038_potion_hp_005			
+70057	全复宝石*5	1		myplugin/item_revive_03	5		set:g2038_pokemon_item.json image:g2038_item_revive_003			
+70058	神奇抽奖券*10	1		myplugin/item_ticket_02	10		set:g2038_pokemon_ticket.json image:item_ticket_02			
+70061	升级蛋糕*1	1		myplugin/item_levelup_01	1		set:g2038_pokemon_item.json image:g2038_item_level_001			
+70062	神奇抽奖券*1	1		myplugin/item_ticket_02	1		set:g2038_pokemon_ticket.json image:item_ticket_02			
+70063	高级物攻糖果*10	1		myplugin/item_bless_07	10					
+70064	高级法攻糖果*10	1		myplugin/item_bless_13	10					
+70065	高级速度糖果*10	1		myplugin/item_bless_04	10					
+70066	金币*30000	2			30000		set:pokemonRechargeAward.json image:goldIcon			
+70067	普通抽奖券*10	1		myplugin/item_ticket_03	10		set:g2038_pokemon_ticket.json image:item_ticket_03			
+70068	普通抽奖券*30	1		myplugin/item_ticket_03	30		set:g2038_pokemon_ticket.json image:item_ticket_03			
+70071	普通抽奖券*1	1		myplugin/item_ticket_03	1		set:g2038_pokemon_ticket.json image:item_ticket_03			
+70072	升级蛋糕*6	1		myplugin/item_levelup_01	6		set:g2038_pokemon_item.json image:g2038_item_level_001			
+70073	高级物防糖果*10	1		myplugin/item_bless_10	10					
+70074	高级法防糖果*10	1		myplugin/item_bless_16	10					
+70075	高级生命糖果*10	1		myplugin/item_bless_01	10					
+70076	大师球*1	1		myplugin/pokeball_04	1		set:g2038_pokemon_ball.json image:ball_04			
+70077	变异碎片*10	1		myplugin/item_mutate	10		set:g2038_pokemon_ticket.json image:item_mutate			
+70078	神奇抽奖券*10	1		myplugin/item_ticket_02	10		set:g2038_pokemon_ticket.json image:item_ticket_02			
+91101	神奇抽奖券*1	1		myplugin/item_ticket_02	1					
+92101	神奇抽奖券*5	1		myplugin/item_ticket_02	5					
+93101	神奇抽奖券*7	1		myplugin/item_ticket_02	7					
+94101	神奇抽奖券*10	1		myplugin/item_ticket_02	10					
+91201	经验蛋糕*50	1		myplugin/item_exp_03	50					
+91202	高级生命药水*5	1		myplugin/potion_hp_003	5					
+91203	复活宝石*1	1		myplugin/item_revive_02	1					
+91204	高级技能恢复*1	1		myplugin/item_ether_03	1					
+92201	升级蛋糕*2	1		myplugin/item_levelup_01	2					
+92202	超级生命药水*2	1		myplugin/potion_hp_004	2					
+92203	全复宝石*1	1		myplugin/item_revive_03	1					
+92204	群体技能恢复*1	1		myplugin/item_ether_04	1					
+92301	超级球*1	1		myplugin/pokeball_03	1					
+92302	海洋球*1	1		myplugin/pokeball_05	1					
+92303	烈焰球*1	1		myplugin/pokeball_06	1					
+92304	森林球*1	1		myplugin/pokeball_07	1					
+92305	高级球*3	1		myplugin/pokeball_02	3					
+93201	神奇抽奖券*3	1		myplugin/item_ticket_02	3					
+93202	普通抽奖券*20	1		myplugin/item_ticket_03	20					
+93203	大师球*1	1		myplugin/pokeball_04	1					
+93204	超能球 *1	1		myplugin/pokeball_08	1					
+94201	霍克	3	10500201		1					
+94202	巫森精灵	3	10400701		1					
+94203	埃文德	3	10300701		1					
+94204	海媚魔蛇	3	10200701		1					
+94205	派勒瑟斯	3	10500301		1					
+94206	皮亚鸟	3	10300302		1					
+94207	人鱼公主	3	10200602		1					
+94208	莱茵	3	10400602		1					
+94209	怠倦哥特	3	10500101		1					
+94210	欧塞顿	3	10200801		1					
+94211	艾德米特	3	10400801		1					
+94212	赫斯托斯	3	10300801		1					
+95101	暴噬蜂	3	10600101		1					
+95102	糖果猫	3	10100601		1					
+95103	芙蕾尔	3	10401001		1					
+95104	奇达	3	10301201		1					
+95105	布拉泽	3	10201201		1					
+95106	雷卓	3	10600301		1					
+95107	伯鲁斯	3	10500401		1					
+95108	瓦尔基里	3	10301301		1					
+95109	卡纳尔	3	10301401		1					
+95110	阿波菲斯	3	10500501		1					
+100001	神奇抽奖券*1	1		myplugin/item_ticket_02	1			item_ticket_02_name	item_ticket_02_name	
+100002	神奇抽奖券*2	1		myplugin/item_ticket_02	2			item_ticket_02_name	item_ticket_02_name	
+100003	神奇抽奖券*3	1		myplugin/item_ticket_02	3			item_ticket_02_name	item_ticket_02_name	
+100004	神奇抽奖券*4	1		myplugin/item_ticket_02	4			item_ticket_02_name	item_ticket_02_name	
+100005	神奇抽奖券*5	1		myplugin/item_ticket_02	5			item_ticket_02_name	item_ticket_02_name	
+100006	神奇抽奖券*6	1		myplugin/item_ticket_02	6			item_ticket_02_name	item_ticket_02_name	
+40003	高级物防糖果*1	1		myplugin/item_bless_10	1					
+40004	高级法防糖果*1	1		myplugin/item_bless_16	1					
+40005	高级生命糖果*1	1		myplugin/item_bless_01	1					
+40011	欧塞顿	3	10200801		1					
+40012	赫斯托斯	3	10300801		1					
+200001	燃烧果实	1	606	asset/imageset/icon:prop_ainilu_icon	1					
+200002	金币	1	99001	gameres|asset/imageset/common:btn_0_gold	20000					
+200003	金币	1	99001	gameres|asset/imageset/common:btn_0_gold	10000					
+200004	金币	1	99001	gameres|asset/imageset/common:btn_0_gold	8000					
+200005	金币	1	99001	gameres|asset/imageset/common:btn_0_gold	6000					
+200006	金币	1	99001	gameres|asset/imageset/common:btn_0_gold	4000					
+200007	纸之舞 	1	608	asset/imageset/icon:prop_xiaonan_icon	1					
+200008	金币	1	99001	gameres|asset/imageset/common:btn_0_gold	10800					
+200009	金币	1	99001	gameres|asset/imageset/common:btn_0_gold	1000					

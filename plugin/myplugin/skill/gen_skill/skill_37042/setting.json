@@ -1,0 +1,25 @@
+{
+  "castAction": "g2069_skill_zuozhu_b2",
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 50,
+    "sound": "g2069_skill_zuozhu_b.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_37042",
+  "missileCount": 1,
+  "skillId": 37042,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": -1,
+    "z": 3
+  },
+  "startWait": 6,
+  "startYaw": 0,
+  "type": "Missile"
+}

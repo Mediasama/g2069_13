@@ -1,0 +1,12 @@
+{
+  "actionMap": {
+    "idle":"g2069_boy_idle"
+  },
+  "removeBuff": [
+    "myplugin/battle_idle_buff"
+  ],
+  "?avoidBuff": [
+    "myplugin/battle_idle_buff"
+  ],
+  "sync": "self"
+}

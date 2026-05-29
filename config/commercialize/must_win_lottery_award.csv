@@ -1,0 +1,14 @@
+n_id	n_activityId	n_sortId	s_giftContent	s_name	s_icon	s_dec	n_weight	n_quality
+奖励id	所属的活动ID	排序id 最大只有12	内容对应 reward_item.csv id	名称	图标	描述	权重	品质
+20002001	20002	2	20001	10200602_name	set:g2038_pokemon_icon.json image:pet_20_2	10200602_name	100	5
+20002002	20002	7	20002	10200601_name	set:g2038_pokemon_icon.json image:pet_20_1	10200601_name	100	5
+20002003	20002	11	20003	item_ticket_02_name	set:g2038_pokemon_ticket.json image:item_ticket_02	item_ticket_02_desc	100	5
+20002004	20002	4	20004	item_levelup_01_name	set:g2038_pokemon_item.json image:g2038_item_level_001	item_levelup_01_desc	1000	4
+20002005	20002	5	20005	item_ticket_03_name	set:g2038_pokemon_ticket.json image:item_ticket_03	item_ticket_03_desc	1000	4
+20002006	20002	9	20006	10200203_name	set:g2038_pokemon_icon.json image:pet_04_3	10200203_name	1000	4
+20002007	20002	6	20007	potion_hp_004_name	set:g2038_pokemon_potion.json image:g2038_potion_hp_004	potion_hp_004_desc	1000	4
+20002008	20002	3	20008	item_levelup_01_name	set:g2038_pokemon_item.json image:g2038_item_level_001	item_levelup_01_desc	1000	4
+20002009	20002	12	20009	item_ticket_03_name	set:g2038_pokemon_ticket.json image:item_ticket_03	item_ticket_03_desc	1000	4
+20002010	20002	8	20010	item_ticket_02_name	set:g2038_pokemon_ticket.json image:item_ticket_02	item_ticket_02_desc	1000	4
+20002011	20002	1	20011	10200402_name	set:g2038_pokemon_icon.json image:pet_17_2	10200402_name	10000	3
+20002012	20002	10	20012	common_coin	set:pokemonRechargeAward.json image:goldIcon	common_coin	10000	3

@@ -1,0 +1,17 @@
+{
+  "attributes": [],
+  "class": "SceneUI",
+  "customProperties": [],
+  "properties": {
+    "isFaceCamera": "true",
+    "isLock": "true",
+    "isTop": "false",
+    "layoutFile": "asset/UI/game_role_common/gui/widget_kill_reward.layout",
+    "name": "SceneUI",
+    "position": "x:0 y:3.7 z:0",
+    "rangeDistance": "1024",
+    "size": "x:1 y:1",
+    "stretch": "false",
+    "useForCollision": "false"
+  }
+}

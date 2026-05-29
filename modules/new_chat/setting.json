@@ -1,0 +1,237 @@
+{
+  "settingKey": "chatSetting",
+  "?crossServer": "跨服聊天开关",
+  "crossServer": true,
+  "msgList": {
+    "crossServer": {
+      "class": "common.base_msg_list"
+    },
+    "world": {
+      "class": "common.base_msg_list"
+    },
+    "system": {
+      "class": "common.base_msg_list"
+    },
+    "notice": {
+      "class": "common.base_msg_list"
+    },
+    "private": {
+      "class": "common.private_msg_list"
+    },
+    "gang": {
+      "class": "common.base_msg_list"
+    }
+  },
+  "?tabConfig": "窗口Tab页配置",
+  "tabConfig": [
+   {
+      "chatPage": "world",
+      "layout": "UI/new_chat/gui/widget_chat_panel_world",
+      "tabWidget": "UI/new_chat/gui/widget_chat_tab_item",
+      "tabNameText": "new_chat_world",
+      "hideRedDot": true,
+      "switch": true
+   },
+    {
+      "chatPage": "system",
+      "layout": "UI/new_chat/gui/widget_chat_panel_system",
+      "tabWidget": "UI/new_chat/gui/widget_chat_tab_item",
+      "tabNameText": "new_chat_system",
+      "hideRedDot": false,
+      "switch": false
+    },
+    {
+      "chatPage": "gang",
+      "layout": "UI/new_chat/gui/widget_chat_panel_gang",
+      "tabWidget": "UI/new_chat/gui/widget_chat_tab_item",
+      "tabNameText": "new_chat_gang",
+      "hideRedDot": false,
+      "switch": false
+    },
+    {
+      "chatPage": "private",
+      "layout": "UI/new_chat/gui/widget_chat_panel_private",
+      "tabWidget": "UI/new_chat/gui/widget_chat_tab_item",
+      "tabNameText": "new_chat_private",
+      "hideRedDot": false,
+      "switch": true
+    },
+    {
+      "chatPage": "friend",
+      "layout": "UI/new_chat/gui/widget_chat_panel_friend",
+      "tabWidget": "UI/new_chat/gui/widget_chat_tab_item",
+      "tabNameText": "new_chat_friend",
+      "hideRedDot": false,
+      "switch": true
+    }
+  ],
+  "tabUIConfig": {
+    "textColor": {
+      "selected": "FF100E0D",
+      "unselected": "FFEBDAA9"
+    }
+  },
+  "?voiceCancelEdge": "扩大触发语音允许的滑动范围，图标的上下左右都增加该值",
+  "voiceCancelEdge": 15,
+  "?chatBubbleSetting": "聊天头顶气泡配置:停留时间（毫秒），每行字数，字体大小,头顶位置",
+  "chatBubbleSetting": {
+    "time": 200,
+    "chatLimit": 150,
+    "offsetY": 3,
+    "bubbleMaxCount": 3,
+    "bubbleWinSize":{
+      "height": 8,
+      "width": 16
+    },
+    "bubbleMinWidth": 60
+  },
+  "?pageMsgMaxCount": "页面消息数量限制",
+  "pageMsgMaxCount": 50,
+  "?miniWndExtraHeight": "展开的额外高度",
+  "miniWndExtraHeight": 100,
+  "?maxHistory": "好友历史消息数量",
+  "maxHistory": 10,
+  "?sendMsgIntervalLimit": "发送聊天时间间隔",
+  "sendMsgIntervalLimit": 3,
+  "?maxMsgSize": "一次输入文本字符上限",
+  "maxMsgSize": 150,
+  "?freeSoundPerDay": "免费语音聊天次数",
+  "freeSoundPerDay" : 30,
+  "?miniChatCfg": "小窗口配置",
+  "miniChatCfg": {
+    "?textLimitChatSwitch": "文本字符串数量限制开关",
+    "textLimitChatSwitch": true,
+    "?textLimitChatLen": "文本字符串数量限制",
+    "textLimitChatLen": 70,
+    "textColor": {
+      "private": "FFFF00FF",
+      "world": "FFFFFFFF",
+      "selfTextColor": "FF00FF00",
+      "defaultTextColor": "FFFFFFFF"
+    },
+    "?miniChatNameMaxLen": "聊天小窗玩家名字显示的长度",
+    "miniChatNameMaxLen":8,
+    "?pageTagSwitch": "频道前缀开关",
+    "pageTagSwitch": false,
+    "?pageTag": "频道前缀配置",
+    "pageTag": {
+      "world": {
+        "color": "FFFFFFFF",
+        "name": "new_chat_world"
+      },
+      "system": {
+        "color": "FFFFFFFF",
+        "name": "new_chat_system"
+      },
+      "private": {
+        "color": "FFFF00FF",
+        "name": "new_chat_private"
+      },
+      "crossServer": {
+        "color": "FFDC143C",
+        "name": "new_chat_crossServer"
+      },
+      "gang": {
+        "color": "FFFFFFFF",
+        "name": "new_chat_gang"
+      }
+    },
+    "?showPageType": "小窗口显示的频道类型",
+    "showPageType": {
+      "world": true,
+      "system": false,
+      "private": true,
+      "crossServer": false,
+      "gang": false
+    },
+    "showEmojiBtn": false,
+    "showVoiceBtn": true
+  },
+  "?emojiWinCfg": "表情窗口配置",
+  "emojiWinCfg": {
+    "emojiTab": [
+      {
+        "tabType": "emoji",
+        "tabNameText": "new_chat_emoji",
+        "layout": "UI/new_chat/gui/widget_chat_emoji_panel"
+      }
+    ],
+    "textColor": {
+      "selected": "FF100E0D",
+      "unselected": "FFEBDAA9"
+    }
+  },
+  "?chatRoomMaxPlayerNum": "每个跨服聊天室的最大人数",
+  "chatRoomMaxPlayerNum": 200,
+  "?lang_list": "语言频道",
+  "lang_list": [
+    {
+      "name": "en",
+      "lang": "English"
+    },
+    {
+      "name": "zh",
+      "lang": "简体中文"
+    },
+    {
+      "name": "vi",
+      "lang": "Tiếng Việt"
+    },
+    {
+      "name": "in",
+      "lang": "Indonesia"
+    },
+    {
+      "name": "pt",
+      "lang": "Português"
+    },
+    {
+      "name": "ru",
+      "lang": "русский"
+    },
+    {
+      "name": "th",
+      "lang": "ภาษาไทย"
+    },
+    {
+      "name": "de",
+      "lang": "Deutsch"
+    },
+    {
+      "name": "ja",
+      "lang": "日本語"
+    },
+    {
+      "name": "ko",
+      "lang": "한국어"
+    },
+    {
+      "name": "es",
+      "lang": "Español"
+    },
+    {
+      "name": "fr",
+      "lang": "Français"
+    },
+    {
+      "name": "it",
+      "lang": "Italiano"
+    },
+    {
+      "name": "tr",
+      "lang": "Türkiye"
+    },
+    {
+      "name": "pl",
+      "lang": "Polski"
+    }
+  ],
+  "friendPanelCfg": {
+    "?showCellNum": "好友列表展开时显示几行",
+    "showCellNum": 3,
+    "onlineStatusColor": {
+      "online": "FF30D178",
+      "offline": "FFFF365C"
+    }
+  }
+}

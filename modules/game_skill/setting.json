@@ -1,0 +1,52 @@
+{
+  "?upOffsetPosY": "冲刺上移偏移量",
+  "upOffsetPosY": 0.2,
+  "?downOffsetPosY": "冲刺下移偏移量",
+  "downOffsetPosY": -0.3,
+  "?initSprintSpeed": "每帧初始前进位移",
+  "initSprintSpeed": 2.5,
+  "?accelerationSprint": "每帧加速度位移",
+  "accelerationSprint": -0.3,
+  "?maxSprintSpeed": "每帧最大位移",
+  "maxSprintSpeed": 8,
+  "?sprintGravity": "冲刺状态+下落状态的重力",
+  "sprintGravity": 0.01,
+  "?sprintAntiGravity": "冲刺状态+下落状态的反重力",
+  "sprintAntiGravity": 0.1,
+  "?battleStateDuration": "战斗状态持续时间",
+  "battleStateDuration": 0.5,
+  "?castSceneEffectDuration": "出招场景特效销毁时间",
+  "castSceneEffectDuration": 6000,
+  "?hitDownState": "击倒相关配置",
+  "hitDownState":
+  {
+    "hitDownAni1Name": "g2069_boy_fall_1",
+    "hitDownAni2Name": "g2069_boy_fall_2",
+    "hitDownAni3Name": "g2069_boy_fall_3",
+    "?hitDownEffect": "倒地特效",
+    "hitDownEffect": "g2069_jump_end.effect"
+  },
+  "storagePowerUpEffect": {
+    "effect": "g2069_storage_end.effect",
+    "once": true,
+    "pos": {
+      "x": 0,
+      "y": 1,
+      "z": 0
+    },
+    "time": 1500
+  },
+  "storagePowerUpSound": "s59999",
+  "storagePowerUpEffectEarly": 0.1,
+  "sprintParam":
+  {
+    "?recoverTimeDelay": "不使用冲刺后多久开始恢复-秒",
+    "recoverTimeDelay": 0.5
+  },
+  "shootDownBuffId": 40004,
+  "?shootDownHitText": "击落信息提示内容",
+  "shootDownHitText": "",
+  "?shootDownCDAdd": "被击落飞行技能CD增加-秒",
+  "shootDownCDAdd": 4,
+  "shootDownSound": "hit_down"
+}

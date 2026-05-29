@@ -1,0 +1,25 @@
+{
+  "castAction": "g2069_skill_ainilu_d2",
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 60,
+    "sound": "g2069_skill_ainilu_d2.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_36064",
+  "missileCount": 1,
+  "skillId": 36064,
+  "startFrom": "foot",
+  "startPitch": 45,
+  "startPos": {
+    "x": 0,
+    "y": 4,
+    "z": 2
+  },
+  "startWait": 0,
+  "startYaw": 0,
+  "type": "Missile"
+}

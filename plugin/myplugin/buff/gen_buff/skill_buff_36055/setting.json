@@ -1,0 +1,13 @@
+{
+  "actionPriority": 9999,
+  "attribute_pct": {
+    "moveSpeed": 1.5
+  },
+  "buffId": 36055,
+  "buffName": "myplugin/gen_buff/skill_buff_36055",
+  "buffSoundKey": "s36055",
+  "deadRemove": true,
+  "flyMode": true,
+  "needSave": false,
+  "partChange": "g2069_buff#aisi_fly"
+}

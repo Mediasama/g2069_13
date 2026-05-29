@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="general_limited_time" imagefile="general_limited_time.png" nativeHorzRes="928" nativeVertRes="1435" autoScaled="vertical">
+	<Image name="btn_0_buy" xPos="558" yPos="100" height="135" width="305"/>
+	<Image name="btn_0_buy2" xPos="168" yPos="100" height="131" width="389"/>
+	<Image name="btn_0_close" xPos="229" yPos="1" height="36" width="34"/>
+	<Image name="btn_0_gift_bag1" xPos="568" yPos="1" height="91" width="86"/>
+	<Image name="btn_0_gift_bag2" xPos="364" yPos="1" height="61" width="59"/>
+	<Image name="btn_0_gift_bag3" xPos="497" yPos="1" height="72" width="70"/>
+	<Image name="btn_0_gift_bag4" xPos="424" yPos="1" height="70" width="72"/>
+	<Image name="icon_egg" xPos="1" yPos="100" height="114" width="166"/>
+	<Image name="img_0_bg" xPos="1" yPos="887" height="535" width="912"/>
+	<Image name="img_0_bubble" xPos="655" yPos="1" height="97" width="179"/>
+	<Image name="img_0_cube" xPos="329" yPos="1" height="40" width="34"/>
+	<Image name="img_0_decoration" xPos="147" yPos="236" height="180" width="658"/>
+	<Image name="img_0_discount" xPos="1" yPos="236" height="147" width="145"/>
+	<Image name="img_0_items" xPos="835" yPos="1" height="98" width="92"/>
+	<Image name="img_0_items2" xPos="272" yPos="417" height="469" width="344"/>
+	<Image name="img_0_light" xPos="1" yPos="417" height="273" width="270"/>
+	<Image name="img_0_line" xPos="1" yPos="1" height="2" width="32"/>
+	<Image name="img_0_number" xPos="61" yPos="1" height="27" width="51"/>
+	<Image name="img_0_time" xPos="34" yPos="1" height="26" width="26"/>
+	<Image name="img_0_time_bottom" xPos="113" yPos="1" height="29" width="115"/>
+	<Image name="img_9_time_bottom" xPos="264" yPos="1" height="37" width="64"/>
+</Imageset>

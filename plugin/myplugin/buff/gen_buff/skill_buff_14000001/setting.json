@@ -1,0 +1,9 @@
+{
+  "addMp": 100,
+  "buffId": 14000001,
+  "buffName": "myplugin/gen_buff/skill_buff_14000001",
+  "deadRemove": true,
+  "duration": 1,
+  "name": "buff_name_14000001",
+  "needSave": false
+}

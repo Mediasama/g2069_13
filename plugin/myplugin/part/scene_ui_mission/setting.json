@@ -1,0 +1,17 @@
+{
+  "attributes": [],
+  "class": "SceneUI",
+  "customProperties": [],
+  "properties": {
+    "isFaceCamera": "true",
+    "isLock": "true",
+    "isTop": "false",
+    "layoutFile": "asset/UI/scene_object/gui/win_mission_info.layout",
+    "name": "SceneUI",
+    "position": "x:0 y:6.5 z:0",
+    "rangeDistance": "1024",
+    "size": "x:1 y:1",
+    "stretch": "false",
+    "useForCollision": "false"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "attribute_pct": {
+    "eleDamage": 0.08,
+    "maxHp": 0.25,
+    "maxMp": 0.1
+  },
+  "buffId": 37043,
+  "buffName": "myplugin/gen_buff/skill_buff_37043",
+  "childActor": {
+    "actorName": "g2069_zuozhu_xuzuonenghu.actor",
+    "pos": {
+      "x": 0,
+      "y": 0,
+      "z": -0.5
+    },
+    "scale": "1.6"
+  },
+  "deadRemove": true,
+  "needSave": false,
+  "removeBuff": [
+    "myplugin/gen_buff/skill_buff_37044"
+  ],
+  "resetSkill": {
+    "skillList": [
+      37044
+    ],
+    "slotList": [
+      4
+    ]
+  }
+}

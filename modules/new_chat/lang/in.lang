@@ -1,0 +1,50 @@
+
+
+language_start:g2055_lang_chat
+
+new_chat_new_msg_tips=Pesan baru {.}
+new_chat_world=Dunia
+new_chat_system=Sistem
+new_chat_gang=Geng
+new_chat_private=Obrolan pribadi
+new_chat_crossServer=lintas server
+new_chat_friend=teman
+new_chat_emoji=Emote
+new_chat_short_msg=Pesan singkat
+new_chat_input_tips=Klik untuk masuk
+new.chat.send.voice=Lepaskan untuk mengirim suara
+new.chat.cancel.send.voice=Lepaskan untuk membatalkan pengiriman
+new.chat.voice.fail=Gagal mengirim pesan suara, coba lagi
+new.chat.can.not.send=Kamu mengirim terlalu sering, silakan coba lagi nanti
+new.chat.voice.time.limit=Batas waktu maksimum perekaman
+new.chat.voice.time.too.short=Waktu perekaman terlalu singkat
+new.chat.recent.private.chat=Kontak terbaru
+new.chat.tips.unable_display=Jenis pesan tidak dapat ditampilkan
+new.chat.friend.applyFriend=Teman baru
+new.chat.friend.gameFriend=Bermain dengan teman
+new.chat.friend.platformFriend=Teman platform
+new.chat.status.online=Online
+new.chat.status.offline=Offline
+new.chat.player_delFriend=Hapus teman
+new.chat.player_addFriend=Tambah teman
+new.chat.shopTitle =Paket suara
+new.chat.voiceless=Sisa pesan suara tidak mencukupi, pengiriman gagal
+new.chat.buyNum={.} pembicara
+new.chat.voiceBuySucc=Pembelian berhasil
+new.chat.voiceBuyFail=Pembelian gagal
+new.chat.moonCard=Kartu Bulanan Suara Sepuasnya
+new.chat.moonTime={.} hari
+new.chat.moonLess=Kurang dari 1 hari lagi
+new.chat.sureBuy=Apakah kamu ingin menghabiskan {.} G Cubes untuk membeli?
+
+new.chat.invite=mengundang
+new.chat.invite.isExist=Pemain sudah ada di dalam game
+new.chat.invite.toofast=Undang terlalu sering
+new.chat.invite.succ=Undangan berhasil
+
+new_chat_input_tips_voice=tahan untuk berbicara
+
+new_chat_reject_all=tolak semua
+new_chat_accept_all=setuju semua
+
+language_end:g2055_lang_chat

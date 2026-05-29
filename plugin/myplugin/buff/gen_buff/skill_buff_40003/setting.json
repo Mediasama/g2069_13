@@ -1,0 +1,11 @@
+{
+  "buffId": 40003,
+  "buffName": "myplugin/gen_buff/skill_buff_40003",
+  "deadRemove": true,
+  "knockDown": true,
+  "knockDownTime": 1,
+  "needSave": false,
+  "removeBuff": [
+    "myplugin/gen_buff/skill_buff_40003"
+  ]
+}

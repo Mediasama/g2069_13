@@ -1,0 +1,75 @@
+{
+  "__OBJ_ID": "c9b04be4-739a-4cc5-9f6b-9a6d770fd9a9",
+  "__OBJ_TYPE": "Instance_MeshPart_Storage",
+  "anchorPoint": {
+    "x": 2.54400014877319,
+    "y": 1.38699531555176,
+    "z": 10.9499979019165
+  },
+  "batchType": "Dynamic",
+  "children": [
+    {
+      "__OBJ_ID": "5963602b-e88a-41df-aa93-359c59962b82",
+      "__OBJ_TYPE": "Instance_EffectPart",
+      "csgShapeEffect": {
+        "asset": "asset/custom_effect/g2069_item_01.effect",
+        "selector": "editor/g2069/asset/custom_effect/g2069_item_01.effect"
+      },
+      "id": "9110887715363258369",
+      "position": {
+        "x": 2.61013317108154,
+        "y": 1.08012807369232,
+        "z": 10.9499979019165
+      },
+      "size": {
+        "x": 2.99999976158142,
+        "y": 3.02671360969543,
+        "z": 2.99999952316284
+      },
+      "templateId": "9110887173539201025",
+      "transform": {
+        "pos": {
+          "x": 0.455816268920898,
+          "y": -0.29418420791626
+        }
+      }
+    }
+  ],
+  "collisionGroup": "8",
+  "collisionUniqueKey": "9110887715365257217",
+  "density": 2.2,
+  "friction": 0.37,
+  "id": "9110887715365257217",
+  "massCenter": {
+    "x": 2.54400014877319,
+    "y": 1.38699531555176,
+    "z": 10.9499979019165
+  },
+  "mesh": "asset/custom_effect/ability_mingren/g2069_mingren_juanzhou.mesh",
+  "mesh_selector": {
+    "asset": "asset/custom_effect/ability_mingren/g2069_mingren_juanzhou.mesh",
+    "selector": "asset/custom_effect/ability_mingren/g2069_mingren_juanzhou.mesh"
+  },
+  "name": "prop_mingren",
+  "position": {
+    "x": 2.54400014877319,
+    "y": 1.38699531555176,
+    "z": 10.9499979019165
+  },
+  "restitution": 0.3,
+  "rotation": {
+    "z": -44.9999923706055
+  },
+  "scale": {
+    "x": 0.578634,
+    "y": 0.578634,
+    "z": 0.578634
+  },
+  "size": {
+    "x": 0.210307031869888,
+    "y": 0.708592891693115,
+    "z": 0.210306763648987
+  },
+  "staticBatchNo": "1",
+  "templateId": "9110875307040473089"
+}

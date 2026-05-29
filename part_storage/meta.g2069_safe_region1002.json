@@ -1,0 +1,42 @@
+{
+  "__OBJ_ID": "6c57a840-a59c-4aa6-89a8-d289414f84a8",
+  "__OBJ_TYPE": "Instance_Part_Storage",
+  "cameraCollideEnable": false,
+  "collisionGroup": "512",
+  "density": 3.4,
+  "friction": 0.4,
+  "id": "9101938487214669825",
+  "massCenter": {
+    "x": -0.894999325275421,
+    "y": 4,
+    "z": -61.919994354248
+  },
+  "material": {
+    "alpha": 0,
+    "color": {
+      "b": 213,
+      "g": 208,
+      "r": 208
+    },
+    "texture": "part_shatu.tga"
+  },
+  "name": "g2069_safe_region1002",
+  "position": {
+    "x": -0.894999325275421,
+    "y": 4,
+    "z": -61.919994354248
+  },
+  "restitution": 0.06,
+  "scale": {
+    "x": 40,
+    "y": 20,
+    "z": 40
+  },
+  "size": {
+    "x": 40,
+    "y": 20,
+    "z": 40
+  },
+  "templateId": "9096315860462895105",
+  "useCollide": false
+}

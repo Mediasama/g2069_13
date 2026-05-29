@@ -1,0 +1,50 @@
+
+
+language_start:g2055_lang_chat
+
+new_chat_new_msg_tips=New message {.}
+new_chat_world=World
+new_chat_system=System
+new_chat_gang=Gang
+new_chat_private=Private chat
+new_chat_crossServer=Cross-server
+new_chat_friend=Friend
+new_chat_emoji=Emotes
+new_chat_short_msg=Short message
+new_chat_input_tips=Click to enter
+new.chat.send.voice=Release to send voice
+new.chat.cancel.send.voice=Release to cancel sending
+new.chat.voice.fail=Failed to send voice message, please try again
+new.chat.can.not.send=You are sending too frequently, please try again later
+new.chat.voice.time.limit=Max time limit of recording
+new.chat.voice.time.too.short=Recording time too short
+new.chat.recent.private.chat=Recent contacts
+new.chat.tips.unable_display=Message type cannot be displayed
+new.chat.friend.applyFriend=New friend
+new.chat.friend.gameFriend=Play with friends
+new.chat.friend.platformFriend=Platform friends
+new.chat.status.online=Online
+new.chat.status.offline=Offline
+new.chat.player_delFriend=Delete friends
+new.chat.player_addFriend=Add friends
+new.chat.shopTitle =Voice pack
+new.chat.voiceless=Insufficient amout of voice messages remaining, sending failed
+new.chat.buyNum={.} speakers
+new.chat.voiceBuySucc=Successful purchase
+new.chat.voiceBuyFail=Purchase failed
+new.chat.moonCard=Unlimited Voice Monthly Card
+new.chat.moonTime={.} day(s)
+new.chat.moonLess=Less than 1 day left
+new.chat.sureBuy=Would you like to spend {.} G Cubes to purchase?
+
+new.chat.invite=invite
+new.chat.invite.isExist=The player is already in the game
+new.chat.invite.toofast=Invite too often
+new.chat.invite.succ=Invitation succeeded
+
+new_chat_input_tips_voice=hold to speak
+
+new_chat_reject_all=reject all
+new_chat_accept_all=agree all
+
+language_end:g2055_lang_chat

@@ -1,0 +1,137 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g2069_enemy_weibo.actor" Originalscale="1.125 1.125 1.125" Skeleton="boy_01.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1" ThreadPriority="1">
+		<SubActors>
+			<SubActor name="monster_base.actor"/>
+		</SubActors>
+		<BodyParts>
+			<BodyPart MasterName="mutex_name_0" SlaveName="group0" LodName="0" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1">
+				<Skin MeshName = "g2069_enemy_weibo_body.skin" ChangeColor = "0 0 0 0" UVSpeed = "0 0" LocalAlpha = "1" LocalBrightnessScale = "1" UseBloom = "false" UseTransparentNearestSlice = "false" OverlayColor = "1 1 1 1" SpecularColor = "1 1 1 1" SpecularCoef = "0.15" SpecularStrength = "1">
+				</Skin>
+				<StaticMesh LocalAlpha = "1">
+					<FileName value="g2069_enemy_weibo_head.mesh"/>
+					<SocketName value="s_head"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<UseBloom value="false"/>
+					<LocalBrightnessScale value="1"/>
+					<UseTransparentNearestSlice value="false"/>
+					<OverlayColor value="1 1 1 1"/>
+					<SpecularColor value="1 1 1 1"/>
+					<SpecularCoef value="0.15"/>
+					<SpecularStrength value="1"/>
+				</StaticMesh>
+				<StaticMesh LocalAlpha = "1">
+					<FileName value="g2069_enemy_weibo_shoes_r.mesh"/>
+					<SocketName value="s_foot_r"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<UseBloom value="false"/>
+					<LocalBrightnessScale value="1"/>
+					<UseTransparentNearestSlice value="false"/>
+					<OverlayColor value="1 1 1 1"/>
+					<SpecularColor value="1 1 1 1"/>
+					<SpecularCoef value="0.15"/>
+					<SpecularStrength value="1"/>
+				</StaticMesh>
+				<StaticMesh LocalAlpha = "1">
+					<FileName value="g2069_enemy_weibo_shoes_l.mesh"/>
+					<SocketName value="s_foot_l"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<UseBloom value="false"/>
+					<LocalBrightnessScale value="1"/>
+					<UseTransparentNearestSlice value="false"/>
+					<OverlayColor value="1 1 1 1"/>
+					<SpecularColor value="1 1 1 1"/>
+					<SpecularCoef value="0.15"/>
+					<SpecularStrength value="1"/>
+				</StaticMesh>
+			</BodyPart>
+			<BodyPart MasterName="mutex_name_1" SlaveName="group1" LodName="0" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1">
+				<StaticMesh LocalAlpha = "1">
+					<FileName value="g2069_enemy_weibo_weapon.mesh"/>
+					<SocketName value="s_hand_r"/>
+					<Position_X value="0"/>
+					<Position_Y value="-0.0103861"/>
+					<Position_Z value="0.0689388"/>
+					<yaw value="72.5"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<UseBloom value="false"/>
+					<LocalBrightnessScale value="1"/>
+					<UseTransparentNearestSlice value="false"/>
+					<OverlayColor value="1 1 1 1"/>
+					<SpecularColor value="1 1 1 1"/>
+					<SpecularCoef value="0.15"/>
+					<SpecularStrength value="1"/>
+				</StaticMesh>
+			</BodyPart>
+			<BodyPart MasterName="mutex_name_2" SlaveName="group2" LodName="0" DefaultUse="false" EdgeColor="1 1 1 1" ColorParams="1 1 1 1">
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="g2069_skill_haijun_a" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2069_skill_base_ground1.anim" BeginTime = "0" Times = "1" Length = "0.233" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<Animation Name = "g2069_skill_base_ground2.anim" BeginTime = "0.26" Times = "1" Length = "0.633" FadeTime = "0.2" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="g2069_skill_wapa_a" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "boy_atstand02.anim" BeginTime = "0.68" Times = "1" Length = "0.7" FadeTime = "0.2" Channel = "upper" TimeScale = "1.4">
+				</Animation>
+				<Animation Name = "g2041_weapon_05_attack01.anim" BeginTime = "0.26" Times = "1" Length = "0.433" FadeTime = "0.2" Channel = "upper" TimeScale = "1">
+				</Animation>
+				<Animation Name = "g2041_weapon_05_idle01.anim" BeginTime = "0" Times = "1" Length = "1.1" FadeTime = "0.25" Channel = "upper" TimeScale = "5">
+				</Animation>
+				<Effect>
+					<FileName value="g2069_skill_wapa_a1.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="0.34"/>
+					<Times value="1"/>
+					<Position_X value="-0.261938"/>
+					<Position_Y value="1.23329"/>
+					<Position_Z value="1.00857"/>
+					<yaw value="-0.500001"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="0.8"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="false"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2041_weapon_05_idle01.anim" BeginTime = "0" Times = "1" Length = "1.1" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="run" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "boy_walk04.anim" BeginTime = "0" Times = "-1" Length = "0.7" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="boy_walk04.anim"/>
+				<Anim Name="boy_atstand02.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

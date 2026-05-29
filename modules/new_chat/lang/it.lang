@@ -1,0 +1,50 @@
+
+
+language_start:g2055_lang_chat
+
+new_chat_new_msg_tips=nuovo messaggio{.}
+new_chat_world=mondo
+new_chat_system=sistema
+new_chat_gang=banda
+new_chat_private=chat privata
+new_chat_crossServer=server incrociato
+new_chat_friend=amico
+new_chat_emoji=espressione
+new_chat_short_msg=frase
+new_chat_input_tips=Clicca per entrare
+new.chat.send.voice=Rilascia per inviare voce
+new.chat.cancel.send.voice=Rilascia per annullare l'invio
+new.chat.voice.fail=Impossibile inviare la voce, riprova
+new.chat.can.not.send=Parlando troppo spesso, parla più tardi
+new.chat.voice.time.limit=registrazione più lunga
+new.chat.voice.time.too.short=Registrazione insufficiente
+new.chat.recent.private.chat=contatto recente
+new.chat.tips.unable_display=Il tipo di messaggio non può essere visualizzato
+new.chat.friend.applyFriend=nuovo amico
+new.chat.friend.gameFriend=giocare con gli amici
+new.chat.friend.platformFriend=amici della piattaforma
+new.chat.status.online=in linea
+new.chat.status.offline=disconnesso
+new.chat.player_delFriend=elimina amico
+new.chat.player_addFriend=Aggiungi amico
+new.chat.shopTitle =Pacchetto vocale
+new.chat.voiceless=Il conteggio delle tue voci è insufficiente, invio non riuscito
+new.chat.buyNum={.} Altoparlanti
+new.chat.voiceBuySucc=acquisto riuscito
+new.chat.voiceBuyFail=Acquisto fallito
+new.chat.moonCard=Tessera mensile vocale illimitata
+new.chat.moonTime={.}cielo
+new.chat.moonLess=Manca meno di 1 giorno
+new.chat.sureBuy=Spendi {.} cubi d'oro per l'acquisto?
+
+new.chat.invite=invitare
+new.chat.invite.isExist=Il giocatore è già in gioco
+new.chat.invite.toofast=Invita troppo spesso
+new.chat.invite.succ=Invito riuscito
+
+new_chat_input_tips_voice=aspetta per parlare
+
+new_chat_reject_all=rifiuta tutto
+new_chat_accept_all=tutti d'accordo
+
+language_end:g2055_lang_chat

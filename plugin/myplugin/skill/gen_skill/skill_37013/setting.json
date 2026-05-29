@@ -1,0 +1,42 @@
+{
+  "castAction": "g2069_skill_lufei_cc2",
+  "castSceneEffect": {
+    "delay": 0.7,
+    "effect": "g2069_skill_lufei_cc.effect",
+    "isFixedPosition": true,
+    "pos": {
+      "x": 0,
+      "y": -2,
+      "z": 0
+    },
+    "scale": {
+      "x": 3.5,
+      "y": 3.5,
+      "z": 3.5
+    },
+    "time": 6000,
+    "yaw": 0
+  },
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 60,
+    "sound": "g2069_skill_lufei_c.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_37013",
+  "missileCount": 1,
+  "skillId": 37013,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": -4,
+    "z": 2
+  },
+  "startWait": 16,
+  "startYaw": 0,
+  "type": "Missile"
+}

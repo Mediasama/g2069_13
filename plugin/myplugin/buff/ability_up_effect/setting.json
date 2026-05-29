@@ -1,0 +1,12 @@
+{
+  "effect": {
+    "effect": "g2069_ability_lvup.effect",
+    "once": true,
+    "pos": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  "deadRemove": true
+}

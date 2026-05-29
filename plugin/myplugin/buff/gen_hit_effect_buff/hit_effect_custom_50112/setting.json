@@ -1,0 +1,17 @@
+{
+  "deadRemove": true,
+  "effect": {
+    "effect": "g2069_hit_1.effect",
+    "once": true,
+    "pos": {
+      "x": 0,
+      "y": 1.5,
+      "z": 0
+    },
+    "scale": {
+      "x": 1.7,
+      "y": 1.7,
+      "z": 1.7
+    }
+  }
+}

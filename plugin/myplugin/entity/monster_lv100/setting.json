@@ -1,0 +1,32 @@
+{
+  "?homeSize": "领地范围",
+  "?reviveTime": "复活时间(帧数)",
+  "actorName": "asset/Actor/monster/g2069_yiwei.actor",
+  "base": "base_monster",
+  "deadAction": "die",
+  "enableAI": true,
+  "flyWordOffset": 2,
+  "textHeight": 10,
+  "?idleProb": "idle的概率",
+  "idleProb": 1,
+  "hurtAction": "hurt",
+  "monsterId": 5003,
+  "name": "monster_lv100",
+  "brightnessScale": 1.4,
+  "reviveTime": 100,
+  "collider": {
+    "height": 11,
+    "offset": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "radius": 5.75,
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "type": "Capsule"
+  }
+}

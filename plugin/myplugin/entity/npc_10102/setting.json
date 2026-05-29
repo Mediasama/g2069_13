@@ -1,0 +1,14 @@
+{
+  "actorName": "asset/Actor/npc/g2069_sandaimu.actor",
+  "base": "npc_base",
+  "interaction": {
+    "offset": {
+      "x": 0,
+      "y": 1,
+      "z": 0
+    },
+    "radius": 3
+  },
+  "headTextHeight": 0.2,
+  "name": "npc_10102_name"
+}

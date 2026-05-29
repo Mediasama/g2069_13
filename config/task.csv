@@ -1,0 +1,73 @@
+n_taskId	s_taskName	n_taskType	n_preTask	s_taskCondition	n_autoIssue	n_branchLogin	n_limitCounts	n_canGiveUp	s_taskCompleteCondition	s_taskRewards	s_rewardCount	s_guideMap	s_guidePos	n_autoGuide	CCC	BBB	AAA
+任务id	任务名	任务类型	前置任务id	任务开启条件	是否自动下发任务	支线任务是否登陆检测下发	支线任务可接次数	是否可以放弃任务	任务完成条件 	任务奖励物品id	任务奖励数量	引导地图 	引导点 	是否自动显示引导	任务奖励示例	任务条件实例	任务条件说明
+		1主线2支线		 条件1$条件2	默认1下发  0不下发	1下发 默认0	默认0 无限	默认0不能 1可以放弃	条件1$条件2	奖励1#奖励2#		地图名	x#y#z	默认1显示 0不显示	填物品别名		
+1001	g2069_task_name_1001	1		BORN#map_muye	1				NPC#NPCsandaimu#100101	role_exp#gold_coin	260#80	map_muye	-1.291#4.074#27.592	1		LEVEL#min#max	角色等级在min和max之间
+1002	g2069_task_name_1002	1	1001		1				KILL#1001#5	role_exp#gold_coin	300#500	map_muye	-16.682#-4.62#-19.402	1	gold_coin 金币	NPC#npc_id#dialog_id	和某个npc完成某个对话，配置npc id和对话id
+1003	g2069_task_name_1001	1	1002		1				TASK#1002$NPC#NPCsandaimu#100102	role_exp#gold_coin	260#80	map_muye	-1.291#4.074#27.592	1	role_exp 角色经验	LOCATION#part_name	到达某个地图的区域
+1004	g2069_task_name_1002	1	1003		1				KILL#1001#5	role_exp#gold_coin	300#500	map_muye	-16.682#-4.62#-19.402	1			
+1005	g2069_task_name_1001	1	1004		1				TASK#1004$NPC#NPCsandaimu#100103	role_exp#gold_coin	460#80	map_muye	-1.291#4.074#27.592	1			
+1006	g2069_task_name_1005	1	1005		1				KILL#1003#5	role_exp#gold_coin	650#600	map_muye	33.823#-4.62#-38.344	1			
+1007	g2069_task_name_1001	1	1006		1				TASK#1006$NPC#NPCsandaimu#100104	role_exp#gold_coin	460#80	map_muye	-1.291#4.074#27.592	1			
+1008	g2069_task_name_1005	1	1007		1				KILL#1003#5	role_exp#gold_coin	696#600	map_muye	33.823#-4.62#-38.344	1			
+1009	g2069_task_name_1003	1	1008		1				LEVEL#10#99999999	role_exp#gold_coin	300#120			0	role_exp 角色经验	LOCATION#part_name	到达某个地图的区域
+1010	g2069_task_name_1004	1	1009		1				TASK#1009$NPC#NPCmingren#300101	role_exp#gold_coin	200#120	map_endervalley	67.502#3.334#215.697	1	ability_exp 能力经验	ITEM#item_id#n	获得某物品n个，配置物品别名和数量
+11001	g2069_task_name_1002	2		LEVEL#0#99999999	0		0	1	KILL#1001#5	role_exp#gold_coin	520#500	map_muye	-16.682#-4.62#-19.402	0		KILL#monster_id#n	杀死某怪物n个，配置怪物id和数量
+11002	g2069_task_name_1005	2		LEVEL#0#99999999	0		0	1	KILL#1003#5	role_exp#gold_coin	733#600	map_muye	33.823#-4.62#-38.344	0		ABILITY#ability_id#min#max	某能力等级达到n，配置能力id和等级范围
+2001	g2069_task_name_2001	1		BORN#map_windmilltown	1				NPC#NPCkebi#200101	role_exp#gold_coin	260#80	map_windmilltown	4.349#-0.784#-31.782	1		TASK#taskId	某个任务是否为完成
+2002	g2069_task_name_2002	1	2001		1				KILL#2001#5	role_exp#gold_coin	300#500	map_windmilltown	4.182#-0.66#-8.552	1		BORN#map_name	选择出生点 地图名map_muye
+2003	g2069_task_name_2001	1	2002		1				TASK#2002$NPC#NPCkebi#200102	role_exp#gold_coin	260#80	map_windmilltown	4.349#-0.784#-31.782	1			
+2004	g2069_task_name_2002	1	2003		1				KILL#2001#5	role_exp#gold_coin	300#500	map_windmilltown	4.182#-0.66#-8.552	1			
+2005	g2069_task_name_2001	1	2004		1				TASK#2004$NPC#NPCkebi#200103	role_exp#gold_coin	460#80	map_windmilltown	4.349#-0.784#-31.782	1			
+2006	g2069_task_name_2005	1	2005		1				KILL#2002#5	role_exp#gold_coin	650#600	map_windmilltown	-24.875#-0.612#-1.533	1			
+2007	g2069_task_name_2001	1	2006		1				TASK#2006$NPC#NPCkebi#200104	role_exp#gold_coin	460#80	map_windmilltown	4.349#-0.784#-31.782	1			
+2008	g2069_task_name_2005	1	2007		1				KILL#2002#5	role_exp#gold_coin	696#600	map_windmilltown	-24.875#-0.612#-1.533	1			
+2009	g2069_task_name_2003	1	2008		1				LEVEL#10#99999999	role_exp#gold_coin	300#120			0			
+2010	g2069_task_name_2004	1	2009		1				TASK#2009$NPC#NPCmingren#300101	role_exp#gold_coin	200#120	map_endervalley	67.502#3.334#215.697	1			
+21001	g2069_task_name_2002	2		LEVEL#0#99999999	0		0	1	KILL#2001#5	role_exp#gold_coin	520#500	map_windmilltown	4.182#-0.66#-8.552	0			
+21002	g2069_task_name_2005	2		LEVEL#0#99999999	0		0	1	KILL#2002#5	role_exp#gold_coin	733#600	map_windmilltown	-24.875#-0.612#-1.533	0			
+3001	g2069_task_name_3001	1		LEVEL#10#99999999$NPC#NPCmingren#300101	1				KILL#3001#5	role_exp#gold_coin	2000#500	map_endervalley	31.129#0.941#129.797	0			
+3002	g2069_task_name_2004	1	3001		1				TASK#3001$NPC#NPCmingren#300102	role_exp#gold_coin	400#400	map_endervalley	67.502#3.334#215.697	1			
+3003	g2069_task_name_3004	1	3002		1				LEVEL#20#99999999	role_exp#gold_coin	4000#500	map_endervalley	67.502#3.334#215.697	0			
+3004	g2069_task_name_3005	1	3003		1				LEVEL#30#99999999	role_exp#gold_coin	4000#650	map_endervalley	67.502#3.334#215.697	0			
+3005	g2069_task_name_3002	1	3004		1				LEVEL#40#99999999	role_exp#gold_coin	4000#850	map_endervalley	67.502#3.334#215.697	0			
+3006	g2069_task_name_3003	1	3005	LEVEL#40#99999999	1				TASK#3005$NPC#NPCnamei#400101	role_exp#gold_coin	5000#1000	navytown	-23.265#11.684#-190.765	1			
+31001	g2069_task_name_31001	2		LEVEL#10#99999999	0		0	1	KILL#3001#8	role_exp#gold_coin	3277#800	map_endervalley	31.129#0.941#129.797	0			
+31002	g2069_task_name_31002	2		LEVEL#20#99999999	0		0	1	KILL#3002#8	role_exp#gold_coin	8455#1000	map_endervalley	31.075#3.632#-42.386	0			
+31003	g2069_task_name_31003	2		LEVEL#30#99999999	0		0	1	KILL#3003#1	role_exp#gold_coin	34516#1300	map_endervalley	-108.892#6.291#163.923	0			
+31004	g2069_task_name_31004	2		TASK#3002	1		1		NPC#endervalley_salesman#300301	role_exp#gold_coin	5000#800	map_endervalley	54.869#0.552#225.48	0			
+32001	g2069_task_name_32001	2	3004		1	1	1		TASK#3004$NPC#npc_motuoyi#11000101	role_exp#gold_coin	5000#1000	map_endervalley	35.552#3.01#224.247	1			
+4001	g2069_task_name_4001	1	3006		1				KILL#4001#5	role_exp#gold_coin	24000#1000	navytown	-8.77#18.28#-124.696	0			
+4002	g2069_task_name_3003	1	4001		1				TASK#4001$NPC#NPCnamei#400102	role_exp#gold_coin	5000#800	navytown	-23.265#11.684#-190.765	1			
+4003	g2069_task_name_4003	1	4002	LEVEL#70#99999999	1				TASK#4002$NPC#desertpalce_woailuo#500101	role_exp#gold_coin	20000#1500	map_desertpalce	-14.121#23.434#169.279	1			
+41001	g2069_task_name_41001	2		LEVEL#40#99999999	0		0	1	KILL#4001#8	role_exp#gold_coin	47068#1900	navytown	-8.77#18.28#-124.696	0			
+41002	g2069_task_name_41002	2		LEVEL#50#99999999	0		0	1	KILL#4002#8	role_exp#gold_coin	83556#2700	navytown	-9.852#31.759#-70.817	0			
+41003	g2069_task_name_41003	2		LEVEL#60#99999999	0		0	1	KILL#4003#1	role_exp#gold_coin	176937#3100	navytown	59.132#33.285#67.288	0			
+5001	g2069_task_name_5001	1	4003		1				KILL#5001#5	role_exp#gold_coin	80000#2000	map_desertpalce	-119.69#21.133#87.964	0			
+5002	g2069_task_name_4003	1	5001		1				TASK#5001$NPC#desertpalce_woailuo#500102	role_exp#gold_coin	40000#1600	map_desertpalce	-14.121#23.434#169.279	1			
+5003	g2069_task_name_5005	1	5002	LEVEL#100#99999999	1				TASK#5002$NPC#npc_fenghuaxiaoxue#600101	role_exp#gold_coin	40000#4200	map_icebergvillage	-7.243#-18.434#-76.772	1			
+51001	g2069_task_name_51001	2		LEVEL#70#99999999	0		0	1	KILL#5001#8	role_exp#gold_coin	133791#3500	map_desertpalce	-119.69#21.133#87.964	0			
+51002	g2069_task_name_51002	2		LEVEL#80#99999999	0		0	1	KILL#5002#8	role_exp#gold_coin	187031#3800	map_desertpalce	-26.994#22.609#-27.892	0			
+51003	g2069_task_name_51003	2		LEVEL#90#99999999	0		0	1	KILL#5003#1	role_exp#gold_coin	310234#4200	map_desertpalce	-71.943#24.661#-126.157	0			
+6001	g2069_task_name_6001	1	5003		1				KILL#6001#6	role_exp#gold_coin	142322#5000	map_icebergvillage	5.65#-0.797#-67.281	0			
+6002	g2069_task_name_5005	1	6001		1				TASK#6001$NPC#npc_fenghuaxiaoxue#600102	role_exp#gold_coin	60000#4000	map_icebergvillage	-7.243#-18.434#-76.772	1			
+6003	g2069_task_name_6002	1	6002	LEVEL#145#99999999	1				TASK#6002$NPC#npc_nikeluobin#700101	role_exp#gold_coin	60000#8000	map_volcanovillage	-76.138#-21.101#-102.955	1			
+61001	g2069_task_name_61001	2		LEVEL#100#99999999	0		0	1	KILL#6001#12	role_exp#gold_coin	284643#8200	map_icebergvillage	5.65#-0.797#-67.281	0			
+61002	g2069_task_name_61002	2		LEVEL#115#99999999	0		0	1	KILL#6002#12	role_exp#gold_coin	365512#8900	map_icebergvillage	-4.415#15.872#2.437	0			
+61003	g2069_task_name_61003	2		LEVEL#130#99999999	0		0	1	KILL#6003#1	role_exp#gold_coin	571335#9600	map_icebergvillage	-61.415#13.872#65.975	0			
+7001	g2069_task_name_7001	1	6003		1				KILL#7001#6	role_exp#gold_coin	280000#6000	map_volcanovillage	-1.731#-38.287#-79.841	0			
+7002	g2069_task_name_6002	1	7001		1				TASK#7001$NPC#npc_nikeluobin#700102	role_exp#gold_coin	100000#4800	map_volcanovillage	-76.138#-21.101#-102.955	1			
+7003	g2069_task_name_7002	1	7002	LEVEL#190#99999999	1				TASK#7002$NPC#npc_kenisi#800101	role_exp#gold_coin	60000#8000	map_skyisland_angel	-11.058#7.399#97.208	1			
+71001	g2069_task_name_71001	2		LEVEL#145#99999999	0		0	1	KILL#7001#12	role_exp#gold_coin	559312#10200	map_volcanovillage	-1.731#-38.287#-79.841	0			
+71002	g2069_task_name_71002	2		LEVEL#160#99999999	0		0	1	KILL#7002#12	role_exp#gold_coin	672243#10900	map_volcanovillage	131.537#-30.493#19.607	0			
+71003	g2069_task_name_71003	2		LEVEL#175#99999999	0		0	1	KILL#7003#1	role_exp#gold_coin	994828#11600	map_volcanovillage	99.523#-34.861#97.741	0			
+8001	g2069_task_name_8001	1	7003		1				KILL#8001#6	role_exp#gold_coin	430000#7000	map_skyisland_angel	-30.345#8.557#45.958	0			
+8002	g2069_task_name_7002	1	8001		1				TASK#8001$NPC#npc_kenisi#800102	role_exp#gold_coin	200000#5200	map_skyisland_angel	-11.058#7.399#97.208	1			
+8003	g2069_task_name_8002	1	8002	LEVEL#235#99999999	1				TASK#8002$NPC#npc_ganfuer#900101	role_exp#gold_coin	120000#8000	map_skyisland_remain	119.467#-137.536#149.476	1			
+81001	g2069_task_name_81001	2		LEVEL#190#99999999	0		0	1	KILL#8001#12	role_exp#gold_coin	930168#14700	map_skyisland_angel	-30.345#8.557#45.958	0			
+81002	g2069_task_name_81002	2		LEVEL#205#99999999	0		0	1	KILL#8002#12	role_exp#gold_coin	1075162#16100	map_skyisland_angel	38.534#23.706#-33.369	0			
+81003	g2069_task_name_81003	2		LEVEL#220#99999999	0		0	1	KILL#8003#1	role_exp#gold_coin	1641125#17800	map_skyisland_angel	-90.962#-52.616#-124.024	0			
+9001	g2069_task_name_9001	1	8003		1				KILL#9001#6	role_exp#gold_coin	700000#8500	map_skyisland_remain	36.036#-137.536#175.864	0			
+9002	g2069_task_name_8002	1	9001		1				TASK#9001$NPC#npc_ganfuer#900102	role_exp#gold_coin	300000#6000	map_skyisland_remain	119.467#-137.536#149.476	0			
+91001	g2069_task_name_91001	2		LEVEL#235#99999999	0		0	1	KILL#9001#12	role_exp#gold_coin	1397212#19200	map_skyisland_remain	36.036#-137.536#175.864	0			
+91002	g2069_task_name_91002	2		LEVEL#250#99999999	0		0	1	KILL#9002#12	role_exp#gold_coin	1574268#20800	map_skyisland_remain	-125.978#-119.472#62.312	0			
+91003	g2069_task_name_91003	2		LEVEL#265#99999999	0		0	1	KILL#9003#1	role_exp#gold_coin	2349350#29900	map_skyisland_remain	-194.864#-134.244#-109.614	0			

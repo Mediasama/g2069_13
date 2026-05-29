@@ -1,0 +1,45 @@
+{
+  "autoRotateColliderBox": true,
+  "collideEntity": 1,
+  "collider": {
+    "extent": {
+      "x": 18,
+      "y": 18,
+      "z": 18
+    },
+    "height": 0,
+    "radius": 0,
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "type": "Box"
+  },
+  "collisionGroup": 32,
+  "followTarget": false,
+  "gravity": 0,
+  "hitEntityEffectCustomName": "hit_effect_custom_36072",
+  "hitEntitySkill": "myplugin/gen_skill/damage_skill_36072",
+  "hitInterval": 4,
+  "lifeTime": 38,
+  "moveAcc": 0,
+  "moveSpeed": 0,
+  "rotateSpeed": 0,
+  "skillId": 36072,
+  "startEffect": {
+    "effect": "g2069_skill_woailuo_b.effect",
+    "pos": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": {
+      "x": 2,
+      "y": 2,
+      "z": 2
+    }
+  },
+  "vanishOnHitPart": true,
+  "vanishTime": 0
+}

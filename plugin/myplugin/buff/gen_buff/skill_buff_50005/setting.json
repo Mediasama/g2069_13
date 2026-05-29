@@ -1,0 +1,21 @@
+{
+  "buffId": 50005,
+  "buffName": "myplugin/gen_buff/skill_buff_50005",
+  "deadRemove": false,
+  "duration": 20,
+  "effect": {
+    "effect": "g2069_miss_zhi.effect",
+    "once": true,
+    "pos": {
+      "x": 0,
+      "y": 1,
+      "z": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "needSave": false
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="gift_bag" imagefile="gift_bag.png" nativeHorzRes="996" nativeVertRes="743" autoScaled="vertical">
+	<Image name="btn_0_close" xPos="63" yPos="1" height="61" width="56"/>
+	<Image name="btn_9_buy" xPos="399" yPos="1" height="130" width="146"/>
+	<Image name="btn_9_buy2" xPos="270" yPos="1" height="86" width="128"/>
+	<Image name="icon_equip_cube_coupons" xPos="120" yPos="1" height="54" width="74"/>
+	<Image name="icon_equip_gold_coupons" xPos="195" yPos="1" height="54" width="74"/>
+	<Image name="img_0_bg" xPos="1" yPos="179" height="563" width="975"/>
+	<Image name="img_0_bubble" xPos="714" yPos="1" height="123" width="281"/>
+	<Image name="img_0_cube" xPos="28" yPos="1" height="38" width="34"/>
+	<Image name="img_0_discount_big" xPos="546" yPos="1" height="177" width="167"/>
+	<Image name="img_0_time" xPos="1" yPos="1" height="26" width="26"/>
+</Imageset>

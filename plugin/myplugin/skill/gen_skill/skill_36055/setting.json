@@ -1,0 +1,15 @@
+{
+  "castAction": "g2069_skill_fly_1",
+  "missileCount": 0,
+  "skillId": 36055,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "startWait": 0,
+  "startYaw": 0,
+  "type": "Fly"
+}

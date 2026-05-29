@@ -1,0 +1,50 @@
+
+
+language_start:g2055_lang_chat
+
+new_chat_new_msg_tips=nouveau message{.}
+new_chat_world=monde
+new_chat_system=système
+new_chat_gang=gang
+new_chat_private=discussion privée
+new_chat_crossServer=serveur croisé
+new_chat_friend=ami
+new_chat_emoji=expression
+new_chat_short_msg=phrase
+new_chat_input_tips=Cliquez pour entrer
+new.chat.send.voice=Relâchez pour envoyer de la voix
+new.chat.cancel.send.voice=Relâcher pour annuler l'envoi
+new.chat.voice.fail=Échec de l'envoi de la voix, veuillez réessayer
+new.chat.can.not.send=Parlant trop souvent, s'il vous plaît parlez plus tard
+new.chat.voice.time.limit=enregistrement le plus long
+new.chat.voice.time.too.short=Enregistrement insuffisant
+new.chat.recent.private.chat=contacts récents
+new.chat.tips.unable_display=Le type de message ne peut pas être affiché
+new.chat.friend.applyFriend=nouvel ami
+new.chat.friend.gameFriend=jouer avec des amis
+new.chat.friend.platformFriend=amis de la plate-forme
+new.chat.status.online=en ligne
+new.chat.status.offline=hors ligne
+new.chat.player_delFriend=supprimer un ami
+new.chat.player_addFriend=Ajouter un ami
+new.chat.shopTitle =Pack Voix
+new.chat.voiceless=Votre nombre de voix est insuffisant, l'envoi a échoué
+new.chat.buyNum={.} haut-parleurs
+new.chat.voiceBuySucc=achat réussi
+new.chat.voiceBuyFail=Échec de l'achat
+new.chat.moonCard=Carte mensuelle voix illimitée
+new.chat.moonTime={.}ciel
+new.chat.moonLess=Moins d'1 jour restant
+new.chat.sureBuy=Dépensez-vous {.} cubes d'or pour acheter ?
+
+new.chat.invite=inviter
+new.chat.invite.isExist=Le joueur est déjà dans le jeu
+new.chat.invite.toofast=Inviter trop souvent
+new.chat.invite.succ=Invitation réussie
+
+new_chat_input_tips_voice=tenir pour parler
+
+new_chat_reject_all=tout rejeter
+new_chat_accept_all=tout d'accord
+
+language_end:g2055_lang_chat

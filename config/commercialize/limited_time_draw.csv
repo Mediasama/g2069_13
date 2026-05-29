@@ -1,0 +1,6 @@
+n_id	n_activityId	n_sequence	n_pondId	s_awardsModel	s_awardsIcon	n_singlePrice	n_dailyDeals	n_tenPrice	n_guaranteeCount
+奖励id	对应活动id	顺序	对应奖池id	大奖展示模型  没有就用池子找大奖	大奖图片跟模型是一个位置的东西 没有就用池子找大奖	单次价格	单次每日优惠比例	十连价格	保底数
+10001001	10001	1	10001001			30	15	300	40
+10001002	10001	2	10001002			30	15	300	40
+10001003	10001	3	10001003			30	15	300	40
+10001004	10001	4	10001004			30	15	300	40

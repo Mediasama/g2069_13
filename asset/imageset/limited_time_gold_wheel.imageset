@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="limited_time_gold_wheel" imagefile="limited_time_gold_wheel.png" nativeHorzRes="735" nativeVertRes="1964" autoScaled="vertical">
+	<Image name="btn_0_turntable" xPos="87" yPos="1" height="172" width="134"/>
+	<Image name="img_0_discount_bg" xPos="1" yPos="1" height="87" width="85"/>
+	<Image name="img_0_turntable01" xPos="1" yPos="1328" height="635" width="613"/>
+	<Image name="img_0_turntable02" xPos="1" yPos="290" height="518" width="525"/>
+	<Image name="img_0_turntable03" xPos="1" yPos="809" height="518" width="525"/>
+	<Image name="img_0_turntable_bg" xPos="222" yPos="1" height="288" width="512"/>
+</Imageset>

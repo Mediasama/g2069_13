@@ -1,0 +1,32 @@
+n_id	n_pool_id	s_item_alias	n_item_num	n_weight	n_floor
+编号	奖池id	物品id别称	道具数量	权重	保底次数
+1	1001	ability_luffy	1	3000	
+2	1001	ability_sauron	1	800	
+3	1001	ability_naruto	1	3000	
+4	1001	ability_sasuke	1	800	
+5	1001	ability_ace	1	200	
+6	1001	ability_enel	1	200	
+7	1001	ability_gaara	1	200	
+8	1001	ability_konan	1	200	
+9	1001	ability_baihuzi	1	100	
+10	1001	ability_peien	1	100	
+11	1002	ability_luffy	1	3000	
+12	1002	ability_sauron	1	800	
+13	1002	ability_naruto	1	3000	
+14	1002	ability_sasuke	1	800	
+15	1002	ability_ace	1	400	
+16	1002	ability_enel	1	400	
+17	1002	ability_gaara	1	400	
+18	1002	ability_konan	1	400	
+19	1002	ability_baihuzi	1	200	
+20	1002	ability_peien	1	200	
+21	1003	ability_luffy	1	3000	
+22	1003	ability_sauron	1	800	
+23	1003	ability_naruto	1	3000	
+24	1003	ability_sasuke	1	800	
+25	1003	ability_ace	1	400	
+26	1003	ability_enel	1	400	
+27	1003	ability_gaara	1	400	
+28	1003	ability_konan	1	400	
+29	1003	ability_baihuzi	1	200	
+30	1003	ability_peien	1	200	

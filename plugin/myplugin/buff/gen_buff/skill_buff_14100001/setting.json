@@ -1,0 +1,9 @@
+{
+  "addMpPct": 0.05,
+  "buffId": 14100001,
+  "buffName": "myplugin/gen_buff/skill_buff_14100001",
+  "deadRemove": true,
+  "duration": 1,
+  "name": "buff_name_14100001",
+  "needSave": false
+}

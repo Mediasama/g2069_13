@@ -1,0 +1,26 @@
+{
+  "castAction": "g2069_skill_mingren_c2",
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 60,
+    "sound": "g2069_skill_mingren_d1.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_360341",
+  "missileCount": 1,
+  "skillId": 360341,
+  "startFrom": "foot",
+  "startPitch": 15,
+  "startPos": {
+    "x": 0,
+    "y": 0.8,
+    "z": 2
+  },
+  "startWait": 2,
+  "startYaw": 0,
+  "targetType": "Camera",
+  "type": "Missile"
+}

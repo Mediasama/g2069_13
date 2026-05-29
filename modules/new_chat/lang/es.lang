@@ -1,0 +1,50 @@
+
+
+language_start:g2055_lang_chat
+
+new_chat_new_msg_tips=Nuevo mensaje {.}
+new_chat_world=Mundo
+new_chat_system=Sistema
+new_chat_gang=Pandilla
+new_chat_private=Chat privado
+new_chat_crossServer=Servidor
+new_chat_friend=Amigos
+new_chat_emoji=Emojis
+new_chat_short_msg=Mensaje corto
+new_chat_input_tips=Pulsa para ingresar
+new.chat.send.voice=Suelta para enviar
+new.chat.cancel.send.voice=Arrastra para cancelar el envío
+new.chat.voice.fail=No se pudo enviar el mensaje de voz, inténtalo nuevamente.
+new.chat.can.not.send=Límite de intentos. Vuelve más tarde.
+new.chat.voice.time.limit=Se excedió el tiempo de grabación.
+new.chat.voice.time.too.short=Tiempo de grabación demasiado corto.
+new.chat.recent.private.chat=Recientes
+new.chat.tips.unable_display=No se puede mostrar este mensaje.
+new.chat.friend.applyFriend=Nuevo amigo
+new.chat.friend.gameFriend=Jugar con amigos
+new.chat.friend.platformFriend=Amigos
+new.chat.status.online=En línea
+new.chat.status.offline=Desconectado
+new.chat.player_delFriend=Eliminar amigo
+new.chat.player_addFriend=Agregar amigo
+new.chat.shopTitle =Paquete de voz
+new.chat.voiceless=Error al enviar.
+new.chat.buyNum={.} Altavoz
+new.chat.voiceBuySucc=?Compra exitosa!
+new.chat.voiceBuyFail=Error de compra.
+new.chat.moonCard=Suscripción de Voz Ilimitada
+new.chat.moonTime={.} día(s)
+new.chat.moonLess=Falta menos de 1 día.
+new.chat.sureBuy=?Deseas usar {.} GCube(s) para completar la compra?
+
+new.chat.invite=invitar
+new.chat.invite.isExist=El jugador ya está en el juego.
+new.chat.invite.toofast=Invitar con demasiada frecuencia
+new.chat.invite.succ=Invitación exitosa
+
+new_chat_input_tips_voice=espera para hablar
+
+new_chat_reject_all=rechazar todo
+new_chat_accept_all=de acuerdo todos
+
+language_end:g2055_lang_chat

@@ -1,0 +1,46 @@
+n_id	n_buffId	tag	s_name	n_duration	n_interval	s_buffEffect	s_buffEffectPos	n_buffScale	s_buffSoundKey	n_dizziness	n_knockDown	n_knockDownTime	n_addHp	n_addHpPct	s_casterLevelScale	n_addMp	n_addMpPct	n_maxHpPct	n_hpRegen	n_attDamagePct	n_eleDamagePct	n_defDamagePct	n_maxMpPct	n_mpRegen	n_moveSpeedPct	n_jumpSpeedPct	n_attCrit	n_attCritDmg	n_skillSpeedUp	n_defDodge	n_defToughPct	s_partChange	n_deadRemove	s_avoidBuff	s_removeBuff	s_actionMap1	s_actionMap2	n_flyMode	s_resetSkill	s_childActor	n_expRate	n_apRate	s_fixTime	n_appendTime	n_location	s_icon	n_needSave
+序号	效果ID	备注	buff名字	持续时间帧(空为永久)	间隔帧	效果特效	特效位置X#y#z	特效缩放默认1	音效key	是否眩晕1是	是否击倒1是	倒地时间-秒	修改血量，固定数值	修改血量，百分比	扣血buff等级缩放	修改精力，增加固定数值	修改精力，每秒百分比	生命值(%)	生命恢复速度(%)	物理攻击力(%)	元素攻击力(%)	防御值(%)	精力值(%)	精力恢复速度(%)	移动速度(%)	跳跃速度(%)	暴击率	暴击伤害	技能冷却时间	闪避率	韧性(%)	外观部件更改partName#skinName	是否死亡移除，默认1移除，0不移除	避让buffID #分隔	移除buffID #分隔	需映射动作 #分隔	映射动作名 #分隔	飞行 默认0 1开启	替换技能 序号,id	子Actor 名称#偏移#缩放	经验获得率	能力经验获得率	多层buff刷新时间类型，reset为重置时间，append为追加时间，max取最大时间	buff追加时间	显示位置	图标	是否退出保存，默认0不保存，1保存
+1	999	减CD测技能用																											-90																		
+2	16010	路飞-被动																								0.25							0														
+3	16020	索隆-被动																							0.2								0														
+4	16030	鸣人-被动																						0.01									0														
+5	16040	佐助-被动																									0.05			0.1			0														
+6	16050	艾斯-被动																												1			0														
+7	10001	通用-免疫普攻																												1			0														
+8	36014	路飞-二档				g2069_lufei_gear2.effect	0#0.6#0													0.1					0.2				-12																		
+9	37014	路飞-二档-觉醒				g2069_lufei_gear3.effect	0#0.6#0													0.1					0.3		0.1		-15																		
+10	36033	鸣人-尾兽化																		0.1			0.25				0.1		-12			g2069_buff#siwei			36033				4,36034								
+11	37033	鸣人-尾兽化-觉醒1																		0.1			0.25				0.1		-12			g2069_buff#siwei1			37033				4,37034								
+12	38033	鸣人-尾兽化-觉醒2																		0.1			0.35				0.1		-15			g2069_buff#siwei1			38033				4,37034#8,2703								
+13	36042	佐助-天照灼烧		100	10	g2069_buff_fire2.effect	0#0.7#0							-0.013	10#0.75,20#0.5,30#0.25																				36042#40001												
+14	37042	佐助-天照控制		10																					-0.8										37042												
+15	36043	佐助-须佐能乎																0.25			0.08		0.1												36044				4,36044	g2069_zuozhu_xuzuonenghu.actor#0,0,-0.5#1.6							
+16	37043	佐助-须佐能乎-觉醒1																0.25			0.08		0.1												37044				4,37044	g2069_zuozhu_xuzuonenghu.actor#0,0,-0.5#1.6							
+17	38043	佐助-须佐能乎-觉醒2																0.35			0.1		0.2												38044				4,37044#8,2704	g2069_zuozhu_xuzuonenghu.actor#0,0,-0.5#1.6							
+18	36055	艾斯-飞行							s36055																1.5							g2069_buff#aisi_fly						1									
+19	36065	艾尼路-飞行							s36065																1.2							g2069_buff#ainilu_fly						1									
+20	36061	艾尼路-减速		40		g2069_buff_lighting.effect	0#0.1#0																		-0.7										36061												
+21	36064	艾尼路-禁锢		20		g2069_buff_lighting2.effect	0#0#0																		-1										36064												
+22	36074	我爱罗-减速		60																					-0.6										36074												
+23	36075	我爱罗-飞行																							0.7							g2069_buff#woailuo_fly				fly#run#idle	g2069_skill_fly_3#g2069_skill_fly_3#g2069_skill_fly_3	1									
+24	36081	小南-减速		8		g2069_hit_1.effect	0#1.5#0																		-0.8										36081												
+25	36085	小南-飞行							s36085																0.9							g2069_buff#xiaonan_fly				fly#run#idle	g2069_xiaonan_run#g2069_xiaonan_run#g2069_xiaonan_idle	1									
+26	40001	通用-灼烧		100	10	g2069_buff_fire.effect	0#0.7#0							-0.01	10#0.75,20#0.5,30#0.25																			16050	40001												
+27	40002	通用-眩晕		20		g2069_buff_xuanyun.effect	0#0#0			1																									40002												
+28	40003	通用-击倒									1	1																							40003												
+29	40004	通用-飞行击倒									1	1.4																							40004												
+30	50001	miss特效-无		20		g2069_miss_none.effect	0#1#0																										0														
+31	50002	miss特效-火		20		g2069_miss_huo.effect	0#1#0																										0														
+32	50003	miss特效-电		20		g2069_miss_dian.effect	0#1#0																										0														
+33	50004	miss特效-沙		20		g2069_miss_sha.effect	0#1#0																										0														
+34	50005	miss特效-纸		20		g2069_miss_zhi.effect	0#1#0																										0														
+35	11000001	双倍经验	buff_name_11000001	36000																													0	11000002	11000002						1		append	36000	1	gameres|asset/imageset/main:img_0_x2	1
+36	11000002	双倍经验	buff_name_11000002	18000																													0								1		append	18000	1	gameres|asset/imageset/main:img_0_x2	1
+37	12000001	双倍能力经验	buff_name_12000001	36000																													0	11000002	11000002							1	append	36000	2	gameres|asset/imageset/main:img_0_x2	1
+38	12000002	双倍能力经验	buff_name_12000002	18000																													0									1	append	18000	2	gameres|asset/imageset/main:img_0_x2	1
+39	13000001	血量+50	buff_name_13000001	1									50																																		
+40	13100001	血量+5%	buff_name_13100001	1										0.05																																	
+41	14000001	精力+100	buff_name_14000001	1												100																															
+42	14100001	精力+5%	buff_name_14100001	1													0.05																														
+43	13100002	血量-5%	buff_name_13100001		10									-0.05																				13100002													
+44	12100001	1.3倍能力经验	buff_name_12100001																														0									0.3			2	gameres|asset/imageset/main:img_0_x15000	

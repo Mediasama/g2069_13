@@ -1,0 +1,14 @@
+---@class StageContentBase : middleclass
+---@field start fun(self : StageContentBase) : void
+---@field update fun(self : StageContentBase) : void
+---@field completed fun(self : StageContentBase) : boolean
+---@field onWaveStart fun(self : StageContentBase) : void
+---@field checkCurrentWaveCompleted fun(self : StageContentBase) : boolean
+---@field checkWaveContinue fun(self : StageContentBase) : boolean
+---@field onMonsterLeave fun(self : StageContentBase, entity : Entity) : void
+---@field getCurrentWave fun(self : StageContentBase) : table
+---@field getMap fun(self : StageContentBase) : table
+---@field destroy fun(self : StageContentBase) : void
+---@field gotoState fun(self : StageContentBase, stateName : string, ...) : void
+---@field getCurrentState fun(self : StageContentBase) : string
+---@field complete fun(self : StageContentBase) : void

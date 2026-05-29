@@ -1,0 +1,25 @@
+{
+  "castAction": "g2069_skill_aisi_a2",
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 40,
+    "sound": "g2069_skill_aisi_a.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_36051",
+  "missileCount": 1,
+  "skillId": 36051,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": -1,
+    "z": 0
+  },
+  "startWait": 5,
+  "startYaw": 0,
+  "type": "Missile"
+}

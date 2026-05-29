@@ -1,0 +1,32 @@
+s_npcId	s_npcShowName	n_dialogGroupID	s_npcShowIcon	s_npcShowTime
+npcID	npc名字多语言	对话组ID	任务标识显示	显示的时间段，不填一直显示
+编辑器里面的npc名称				如：18:00#24:00$00:00#6:00
+NPCsandaimu	NPCsandaimu_show_name	1001	asset/imageset/image/img_0_npc_head.png	
+g2069_dialog_npc_1002	g2069_dialog_npc_show_name_1002			
+g2069_dialog_npc_1003	g2069_dialog_npc_show_name_1003			
+NPCkebi	NPCkebi_show_name	2001	asset/imageset/image/img_0_npc_head.png	
+g2069_dialog_npc_2002	g2069_dialog_npc_show_name_2002			
+g2069_dialog_npc_2003	g2069_dialog_npc_show_name_2003			
+NPCmingren	NPCmingren_show_name	3001	asset/imageset/image/img_0_npc_head.png	
+g2069_dialog_npc_3002	g2069_dialog_npc_show_name_3002			
+endervalley_salesman	endervalley_salesman_show_name_3003	3003		
+endervalley_woailuo	endervalley_woailuo_show_name_3004	3004		
+endervalley_kanjiulang	endervalley_kanjiulang_show_name_3005	3005		
+endervalley_kebi	endervalley_kebi_show_name_3006	3006		
+NPCnamei	NPCnamei_show_name	4001	asset/imageset/image/img_0_npc_head.png	
+g2069_dialog_npc_4002	g2069_dialog_npc_show_name_4002			
+navytown_salesman	navytown_salesman_show_name_4003	4003		
+desertpalce_woailuo	desertpalce_woailuo_show_name_5001	5001	asset/imageset/image/img_0_npc_head.png	
+g2069_dialog_npc_5002	g2069_dialog_npc_show_name_5002			
+desertpalce_salesman	desertpalce_salesman_show_name_5003	5003		
+desertpalce_anbu	desertpalce_anbu_show_name_5004	5004		
+desertpalce_sandaimu	desertpalce_sandaimu_show_name_5005	5005		
+npc_fenghuaxiaoxue	npc_fenghuaxiaoxue_show_name	6001	asset/imageset/image/img_0_npc_head.png	
+npc_nikeluobin	npc_nikeluobin_show_name	7001	asset/imageset/image/img_0_npc_head.png	
+NPCluckyDraw1	NPCluckyDraw_show_name	100001		
+NPCluckyDraw2	NPCluckyDraw_show_name	100002		
+npc_kenisi	npc_kenisi_show_name	8001	asset/imageset/image/img_0_npc_head.png	
+npc_ganfuer	npc_ganfuer_show_name	9001	asset/imageset/image/img_0_npc_head.png	
+entity_npc_mission1	npc_mission_show_name			
+npc_motuoyi	npc_motuoyi_show_name	110001		
+npc_motuoyi_shamo	npc_motuoyi_show_name	110001		

@@ -1,0 +1,41 @@
+{
+  "castSceneEffect": {
+    "delay": 0,
+    "effect": "g2069_skill_mingren_c3.effect",
+    "isFixedPosition": true,
+    "pos": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": {
+      "x": 3,
+      "y": 3,
+      "z": 3
+    },
+    "time": 6000,
+    "yaw": 0
+  },
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 70,
+    "sound": "g2069_skill_mingren_d2.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_360345",
+  "missileCount": 1,
+  "skillId": 360345,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": -11,
+    "z": 0
+  },
+  "startWait": 0,
+  "startYaw": 0,
+  "type": "Missile"
+}

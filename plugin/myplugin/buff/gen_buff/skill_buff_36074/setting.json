@@ -1,0 +1,13 @@
+{
+  "attribute_pct": {
+    "moveSpeed": -0.6
+  },
+  "buffId": 36074,
+  "buffName": "myplugin/gen_buff/skill_buff_36074",
+  "deadRemove": true,
+  "duration": 60,
+  "needSave": false,
+  "removeBuff": [
+    "myplugin/gen_buff/skill_buff_36074"
+  ]
+}

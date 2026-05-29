@@ -1,0 +1,607 @@
+{
+  "passDataCacheContainer": true,
+  "?awakeOpenLevel": "觉醒入口开启等级",
+  "awakeOpenLevel": 30,
+  "?resetPosTime": "重置位置时间，单位秒",
+  "resetPosTime": 300,
+  "/needReport": "数据上报开关",
+  "/teleportSetting": "传送门相关设置",
+  "?attributeData": "属性加点相关",
+  "?bloomSetting": "辉光配置",
+  "?cameraDistanceMax": "摄像机最远距离",
+  "?cameraDistanceMin": "摄像机最远距离",
+  "?cameraZoomSensitive": "双指缩放灵敏度",
+  "?clearData": "清除数据开关",
+  "?defaultAbilities": "默认添加能力",
+  "?defaultAvatar": "默认头像资源",
+  "?enableUpperAnimCrossFade": "移动不打断攻击",
+  "?initTime": "服务器初始时间，13000代表下午13点，有效值为0-23999,建议填入整点 nowTime引擎的 52的用initTime",
+  "?localDebug": "是否本地测试",
+  "?openGM": "是否显示GM按钮",
+  "?pkWaitEnter": "pk等待UI配置",
+  "?timeSpeedRate": "时间缩放倍率，正式值为1",
+  "attributeData": {
+    "?freeResetTimes": "免费重置次数",
+    "?maxIndex": "最大方案索引",
+    "?resetCostCube": "重置方案所需金魔方",
+    "?unlockCostCube": "解锁方案金魔方消耗",
+    "freeResetTimes": 1,
+    "maxIndex": 2,
+    "resetCostCube": 30,
+    "unlockCostCube": 100
+  },
+  "automatch": false,
+  "bagCap": 9,
+  "baseCustomMainWndList": [],
+  "baseMainWndListNormal": [
+    "UI/main/gui/win_game_main",
+    "UI/task/gui/win_task_content",
+    "UI/task/gui/win_task_guide",
+    "UI/main/gui/win_action_control",
+    "UI/new_chat/gui/win_chat_mini",
+    "UI/main/gui/win_action_skill"
+  ],
+  "batchType": "Static",
+  "bloomSetting": {
+    "blurDeviation": 2.587,
+    "blurMultiplier": 1.399,
+    "blurSampler": 7,
+    "enable": true,
+    "enableFullScreen": false,
+    "intensity": 2,
+    "saturation": 1,
+    "threshold": 0.2
+  },
+  "cameraCfg": {
+    "canSwitchView": true,
+    "defaultPitch": 0,
+    "defaultView": 3,
+    "defaultYaw": 0,
+    "viewModeConfig": [
+      {
+        "enable": false,
+        "lockSlideScreen": false,
+        "viewFovAngle": 75
+      },
+      {
+        "distance": 1,
+        "enable": true,
+        "enableCollisionDetect": true,
+        "lockSlideScreen": false,
+        "offset": {
+          "__OBJ_ID": "da08b8f8-97bc-42cd-bc34-a3d77a3f2cb9",
+          "__OBJ_TYPE": "Vector3",
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "viewFovAngle": 75
+      },
+      {
+        "distance": 4,
+        "enable": false,
+        "enableCollisionDetect": true,
+        "lockSlideScreen": false,
+        "offset": {
+          "__OBJ_ID": "4430ebc6-5fa1-4ca1-9a07-4ee51d421fba",
+          "__OBJ_TYPE": "Vector3",
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "viewFovAngle": 75
+      },
+      {
+        "distance": 8,
+        "enable": true,
+        "enableCollisionDetect": true,
+        "lockBodyRotation": false,
+        "lockSlideScreen": false,
+        "offset": {
+          "__OBJ_ID": "85d8907f-941f-448b-9b27-9b32c376d206",
+          "__OBJ_TYPE": "Vector3",
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "viewFovAngle": 65,
+        "?horizontalFollow": true,
+        "?cameraHorizontalFollowWaitTime": 1000,
+        "minPitch":-50,
+        "maxPitch":60
+      },
+      {
+        "enable": true,
+        "lockBodyRotation": false,
+        "lockSlideScreen": false,
+        "lockViewPos": true,
+        "pos": {
+          "__OBJ_ID": "992a5311-125e-4dad-8d69-2b82707e68e4",
+          "__OBJ_TYPE": "Vector3",
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "viewFovAngle": 75
+      }
+    ]
+  },
+  "cameraDistanceMax": 14,
+  "cameraDistanceMin": 0.1,
+  "cameraZoomSensitive": 0.02,
+  "canJoinMidway": true,
+  "clearData": false,
+  "collisionFilteringVersion": 2,
+  "collisionMatrix": [
+    "1",
+    "10",
+    "101",
+    "1100",
+    "11100",
+    "011000",
+    "1000000",
+    "11111111",
+    "110011011",
+    "0100000000"
+  ],
+  "defaultAbilities": [],
+  "defaultAvatar": "set:default_icon.json image:header_icon",
+  "defaultMap": "map_born",
+  "defaultQualityLevel": 0,
+  "dragControlConfig": {
+    "useDragControl": true
+  },
+  "editorFovAngle": 65,
+  "enableAILerpWithForceDir": true,
+  "enableAITryForceDir": true,
+  "enableBakeLight": true,
+  "enableNewLighting": true,
+  "enableNewLightingLow": true,
+  "enableNewVIPEffect": false,
+  "enableUpperAnimCrossFade": true,
+  "engineDefUIEnable": {
+    "actionControl": false,
+    "actionControlMode": "flexibleDragControl",
+    "appMainRole": false,
+    "chat": false,
+    "playerinfo": false,
+    "shortcutBar": false,
+    "toolbar": false
+  },
+  "fixColliderPositionBug": true,
+  "forcePickBlock": true,
+  "glesMinorVersion": 0,
+  "glesVersion": 3,
+  "hideCloud": false,
+  "hideTeamStatusBar": false,
+  "ignoreEmptyStartPos": true,
+  "imguiLighting": false,
+  "initPos": {
+    "map": "map_born",
+    "x": 7,
+    "y": 2.2,
+    "z": 37
+  },
+  "initSensitive": 0.55,
+  "initTime": 5,
+  "isTimeStopped": true,
+  "jumpControlConfig": {
+    "area": [
+      [
+        0,
+        100
+      ],
+      [
+        0,
+        60
+      ],
+      [
+        0,
+        200
+      ],
+      [
+        0,
+        200
+      ]
+    ],
+    "jumpImage": {
+      "name": "jump_imagesets/icon_jump_nor.png"
+    },
+    "jumpPushImage": {
+      "name": "jump_imagesets/icon_jump_act.png"
+    },
+    "useGroup": "_imagesets_"
+  },
+  "lightForLowShaderStaticSkinnedMesh": true,
+  "localDebug": false,
+  "maxPlayers": 15,
+  "meleeAttackHurtDistance": 0,
+  "meshPartStaticMergeRender": true,
+  "minPlayers": 1,
+  "moveStateConfig": {
+    "isShow": false
+  },
+  "needReport": true,
+  "needSave": true,
+  "new_videoSetting": {
+    "AlphaTo0UiList": [
+      "UI/main/gui/win_action_control"
+    ],
+    "HideUiWhiteList": [
+      "UI/new_video/gui/win_video_mode",
+      "videoMode",
+      "UI/main/gui/win_action_control"
+    ]
+  },
+  "noLoadHp": true,
+  "notLerpMotionCoef": 1,
+  "notReadUserSettingCfgAtEditor": true,
+  "nowTime": 10666.6666666667,
+  "oneDayTime": 600,
+  "openGM": false,
+  "partGameStaticBatch": true,
+  "personalSettingUI": {
+    "controlMode": true,
+    "guiSize": false,
+    "horizon": false,
+    "imageQuality": true,
+    "jumpSneakState": false,
+    "luminance": false,
+    "sensitive": true,
+    "volume": true
+  },
+  "personalShop": false,
+  "pkWaitEnter": {
+    "offsetY": 4,
+    "waitTime": 3,
+    "waitWinHeight": 1,
+    "waitWinWidth": 4.8,
+    "?autoCloseSafe": "安全模式自动关闭的时间 秒",
+    "autoCloseSafe": 300
+  },
+  "playerCfg": "myplugin/player1",
+  "playTime": -1,
+  "plugins": [
+    "subscribe_vip",
+    "engine_overwrite",
+    "game_common",
+    "game_time",
+    "connector",
+    "game_coin",
+    "game_role_common",
+    "sound_manager",
+    "game_skill",
+    "fly_text",
+    "jump_control",
+    "monster_manager",
+    "role_state_manager",
+    "game_mission",
+    "scene_object",
+    "task_system",
+    "npc_system",
+    "game_business",
+    "fly_new_tips",
+    "limited_time_activity",
+    "new_limited_time_activity",
+    "report",
+    "new_chat",
+    "g2060_friend",
+    "new_game_report",
+    "new_video",
+    "player_action",
+    "game_book",
+    "rank_overwrite"
+  ],
+  "qualityLevelData": {
+    "maxLevel": [
+      2,
+      0,
+      0.6,
+      0.68,
+      0.00132,
+      3,
+      1.4,
+      1,
+      1,
+      0.22,
+      -0.00132,
+      0.43,
+      1,
+      0,
+      0.1,
+      0,
+      0,
+      2,
+      2,
+      1,
+      0,
+      2,
+      1.8,
+      0,
+      0,
+      0,
+      0,
+      300,
+      150,
+      25
+    ],
+    "midLevel": [
+      0,
+      0,
+      0.6,
+      0.68,
+      0,
+      0,
+      2,
+      3,
+      0,
+      0,
+      0,
+      0.26,
+      1,
+      0,
+      0.1,
+      0,
+      0,
+      2,
+      2,
+      1,
+      0,
+      2,
+      1.8,
+      0,
+      0,
+      0,
+      0,
+      200,
+      150,
+      25
+    ],
+    "minLevel": [
+      0,
+      0,
+      0.6,
+      0.68,
+      0,
+      0,
+      2,
+      3,
+      0,
+      0,
+      0,
+      0.26,
+      1,
+      0,
+      0.1,
+      0,
+      0,
+      2,
+      2,
+      1,
+      0,
+      2,
+      1.8,
+      0,
+      0,
+      0,
+      0,
+      100,
+      100,
+      25
+    ]
+  },
+  "replay": false,
+  "reportSetting": {
+    "debug": false,
+    "disableReportEvent": {
+      "add_currency": true,
+      "player_out": true
+    },
+    "ignoreEvent": {
+      "chat_emoji": true,
+      "chat_voice": true
+    },
+    "uiClose": [],
+    "uiOpen": [],
+    "newUIOpen":{
+      "UI/game_role_common/gui/win_player_attribute": true,
+      "UI/game_role_common/gui/win_simple_ability_bag": true,
+      "UI/game_role_common/gui/win_item_bag": true,
+      "UI/rank/gui/win_rank": true,
+      "UI/game_business/gui/win_game_shop": true,
+      "UI/setting/gui/win_new_setting": true,
+      "UI/player_action/gui/win_player_action": true
+    },
+    "newUIClose":{
+      "UI/game_role_common/gui/win_player_attribute": true,
+      "UI/game_role_common/gui/win_simple_ability_bag": true,
+      "UI/game_role_common/gui/win_item_bag": true,
+      "UI/rank/gui/win_rank": true,
+      "UI/game_business/gui/win_game_shop": true,
+      "UI/setting/gui/win_new_setting": true,
+      "UI/player_action/gui/win_player_action": true
+    },
+    "useGameFpsReport": true
+  },
+  "reportTime": 1200,
+  "screenSpaceCull": false,
+  "skillJack": {
+    "AJackArea": [
+      [
+        0,
+        -40
+      ],
+      [
+        0,
+        -40
+      ],
+      [
+        0,
+        120
+      ],
+      [
+        0,
+        120
+      ]
+    ],
+    "hideBJack": true,
+    "lineSkills": [
+      {
+        "hAlign": 2,
+        "itemSpace": 30,
+        "jackNum": 2,
+        "jackSize": 80,
+        "vAlign": 1,
+        "xOffset": -50,
+        "yOffset": 0
+      },
+      {
+        "hAlign": 1,
+        "itemSpace": 30,
+        "jackNum": 4,
+        "jackSize": 80,
+        "vAlign": 0,
+        "xOffset": 0,
+        "yOffset": 50
+      }
+    ],
+    "sectorSkills": [
+      {
+        "deltaAngle": 45,
+        "jackNum": 3,
+        "jackSize": 88,
+        "radius": 170,
+        "startAngle": 270
+      }
+    ]
+  },
+  "startPos": [
+    {
+      "map": "map_born",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  ],
+  "team": [],
+  "teammateHurt": false,
+  "teleportSetting": {
+    "/randomRadius": "传送位置偏移",
+    "randomRadius": 3
+  },
+  "timeSpeedRate": 1,
+  "topTeamInfo": {
+    "teamDieIcon": "flag_textures/flag_die",
+    "teamDieIconArea": [
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        -7
+      ],
+      [
+        0,
+        20
+      ],
+      [
+        0,
+        20
+      ]
+    ],
+    "teamInfoArea": [
+      [
+        0,
+        -5
+      ],
+      [
+        0,
+        -3
+      ],
+      [
+        0,
+        53.45
+      ],
+      [
+        0,
+        17
+      ]
+    ]
+  },
+  "?magmaPartHurtBuff": "岩浆零件伤害buff",
+  "magmaPartHurtBuff": 13100002,
+  "?cleanDataVersion": "清除数据的版本号",
+  "cleanDataVersion": 3,
+  "useHalfImageSize": true,
+  "useNewCollisionFiltering": true,
+  "useNewFirstViewer": true,
+  "useNewQuadConfig": true,
+  "useNewUI": true,
+  "useVoxelTerrain": true,
+  "vars": {
+    "__OBJ_ID": [],
+    "__OBJ_TYPE": [],
+    "entity": [],
+    "global": [],
+    "ui": []
+  },
+  "subscribe_vipSetting": {
+    "?abilityExpAddition": "订阅会员能力经验加成百分比 20 是%20, 这里只用来订阅界面显示",
+    "abilityExpAddition": 30,
+    "?abilityExpBuffId": "订阅会员能力经验加成 的buffID",
+    "abilityExpBuffId": 12100001,
+    "?heightVipRewardList": "高V 奖励的永久能力别称列表",
+    "heightVipRewardList": [
+        "ability_aceshu",
+        "ability_enelshu",
+        "ability_gaarashu",
+        "ability_konanshu"
+    ],
+    "?subscribeRewardItem": "订阅奖励描述显示item",
+    "subscribeRewardItem": [
+      {
+        "?itemText": "描述多语言",
+        "itemText": "subscribe_reward_tips1",
+        "?itemParma": "多语言的参数队列，对应 subscribe_vipSetting 的某个key",
+        "itemParma": [
+          "abilityExpAddition"
+        ]
+      }
+    ],
+    "?vipRewardItem": "订阅VIP特权描述显示item",
+    "vipRewardItem": [
+      [
+        {
+          "?itemText": "普V奖励描述多语言1",
+          "itemText": "common_vip_reward_tips1",
+          "?itemParma": "多语言的参数队列，对应 subscribe_vipSetting 的某个key",
+          "itemParma": [
+          ]
+        }
+      ],
+      [
+        {
+          "?itemText": "高V奖励描述多语言1",
+          "itemText": "premium_vip_reward_tips1",
+          "?itemParma": "多语言的参数队列，对应 subscribe_vipSetting 的某个key",
+          "itemParma": [
+          ]
+        },
+        {
+          "?itemText": "高V奖励描述多语言2",
+          "itemText": "common_vip_reward_tips1",
+          "?itemParma": "多语言的参数队列，对应 subscribe_vipSetting 的某个key",
+          "itemParma": [
+          ]
+        }
+      ]
+    ]
+  },
+  "waitAtInitPos": false,
+  "waitGoTime": 0,
+  "waitPlayerTime": 0,
+  "waitStartTime": 0,
+  "?defaultBornMap": "强制设定出生地图",
+  "defaultBornMap": "map_muye"
+}

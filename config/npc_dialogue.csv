@@ -1,0 +1,86 @@
+n_dialogId	n_dialogGroupID	s_openCondition	n_dialogueTimes	s_dialogueText	s_dialogueInput	s_replyList	n_showShopId	n_showTaskId	n_luckyDrawId	n_mission_group	CCC	BBB	AAA
+对话id	对话组ID	对话开启条件	对话次数	对话内容	对话内容插入值	回复id列表	是否展示商品	是否展示任务	是否抽奖NPC	是否副本NPC	对话内容插入值实例	任务条件实例	任务条件说明
+		条件1$条件2	不填不限次数		val1$val2	id1#id2#id3	商品ID	任务ID	抽奖组ID	副本组ID			
+100101	1001	BORN#map_muye	1	g2069_dialog_content_100101							LEVEL 当前等级	LEVEL#min#max	角色等级在min和max之间
+100102	1001	TASK#1002	1	g2069_dialog_content_100102							TEXT# val TEXT表示插入val的值	NPC#npc_id#dialog_id	和某个npc完成某个对话，配置npc id和对话id
+100103	1001	TASK#1004	1	g2069_dialog_content_100103									
+100104	1001	TASK#1006	1	g2069_dialog_content_100104									
+100201	1001	TASK#1008		g2069_dialog_content_100201		1#111002#111001						LOCATION#part_name	到达某个地图的区域
+100301	1003			g2069_dialog_content_100301		1#3#11005							
+200101	2001	BORN#map_windmilltown	1	g2069_dialog_content_200101								ITEM#item_id#n	获得某物品n个，配置物品别名和数量
+200102	2001	TASK#2002	1	g2069_dialog_content_200102								KILL#monster_id#n	杀死某怪物n个，配置怪物id和数量
+200103	2001	TASK#2004	1	g2069_dialog_content_200103									
+200104	2001	TASK#2006	1	g2069_dialog_content_200104									
+200201	2001	TASK#2008		g2069_dialog_content_200201		1#211002#211001						ABILITY#ability_id#min#max	某能力等级达到n，配置能力id和等级范围
+200301	2003			g2069_dialog_content_200301		1#3#21005							
+300101	3001	LEVEL#10#999999	1	g2069_dialog_content_300101								TASK#taskId	某个任务是否为完成
+300102	3001	TASK#3001	1	g2069_dialog_content_300102									
+300201	3001	TASK#3001		g2069_dialog_content_300201		1#311003#311002#311001							
+300301	3003	TASK#3002	1	g2069_dialog_content_300302									
+300302	3003			g2069_dialog_content_300301		1#31006#31008							
+300401	3004			g2069_dialog_content_300401									
+300501	3005			g2069_dialog_content_300501									
+300601	3006			g2069_dialog_content_300601									
+400101	4001	TASK#3005$LEVEL#40#99999999	1	g2069_dialog_content_400101									
+400102	4001	TASK#4001	1	g2069_dialog_content_400102									
+400103	4001	TASK#4001		g2069_dialog_content_400201		1#411003#411002#411001							
+400301	4003			g2069_dialog_content_400301		1#41006#41008							
+500101	5001	TASK#4002	1	g2069_dialog_content_500101									
+500102	5001	TASK#5001	1	g2069_dialog_content_500102									
+500103	5001	TASK#5001		g2069_dialog_content_500201		1#511003#511002#511001							
+500301	5003			g2069_dialog_content_500301		1#51006#51008							
+500401	5004			g2069_dialog_content_500401									
+500501	5005			g2069_dialog_content_500501									
+600101	6001	TASK#5002	1	g2069_dialog_content_600101									
+600102	6001	TASK#6001	1	g2069_dialog_content_600102									
+600103	6001	TASK#6001		g2069_dialog_content_600103		1#611003#611002#611001							
+700101	7001	TASK#6002	1	g2069_dialog_content_700101									
+700102	7001	TASK#7001	1	g2069_dialog_content_700102									
+700103	7001	TASK#7001		g2069_dialog_content_700103		1#711003#711002#711001							
+800101	8001	TASK#7002	1	g2069_dialog_content_800101									
+800102	8001	TASK#8001	1	g2069_dialog_content_800102									
+800103	8001	TASK#8001		g2069_dialog_content_800103		1#811003#811002#811001							
+900101	9001	TASK#8002	1	g2069_dialog_content_900101									
+900102	9001	TASK#9001	1	g2069_dialog_content_900102									
+900103	9001	TASK#9001		g2069_dialog_content_900103		1#911003#911002#911001							
+1001				g2069_task_start_tips									
+1002				g2069_task_un_receive_tips									
+1003				g2069_transfer_success_tips									
+1004				g2069_transfer_fail_tips									
+1100101						1#11004		11001					
+1100102						1#11003		11002					
+1100103						1#11006	14						
+2100101						1#21004		21001					
+2100102						1#21003		21002					
+2100103						1#11006	14						
+3100101						1#31003		31001					
+3100102						1#31004		31002					
+3100103						1#31005		31003					
+3100104						1#31007	2						
+3100105						1#31009	4						
+4100101						1#41003		41001					
+4100102						1#41004		41002					
+4100103						1#41005		41003					
+4100104						1#41007	3						
+4100105						1#41009	5						
+5100101						1#51003		51001					
+5100102						1#51004		51002					
+5100103						1#51005		51003					
+5100104						1#51007	6						
+5100105						1#51009	9						
+6100101						1#61003		61001					
+6100102						1#61004		61002					
+6100103						1#61005		61003					
+7100101						1#71003		71001					
+7100102						1#71004		71002					
+7100103						1#71005		71003					
+8100101						1#81003		81001					
+8100102						1#81004		81002					
+8100103						1#81005		81003					
+9100101						1#91003		91001					
+9100102						1#91004		91002					
+9100103						1#91005		91003					
+6200101	100001			g2069_dialog_reward_tips		1#91001			1				
+6200102	100002			g2069_dialog_reward_tips		1#91001			1				
+11000101	110001	TASK#3004$LEVEL#30#99999999	1	g2069_dialog_mission_task									
+11000102	110001	LEVEL#30#99999999		g2069_dialog_mission_tips		1#92210001				1			

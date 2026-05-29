@@ -1,0 +1,55 @@
+{
+  "autoRotateColliderBox": true,
+  "collideEntity": 1,
+  "collider": {
+    "extent": {
+      "x": 7,
+      "y": 5,
+      "z": 5
+    },
+    "height": 0,
+    "radius": 0,
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "type": "Box"
+  },
+  "collisionGroup": 32,
+  "followTarget": false,
+  "gravity": 0,
+  "hitBuff": "36064",
+  "hitEntityEffectCustomName": "hit_effect_custom_50122",
+  "hitEntitySkill": "myplugin/gen_skill/damage_skill_50122",
+  "hitInterval": 99,
+  "lifeTime": 30,
+  "moveAcc": 0,
+  "moveSpeed": 1.6,
+  "rotateSpeed": 0,
+  "skillId": 50122,
+  "startEffect": {
+    "effect": "g2069_skill_ainilu_b2.effect",
+    "pos": {
+      "x": 0,
+      "y": 2,
+      "z": 3
+    },
+    "scale": {
+      "x": 10,
+      "y": 10,
+      "z": 10
+    }
+  },
+  "startSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 50,
+    "sound": "g2069_skill_ainilu_b2.mp3",
+    "volume": 1
+  },
+  "vanishOnHitPart": true,
+  "vanishTime": 0
+}

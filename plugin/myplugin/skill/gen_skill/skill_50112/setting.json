@@ -1,0 +1,27 @@
+{
+  "castAction": "g2069_skill_oumu_a",
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 30,
+    "sound": "g2069_skill_oumu_a.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_50112",
+  "missileCount": 1,
+  "skillId": 50112,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": 0,
+    "z": 1
+  },
+  "startWait": 12,
+  "startYaw": 0,
+  "target": "self",
+  "targetType": "Self",
+  "type": "Missile"
+}

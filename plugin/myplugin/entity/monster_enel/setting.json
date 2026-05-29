@@ -1,0 +1,17 @@
+{
+  "?homeSize": "领地范围",
+  "?reviveTime": "复活时间(帧数)",
+  "actorName": "asset/Actor/monster/g2069_enemy_enel.actor",
+  "base": "base_monster",
+  "deadAction": "g2069_boy_die",
+  "enableAI": true,
+  "flyWordOffset": 2,
+  "homeSize": 5,
+  "hurtAction": "g2069_boy_hurt",
+  "monsterId": 9003,
+  "name": "monster_enel",
+  "?idleProb": "idle的概率",
+  "idleProb": 1,
+  "reviveTime": 100,
+  "textHeight": 2.8
+}

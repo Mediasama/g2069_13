@@ -1,0 +1,17 @@
+{
+  "actionMap": {
+    "fly": "g2069_skill_fly_3",
+    "idle": "g2069_skill_fly_3",
+    "run": "g2069_skill_fly_3"
+  },
+  "actionPriority": 9999,
+  "attribute_pct": {
+    "moveSpeed": 0.7
+  },
+  "buffId": 36075,
+  "buffName": "myplugin/gen_buff/skill_buff_36075",
+  "deadRemove": true,
+  "flyMode": true,
+  "needSave": false,
+  "partChange": "g2069_buff#woailuo_fly"
+}

@@ -1,0 +1,3 @@
+n_id	n_activityId	n_sequence	n_pondId	n_price	n_dailyDeals	n_radius	n_aSpeed	n_maxSpeed	n_highSpeedWhirl	n_minSpeed
+奖励id	对应活动id	顺序	对应奖池id	价格	单次每日优惠价格	半径	加速度 启动 减速	最大速度	最大速度后转几圈	最小速度 最后停止前 达到后转一圈就找终点位置
+100001001	100003	1	100001001	50	25	188	-1	-12	1	-12

@@ -1,0 +1,9 @@
+{
+  "attribute": {
+    "defDodge": 1
+  },
+  "buffId": 10001,
+  "buffName": "myplugin/gen_buff/skill_buff_10001",
+  "deadRemove": false,
+  "needSave": false
+}

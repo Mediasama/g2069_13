@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="subscribe_new_game_vip" imagefile="subscribe_new_game_vip.png" nativeHorzRes="1100" nativeVertRes="2009" autoScaled="vertical">
+	<Image name="btn_0_arrow1" xPos="1" yPos="1" height="70" width="42"/>
+	<Image name="btn_0_arrow2" xPos="44" yPos="1" height="70" width="42"/>
+	<Image name="btn_0_close" xPos="87" yPos="1" height="40" width="40"/>
+	<Image name="btn_0_subscription" xPos="128" yPos="1" height="78" width="334"/>
+	<Image name="btn_0_subscription2" xPos="463" yPos="1" height="78" width="334"/>
+	<Image name="btn_0_subscription_entrance" xPos="798" yPos="1" height="88" width="108"/>
+	<Image name="btn_0_subscription_entrance2" xPos="907" yPos="1" height="86" width="106"/>
+	<Image name="chb_0_1" xPos="1" yPos="90" height="73" width="156"/>
+	<Image name="chb_0_2" xPos="158" yPos="90" height="73" width="156"/>
+	<Image name="img_0_dot" xPos="315" yPos="90" height="18" width="18"/>
+	<Image name="img_0_dot2black" xPos="334" yPos="90" height="18" width="18"/>
+	<Image name="img_0_subscript1" xPos="353" yPos="90" height="60" width="90"/>
+	<Image name="img_0_subscript2" xPos="444" yPos="90" height="60" width="90"/>
+	<Image name="img_0_subscript3" xPos="535" yPos="90" height="60" width="90"/>
+	<Image name="img_0_v" xPos="626" yPos="90" height="94" width="142"/>
+	<Image name="img_0_v2black" xPos="769" yPos="90" height="94" width="142"/>
+	<Image name="img_9_big_bottom1" xPos="1" yPos="185" height="604" width="1033"/>
+	<Image name="img_9_big_bottom2" xPos="1" yPos="790" height="604" width="1033"/>
+	<Image name="img_9_big_bottom3black" xPos="1" yPos="1395" height="604" width="1033"/>
+	<Image name="img_9_bottom2" xPos="1035" yPos="1395" height="548" width="64"/>
+	<Image name="img_9_bottom3" xPos="1" yPos="2000" height="8" width="8"/>
+	<Image name="img_9_bottom3black" xPos="10" yPos="2000" height="8" width="8"/>
+	<Image name="img_9_line" xPos="19" yPos="2000" height="2" width="4"/>
+	<Image name="img_9_line2black" xPos="24" yPos="2000" height="2" width="4"/>
+</Imageset>

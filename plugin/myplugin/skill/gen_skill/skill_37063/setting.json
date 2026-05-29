@@ -1,0 +1,42 @@
+{
+  "castAction": "g2069_skill_ainilu_c2",
+  "castSceneEffect": {
+    "delay": 0,
+    "effect": "g2069_skill_ainilu_cc.effect",
+    "isFixedPosition": true,
+    "pos": {
+      "x": 0,
+      "y": 0,
+      "z": 10
+    },
+    "scale": {
+      "x": 1.2,
+      "y": 1.2,
+      "z": 1.2
+    },
+    "time": 6000,
+    "yaw": 0
+  },
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 60,
+    "sound": "g2069_skill_ainilu_c2.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_37063",
+  "missileCount": 1,
+  "skillId": 37063,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": -1.5,
+    "z": 10
+  },
+  "startWait": 2,
+  "startYaw": 0,
+  "type": "Missile"
+}

@@ -1,0 +1,29 @@
+n_id	s_attr_id	n_attr_type	s_name	s_desc	s_icon	n_base_value	n_max_value	n_min_value	s_comp_attr_ids	s_inc_rates	n_sort_index	
+序号	一级属性id	属性类型（1为基础属性，2为加点属性，3是其他属性）	名称	描述	图标	初始值	上限值	最小值	加点属性id，多个用#隔开	二级属性对应增长比例	排序	
+1	maxHp	1				200			health		1	生命值 
+2	hpRegen	1				0.02	0.1		health		2	生命恢复速度 
+3	attDamage	1				10			attack		3	物理攻击力 
+4	eleDamage	1				10			eleattack		4	元素攻击力
+5	attDominant	1				10			attack		5	物理霸气 
+6	eleDominant	1				10			eleattack		6	元素霸气
+7	defDamage	1				10			health		7	防御值
+8	maxMp	1				100			energy		8	精力值 
+9	mpRegen	1				0.04	0.1		energy		9	精力值恢复速度 
+10	moveSpeed	1				0.4	2		energy		10	移动速度 
+11	jumpSpeed	1				0.8	4		energy		11	跳跃速度 
+12	attCrit	1				0.05	1				12	暴击率 
+13	attCritDmg	1				1.2	2				13	暴击 
+14	defDodge	1				0					14	闪避 
+15	defTough	1				0					15	韧性 
+16	health	2	health		gameres|asset/imageset/role:img_0_life	0					16	生命 
+17	attack	2	attack		gameres|asset/imageset/role:img_0_attack	0					17	物理攻击
+18	eleattack	2	eleattack		gameres|asset/imageset/role:img_0_agile	0					18	元素攻击
+19	energy	2	energy		gameres|asset/imageset/role:img_0_energy	0					19	耐力 
+20	attPrivilege	1				0					20	攻击特权修正 
+21	dailyExp	1				0					21	每日经验值 
+22	expRate	1				1					22	经验获得率 
+23	dailyCoin	1				0					23	每日金币上限 
+24	coinRate	1				1					24	金币获得率 
+25	apRate	1				1					25	能力经验获得率
+26	jumpCount	1				2			energy		26	跳跃次数
+27	dashCount	1				8			energy		27	冲刺次数

@@ -1,0 +1,31 @@
+{
+  "__OBJ_ID": "76dc02fa-811b-41d3-9791-40cd28c249b1",
+  "__OBJ_TYPE": "Instance_Part_Storage",
+  "batchType": "Dynamic",
+  "cameraCollideEnable": false,
+  "collisionGroup": "8",
+  "density": 2.2,
+  "friction": 0.37,
+  "id": "9078071080679964673",
+  "massCenter": {
+    "x": -28.992000579834,
+    "y": 1.49990010261536,
+    "z": 30.3800010681152
+  },
+  "name": "ability_item",
+  "position": {
+    "x": -28.992000579834,
+    "y": 1.49990010261536,
+    "z": 30.3800010681152
+  },
+  "restitution": 0.3,
+  "shape": "2",
+  "size": {
+    "x": 0.999999940395355,
+    "y": 0.999999940395355,
+    "z": 0.99999988079071
+  },
+  "templateId": "9078070946509864961",
+  "useCollide": false,
+  "useGravity": false
+}

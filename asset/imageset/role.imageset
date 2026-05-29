@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="role" imagefile="role.png" nativeHorzRes="419" nativeVertRes="623" autoScaled="vertical">
+	<Image name="btn_9_reset" xPos="1" yPos="50" height="49" width="128"/>
+	<Image name="btn_9_upgrade" xPos="362" yPos="1" height="48" width="48"/>
+	<Image name="chb_0_add" xPos="130" yPos="50" height="53" width="134"/>
+	<Image name="chb_9_normal" xPos="6" yPos="1" height="4" width="4"/>
+	<Image name="chb_9_selected" xPos="265" yPos="50" height="53" width="32"/>
+	<Image name="img_0_agile" xPos="86" yPos="1" height="39" width="42"/>
+	<Image name="img_0_attack" xPos="270" yPos="1" height="45" width="42"/>
+	<Image name="img_0_character_bg" xPos="1" yPos="115" height="507" width="417"/>
+	<Image name="img_0_combat" xPos="313" yPos="1" height="47" width="48"/>
+	<Image name="img_0_defense" xPos="223" yPos="1" height="44" width="46"/>
+	<Image name="img_0_energy" xPos="176" yPos="1" height="44" width="46"/>
+	<Image name="img_0_life" xPos="129" yPos="1" height="44" width="46"/>
+	<Image name="img_9_attributes_bg" xPos="298" yPos="50" height="64" width="16"/>
+	<Image name="img_9_line" xPos="1" yPos="1" height="2" width="4"/>
+	<Image name="ipt_9_add_dot" xPos="11" yPos="1" height="8" width="8"/>
+	<Image name="pbar_9_role_lv1" xPos="20" yPos="1" height="23" width="32"/>
+	<Image name="pbar_9_role_lv2" xPos="53" yPos="1" height="23" width="32"/>
+</Imageset>

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="npc_dialogue" imagefile="npc_dialogue.png" nativeHorzRes="827" nativeVertRes="320" autoScaled="vertical">
+	<Image name="btn_0_arrow" xPos="1" yPos="1" height="34" width="37"/>
+	<Image name="btn_0_reply" xPos="246" yPos="1" height="85" width="285"/>
+	<Image name="img_0_bubble" xPos="1" yPos="87" height="232" width="825"/>
+	<Image name="img_0_name" xPos="39" yPos="1" height="61" width="206"/>
+</Imageset>

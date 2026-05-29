@@ -1,0 +1,42 @@
+{
+  "castAction": "g2069_skill_baihuzi_c2",
+  "castSceneEffect": {
+    "delay": 0,
+    "effect": "g2069_skill_baihuzi_c2.effect",
+    "isFixedPosition": true,
+    "pos": {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+    "scale": {
+      "x": 2.5,
+      "y": 2.5,
+      "z": 2.5
+    },
+    "time": 6000,
+    "yaw": 0
+  },
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 70,
+    "sound": "g2069_skill_baihuzi_c.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_36093",
+  "missileCount": 1,
+  "skillId": 36093,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": -13,
+    "z": 0
+  },
+  "startWait": 2,
+  "startYaw": 0,
+  "type": "Missile"
+}

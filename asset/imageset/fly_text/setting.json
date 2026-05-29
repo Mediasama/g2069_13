@@ -1,0 +1,46 @@
+[
+    {
+        "?atlas": "怪物普通伤害",
+        "atlas": 1,
+        "folder": "white"
+    },
+    {
+        "?atlas": "自己受到普通伤害",
+        "atlas": 2,
+        "folder": "red",
+        "useAnim": "secondAnim"
+    },
+	{
+        "?atlas": "暴击伤害",
+        "atlas": 3,
+        "folder": "critical"
+    },
+    {
+        "?atlas": "其他玩家普通伤害",
+        "atlas": 4,
+        "folder": "white"
+    },
+    {
+        "?atlas": "闪避",
+        "atlas": 5,
+        "folder": "miss"
+    },
+    {
+        "?atlas": "UI白字",
+        "atlas": 6,
+        "imageSet": "write_numbers",
+        "duration": 20
+    },
+    {
+        "?atlas": "玩家自己的闪避",
+        "atlas": 7,
+        "folder": "miss",
+        "useAnim": "secondAnim"
+    },
+    {
+        "?atlas": "击落飞行玩家",
+        "atlas": 8,
+        "imageSet": "write_numbers",
+        "useAnim": "secondAnim"
+    }
+]

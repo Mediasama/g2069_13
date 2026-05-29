@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="lucky_spin" imagefile="lucky_spin.png" nativeHorzRes="2012" nativeVertRes="986" autoScaled="vertical">
+	<Image name="btn_0_illustrate" xPos="1" yPos="1" height="41" width="42"/>
+	<Image name="btn_0_turntable" xPos="44" yPos="1" height="168" width="129"/>
+	<Image name="img_0_discount_bg" xPos="174" yPos="1" height="126" width="119"/>
+	<Image name="img_0_turntable01" xPos="294" yPos="1" height="659" width="659"/>
+	<Image name="img_0_turntable02" xPos="954" yPos="1" height="528" width="528"/>
+	<Image name="img_0_turntable03" xPos="1483" yPos="1" height="528" width="528"/>
+	<Image name="img_9_congratulations" xPos="1" yPos="661" height="324" width="430"/>
+</Imageset>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="in_game_people_tips" imagefile="in_game_people_tips.png" nativeHorzRes="432" nativeVertRes="84" autoScaled="vertical">
+	<Image name="img_9_bubble_blue" xPos="1" yPos="1" height="52" width="90"/>
+	<Image name="img_9_bubble_red" xPos="92" yPos="1" height="52" width="90"/>
+	<Image name="pbar_0_power1" xPos="183" yPos="1" height="82" width="82"/>
+	<Image name="pbar_0_power2" xPos="266" yPos="1" height="82" width="82"/>
+	<Image name="pbar_0_power3" xPos="349" yPos="1" height="82" width="82"/>
+</Imageset>

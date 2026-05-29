@@ -1,0 +1,70 @@
+{
+  "__OBJ_ID": "3911e52e-5483-4394-8e8f-d13269bc5336",
+  "__OBJ_TYPE": "Instance_MeshPart_Storage",
+  "anchorPoint": {
+    "x": -1.13500022888184,
+    "y": 1.3453643321991,
+    "z": 11.1469993591309
+  },
+  "batchType": "Dynamic",
+  "children": [
+    {
+      "__OBJ_ID": "edc46ec8-8609-48e3-8922-5a953ac099bb",
+      "__OBJ_TYPE": "Instance_EffectPart",
+      "csgShapeEffect": {
+        "asset": "asset/custom_effect/g2069_item_01.effect",
+        "selector": "editor/g2069/asset/custom_effect/g2069_item_01.effect"
+      },
+      "id": "9110885527784030209",
+      "position": {
+        "x": -1.135,
+        "y": 1.03586,
+        "z": 11.147
+      },
+      "size": {
+        "x": 2.99999976158142,
+        "y": 3.02671360969543,
+        "z": 2.99999952316284
+      },
+      "templateId": "9110885337858785281",
+      "transform": {
+        "pos": {
+          "y": -0.75
+        }
+      }
+    }
+  ],
+  "collisionGroup": "8",
+  "collisionUniqueKey": "9110885527787880449",
+  "density": 2.2,
+  "friction": 0.37,
+  "id": "9110885527787880449",
+  "massCenter": {
+    "x": -1.13500022888184,
+    "y": 1.3453643321991,
+    "z": 11.1469993591309
+  },
+  "mesh": "asset/Mesh/prop/g2069_prop_baihuzi.mesh",
+  "mesh_selector": {
+    "asset": "asset/Mesh/prop/g2069_prop_baihuzi.mesh",
+    "selector": "asset/Mesh/prop/g2069_prop_baihuzi.mesh"
+  },
+  "name": "prop_baihuzi",
+  "position": {
+    "x": -1.13500022888184,
+    "y": 1.3453643321991,
+    "z": 11.1469993591309
+  },
+  "restitution": 0.3,
+  "scale": {
+    "x": 0.412677,
+    "y": 0.412677,
+    "z": 0.412676
+  },
+  "size": {
+    "x": 0.475044250488281,
+    "y": 0.653460264205933,
+    "z": 0.401208311319351
+  },
+  "templateId": "9110866936681136129"
+}

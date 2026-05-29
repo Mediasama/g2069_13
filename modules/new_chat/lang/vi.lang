@@ -1,0 +1,50 @@
+
+
+language_start:g2055_lang_chat
+
+new_chat_new_msg_tips=Tin mới {.}
+new_chat_world=Thế giới
+new_chat_system=Hệ thống
+new_chat_gang=Hội
+new_chat_private=Riêng tư
+new_chat_crossServer=Liên server
+new_chat_friend=Bạn bè
+new_chat_emoji=Biểu cảm
+new_chat_short_msg=Chat nhanh
+new_chat_input_tips=Nhấn để nhập
+new.chat.send.voice=Thả để gửi tin nhắn thoại
+new.chat.cancel.send.voice=Thả để hủy gửi
+new.chat.voice.fail=Gửi tin nhắn thoại thất bại, hãy thử lại
+new.chat.can.not.send=Gửi quá nhiều, hãy thử lại sau
+new.chat.voice.time.limit=Ghi âm quá dài
+new.chat.voice.time.too.short=Ghi âm quá ngắn
+new.chat.recent.private.chat=Liên hệ gần đây
+new.chat.tips.unable_display=Dạng tin nhắn không thể hiển thị
+new.chat.friend.applyFriend=Bạn bè mới
+new.chat.friend.gameFriend=Bạn chơi cùng
+new.chat.friend.platformFriend=Bạn nền tảng
+new.chat.status.online=Trực tuyến
+new.chat.status.offline=Ngoại tuyến
+new.chat.player_delFriend=Xóa bạn
+new.chat.player_addFriend=Kết bạn
+new.chat.shopTitle =Gói tin nhắn thoại
+new.chat.voiceless=Đã hết số lần, gửi thất bại
+new.chat.buyNum={.} Loa
+new.chat.voiceBuySucc=Mua thành công
+new.chat.voiceBuyFail=Mua thất bại
+new.chat.moonCard=Thẻ chat thoại tháng
+new.chat.moonTime={.} ngày
+new.chat.moonLess=Còn chưa đủ 1 ngày
+new.chat.sureBuy=Xác nhận tiêu {.} Khối Vàng để mua?
+
+new.chat.invite=mời
+new.chat.invite.isExist=Người chơi đã ở trong trò chơi
+new.chat.invite.toofast=Mời quá thường xuyên
+new.chat.invite.succ=Lời mời đã thành công
+
+new_chat_input_tips_voice=giữ để nói
+
+new_chat_reject_all=từ chối tất cả
+new_chat_accept_all=đồng ý tất cả
+
+language_end:g2055_lang_chat

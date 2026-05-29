@@ -1,0 +1,50 @@
+
+
+language_start:g2055_lang_chat
+
+new_chat_new_msg_tips=neue Nachricht{.}
+new_chat_world=Welt
+new_chat_system=System
+new_chat_gang=Gang
+new_chat_private=privater Chat
+new_chat_crossServer=serverübergreifend
+new_chat_friend=Freund
+new_chat_emoji=Ausdruck
+new_chat_short_msg=Phrase
+new_chat_input_tips=Klicken Sie, um einzutreten
+new.chat.send.voice=Lassen Sie los, um die Stimme zu senden
+new.chat.cancel.send.voice=Lassen Sie los, um das Senden abzubrechen
+new.chat.voice.fail=Sprachübertragung fehlgeschlagen, bitte versuchen Sie es erneut
+new.chat.can.not.send=Sprechen Sie zu oft, sprechen Sie bitte später
+new.chat.voice.time.limit=längste Aufnahme
+new.chat.voice.time.too.short=Unzureichende Aufzeichnung
+new.chat.recent.private.chat=kürzlicher Kontakt
+new.chat.tips.unable_display=Nachrichtentyp kann nicht angezeigt werden
+new.chat.friend.applyFriend=neuer Freund
+new.chat.friend.gameFriend=mit Freunden spielen
+new.chat.friend.platformFriend=Plattform Freunde
+new.chat.status.online=online
+new.chat.status.offline=offline
+new.chat.player_delFriend=Freund löschen
+new.chat.player_addFriend=Freund hinzufügen
+new.chat.shopTitle =Sprachpaket
+new.chat.voiceless=Ihre Stimmenanzahl ist unzureichend, das Senden ist fehlgeschlagen
+new.chat.buyNum={.} Lautsprecher
+new.chat.voiceBuySucc=erfolgreicher Kauf
+new.chat.voiceBuyFail=Fehlgeschlagener Kauf
+new.chat.moonCard=Unbegrenzte Sprachmonatskarte
+new.chat.moonTime={.}Himmel
+new.chat.moonLess=Weniger als 1 Tag übrig
+new.chat.sureBuy=Gibst du {.} Goldwürfel aus, um sie zu kaufen?
+
+new.chat.invite=einladen
+new.chat.invite.isExist=Der Spieler ist bereits im Spiel
+new.chat.invite.toofast=Lade zu oft ein
+new.chat.invite.succ=Einladung erfolgreich
+
+new_chat_input_tips_voice=halten, um zu sprechen
+
+new_chat_reject_all=Alles ablehnen
+new_chat_accept_all=stimme allen zu
+
+language_end:g2055_lang_chat

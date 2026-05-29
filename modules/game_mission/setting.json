@@ -1,0 +1,11 @@
+{
+  "?missionCounts": "玩家每天可进入副本组次数,副本组可不同",
+  "missionCounts": [
+    {
+      "?missionGroup": "副本组ID",
+      "missionGroup": 1,
+      "?missionNum": "副本组可进入次数",
+      "missionNum": 10
+    }
+  ]
+}

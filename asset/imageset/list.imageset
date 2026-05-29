@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="list" imagefile="list.png" nativeHorzRes="1174" nativeVertRes="719" autoScaled="vertical">
+	<Image name="chb_9_1" xPos="21" yPos="1" height="50" width="16"/>
+	<Image name="chb_9_2" xPos="55" yPos="1" height="16" width="16"/>
+	<Image name="img_0_1" xPos="204" yPos="1" height="41" width="56"/>
+	<Image name="img_0_2" xPos="318" yPos="1" height="41" width="56"/>
+	<Image name="img_0_3" xPos="261" yPos="1" height="41" width="56"/>
+	<Image name="img_0_bg" xPos="1" yPos="159" height="559" width="1172"/>
+	<Image name="img_0_combat" xPos="138" yPos="1" height="28" width="32"/>
+	<Image name="img_0_lv" xPos="171" yPos="1" height="28" width="32"/>
+	<Image name="img_0_name" xPos="105" yPos="1" height="28" width="32"/>
+	<Image name="img_0_platform" xPos="594" yPos="1" height="157" width="439"/>
+	<Image name="img_0_ranking" xPos="72" yPos="1" height="28" width="32"/>
+	<Image name="img_9_1bottom" xPos="16" yPos="1" height="4" width="4"/>
+	<Image name="img_9_2bottom" xPos="1" yPos="1" height="4" width="4"/>
+	<Image name="img_9_3bottom" xPos="11" yPos="1" height="4" width="4"/>
+	<Image name="img_9_bottom" xPos="38" yPos="1" height="64" width="16"/>
+	<Image name="img_9_line" xPos="6" yPos="1" height="2" width="4"/>
+	<Image name="img_9_ownbottom" xPos="375" yPos="1" height="65" width="218"/>
+</Imageset>

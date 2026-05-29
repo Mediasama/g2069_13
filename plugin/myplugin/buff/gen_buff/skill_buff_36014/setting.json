@@ -1,0 +1,25 @@
+{
+  "attribute_pct": {
+    "attDamage": 0.1,
+    "moveSpeed": 0.2
+  },
+  "buffId": 36014,
+  "buffName": "myplugin/gen_buff/skill_buff_36014",
+  "deadRemove": true,
+  "effect": {
+    "effect": "g2069_lufei_gear2.effect",
+    "once": true,
+    "pos": {
+      "x": 0,
+      "y": 0.6,
+      "z": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "needSave": false,
+  "skillSpeedUp": -0.12
+}

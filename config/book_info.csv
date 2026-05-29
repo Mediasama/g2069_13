@@ -1,0 +1,13 @@
+n_Id	n_abilityId	s_abilityRole	n_showPosY
+id	能力ID	图鉴展示Icon	图鉴Y坐标偏移
+序号		角色icon	0 原点 -10 向上偏移10
+1	601	asset/imageset/book:img_0_role5	-20
+2	602	asset/imageset/book:img_0_role4	-10
+3	603	asset/imageset/book:img_0_role2	0
+4	604	asset/imageset/book:img_0_role3	-5
+5	605	asset/imageset/book:img_0_role10	-10
+6	606	asset/imageset/book:img_0_role7	-15
+7	607	asset/imageset/book:img_0_role1	-5
+8	608	asset/imageset/book:img_0_role6	0
+9	609	asset/imageset/book:img_0_role8	-10
+10	610	asset/imageset/book:img_0_role9	-20

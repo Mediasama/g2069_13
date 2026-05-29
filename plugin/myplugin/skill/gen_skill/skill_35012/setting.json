@@ -1,0 +1,27 @@
+{
+  "castAction": "g2069_skill_base_punch2",
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 40,
+    "sound": "g2069_skill_base_punch.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_35012",
+  "missileCount": 1,
+  "skillId": 35012,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": -1.5,
+    "z": -1
+  },
+  "startWait": 0,
+  "startYaw": 0,
+  "target": "self",
+  "targetType": "Self",
+  "type": "Missile"
+}

@@ -1,0 +1,47 @@
+{
+  "settingKey": "rankSetting",
+  "/newRankType": "排行榜的关键key，和下面ranks的key一致,注意这个key必须在平台保持唯一性，所以需要加gameId前缀",
+  "newRankType": [
+    "g2069_Rank",
+    "g2069_Rank_Global"
+  ],
+  "ranks": {
+    "g2069_Rank": {
+      "db": "redis",
+      "size": 200,
+      "expireType": "forever",
+      "?scoreChangeThenRequest": "true表示如果自己的分数没有变化，则请求立即更新排行榜服务器也不会因为该玩家向平台请求，只返回服务器缓存数据，默认为false",
+      "scoreChangeThenRequest": false,
+      "/maxSize": "排行版的key支持的最大的member的数量，默认为1000,平台最大排maxSize个数据，超过这个数量的玩家，不会在排行榜（有新人飙升的会替换掉maxSize内的玩家）",
+      "maxSize": 200,
+      "/loginUpdateScore": "玩家登陆是否需要上报一次自己的排行数据，true需要",
+      "loginUpdateScore": true,
+      "/scoreFuncName": "获得自己排行榜分数数据的函数名，业务自己重写Player:getNewRankScore()",
+      "scoreFuncName": "getNewRankScore",
+      "/reportScoreLimit": "自己上报的分数限制，true：上报什么，保存什么，false平台只保存历史上报的最大值",
+      "reportScoreLimit": true
+    },
+    "g2069_Rank_Global": {
+      "db": "redis",
+      "size": 200,
+      "expireType": "forever",
+      "?scoreChangeThenRequest": "true表示如果自己的分数没有变化，则请求立即更新排行榜服务器也不会因为该玩家向平台请求，只返回服务器缓存数据，默认为false",
+      "scoreChangeThenRequest": false,
+      "/maxSize": "排行版的key支持的最大的member的数量，默认为1000,平台最大排maxSize个数据，超过这个数量的玩家，不会在排行榜（有新人飙升的会替换掉maxSize内的玩家）",
+      "maxSize": 200,
+      "/loginUpdateScore": "玩家登陆是否需要上报一次自己的排行数据，true需要",
+      "loginUpdateScore": true,
+      "/scoreFuncName": "获得自己排行榜分数数据的函数名，业务自己重写Player:getNewRankScore()",
+      "scoreFuncName": "getNewRankScore",
+      "/reportScoreLimit": "自己上报的分数限制，true：上报什么，保存什么，false平台只保存历史上报的最大值",
+      "reportScoreLimit": true,
+      "isGlobal": true
+    }
+  },
+  "rankScentUI": {
+    "ui_offset": [0,3.6,-0.2],
+    "ui_rotation": 0,
+    "ui_size": 1.3,
+    "entity_scale": [2.3,2,2]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "autoRotateColliderBox": true,
+  "collideEntity": 1,
+  "collider": {
+    "extent": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "height": 6,
+    "radius": 2,
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "type": "Cylinder"
+  },
+  "collisionGroup": 16,
+  "followTarget": false,
+  "gravity": 0,
+  "hitEntityCount": 1,
+  "hitEntityEffectCustomName": "hit_effect_custom_36082",
+  "hitEntitySkill": "myplugin/gen_skill/damage_skill_36082",
+  "hitInterval": 99,
+  "lifeTime": 22,
+  "moveAcc": 0,
+  "moveSpeed": 0.6,
+  "rotateSpeed": 0,
+  "skillId": 36082,
+  "startEffect": {
+    "effect": "g2069_skill_xiaonan_b1.effect",
+    "pos": {
+      "x": 0,
+      "y": -1,
+      "z": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "vanishEffect": {
+    "effect": "g2069_skill_xiaonan_b1.effect",
+    "pos": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "vanishOnHitPart": true,
+  "vanishSkill": "myplugin/gen_skill/skill_360822",
+  "vanishTime": 3
+}

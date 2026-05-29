@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Imageset name="emoji" nativeHorzRes="775" version="2" autoScaled="false" imagefile="emoji.png" nativeVertRes="388">
+      <Image name="img_0_phiz_shutup" yPos="130" xPos="517" height="128" width="128"/>
+    <Image name="img_0_phiz_think" yPos="259" xPos="259" height="128" width="128"/>
+    <Image name="img_0_phiz_surprised" yPos="259" xPos="130" height="128" width="128"/>
+    <Image name="img_0_phiz_good" yPos="1" xPos="646" height="128" width="128"/>
+    <Image name="img_0_phiz_speechless" yPos="259" xPos="1" height="128" width="128"/>
+    <Image name="img_0_phiz_gosh" yPos="130" xPos="1" height="128" width="128"/>
+    <Image name="img_0_phiz_daze" yPos="1" xPos="388" height="128" width="128"/>
+    <Image name="img_0_phiz_hello" yPos="130" xPos="130" height="128" width="128"/>
+    <Image name="img_0_phiz_darkcircles" yPos="1" xPos="259" height="128" width="128"/>
+    <Image name="img_0_phiz_threwup" yPos="259" xPos="388" height="128" width="128"/>
+    <Image name="img_0_phiz_nosebleed" yPos="130" xPos="388" height="128" width="128"/>
+    <Image name="img_0_phiz_shy" yPos="130" xPos="646" height="128" width="128"/>
+    <Image name="img_0_phiz_funny" yPos="1" xPos="517" height="128" width="128"/>
+    <Image name="img_0_phiz_love" yPos="130" xPos="259" height="128" width="128"/>
+    <Image name="img_0_phiz_cry" yPos="1" xPos="130" height="128" width="128"/>
+    <Image name="img_0_phiz_angry" yPos="1" xPos="1" height="128" width="128"/>
+</Imageset>

@@ -1,0 +1,27 @@
+{
+  "castAction": "g2069_skill_lufei_bb2",
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 50,
+    "sound": "g2069_skill_lufei_b1.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_60024",
+  "missileCount": 1,
+  "skillId": 60024,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": 0,
+    "z": 7
+  },
+  "startWait": 4,
+  "startYaw": 0,
+  "target": "self",
+  "targetType": "Self",
+  "type": "Missile"
+}

@@ -1,0 +1,22 @@
+n_id	n_mission_id	s_mission_name	s_mission_alias	n_mission_group	n_mission_type	n_mission_show	s_mission_stages	s_stages_change_time	s_stages_waitting_battle_time	n_complete_time	n_waitting_time	n_quit_time	s_costs	s_rewards	s_open_level_range	n_join_type	n_join_player_max	s_join_level_range	s_ability_alias	s_difficulty_text
+序号	副本id	副本名称	副本别称	副本组	副本类型(1为觉醒副本)	是否开放，1开放 0不 默认1	副本stage	副本切换时间	等待战斗时间	副本完成时间	副本等待时间	副本退出时间	进入消耗物品(alias1#num1,alias2#num2...)	奖励物品(alias1#num1,alias2#num2...)	开启等级	副本参加类型，1为可单人可多人，2为只能单人，3为只能多人	最大玩家数量，单人副本默认1	多人副本参与等级	所属能力别称	副本难度多语言
+1	10001	mission_10001	naruto_easy	1	1		1000101	0	5	600	30	5	ability_naruto#1	awaken_yu#10	30#100	1	3	30#999	ability_naruto	g2069_miss_difficulty_easy
+2	10002	mission_10002	luffy_easy	1	1		1000102	0	5	600	30	5	ability_luffy#1	awaken_yu#10	30#100	1	3	30#999	ability_luffy	g2069_miss_difficulty_easy
+3	10003	mission_10003	sauron_easy	1	1		1000103	0	5	600	30	5	ability_sauron#1	awaken_yu#20	30#100	1	3	30#999	ability_sauron	g2069_miss_difficulty_easy
+4	10004	mission_10004	sasuke_easy	1	1		1000104	0	5	600	30	5	ability_sasuke#1	awaken_yu#20	30#100	1	3	30#999	ability_sasuke	g2069_miss_difficulty_easy
+5	10005	mission_10005	ace_easy	1	1		1000105	0	5	600	30	5	ability_ace#1	awaken_yu#50	30#100	1	3	30#999	ability_ace	g2069_miss_difficulty_easy
+6	10006	mission_10006	enel_easy	1	1		1000106	0	5	600	30	5	ability_enel#1	awaken_yu#100	30#100	1	3	30#999	ability_enel	g2069_miss_difficulty_easy
+7	10007	mission_10007	gaara_easy	1	1		1000107	0	5	600	30	5	ability_gaara#1	awaken_yu#100	30#100	1	3	30#999	ability_gaara	g2069_miss_difficulty_easy
+8	10008	mission_10008	konan_easy	1	1		1000108	0	5	600	30	5	ability_konan#1	awaken_yu#65	30#100	1	3	30#999	ability_konan	g2069_miss_difficulty_easy
+9	10009	mission_10009	baihuzi_easy	1	1		1000109	0	5	600	30	5	ability_baihuzi#1	awaken_yu#500	30#100	1	3	30#999	ability_baihuzi	g2069_miss_difficulty_easy
+10	10010	mission_10010	peien_easy	1	1		1000110	0	5	600	30	5	ability_peien#1	awaken_yu#500	30#100	1	3	30#999	ability_peien	g2069_miss_difficulty_easy
+11	20001	mission_20001	naruto_hard	1	1		2000101	0	5	600	30	5	ability_naruto#10	awaken_yu#50	101#999	1	3	30#999	ability_naruto	g2069_miss_difficulty_hard
+12	20002	mission_20002	luffy_hard	1	1		2000102	0	5	600	30	5	ability_luffy#10	awaken_yu#50	101#999	1	3	30#999	ability_luffy	g2069_miss_difficulty_hard
+13	20003	mission_20003	sauron_hard	1	1		2000103	0	5	600	30	5	ability_sauron#1	awaken_yu#100	101#999	1	3	30#999	ability_sauron	g2069_miss_difficulty_hard
+14	20004	mission_20004	sasuke_hard	1	1		2000104	0	5	600	30	5	ability_sasuke#1	awaken_yu#100	101#999	1	3	30#999	ability_sasuke	g2069_miss_difficulty_hard
+15	20005	mission_20005	ace_hard	1	1		2000105	0	5	600	30	5	ability_ace#1	awaken_yu#500	101#999	1	3	30#999	ability_ace	g2069_miss_difficulty_hard
+16	20006	mission_20006	enel_hard	1	1		2000106	0	5	600	30	5	ability_enel#1	awaken_yu#1000	101#999	1	3	30#999	ability_enel	g2069_miss_difficulty_hard
+17	20007	mission_20007	gaara_hard	1	1		2000107	0	5	600	30	5	ability_gaara#1	awaken_yu#1000	101#999	1	3	30#999	ability_gaara	g2069_miss_difficulty_hard
+18	20008	mission_20008	konan_hard	1	1		2000108	0	5	600	30	5	ability_konan#1	awaken_yu#650	101#999	1	3	30#999	ability_konan	g2069_miss_difficulty_hard
+19	20009	mission_20009	baihuzi_hard	1	1		2000109	0	5	600	30	5	ability_baihuzi#1	awaken_yu#5000	101#999	1	3	30#999	ability_baihuzi	g2069_miss_difficulty_hard
+20	20010	mission_20010	peien_hard	1	1		2000110	0	5	600	30	5	ability_peien#1	awaken_yu#5000	101#999	1	3	30#999	ability_peien	g2069_miss_difficulty_hard

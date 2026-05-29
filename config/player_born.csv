@@ -1,0 +1,13 @@
+n_id	s_mapName	s_name	s_icon	s_bornCoordinate	s_rebornMap	s_rebornCoordinate	n_selectableMap	s_born_icon	s_bgm	s_born_level
+序号	场景名	场景名称	图标	出生坐标	复活场景	复活坐标	是否二选一地图	初始地图icon	背景音乐	返回出生点等级，不填则不会返回
+1	map_muye	g2069_map_muye		0.24#2.215#18.29	map_muye	-0.706#1.757#25.851	1	gameres|asset/imageset/birth_point:img_0_konoha_village	map_muye_bgm	1#9
+2	map_windmilltown	g2069_map_windmilltown		-0.376#-3#-37.493	map_windmilltown	-0.376#-3#-37.493	1	gameres|asset/imageset/birth_point:img_0_windmill_town	map_windmilltown_bgm	1#9
+3	map_endervalley	g2069_map_endervalley		56.525#0.925#215.726	map_endervalley	56.525#0.725#215.726,46.609#0.725#215.726			map_endervalley_bgm	10#39
+4	navytown	g2069_navytown		-9.941#5.38#-207.904	navytown	7.148#9.184#-178.745,-9.941#5.18#-207.904			map_navytown_bgm	
+5	map_desertpalce	g2069_map_desertpalce		-24.745#21.1#155.886	map_desertpalce	-33.902#20.902#168.254,-24.745#20.902#155.886,-14.005#20.902#155.408			map_desertpalce_bgm	
+6	map_born	map_born		1#2.2#2	map_born	1#2#2			default_bgm	
+7	map_icebergvillage	g2069_map_icebergvillage		-14.242#-19.934#-92.373	map_icebergvillage	-14.242#-19.934#-92.373,-22.109#-19.934#-92.373,-22.109#-19.934#-79.724			map_icebergvillage_bgm	
+8	map_volcanovillage	g2069_map_volcanovillage		-95.974#-21.227#-99.756	map_volcanovillage	-90.171#-21.227#-71.753,-77.43#-21.227#-78.883,-95.974#-21.227#-99.756			map_volcanovillage_bgm	
+9	map_skyisland_angel	g2069_map_skyisland_angel		8.213#7.899#98.594	map_skyisland_angel	0.463#7.899#101.995,8.213#7.899#98.594,17.857#7.899#95.602			map_muye_bgm	
+10	map_skyisland_remain	g2069_map_skyisland_remain		127.244#-137.064#194.822	map_skyisland_remain	114.355#-137.064#194.822,140.464#-137.064#194.822,127.244#-137.064#194.822			map_muye_bgm	
+11	map_waterfall	g2069_map_waterfall		-29.831#1.5#13.048	map_waterfall	-29.831#1.5#13.048			map_waterfall_bgm	

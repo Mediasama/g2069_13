@@ -1,0 +1,46 @@
+{
+  "autoRotateColliderBox": true,
+  "collideEntity": 0,
+  "collider": {
+    "extent": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "height": 0,
+    "radius": 2,
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "type": "Sphere"
+  },
+  "collisionGroup": 16,
+  "followTarget": false,
+  "gravity": 0.08,
+  "hitEntityCount": 1,
+  "hitEntitySkill": "myplugin/gen_skill/damage_skill_36064",
+  "hitInterval": 99,
+  "lifeTime": 120,
+  "moveAcc": 0,
+  "moveSpeed": 1,
+  "rotateSpeed": 0,
+  "skillId": 36064,
+  "startEffect": {
+    "effect": "g2069_skill_ainilu_d2.effect",
+    "pos": {
+      "x": 0,
+      "y": 2,
+      "z": 0
+    },
+    "scale": {
+      "x": 1.5,
+      "y": 1.5,
+      "z": 1.5
+    }
+  },
+  "vanishOnHitPart": true,
+  "vanishSkill": "myplugin/gen_skill/skill_360642",
+  "vanishTime": 0
+}

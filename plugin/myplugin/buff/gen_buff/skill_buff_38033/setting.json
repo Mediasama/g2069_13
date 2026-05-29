@@ -1,0 +1,28 @@
+{
+  "attribute": {
+    "attCrit": 0.1
+  },
+  "attribute_pct": {
+    "attDamage": 0.1,
+    "maxMp": 0.35
+  },
+  "buffId": 38033,
+  "buffName": "myplugin/gen_buff/skill_buff_38033",
+  "deadRemove": true,
+  "needSave": false,
+  "partChange": "g2069_buff#siwei1",
+  "removeBuff": [
+    "myplugin/gen_buff/skill_buff_38033"
+  ],
+  "resetSkill": {
+    "skillList": [
+      37034,
+      2703
+    ],
+    "slotList": [
+      4,
+      8
+    ]
+  },
+  "skillSpeedUp": -0.15
+}

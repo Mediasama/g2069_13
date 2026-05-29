@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="ability" imagefile="ability.png" nativeHorzRes="292" nativeVertRes="605" autoScaled="vertical">
+	<Image name="img_0_agile2" xPos="1" yPos="24" height="22" width="26"/>
+	<Image name="img_0_agile3" xPos="15" yPos="1" height="15" width="16"/>
+	<Image name="img_0_attack2" xPos="82" yPos="24" height="22" width="26"/>
+	<Image name="img_0_attack3" xPos="72" yPos="1" height="19" width="19"/>
+	<Image name="img_0_energy2" xPos="28" yPos="24" height="22" width="26"/>
+	<Image name="img_0_energy3" xPos="32" yPos="1" height="19" width="19"/>
+	<Image name="img_0_equipped" xPos="1" yPos="48" height="30" width="36"/>
+	<Image name="img_0_life2" xPos="55" yPos="24" height="22" width="26"/>
+	<Image name="img_0_life3" xPos="52" yPos="1" height="19" width="19"/>
+	<Image name="img_0_wake1" xPos="163" yPos="24" height="22" width="26"/>
+	<Image name="img_0_wake10" xPos="109" yPos="24" height="22" width="26"/>
+	<Image name="img_0_wake2" xPos="136" yPos="24" height="22" width="26"/>
+	<Image name="img_0_wake3" xPos="254" yPos="1" height="22" width="26"/>
+	<Image name="img_0_wake4" xPos="173" yPos="1" height="22" width="26"/>
+	<Image name="img_0_wake5" xPos="119" yPos="1" height="22" width="26"/>
+	<Image name="img_0_wake6" xPos="92" yPos="1" height="22" width="26"/>
+	<Image name="img_0_wake7" xPos="227" yPos="1" height="22" width="26"/>
+	<Image name="img_0_wake8" xPos="146" yPos="1" height="22" width="26"/>
+	<Image name="img_0_wake9" xPos="200" yPos="1" height="22" width="26"/>
+	<Image name="img_9_bottom2" xPos="1" yPos="97" height="507" width="290"/>
+	<Image name="img_9_line" xPos="1" yPos="1" height="2" width="4"/>
+	<Image name="img_9_lock" xPos="38" yPos="48" height="48" width="240"/>
+	<Image name="img_9_prompt" xPos="6" yPos="1" height="8" width="8"/>
+	<Image name="pbar_9_lv1" xPos="190" yPos="24" height="23" width="32"/>
+	<Image name="pbar_9_lv2" xPos="223" yPos="24" height="23" width="32"/>
+</Imageset>

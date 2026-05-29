@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="wake" imagefile="wake.png" nativeHorzRes="484" nativeVertRes="949" autoScaled="vertical">
+	<Image name="btn_9_awakening" xPos="1" yPos="1" height="69" width="128"/>
+	<Image name="img_0_1" xPos="130" yPos="1" height="48" width="48"/>
+	<Image name="img_0_10" xPos="179" yPos="1" height="48" width="48"/>
+	<Image name="img_0_2" xPos="228" yPos="1" height="48" width="48"/>
+	<Image name="img_0_3" xPos="277" yPos="1" height="48" width="48"/>
+	<Image name="img_0_4" xPos="326" yPos="1" height="48" width="48"/>
+	<Image name="img_0_5" xPos="375" yPos="1" height="48" width="48"/>
+	<Image name="img_0_6" xPos="424" yPos="1" height="48" width="48"/>
+	<Image name="img_0_7" xPos="1" yPos="71" height="48" width="48"/>
+	<Image name="img_0_8" xPos="50" yPos="71" height="48" width="48"/>
+	<Image name="img_0_9" xPos="99" yPos="71" height="48" width="48"/>
+	<Image name="img_0_equipped" xPos="148" yPos="71" height="30" width="36"/>
+	<Image name="img_0_invited" xPos="185" yPos="71" height="30" width="36"/>
+	<Image name="img_0_rightbottom" xPos="1" yPos="120" height="558" width="482"/>
+	<Image name="img_9_bigbottom_left" xPos="1" yPos="679" height="32" width="32"/>
+	<Image name="img_9_bigbottom_right" xPos="34" yPos="679" height="64" width="326"/>
+	<Image name="img_9_bottom" xPos="361" yPos="679" height="16" width="16"/>
+	<Image name="img_9_fulllv" xPos="1" yPos="744" height="165" width="256"/>
+	<Image name="img_9_leftbottom" xPos="258" yPos="744" height="64" width="16"/>
+	<Image name="img_9_leftbottom2" xPos="275" yPos="744" height="16" width="16"/>
+	<Image name="img_9_leftbottom3" xPos="292" yPos="744" height="16" width="16"/>
+	<Image name="img_9_lock" xPos="309" yPos="744" height="37" width="32"/>
+	<Image name="img_9_lock_mask" xPos="342" yPos="744" height="8" width="8"/>
+	<Image name="img_9_mask" xPos="351" yPos="744" height="204" width="16"/>
+</Imageset>

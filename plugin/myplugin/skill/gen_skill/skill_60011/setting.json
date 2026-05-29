@@ -1,0 +1,35 @@
+{
+  "castAction": "g2069_skill_mingren_a2",
+  "castSceneEffect": {
+    "delay": 0.4,
+    "effect": "g2069_skill_mingren_a2.effect",
+    "isFixedPosition": false,
+    "pos": {
+      "x": 0,
+      "y": 2.7,
+      "z": 0.5
+    },
+    "scale": {
+      "x": 1.5,
+      "y": 1.5,
+      "z": 1.5
+    },
+    "time": 6000,
+    "yaw": 0
+  },
+  "missileCfg": "myplugin/gen_missile/missile_60011",
+  "missileCount": 1,
+  "skillId": 60011,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "startWait": 0,
+  "startYaw": 0,
+  "target": "self",
+  "targetType": "Self",
+  "type": "Missile"
+}

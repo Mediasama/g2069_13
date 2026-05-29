@@ -1,0 +1,15 @@
+{
+  "missileCfg": "myplugin/gen_missile/missile_600712",
+  "missileCount": 1,
+  "skillId": 600712,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "startWait": 0,
+  "startYaw": 0,
+  "type": "Missile"
+}

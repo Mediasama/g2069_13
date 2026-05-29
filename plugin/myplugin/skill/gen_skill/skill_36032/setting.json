@@ -1,0 +1,17 @@
+{
+  "castAction": "g2069_skill_mingren_b2",
+  "missileCfg": "myplugin/gen_missile/missile_36032",
+  "missileCount": 1,
+  "skillId": 36032,
+  "startFrom": "foot",
+  "startPitch": 10,
+  "startPos": {
+    "x": 0,
+    "y": 1.3,
+    "z": 1.5
+  },
+  "startWait": 12,
+  "startYaw": 0,
+  "targetType": "Camera",
+  "type": "Missile"
+}

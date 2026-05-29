@@ -1,0 +1,60 @@
+{
+  "__OBJ_ID": "3767fc01-01bf-4b4c-a0ea-42c3e12a7bfa",
+  "__OBJ_TYPE": "Instance_Part_Storage",
+  "batchType": "Dynamic",
+  "children": [
+    {
+      "__OBJ_ID": "3ef90e9f-e439-43fb-86a4-9f9af497636a",
+      "__OBJ_TYPE": "Instance_ActorNode",
+      "actorObject": {
+        "asset": "asset/Actor/item/g2069_scene_item_chest.actor"
+      },
+      "id": "9090598855028277249",
+      "name": "actor",
+      "position": {
+        "x": -6.45000028610229,
+        "y": -11.598,
+        "z": 117.302001953125
+      },
+      "scale": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "size": {
+        "x": 0.776013314723969,
+        "y": 0.599885880947113,
+        "z": 0.52407830953598
+      },
+      "templateId": "9090598734180597761"
+    }
+  ],
+  "collisionGroup": "8",
+  "density": 2.5,
+  "friction": 0.28,
+  "id": "9090598855030816769",
+  "massCenter": {
+    "x": -6.45000028610229,
+    "y": -11.5976600646973,
+    "z": 117.302001953125
+  },
+  "material": {
+    "alpha": 0,
+    "texture": "part_muban.tga"
+  },
+  "name": "treasure_box",
+  "position": {
+    "x": -6.45000028610229,
+    "y": -11.5976600646973,
+    "z": 117.302001953125
+  },
+  "restitution": 0.2,
+  "size": {
+    "x": 0.999999940395355,
+    "y": 0.999999940395355,
+    "z": 0.99999988079071
+  },
+  "templateId": "9090598734182875137",
+  "useCollide": false,
+  "useGravity": false
+}

@@ -1,0 +1,7 @@
+{
+  "buffId": 999,
+  "buffName": "myplugin/gen_buff/skill_buff_999",
+  "deadRemove": true,
+  "needSave": false,
+  "skillSpeedUp": -0.9
+}

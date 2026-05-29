@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="birth_point" imagefile="birth_point.png" nativeHorzRes="1340" nativeVertRes="578" autoScaled="vertical">
+	<Image name="img_0_bg" xPos="827" yPos="1" height="288" width="512"/>
+	<Image name="img_0_konoha_village" xPos="414" yPos="1" height="467" width="412"/>
+	<Image name="img_0_title" xPos="1" yPos="469" height="108" width="1280"/>
+	<Image name="img_0_windmill_town" xPos="1" yPos="1" height="467" width="412"/>
+</Imageset>

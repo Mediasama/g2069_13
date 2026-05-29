@@ -1,0 +1,10 @@
+n_id	n_box_id	n_pool_id	s_reward_num	s_consume	s_reward_type
+序号	宝箱id	奖池id	奖励数量，格式num1(#num2)，默认不填为全部，填num2为随机范围	消耗item#count，多种消耗用逗号隔开	随机方式，默认0为可重复，1表示抽完为止
+1	1	1001			
+2	2	1002			
+3	3	1003			
+4	4	1004			
+5	5	1005			
+6	6	1006			
+7	7	1007			
+8	10001	10001			

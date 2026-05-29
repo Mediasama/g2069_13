@@ -1,0 +1,42 @@
+{
+  "castAction": "g2069_skill_xiaonan_a2",
+  "castSceneEffect": {
+    "delay": 0,
+    "effect": "g2069_skill_xiaonan_aa1.effect",
+    "isFixedPosition": true,
+    "pos": {
+      "x": 0,
+      "y": 0,
+      "z": 7
+    },
+    "scale": {
+      "x": 2,
+      "y": 2,
+      "z": 2
+    },
+    "time": 6000,
+    "yaw": 0
+  },
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 40,
+    "sound": "g2069_skill_xiaonan_a.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_37081",
+  "missileCount": 1,
+  "skillId": 37081,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": -0.8,
+    "z": 7
+  },
+  "startWait": 0,
+  "startYaw": 0,
+  "type": "Missile"
+}

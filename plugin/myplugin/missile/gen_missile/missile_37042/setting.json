@@ -1,0 +1,52 @@
+{
+  "autoRotateColliderBox": true,
+  "collideEntity": 1,
+  "collider": {
+    "extent": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "height": 5,
+    "radius": 8,
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "type": "Cylinder"
+  },
+  "collisionGroup": 32,
+  "dragTarget": {
+    "dragTargetTime": 6,
+    "dragTargetType": 0,
+    "dragToMissileCenter": false
+  },
+  "followTarget": false,
+  "gravity": 0,
+  "hitBuff": "36042",
+  "hitEntityEffectCustomName": "hit_effect_custom_37042",
+  "hitEntitySkill": "myplugin/gen_skill/damage_skill_37042",
+  "hitInterval": 4,
+  "lifeTime": 19,
+  "moveAcc": 0,
+  "moveSpeed": 0.8,
+  "rotateSpeed": 0,
+  "skillId": 37042,
+  "startEffect": {
+    "effect": "g2069_skill_zuozhu_bb.effect",
+    "pos": {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+    "scale": {
+      "x": 2.5,
+      "y": 2.5,
+      "z": 2.5
+    }
+  },
+  "vanishOnHitPart": true,
+  "vanishSkill": "myplugin/gen_skill/skill_370421",
+  "vanishTime": 0
+}

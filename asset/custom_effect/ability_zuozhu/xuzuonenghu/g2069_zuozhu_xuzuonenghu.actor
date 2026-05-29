@@ -1,0 +1,366 @@
+<?xml version = "1.0" encoding = "GB2312"?>
+<ActorTemplates>
+	<ActorTemplate name="g2069_zuozhu_xuzuonenghu.actor" Originalscale="1 1 1" Skeleton="g2033_xuzuonenghu_body.skel" AttackScale="1" TextHeight="0" IsShowShadow="true" WoundBone="" WoundAngle="25" SelectedRingSize="1" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" SoundFileNum="0" Volume="0.8" MinDistance="1" MaxDistance="16" IntervalTime="2" Alpha="1" ThreadPriority="0">
+		<SubActors>
+		</SubActors>
+		<BodyParts>
+			<BodyPart MasterName="body" SlaveName="g2041_weapon_40" LodName="0" DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1">
+				<Skin MeshName = "g2033_xuzuonenghu_body_3.skin" ChangeColor = "4.2039e-45 7.18306e-42 0 0" UVSpeed = "0 0" LocalAlpha = "0.8" LocalBrightnessScale = "1.5" UseBloom = "true" UseTransparentNearestSlice = "false" OverlayColor = "1 1 1 1" SpecularColor = "1 1 1 1" SpecularCoef = "0.15" SpecularStrength = "1">
+				</Skin>
+				<Effect>
+					<FileName value="g2041_weapon_24_a_04_2_1.effect"/>
+					<SocketName value="Bip001_R_Forearm"/>
+					<Position_X value="-0.141954"/>
+					<Position_Y value="-0.0765938"/>
+					<Position_Z value="0.0638552"/>
+					<yaw value="-80.9999"/>
+					<pitch value="-74.4999"/>
+					<roll value="-117.5"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+				</Effect>
+				<Effect>
+					<FileName value="g2041_weapon_24_a_04_1.effect"/>
+					<SocketName value="Bip001"/>
+					<Position_X value="0.045388"/>
+					<Position_Y value="-0.21098"/>
+					<Position_Z value="-0.138679"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+				</Effect>
+				<Effect>
+					<FileName value="g2041_weapon_24_a_04_2_2.effect"/>
+					<SocketName value="Bip001_R_Forearm"/>
+					<Position_X value="1.31625"/>
+					<Position_Y value="-0.15397"/>
+					<Position_Z value="0.157886"/>
+					<yaw value="-170.05"/>
+					<pitch value="24.2093"/>
+					<roll value="-108.639"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+				</Effect>
+				<Effect>
+					<FileName value="g2041_weapon_24_a_04_3_1.effect"/>
+					<SocketName value="Bip001_L_UpperArm"/>
+					<Position_X value="0.81255"/>
+					<Position_Y value="0.122662"/>
+					<Position_Z value="0"/>
+					<yaw value="-5.28055"/>
+					<pitch value="-24.6055"/>
+					<roll value="69.7513"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+				</Effect>
+				<Effect>
+					<FileName value="g2041_weapon_24_a_04_3_2.effect"/>
+					<SocketName value="Bip001_L_Hand"/>
+					<Position_X value="0.328264"/>
+					<Position_Y value="0.0551728"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="79"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+				</Effect>
+				<StaticMesh LocalAlpha = "0.8">
+					<FileName value="g2041_weapon_40_01.mesh"/>
+					<SocketName value="Bip001_L_Hand"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<UseBloom value="true"/>
+					<LocalBrightnessScale value="1.5"/>
+					<UseTransparentNearestSlice value="false"/>
+					<OverlayColor value="1 1 1 1"/>
+					<SpecularColor value="1 1 1 1"/>
+					<SpecularCoef value="0.15"/>
+					<SpecularStrength value="1"/>
+				</StaticMesh>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill Name="g2069_skill_zuozhu_01" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2069_skill_xuzuo_dd1.anim" BeginTime = "0" Times = "1" Length = "0.466" FadeTime = "0.25" Channel = "" TimeScale = "0.9">
+				</Animation>
+				<Effect>
+					<FileName value="g2069_skill_quantou2.effect"/>
+					<SocketName value="Bip001_R_Hand"/>
+					<BeginTime value="0.02"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="0.3"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="g2069_skill_zuozhu_02" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2069_skill_xuzuo_dd2.anim" BeginTime = "0" Times = "1" Length = "0.633" FadeTime = "0.15" Channel = "" TimeScale = "1.1">
+				</Animation>
+				<Effect>
+					<FileName value="g2069_skill_quantou2.effect"/>
+					<SocketName value="Bip001_R_Hand"/>
+					<BeginTime value="0.02"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="0.3"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="g2069_skill_zuozhu_03" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2069_skill_xuzuo_dd3.anim" BeginTime = "0" Times = "1" Length = "0.466" FadeTime = "0.15" Channel = "" TimeScale = "0.9">
+				</Animation>
+				<Effect>
+					<FileName value="g2069_skill_quantou2.effect"/>
+					<SocketName value="Bip001_R_Hand"/>
+					<BeginTime value="0.02"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="0.3"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="g2069_skill_zuozhu_04" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2069_skill_zuozhu_dd4.anim" BeginTime = "0" Times = "1" Length = "0.933" FadeTime = "0.15" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g2069_skill_mingren_04.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="0.4"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="1.04545"/>
+					<Position_Z value="-0.2632"/>
+					<yaw value="180"/>
+					<pitch value="87"/>
+					<roll value="180"/>
+					<scale value="1.2 1.2 1.2"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+				<Effect>
+					<FileName value="g2069_skill_quantou2.effect"/>
+					<SocketName value="Bip001_R_Hand"/>
+					<BeginTime value="0.02"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="0.5"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+				<Effect>
+					<FileName value="g2069_skill_mingren_04.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="0.44"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="1.21005"/>
+					<Position_Z value="-0.2632"/>
+					<yaw value="180"/>
+					<pitch value="87"/>
+					<roll value="180"/>
+					<scale value="0.8 0.8 0.8"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="g2069_skill_zuozhu_c1" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2069_skill_xuzuo_c1.anim" BeginTime = "0" Times = "1" Length = "0.4" FadeTime = "0.1" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g2069_skill_zuozhu_c1.effect"/>
+					<SocketName value="Bip001_L_Hand"/>
+					<BeginTime value="0.02"/>
+					<Times value="1"/>
+					<Position_X value="0.693989"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="g2069_skill_zuozhu_c1_hold" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2069_skill_xuzuo_c1_hold.anim" BeginTime = "0" Times = "-1" Length = "0.7" FadeTime = "0.1" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="g2069_skill_zuozhu_c2" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2069_skill_xuzuo_c2.anim" BeginTime = "0" Times = "1" Length = "0.466" FadeTime = "0.1" Channel = "" TimeScale = "0.8">
+				</Animation>
+				<Effect>
+					<FileName value="g2069_skill_zuozhu_c3.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="0.02"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="g2069_skill_zuozhu_cc1" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2069_skill_xuzuo_cc_1.anim" BeginTime = "0" Times = "1" Length = "0.4" FadeTime = "0.1" Channel = "" TimeScale = "1">
+				</Animation>
+				<Effect>
+					<FileName value="g2069_skill_zuozhu_c1.effect"/>
+					<SocketName value="Bip001_L_Hand"/>
+					<BeginTime value="0.02"/>
+					<Times value="1"/>
+					<Position_X value="0.693989"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="0"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="g2069_skill_zuozhu_cc1_hold" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2069_skill_xuzuo_cc_1_hold.anim" BeginTime = "0" Times = "-1" Length = "0.7" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+			</Skill>
+			<Skill Name="g2069_skill_zuozhu_cc2" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2069_skill_xuzuo_c2.anim" BeginTime = "0" Times = "1" Length = "0.466" FadeTime = "0.25" Channel = "" TimeScale = "0.8">
+				</Animation>
+				<Effect>
+					<FileName value="g2069_skill_zuozhu_c3.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="0.02"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="0.2007"/>
+					<Position_Z value="0"/>
+					<yaw value="0"/>
+					<pitch value="-45"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="-1"/>
+					<FollowActor value="true"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+				<Effect>
+					<FileName value="g2069_skill_zuozhu_cc_1.effect"/>
+					<SocketName value="BuSuiFu"/>
+					<BeginTime value="0.12"/>
+					<Times value="1"/>
+					<Position_X value="0"/>
+					<Position_Y value="15.8538"/>
+					<Position_Z value="37.3161"/>
+					<yaw value="0"/>
+					<pitch value="-21"/>
+					<roll value="0"/>
+					<scale value="1 1 1"/>
+					<TimeScale value="1"/>
+					<Alpha value="1"/>
+					<CycleTime value="500"/>
+					<FollowActor value="false"/>
+					<Persist value="false"/>
+					<isSlowdownValuable value="true"/>
+				</Effect>
+			</Skill>
+			<Skill Name="idle" EnableWound="false" UserDefineTime="-2" TextMode="0">
+				<Animation Name = "g2041_weapon_40_01_idle.anim" BeginTime = "0" Times = "-1" Length = "2.7" FadeTime = "0.25" Channel = "" TimeScale = "1">
+				</Animation>
+				<ActorScaleChange  beginScale = "1" endScale = "1" >
+				</ActorScaleChange>
+			</Skill>
+		</Skills>
+		<Anims>
+				<Anim Name="g2069_skill_xuzuo_c1.anim"/>
+				<Anim Name="g2069_skill_xuzuo_c2.anim"/>
+				<Anim Name="g2069_skill_xuzuo_c1_hold.anim"/>
+				<Anim Name="g2041_weapon_40_01_idle.anim"/>
+				<Anim Name="g2069_skill_xuzuo_cc_1.anim"/>
+				<Anim Name="g2069_skill_xuzuo_cc_1_hold.anim"/>
+				<Anim Name="g2069_skill_xuzuo_cc_2.anim"/>
+				<Anim Name="g2069_skill_xuzuo_dd1.anim"/>
+				<Anim Name="g2069_skill_xuzuo_dd2.anim"/>
+				<Anim Name="g2069_skill_xuzuo_dd3.anim"/>
+				<Anim Name="g2069_skill_zuozhu_dd4.anim"/>
+		</Anims>
+	</ActorTemplate>
+</ActorTemplates>

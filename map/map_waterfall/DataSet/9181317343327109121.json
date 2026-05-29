@@ -1,0 +1,23 @@
+[
+  {
+    "attributes": [],
+    "class": "EmptyNode",
+    "customProperties": [],
+    "properties": {
+      "bakeTextureWeight": "1",
+      "batchType": "Static",
+      "canAcceptShadow": "true",
+      "canGenerateShadow": "true",
+      "customViewDistance": "nil",
+      "id": "9181317935499411457",
+      "name": "teleport_parent",
+      "needSync": "false",
+      "position": "x:-5.75516581535339 y:16.7249339818954 z:23.956093788147",
+      "rotation": "x:0 y:0 z:0",
+      "templateId": "9181317935499411457",
+      "useAnchor": "true",
+      "useForCollision": "false",
+      "viewDistance": "nil"
+    }
+  }
+]

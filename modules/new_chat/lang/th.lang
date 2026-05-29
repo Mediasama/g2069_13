@@ -1,0 +1,50 @@
+
+
+language_start:g2055_lang_chat
+
+new_chat_new_msg_tips=ข้อความใหม่ {.}
+new_chat_world=โลก
+new_chat_system=ระบบ
+new_chat_gang=แก๊ง
+new_chat_private=แชทส่วนตัว
+new_chat_crossServer=ข้ามเซิร์ฟเวอร์
+new_chat_friend=เพื่อน
+new_chat_emoji=อีโมติคอน
+new_chat_short_msg=ข้อความสั้น ๆ
+new_chat_input_tips=คลิกเพื่อเข้าสู่
+new.chat.send.voice=ปล่อยเพื่อส่งเสียง
+new.chat.cancel.send.voice=ปล่อยยกเลิกการส่ง
+new.chat.voice.fail=ไม่สามารถส่งข้อความเสียงได้ โปรดลองอีกครั้ง
+new.chat.can.not.send=คุณส่งบ่อยเกินไป โปรดลองอีกครั้งในภายหลัง
+new.chat.voice.time.limit=จำกัดเวลาสูงสุดของการบันทึก
+new.chat.voice.time.too.short=เวลาในการบันทึกสั้นเกินไป
+new.chat.recent.private.chat=ติดต่อล่าสุด
+new.chat.tips.unable_display=ไม่สามารถแสดงประเภทข้อความได้
+new.chat.friend.applyFriend=เพื่อนใหม่
+new.chat.friend.gameFriend=เล่นกับเพื่อน
+new.chat.friend.platformFriend=เพื่อนแพลตฟอร์ม
+new.chat.status.online=ออนไลน์
+new.chat.status.offline=ออฟไลน์
+new.chat.player_delFriend=ลบเพื่อน
+new.chat.player_addFriend=เพิ่มเพื่อน
+new.chat.shopTitle =แพ็คเสียง
+new.chat.voiceless=เหลือข้อความเสียงไม่เพียงพอ การส่งล้มเหลว
+new.chat.buyNum={.} วิทยากร
+new.chat.voiceBuySucc=ซื้อสำเร็จ
+new.chat.voiceBuyFail=การซื้อล้มเหลว
+new.chat.moonCard=การ์ดเสียงรายเดือนไม่จำกัด
+new.chat.moonTime={.} วัน
+new.chat.moonLess=เหลืออีกไม่ถึง 1 วัน
+new.chat.sureBuy=คุณต้องการใช้จ่าย {.} G Cubes เพื่อซื้อหรือไม่
+
+new.chat.invite=เชิญชวน
+new.chat.invite.isExist=ผู้เล่นอยู่ในเกมแล้ว
+new.chat.invite.toofast=เชิญบ่อยเกินไป
+new.chat.invite.succ=คำเชิญสำเร็จ
+
+new_chat_input_tips_voice=ถือพูด
+
+new_chat_reject_all=ปฏิเสธทั้งหมด
+new_chat_accept_all=เห็นด้วยทั้งหมด
+
+language_end:g2055_lang_chat

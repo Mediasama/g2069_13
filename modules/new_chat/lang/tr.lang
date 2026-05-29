@@ -1,0 +1,50 @@
+
+
+language_start:g2055_lang_chat
+
+new_chat_new_msg_tips=yeni Mesaj{.}
+new_chat_world=dünya
+new_chat_system=sistem
+new_chat_gang=çete
+new_chat_private=özel sohbet
+new_chat_crossServer=çapraz sunucu
+new_chat_friend=arkadaş
+new_chat_emoji=ifade
+new_chat_short_msg=ifade etmek
+new_chat_input_tips=girmek için tıklayın
+new.chat.send.voice=Ses göndermek için bırakın
+new.chat.cancel.send.voice=Göndermeyi iptal etmek için bırakın
+new.chat.voice.fail=Ses gönderilemedi, lütfen tekrar deneyin
+new.chat.can.not.send=Çok sık konuşuyorum, lütfen daha sonra konuşun
+new.chat.voice.time.limit=en uzun kayıt
+new.chat.voice.time.too.short=Yetersiz kayıt
+new.chat.recent.private.chat=son kişi
+new.chat.tips.unable_display=Mesaj türü görüntülenemiyor
+new.chat.friend.applyFriend=yeni arkadaş
+new.chat.friend.gameFriend=arkadaşlarla oynamak
+new.chat.friend.platformFriend=platform arkadaşları
+new.chat.status.online=internet üzerinden
+new.chat.status.offline=çevrimdışı
+new.chat.player_delFriend=arkadaş sil
+new.chat.player_addFriend=arkadaş Ekle
+new.chat.shopTitle =Ses Paketi
+new.chat.voiceless=Ses sayınız yetersiz, gönderilemedi
+new.chat.buyNum={.} hoparlörler
+new.chat.voiceBuySucc=başarılı satın alma
+new.chat.voiceBuyFail=Başarısız satın alma
+new.chat.moonCard=Sınırsız Ses Aylık Kart
+new.chat.moonTime={.}gökyüzü
+new.chat.moonLess=1 günden az kaldı
+new.chat.sureBuy=Satın almak için {.} altın küp harcıyor musunuz?
+
+new.chat.invite=Davet et
+new.chat.invite.isExist=Oyuncu zaten oyunda
+new.chat.invite.toofast=Çok sık davet et
+new.chat.invite.succ=davet başarılı
+
+new_chat_input_tips_voice=konuşmak için bekle
+
+new_chat_reject_all=hepsini reddet
+new_chat_accept_all=hepsine katılıyorum
+
+language_end:g2055_lang_chat

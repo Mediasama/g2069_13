@@ -1,0 +1,41 @@
+{
+  "castSceneEffect": {
+    "delay": 0,
+    "effect": "g2069_skill_zuozhu_aa.effect",
+    "isFixedPosition": true,
+    "pos": {
+      "x": 0,
+      "y": 3,
+      "z": 0
+    },
+    "scale": {
+      "x": 2.3,
+      "y": 2.3,
+      "z": 2.3
+    },
+    "time": 6000,
+    "yaw": 0
+  },
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 60,
+    "sound": "g2069_skill_zuozhu_a2.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_370412",
+  "missileCount": 1,
+  "skillId": 370412,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": -5,
+    "z": 0
+  },
+  "startWait": 0,
+  "startYaw": 0,
+  "type": "Missile"
+}

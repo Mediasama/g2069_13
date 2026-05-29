@@ -1,0 +1,35 @@
+{
+  "castAction": "g2069_skill_zuozhu_a2",
+  "castSceneEffect": {
+    "delay": 0.4,
+    "effect": "g2069_skill_zuozhu_a2.effect",
+    "isFixedPosition": false,
+    "pos": {
+      "x": 0,
+      "y": 3,
+      "z": 0.5
+    },
+    "scale": {
+      "x": 1.8,
+      "y": 1.8,
+      "z": 1.8
+    },
+    "time": 6000,
+    "yaw": 0
+  },
+  "missileCfg": "myplugin/gen_missile/missile_36041",
+  "missileCount": 1,
+  "skillId": 36041,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "startWait": 0,
+  "startYaw": 0,
+  "target": "self",
+  "targetType": "Self",
+  "type": "Missile"
+}

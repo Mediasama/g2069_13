@@ -1,0 +1,8 @@
+n_id	n_activityId	n_sortId	s_giftName	n_finalPrice	n_limitCounts	n_limitDayNum	n_isBigAward	n_bigLimit	s_giftContent	n_optionalNum	s_optionalContent1	s_optionalContent2	s_optionalContent3	s_optionalContent4
+礼包ID	所属的活动ID	排序ID	礼包名称多语言	实际价格	限购次数	每日限购次数	是否大奖	大奖开启购买数	固定奖励列表 #隔开	可选奖励数	可选奖励1列表 #隔开	可选奖励2列表 #隔开	可选奖励3列表 #隔开	可选奖励4列表 #隔开
+		从小到大					1 是 		对应limited_time_gift_item的awardId		对应limited_time_gift_item的awardId			
+90001001	90001	1	optional_name_pack0	59		1			91101	1	91201#91202#91203#91204			
+90001002	90001	2	optional_name_pack1	249	3				92101	2	92201#92202#92203#92204	92301#92302#92303#92304#92305		
+90001003	90001	3	optional_name_pack2	499	3				93101	2	93201#93202#93203#93204	92201#92202#92203#92204		
+90001004	90001	4	optional_name_pack3	699	1				94101	1	94201#94202#94203#94204#94205#94206#94207#94208#94209#94210#94211#94212			
+90001099	90001	5	optional_name_pack9	0	1		1	5		1	95101#95102#95103#95104#95105#95106#95107#95108#95109#95110			

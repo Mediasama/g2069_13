@@ -1,0 +1,12 @@
+{
+  "attribute": {
+    "apRate": 0.3
+  },
+  "buffId": 12100001,
+  "buffName": "myplugin/gen_buff/skill_buff_12100001",
+  "deadRemove": false,
+  "icon": "gameres|asset/imageset/main:img_0_x15000",
+  "location": 2,
+  "name": "buff_name_12100001",
+  "needSave": false
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="friends" imagefile="friends.png" nativeHorzRes="292" nativeVertRes="66" autoScaled="vertical">
+	<Image name="img_9_bottom" xPos="1" yPos="1" height="64" width="16"/>
+	<Image name="img_9_bottom2" xPos="18" yPos="1" height="16" width="16"/>
+	<Image name="img_9_prompt" xPos="35" yPos="1" height="16" width="256"/>
+</Imageset>

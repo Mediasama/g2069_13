@@ -1,0 +1,13 @@
+{
+  "actionPriority": 9999,
+  "attribute_pct": {
+    "moveSpeed": 1.2
+  },
+  "buffId": 36065,
+  "buffName": "myplugin/gen_buff/skill_buff_36065",
+  "buffSoundKey": "s36065",
+  "deadRemove": true,
+  "flyMode": true,
+  "needSave": false,
+  "partChange": "g2069_buff#ainilu_fly"
+}

@@ -1,0 +1,96 @@
+{
+  "__OBJ_ID": "54d5fec2-6e39-4fb2-98e2-b1767c12e809",
+  "__OBJ_TYPE": "Instance_Part_Storage",
+  "AddCustom": {
+    "attrs": [
+      {
+        "__OBJ_ID": "555327ee-c010-4e5d-82c2-d5472bfafd2a",
+        "key": "ui_offset",
+        "val": {
+          "__OBJ_ID": "eb71c784-7847-4d33-92e2-48f00e3ec2fc",
+          "__OBJ_TYPE": "T_String",
+          "rawval": "x:0 y:1.05 z:-0.2"
+        }
+      },
+      {
+        "__OBJ_ID": "d3e36507-10f4-4eae-baf8-069d0fc62cf9",
+        "key": "ui_size",
+        "val": {
+          "__OBJ_ID": "030647b7-0655-4aeb-9836-f17b4d44b8dc",
+          "__OBJ_TYPE": "T_String",
+          "rawval": "1.3"
+        }
+      },
+      {
+        "__OBJ_ID": "a9fdaf54-93a8-43f6-afb7-430deb6ba5fc",
+        "key": "ui_rotation",
+        "val": {
+          "__OBJ_ID": "43c612f4-1d4d-45b2-899f-baddb4128398",
+          "__OBJ_TYPE": "T_String",
+          "rawval": "0"
+        }
+      }
+    ]
+  },
+  "cameraCollideEnable": false,
+  "children": [
+    {
+      "__OBJ_ID": "dc09db73-f544-4a44-a5f3-8e67e9bbd3bf",
+      "__OBJ_TYPE": "Instance_ActorNode",
+      "actorObject": {
+        "asset": "asset/Actor/item/g2069_gaoshipai.actor",
+        "selector": "asset/Actor/item/g2069_gaoshipai.actor"
+      },
+      "id": "9198220582333284353",
+      "position": {
+        "x": 37.4570236206055,
+        "y": -0.0340008735656738,
+        "z": 221.795959472656
+      },
+      "scale": {
+        "x": 2.3,
+        "y": 2,
+        "z": 2
+      },
+      "size": {
+        "x": 9.34687232971191,
+        "y": 6.43938159942627,
+        "z": 3.51608395576477
+      },
+      "templateId": "9198220551753416705"
+    }
+  ],
+  "collisionGroup": "8",
+  "density": 2.2,
+  "friction": 0.37,
+  "id": "9198220582338527233",
+  "massCenter": {
+    "x": 37.4570236206055,
+    "y": 2.6340000629425,
+    "z": 221.795959472656
+  },
+  "material": {
+    "alpha": 0
+  },
+  "name": "rank_board",
+  "needSync": false,
+  "position": {
+    "x": 37.4570236206055,
+    "y": 2.6340000629425,
+    "z": 221.795959472656
+  },
+  "restitution": 0.3,
+  "scale": {
+    "x": 2.3,
+    "y": 2,
+    "z": 2
+  },
+  "size": {
+    "x": 2.3,
+    "y": 2,
+    "z": 2
+  },
+  "templateId": "9198220551757758465",
+  "useCollide": false,
+  "useGravity": false
+}

@@ -1,0 +1,35 @@
+{
+  "attributes": {
+    "teleport_map": "map_windmilltown"
+  },
+  "class": "Part",
+  "customProperties": [],
+  "properties": {
+    "btsKey": "",
+    "cameraCollideEnable": "false",
+    "canAcceptShadow": "true",
+    "canGenerateShadow": "true",
+    "collisionGroup": "8",
+    "density": "2.2",
+    "discardAlpha": "0.0",
+    "exists_baked_data": "false",
+    "friction": "0.37",
+    "id": "9078067257835012097",
+    "massCenter": "x:-1.37999832630157 y:1.58353734016418 z:20.2400074005127",
+    "materialAlpha": "1.0",
+    "materialColor": "r:1.0 g:1.0 b:1.0 a:1.0",
+    "materialOffset": "x:1 y:1 z:1.0",
+    "name": "teleport_gate",
+    "partNavMeshType": "1",
+    "position": "x:-1.37999832630157 y:1.58353734016418 z:20.2400074005127",
+    "restitution": "0.3",
+    "simpleEmissiveIntensity": "1.0",
+    "staticBatchNo": "auto_batch_0",
+    "templateId": "9078009578701357057",
+    "useAnchor": "true",
+    "useCollide": "false",
+    "useForCollision": "false",
+    "useGravity": "false",
+    "useTextureAlpha": "false"
+  }
+}

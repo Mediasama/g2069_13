@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="limited_time_activity_entry" imagefile="limited_time_activity_entry.png" nativeHorzRes="441" nativeVertRes="85" autoScaled="vertical">
+	<Image name="icon_0_fisherman01" xPos="1" yPos="1" height="65" width="87"/>
+	<Image name="icon_0_fisherman02" xPos="89" yPos="1" height="57" width="78"/>
+	<Image name="icon_0_fisherman03" xPos="168" yPos="1" height="60" width="79"/>
+	<Image name="icon_0_fisherman04" xPos="248" yPos="1" height="70" width="72"/>
+	<Image name="icon_0_fisherman05" xPos="321" yPos="1" height="83" width="119"/>
+</Imageset>

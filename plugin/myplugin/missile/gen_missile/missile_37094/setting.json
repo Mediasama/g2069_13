@@ -1,0 +1,54 @@
+{
+  "autoRotateColliderBox": true,
+  "collideEntity": 1,
+  "collider": {
+    "extent": {
+      "x": 40,
+      "y": 30,
+      "z": 40
+    },
+    "height": 0,
+    "radius": 0,
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "type": "Box"
+  },
+  "collisionGroup": 32,
+  "followTarget": false,
+  "gravity": 0,
+  "hitEntityEffectCustomName": "hit_effect_custom_37094",
+  "hitEntitySkill": "myplugin/gen_skill/damage_skill_37094",
+  "hitInterval": 99,
+  "lifeTime": 140,
+  "moveAcc": 0,
+  "moveSpeed": 1.3,
+  "rotateSpeed": 0,
+  "skillId": 37094,
+  "startEffect": {
+    "effect": "g2069_skill_baihuzi_d2.effect",
+    "pos": {
+      "x": 0,
+      "y": 10,
+      "z": 0
+    },
+    "scale": {
+      "x": 8,
+      "y": 8,
+      "z": 8
+    }
+  },
+  "startSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 70,
+    "sound": "g2069_skill_baihuzi_d2.mp3",
+    "volume": 1
+  },
+  "vanishOnHitPart": true,
+  "vanishTime": 0
+}

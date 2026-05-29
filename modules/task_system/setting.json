@@ -1,0 +1,14 @@
+{
+  "?maxBranchNum": "最大同时存在的支线任务数",
+  "maxBranchNum": 3,
+  "?guideChangeDis": "任务引导变大距离",
+  "guideChangeDis": 60,
+  "?guideChangeScale": "任务引导变大倍数",
+  "guideChangeScale": 1,
+  "?taskItemMaxLen": "主界面任务item显示最大长度",
+  "taskItemMaxLen": 32,
+  "?closeMuYeTask": "关闭木叶传送阵的任务ID",
+  "closeMuYeTask": 1010,
+  "?closeWindTask": "关闭风车镇传送阵的任务ID",
+  "closeWindTask": 2010
+}

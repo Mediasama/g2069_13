@@ -1,0 +1,13 @@
+n_id	n_activityId	n_sortId	n_limitCounts	s_giftName	n_initPrice	n_finalPrice	s_percent	s_giftContent	n_giftNum	s_giftIcon
+礼包ID	所属的活动ID	排序ID	限购次数	礼包名称多语言	原价	实际价格	显示折扣比	奖励物品 #隔开	物品数量	多个奖励显示的图标
+			 -1无数次					对应limited_time_gift_item的awardId		
+4001	40001	1	-1	general_gift_name4001	2500	499	-80%	4	5	
+4002	40001	2	-1	general_gift_name4002	500	99	-80%	16	10	
+4003	40001	3	-1	item_bless_10_name	500	200	-60%	40003	40	
+4004	40001	4	-1	item_bless_16_name	500	200	-60%	40004	40	
+4005	40001	5	-1	item_bless_01_name	500	200	-60%	40005	40	
+4006	40002	1	6	10200801_name	1200	599	-50%	40011	1	
+4007	40002	2	6	10300801_name	1200	599	-50%	40012	1	
+4008	40002	3	-1	general_gift_name4003	500	200	-60%	21	40	
+4009	40002	4	-1	general_gift_name4004	500	200	-60%	22	40	
+4010	40002	5	-1	general_gift_name4005	500	200	-60%	23	40	

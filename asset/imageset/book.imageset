@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="book" imagefile="book.png" nativeHorzRes="1012" nativeVertRes="1985" autoScaled="vertical">
+	<Image name="btn_0_1" xPos="1" yPos="1" height="161" width="161"/>
+	<Image name="btn_0_2" xPos="163" yPos="1" height="161" width="161"/>
+	<Image name="img_0_arrow1" xPos="325" yPos="1" height="66" width="47"/>
+	<Image name="img_0_arrow2" xPos="373" yPos="1" height="66" width="47"/>
+	<Image name="img_0_light" xPos="421" yPos="1" height="134" width="134"/>
+	<Image name="img_0_role1" xPos="556" yPos="1" height="342" width="196"/>
+	<Image name="img_0_role10" xPos="753" yPos="1" height="342" width="196"/>
+	<Image name="img_0_role2" xPos="1" yPos="344" height="342" width="196"/>
+	<Image name="img_0_role3" xPos="198" yPos="344" height="342" width="196"/>
+	<Image name="img_0_role4" xPos="395" yPos="344" height="342" width="196"/>
+	<Image name="img_0_role5" xPos="592" yPos="344" height="342" width="196"/>
+	<Image name="img_0_role6" xPos="789" yPos="344" height="342" width="196"/>
+	<Image name="img_0_role7" xPos="1" yPos="687" height="342" width="196"/>
+	<Image name="img_0_role8" xPos="198" yPos="687" height="342" width="196"/>
+	<Image name="img_0_role9" xPos="395" yPos="687" height="342" width="196"/>
+	<Image name="img_0_tick" xPos="592" yPos="687" height="62" width="62"/>
+	<Image name="img_9_bottom" xPos="655" yPos="687" height="16" width="16"/>
+	<Image name="img_9_bottom1" xPos="672" yPos="687" height="32" width="32"/>
+	<Image name="img_9_bottom2" xPos="1" yPos="1030" height="490" width="1010"/>
+	<Image name="img_9_bottom3" xPos="1" yPos="1521" height="463" width="337"/>
+	<Image name="img_9_leftbottom3" xPos="339" yPos="1521" height="16" width="16"/>
+</Imageset>

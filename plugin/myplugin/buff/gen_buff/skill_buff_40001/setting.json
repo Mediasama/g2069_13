@@ -1,0 +1,43 @@
+{
+  "addHpPct": -0.01,
+  "avoidBuff": [
+    "myplugin/gen_buff/skill_buff_16050"
+  ],
+  "buffId": 40001,
+  "buffName": "myplugin/gen_buff/skill_buff_40001",
+  "casterLevelScale": [
+    [
+      10,
+      0.75
+    ],
+    [
+      20,
+      0.5
+    ],
+    [
+      30,
+      0.25
+    ]
+  ],
+  "deadRemove": true,
+  "duration": 100,
+  "effect": {
+    "effect": "g2069_buff_fire.effect",
+    "once": true,
+    "pos": {
+      "x": 0,
+      "y": 0.7,
+      "z": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "interval": 10,
+  "needSave": false,
+  "removeBuff": [
+    "myplugin/gen_buff/skill_buff_40001"
+  ]
+}

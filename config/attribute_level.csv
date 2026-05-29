@@ -1,0 +1,8 @@
+n_id	s_attr_id	n_max_level	n_need_point	n_add_value
+序号	属性id	最高等级	升级消耗属性点	升级对应提升值
+1	health	300	1	1
+2	attack	300	1	1
+3	eleattack	300	1	1
+4	energy	300	1	1
+5	defence	300	1	1
+6	agility	300	1	1

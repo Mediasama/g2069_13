@@ -1,0 +1,20 @@
+{
+  "setFaceToTargetTime": 0.15,
+  "HorizontalFollowSpeed": 0.15,
+  "?dangerProtectVal": "危险指数小于等于A-被玩家击杀不掉落危险数",
+  "dangerProtectVal": 5000,
+  "?dangerProtectLv": "等级相差大于等于B-玩家之间不获得危险数",
+  "dangerProtectLv": 99999,
+  "?dangerPlayerLimit": "玩家相互PVP获得危险数次数上限, 超过就不获得",
+  "dangerPlayerLimit": 3,
+  "?dangerMonsterLimit": "危险指数大于等于N-击杀怪物不再获得",
+  "dangerMonsterLimit": 60000,
+  "?dangerBoardVal1": "危险人物广播，危险值",
+  "dangerBoardVal1": 100000,
+  "?dangerBoardVal2": "极度危险人物广播，危险值",
+  "dangerBoardVal2": 200000,
+  "?pvpDangerChange": "PVP损失(对方获得)危险值的比例",
+  "pvpDangerChange": 0.02,
+  "?dangerChangeMax": "危险值每次增加的上限",
+  "dangerChangeMax": 10000
+}

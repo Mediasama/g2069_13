@@ -1,0 +1,4 @@
+n_id	n_activityId	n_type	n_sortId	s_giftContent	n_price	n_awardCount	s_bgFrame	s_icon	s_buyIcon	s_title	s_dec	s_tag
+奖励id	对应活动id	类型 周卡1 月卡2	排序	对应奖品 #分割	价格	奖励次数	背景框图片	图片	购买按钮图片	标题	详细	标签
+80001001	80001	2	1	80002	299	30	set:limited_time_card.json image:img_0_monthly_card01	set:limited_time_card.json image:icon_0_monthly_card06	set:limited_time_card.json image:btn_0_monthly_card	gui.limit.time.activity.card.title2		500%
+80001002	80001	1	2	80001	499	7	set:limited_time_card.json image:img_0_monthly_card02	set:limited_time_card.json image:icon_0_monthly_card03	set:limited_time_card.json image:btn_0_monthly_card	gui.limit.time.activity.card.title1		900%

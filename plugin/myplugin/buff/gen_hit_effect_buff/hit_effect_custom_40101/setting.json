@@ -1,0 +1,17 @@
+{
+  "deadRemove": true,
+  "effect": {
+    "effect": "g2069_skill_wapa_a3.effect",
+    "once": true,
+    "pos": {
+      "x": 0,
+      "y": 1.5,
+      "z": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    }
+  }
+}

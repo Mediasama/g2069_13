@@ -1,0 +1,24 @@
+{
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 40,
+    "sound": "g2069_skill_mingren_a2.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_360312",
+  "missileCount": 1,
+  "skillId": 360312,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": -2.5,
+    "z": 0.5
+  },
+  "startWait": 0,
+  "startYaw": 0,
+  "type": "Missile"
+}

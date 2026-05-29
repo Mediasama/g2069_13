@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="shop" imagefile="shop.png" nativeHorzRes="211" nativeVertRes="232" autoScaled="vertical">
+	<Image name="img_9_details" xPos="146" yPos="66" height="165" width="64"/>
+	<Image name="img_9_details2" xPos="1" yPos="1" height="4" width="4"/>
+	<Image name="img_9_ommodity" xPos="1" yPos="66" height="120" width="144"/>
+	<Image name="img_9_ommodity_bottom" xPos="6" yPos="1" height="8" width="8"/>
+	<Image name="img_9_sold_out" xPos="32" yPos="1" height="64" width="144"/>
+	<Image name="img_9_vip" xPos="15" yPos="1" height="27" width="16"/>
+</Imageset>

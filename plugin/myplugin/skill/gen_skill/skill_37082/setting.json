@@ -1,0 +1,27 @@
+{
+  "castAction": "g2069_skill_xiaonan_bb2",
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 50,
+    "sound": "g2069_skill_xiaonan_b1.mp3",
+    "volume": 1
+  },
+  "missileCfg": "myplugin/gen_missile/missile_37082",
+  "missileCount": 1,
+  "skillId": 37082,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 0,
+    "y": 1,
+    "z": 0
+  },
+  "startWait": 0,
+  "startYaw": 0,
+  "target": "self",
+  "targetType": "Self",
+  "type": "Missile"
+}

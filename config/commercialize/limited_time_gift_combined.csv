@@ -1,0 +1,5 @@
+n_id	n_activityId	s_giftName	n_initPrice	n_finalPrice	s_percent	s_giftContent
+礼包ID	所属的活动ID	礼包名称多语言	原价	实际价格	显示折扣比	对应奖励列表 #隔开
+						对应limited_time_gift_item的awardId
+3001	300003	general_gift_name300001	300	30	-90%	200009
+3002	300004	general_gift_name300001	300	30	-90%	200008

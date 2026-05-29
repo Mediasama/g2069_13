@@ -1,0 +1,155 @@
+n_id	s_key		s_sound	n_loop	n_volume	n_3dSound	n_losslessDistance	n_maxDistance	n_bgm_interval	n_bgm_duration
+id	对应Key值	备注	音频文件(格式如asset/sound/g2042_item_gold_close.mp3)	是否循环播放（0为否，1为是）	音量大小（1,2,3,4,5音量递增）	3D音效			bgm播放间隔	bgm播放时间
+1	ui_click		ui_click.mp3	0	1					
+2	ui_close		ui_close.mp3	0	1					
+3	player_level		player_levelup.mp3	0	1	0				
+4	player_run		run1.mp3	1	1	1	10	30		
+5	player_jump		jump.mp3	0	1	1	10	30		
+6	player_jump_end		jump_fall.mp3	0	1	1	10	30		
+7	player_sprint		sprint.mp3	0	1	1	10	30		
+8	entity_revival		entity_revival.mp3	0	1	1	10	40		
+9	entity_dead		entity_dead.mp3	0	1	1	10	40		
+10	short_Mp		short_Mp.mp3	0	1	0				
+11	ability_level		ability_levelup.mp3	0	1	0				
+12	map_muye_bgm		asset/sound/map_muye_bgm.mp3	0	1				30	51
+13	map_windmilltown_bgm		asset/sound/map_willtown_bgm.mp3	0	1				30	87
+14	map_endervalley_bgm		asset/sound/map_endervalley_bgm.mp3	0	1				30	153
+15	map_navytown_bgm		asset/sound/map_navytown_bgm.mp3	0	1				30	75
+16	map_desertpalce_bgm		asset/sound/map_desertpalce_bgm.mp3	0	1				30	70
+17	map_icebergvillage_bgm		asset/sound/map_icebergvillage_bgm.mp3	0	1				30	70
+18	map_volcanovillage_bgm		asset/sound/map_volcanovillage_bgm.mp3	0	1				30	70
+19	default_bgm			0	1					
+20	map_waterfall_bgm		asset/sound/map_waterfall_bgm.mp3	0	1				30	70
+25011	s25011	练习生-普攻1	g2069_skill_base_attack_01.mp3	0	1	1	10	30		
+25012	s25012	练习生-普攻2	g2069_skill_base_attack_02.mp3	0	1	1	10	30		
+25013	s25013	练习生-普攻3	g2069_skill_base_attack_03.mp3	0	1	1	10	30		
+25014	s25014	练习生-普攻4	g2069_skill_base_attack_04.mp3	0	1	1	10	30		
+26011	s26011	路飞-普攻1	g2069_skill_lufei_01.mp3	0	1	1	10	30		
+26012	s26012	路飞-普攻2	g2069_skill_lufei_02.mp3	0	1	1	10	30		
+26013	s26013	路飞-普攻3	g2069_skill_lufei_03.mp3	0	1	1	10	30		
+26014	s26014	路飞-普攻4	g2069_skill_lufei_04.mp3	0	1	1	10	30		
+26021	s26021	索隆-普攻1	g2069_skill_suolong_01.mp3	0	1	1	10	30		
+26022	s26022	索隆-普攻2	g2069_skill_suolong_02.mp3	0	1	1	10	30		
+26023	s26023	索隆-普攻3	g2069_skill_suolong_03.mp3	0	1	1	10	30		
+26024	s26024	索隆-普攻4	g2069_skill_suolong_04.mp3	0	1	1	10	30		
+26031	s26031	鸣人-普攻1	g2069_skill_mingren_01.mp3	0	1	1	10	30		
+26032	s26032	鸣人-普攻2	g2069_skill_mingren_02.mp3	0	1	1	10	30		
+26033	s26033	鸣人-普攻3	g2069_skill_mingren_03.mp3	0	1	1	10	30		
+26034	s26034	鸣人-普攻4	g2069_skill_mingren_04.mp3	0	1	1	10	30		
+26041	s26041	佐助-普攻1	g2069_skill_zuozhu_01.mp3	0	1	1	10	30		
+26042	s26042	佐助-普攻2	g2069_skill_zuozhu_02.mp3	0	1	1	10	30		
+26043	s26043	佐助-普攻3	g2069_skill_zuozhu_03.mp3	0	1	1	10	30		
+26044	s26044	佐助-普攻4	g2069_skill_zuozhu_04.mp3	0	1	1	10	30		
+26051	s26051	艾斯-普攻1	g2069_skill_aisi_01.mp3	0	1	1	10	30		
+26052	s26052	艾斯-普攻2	g2069_skill_aisi_02.mp3	0	1	1	10	30		
+26053	s26053	艾斯-普攻3	g2069_skill_aisi_03.mp3	0	1	1	10	30		
+26054	s26054	艾斯-普攻4	g2069_skill_aisi_04.mp3	0	1	1	10	30		
+26061	s26061	艾尼路-普攻1	g2069_skill_ainilu_01.mp3	0	1	1	10	30		
+26062	s26062	艾尼路-普攻2	g2069_skill_ainilu_02.mp3	0	1	1	10	30		
+26063	s26063	艾尼路-普攻3	g2069_skill_ainilu_03.mp3	0	1	1	10	30		
+26064	s26064	艾尼路-普攻4	g2069_skill_ainilu_04.mp3	0	1	1	10	30		
+26071	s26071	我爱罗-普攻1	g2069_skill_woailuo_01.mp3	0	1	1	10	30		
+26072	s26072	我爱罗-普攻2	g2069_skill_woailuo_02.mp3	0	1	1	10	30		
+26073	s26073	我爱罗-普攻3	g2069_skill_woailuo_03.mp3	0	1	1	10	30		
+26074	s26074	我爱罗-普攻4	g2069_skill_woailuo_04.mp3	0	1	1	10	30		
+26081	s26081	小南-普攻1	g2069_skill_xiaonan_01.mp3	0	1	1	10	30		
+26082	s26082	小南-普攻2	g2069_skill_xiaonan_02.mp3	0	1	1	10	30		
+26083	s26083	小南-普攻3	g2069_skill_xiaonan_03.mp3	0	1	1	10	30		
+26084	s26084	小南-普攻4	g2069_skill_xiaonan_04.mp3	0	1	1	10	30		
+26091	s26091	白胡子-普攻1	g2069_skill_baihuzi_01.mp3	0	1	1	10	30		
+26092	s26092	白胡子-普攻2	g2069_skill_baihuzi_02.mp3	0	1	1	10	30		
+26093	s26093	白胡子-普攻3	g2069_skill_baihuzi_03.mp3	0	1	1	10	30		
+26094	s26094	白胡子-普攻4	g2069_skill_baihuzi_04.mp3	0	1	1	10	30		
+26101	s26101	佩恩-普攻1	g2069_skill_peien_01.mp3	0	1	1	10	30		
+26102	s26102	佩恩-普攻2	g2069_skill_peien_02.mp3	0	1	1	10	30		
+26103	s26103	佩恩-普攻3	g2069_skill_peien_03.mp3	0	1	1	10	30		
+26104	s26104	佩恩-普攻4	g2069_skill_peien_04.mp3	0	1	1	10	30		
+35011	s35011	练习生-砸地	g2069_skill_base_ground.mp3	0	1	1	10	40		
+35012	s35012	练习生-冲拳	g2069_skill_base_punch.mp3	0	1	1	10	40		
+36011	s36011a	路飞-橡胶火箭a	g2069_skill_lufei_a1.mp3	0	1	1	10	40		
+36011	s36011b	路飞-橡胶火箭b	g2069_skill_lufei_a2.mp3	0	1	1	10	40		
+36012	s36012	路飞-橡胶机关枪1段	g2069_skill_lufei_b1.mp3	0	1	1	10	50		
+360122	s360122	路飞-橡胶机关枪2段	g2069_skill_lufei_b2.mp3	0	1	1	10	50		
+36013	s36013	路飞-橡胶锤	g2069_skill_lufei_c.mp3	0	1	1	10	60		
+36021	s36021	索隆-一斩·闪	g2069_skill_suolong_a.mp3	0	1	1	10	40		
+36022	s36022	索隆-烦恼风	g2069_skill_suolong_b.mp3	0	1	1	10	50		
+36023	s36023	索隆-龙卷风-一段	g2069_skill_suolong_c1.mp3	0	1	1	10	60		
+360232	s360232	索隆-龙卷风-二段	g2069_skill_suolong_c2.mp3	0	1	1	10	60		
+36024	s36024	索隆-三刀流奥义	g2069_skill_suolong_d.mp3	0	1	1	10	70		
+36031	s36031a	鸣人-螺旋丸a	g2069_skill_mingren_a1.mp3	0	1	1	10	40		
+36031	s36031b	鸣人-螺旋丸b	g2069_skill_mingren_a2.mp3	0	1	1	10	40		
+36032	s36032	鸣人-螺旋丸手里剑-一段	g2069_skill_mingren_b1.mp3	0	1	1	10	50		
+360322	s360322	鸣人-螺旋丸手里剑-二段	g2069_skill_mingren_b2.mp3	0	1	1	10	50		
+36034	s36034a	鸣人-尾兽玉a	g2069_skill_mingren_d1.mp3	0	1	1	10	60		
+36034	s36034b	鸣人-尾兽玉b	g2069_skill_mingren_d2.mp3	0	1	1	10	70		
+36041	s36041a	佐助-千鸟a	g2069_skill_zuozhu_a1.mp3	0	1	1	10	60		
+36041	s36041b	佐助-千鸟b	g2069_skill_zuozhu_a2.mp3	0	1	1	10	60		
+36042	s36042	佐助-天照	g2069_skill_zuozhu_b.mp3	0	1	1	10	50		
+36044	s36044	佐助-须佐能乎箭-一段	g2069_skill_zuozhu_d1.mp3	0	1	1	10	60		
+360442	s360442	佐助-须佐能乎箭-二段	g2069_skill_zuozhu_d2.mp3	0	1	1	10	70		
+36051	s36051	艾斯-火拳	g2069_skill_aisi_a.mp3	0	1	1	10	40		
+36052	s36052a	艾斯-火摩达a	g2069_skill_aisi_b1.mp3	0	1	1	10	50		
+36052	s36052b	艾斯-火摩达b	g2069_skill_aisi_b2.mp3	0	1	1	10	50		
+36053	s36053	艾斯-火柱	g2069_skill_aisi_c.mp3	0	1	1	10	60		
+36054	s36054	艾斯-炎帝-一段	g2069_skill_aisi_d1.mp3	0	1	1	10	60		
+360542	s360542	艾斯炎帝-二段	g2069_skill_aisi_d2.mp3	0	1	1	10	80		
+36055	s36055	艾斯-飞行	g2069_skill_aisi_fly.mp3	1	1	1	10	30		
+36061	s36061	艾尼路-雷击	g2069_skill_ainilu_a.mp3	0	1	1	10	40		
+36062	s36062a	艾尼路-雷鸟a	g2069_skill_ainilu_b1.mp3	0	1	1	10	50		
+36062	s36062b	艾尼路-雷鸟b	g2069_skill_ainilu_b2.mp3	0	1	1	10	50		
+36063	s36063a	艾尼路-神之制裁a	g2069_skill_ainilu_c1.mp3	0	1	1	10	60		
+36063	s36063b	艾尼路-神之制裁b	g2069_skill_ainilu_c2.mp3	0	1	1	10	60		
+36064	s36064a	艾尼路-雷迎-一段a	g2069_skill_ainilu_d1.mp3	0	1	1	10	60		
+36064	s36064b	艾尼路-雷迎-一段b	g2069_skill_ainilu_d2.mp3	0	1	1	10	60		
+360642	s360642	艾尼路-雷迎-二段	g2069_skill_ainilu_d3.mp3	0	1	1	10	80		
+36065	s36065	艾尼路-飞行	g2069_skill_ainilu_fly.mp3	1	1	1	10	30		
+36071	s36071	我爱罗-砂之手	g2069_skill_woailuo_a.mp3	0	1	1	10	40		
+36072	s36072	我爱罗-砂散弹	g2069_skill_woailuo_b.mp3	0	1	1	10	50		
+36073	s36073	我爱罗-砂瀑送葬-一段	g2069_skill_woailuo_c1.mp3	0	1	1	10	60		
+360732	s360732	我爱罗-砂瀑送葬-二段	g2069_skill_woailuo_c2.mp3	0	1	1	10	60		
+36074	s36074	我爱罗-砂瀑大葬	g2069_skill_woailuo_d.mp3	0	1	1	10	80		
+36075	s36075	我爱罗-飞行	g2069_skill_woailuo_fly.mp3	0	1	1	10	30		
+36081	s36081	小南-纸之束缚	g2069_skill_xiaonan_a.mp3	0	1	1	10	40		
+36082	s36082	小南-纸龙卷-一段	g2069_skill_xiaonan_b1.mp3	0	1	1	10	50		
+360822	s360822	小南-纸龙卷-二段	g2069_skill_xiaonan_b2.mp3	0	1	1	10	50		
+36083	s36083	小南-纸爆符-一段	g2069_skill_xiaonan_c1.mp3	0	1	1	10	60		
+360832	s360832	小南-纸爆符-二段	g2069_skill_xiaonan_c2.mp3	0	1	1	10	60		
+36084	s36084	小南-纸之矛-一段	g2069_skill_xiaonan_d1.mp3	0	1	1	10	60		
+36085	s36085	小南-飞行	g2069_skill_xiaonan_fly.mp3	1	1	1	10	30		
+360842	s360842	小南-纸之矛-二段	g2069_skill_xiaonan_d2.mp3	0	1	1	10	80		
+36091	s36091a	白胡子-蓄力	g2069_skill_baihuzi_a1.mp3	0	1	1	10	30		
+36091	s36091b	白胡子-从云切	g2069_skill_baihuzi_a2.mp3	0	1	1	10	50		
+36092	s36092	白胡子-海震拳	g2069_skill_baihuzi_b.mp3	0	1	1	10	60		
+36093	s36093	白胡子-大地震撼	g2069_skill_baihuzi_c.mp3	0	1	1	10	70		
+36094	s36094a	白胡子-大陆崩塌1	g2069_skill_baihuzi_d1.mp3	0	1	1	10	50		
+36094	s36094b	白胡子-大陆崩塌2	g2069_skill_baihuzi_d2.mp3	0	1	1	10	70		
+36101	s36101	佩恩-神罗天正	g2069_skill_peien_a.mp3	0	1	1	10	50		
+36102	s36102	佩恩-万象天印	g2069_skill_peien_b.mp3	0	1	1	10	50		
+36103	s36103	佩恩-地爆天星-一段	g2069_skill_peien_c1.mp3	0	1	1	10	60		
+361032	s361032	佩恩-地爆天星-二段	g2069_skill_peien_c2.mp3	0	1	1	10	70		
+36104	s36104	佩恩-超神罗天正	g2069_skill_peien_d.mp3	0	1	1	10	90		
+50011	s50011	多有也-技能A	g2069_skill_duoyouye_a.mp3	0	1	1	10	50		
+50041	s50041	蒙卡-砸地	g2069_skill_mengka_a.mp3	0	1	1	10	40		
+50042	s50042	蒙卡-爆炸	g2069_skill_mengka_b.mp3	0	1	1	10	50		
+50063	s50063	一尾-岩凸	g2069_skill_yiwei_c.mp3	0	1	1	10	50		
+50021	s50021	咒印佐助-技能A	g2069_skill_zyzz_a.mp3	0	1	1	10	50		
+50001	s50001	爆汽	g2069_skill_baoqi.mp3	0	1	1	10	50		
+40031	s40031	怪物-棍棒普攻1	g2069_skill_gunbang_02.mp3	0	1	1	10	30		
+40032	s40032	怪物-棍棒普攻2	g2069_skill_gunbang_01.mp3	0	1	1	10	30		
+50071	s50071	吹雪-冰遁	g2069_skill_bingdun_a.mp3	0	1	1	10	40		
+50081	s50081	怒涛-黑波	g2069_skill_nutao_a.mp3	0	1	1	10	40		
+50082	s50082	怒涛-黑龙卷	g2069_skill_nutao_b.mp3	0	1	1	10	50		
+50101	s50101	神国警察-剑气	g2069_skill_jianqi.mp3	0	1	1	10	30		
+50111	s50111	欧姆-连击	g2069_skill_oumu_b.mp3	0	1	1	10	30		
+50112	s50112	欧姆-剑气	g2069_skill_oumu_a.mp3	0	1	1	10	30		
+40101	s40101	瓦帕-火箭筒普攻	g2069_skill_wapa_a.mp3	0	1	1	10	30		
+59999	s59999	蓄力提示	g2069_skill_xuli.mp3	0	1	0				
+1	hit_boxing1	拳头命中1	hit_boxing1.mp3	0	1	1	10	20		
+2	hit_boxing2	拳头命中2	hit_boxing2.mp3	0	1	1	10	20		
+3	hit_boxing3	拳头命中3	hit_boxing3.mp3	0	1	1	10	20		
+4	hit_sword1	刀剑命中1	hit_sword1.mp3	0	1	1	10	20		
+5	hit_sword2	刀剑命中2	hit_sword2.mp3	0	1	1	10	20		
+6	hit_sword3	刀剑命中3	hit_sword3.mp3	0	1	1	10	20		
+7	hit_stick1	棍棒命中1	hit_stick1.mp3	0	1	1	10	20		
+8	hit_stick2	棍棒命中2	hit_stick2.mp3	0	1	1	10	20		
+9	hit_down	飞行击倒	hit_down.mp3	0	1	0				

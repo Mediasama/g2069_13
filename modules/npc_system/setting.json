@@ -1,0 +1,8 @@
+{
+  "?dialogMoveTime": "对话框左移时间 帧",
+  "dialogMoveTime": 2,
+  "?dialogUpdateTime": "对话框文字刷新频率 帧",
+  "dialogUpdateTime": 2,
+  "?dialogUpdateLen": "对话框文字刷新速度 文字个数",
+  "dialogUpdateLen": 1
+}

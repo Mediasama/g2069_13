@@ -1,0 +1,41 @@
+n_shop_id	s_shop_alias	s_shop_name	s_shop_desc	s_item	s_tab	n_sort	s_cost	n_display	n_is_use	n_purchase_limit
+商品Id	商品别称	商品名	商品描述	商品物品，格式为item#num	显示页签,暂定props、privilege和resources	排序	购买消耗货币，格式为coinName#num	是否显示在商店	是否直接使用，默认0	限购次数，默认0不限制
+1	ability_noob	ability_noob	g2069_items_1	ability_noob#1	props	1	gDiamonds#5	0	0	
+2	ability_luffy	ability_luffy	g2069_items_1	ability_luffy#1	props	2	gold_coin#3000	0	0	
+3	ability_sauron	ability_sauron	g2069_items_1	ability_sauron#1	props	3	gold_coin#30000	1	0	
+4	ability_naruto	ability_naruto	g2069_items_1	ability_naruto#1	props	4	gold_coin#3000	0	0	
+5	ability_sasuke	ability_sasuke	g2069_items_2	ability_sasuke#1	props	5	gold_coin#30000	1	0	
+6	ability_ace	ability_ace	g2069_items_2	ability_ace#1	props	6	gold_coin#80000	1	0	
+7	ability_enel	ability_enel	g2069_items_2	ability_enel#1	props	7	gold_coin#80000	0	0	
+8	ability_gaara	ability_gaara	g2069_items_2	ability_gaara#1	props	8	gold_coin#100000	0	0	
+9	ability_konan	ability_konan	g2069_items_1	ability_konan#1	props	9	gold_coin#100000	1	0	
+10	ability_baihuzi	ability_baihuzi	g2069_items_1	ability_baihuzi#1	props	10	gold_coin#300000	0	0	
+11	ability_peien	ability_peien	g2069_items_1	ability_peien#1	props	11	gold_coin#300000	0	0	
+10000	gold_coin3000	gold_coin	g2069_items_3	gold_coin#3000	resources	12	gDiamonds#10	1	0	
+10001	gold_coin15000	gold_coin	g2069_items_4	gold_coin#15000	resources	13	gDiamonds#50	1	0	
+10002	gold_coin37500	gold_coin	g2069_items_5	gold_coin#37500	resources	14	gDiamonds#100	1	0	
+10003	gold_coin75000	gold_coin	g2069_items_6	gold_coin#75000	resources	15	gDiamonds#200	1	0	
+10004	gold_coin180000	gold_coin	g2069_items_7	gold_coin#180000	resources	16	gDiamonds#400	1	0	
+10005	gold_coin306000	gold_coin	g2069_items_8	gold_coin#306000	resources	17	gDiamonds#600	1	0	
+10006	gold_coin200000	gold_coin	shop1	gold_coin#200000	resources	18	gDiamonds#10	0	0	
+10007	gold_coin200000	gold_coin	shop1	gold_coin#200000	privilege	19	gDiamonds#10	0	0	
+20000	exp_2_buff_card	exp_2_buff_card	g2069_items_11000001	exp_2_buff_card#1	props	20	gold_coin#500	0	0	
+20001	exp_15000_buff_card	exp_15000_buff_card	g2069_items_11000002	exp_15000_buff_card#1	props	21	gold_coin#10000	0	0	
+20002	ap_2_buff_card	ap_2_buff_card	g2069_items_12000001	ap_2_buff_card#1	props	22	gold_coin#500	0	0	
+20003	ap_15000_buff_card	ap_15000_buff_card	g2069_items_12000002	ap_15000_buff_card#1	props	23	gold_coin#10000	0	0	
+20004	hp_50_buff_card	hp_50_buff_card	g2069_items_13000001	hp_50_buff_card#1	props	24	gold_coin#50000	0	0	
+20005	hp_pct_5_buff_card	hp_pct_5_buff_card	g2069_items_13100001	hp_pct_5_buff_card#1	props	25	gold_coin#500	0	0	
+20006	mp_100_buff_card	mp_100_buff_card	g2069_items_14000001	mp_100_buff_card#1	props	26	gold_coin#10000	0	0	
+20007	mp_pct_5_buff_card	mp_pct_5_buff_card	g2069_items_14100001	mp_pct_5_buff_card#1	props	27	gold_coin#500	0	0	
+20008	gift_pack	gift_pack	g2069_items_15000001	gift_pack#1	props	28	gold_coin#10000	0	0	
+30000	ability_noobshu	ability_noobshu	g2069_items_11	ability_noobshu#1	privilege	29	gDiamonds#99	0	1	1
+30001	ability_luffyshu	ability_luffyshu	g2069_items_11	ability_luffyshu#1	privilege	30	gDiamonds#50	1	1	1
+30002	ability_sauronshu	ability_sauronshu	g2069_items_11	ability_sauronshu#1	privilege	32	gDiamonds#180	1	1	1
+30003	ability_narutoshu	ability_narutoshu	g2069_items_11	ability_narutoshu#1	privilege	31	gDiamonds#50	1	1	1
+30004	ability_sasukeshu	ability_sasukeshu	g2069_items_12	ability_sasukeshu#1	privilege	33	gDiamonds#180	1	1	1
+30005	ability_aceshu	ability_aceshu	g2069_items_12	ability_aceshu#1	privilege	34	gDiamonds#400	1	1	1
+30006	ability_enelshu	ability_enelshu	g2069_items_12	ability_enelshu#1	privilege	35	gDiamonds#400	1	1	1
+30007	ability_gaarashu	ability_gaarashu	g2069_items_12	ability_gaarashu#1	privilege	36	gDiamonds#400	1	1	1
+30008	ability_konanshu	ability_konanshu	g2069_items_11	ability_konanshu#1	privilege	37	gDiamonds#400	1	1	1
+30009	ability_baihuzishu	ability_baihuzishu	g2069_items_11	ability_baihuzishu#1	privilege	38	gDiamonds#600	1	1	1
+30010	ability_peienshu	ability_peienshu	g2069_items_11	ability_peienshu#1	privilege	39	gDiamonds#600	1	1	1

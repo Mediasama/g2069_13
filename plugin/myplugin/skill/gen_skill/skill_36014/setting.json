@@ -1,0 +1,41 @@
+{
+  "castAction": "g2069_skill_lufei_d",
+  "castSceneEffect": {
+    "delay": 0,
+    "effect": "g2069_skill_baoqi.effect",
+    "isFixedPosition": false,
+    "pos": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "time": 6000,
+    "yaw": 0
+  },
+  "castSound": {
+    "attenuationType": "0",
+    "is3dSound": true,
+    "loop": false,
+    "losslessDistance": 10,
+    "maxDistance": 50,
+    "sound": "g2069_skill_baoqi.mp3",
+    "volume": 1
+  },
+  "missileCount": 0,
+  "skillId": 36014,
+  "startFrom": "foot",
+  "startPitch": 0,
+  "startPos": {
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "startWait": 0,
+  "startYaw": 0,
+  "type": "State"
+}

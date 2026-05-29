@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<Imageset version="2" name="chat" imagefile="chat.png" nativeHorzRes="124" nativeVertRes="347" autoScaled="vertical">
+	<Image name="btn_0_private_chat" xPos="1" yPos="104" height="38" width="43"/>
+	<Image name="btn_0_private_chat_sel" xPos="70" yPos="65" height="38" width="43"/>
+	<Image name="btn_0_send" xPos="1" yPos="65" height="38" width="68"/>
+	<Image name="btn_0_send_sel" xPos="45" yPos="104" height="38" width="68"/>
+	<Image name="btn_0_voice" xPos="1" yPos="143" height="38" width="43"/>
+	<Image name="btn_0_voice_sel" xPos="79" yPos="26" height="38" width="43"/>
+	<Image name="chb_9_normal" xPos="1" yPos="1" height="4" width="4"/>
+	<Image name="chb_9_selected" xPos="1" yPos="26" height="35" width="16"/>
+	<Image name="img_0_voiceicon_other" xPos="11" yPos="1" height="24" width="17"/>
+	<Image name="img_0_voiceicon_other01" xPos="101" yPos="1" height="24" width="17"/>
+	<Image name="img_0_voiceicon_other02" xPos="47" yPos="1" height="24" width="17"/>
+	<Image name="img_0_voiceicon_self" xPos="83" yPos="1" height="24" width="17"/>
+	<Image name="img_0_voiceicon_self01" xPos="65" yPos="1" height="24" width="17"/>
+	<Image name="img_0_voiceicon_self02" xPos="29" yPos="1" height="24" width="17"/>
+	<Image name="img_9_bubble_other" xPos="18" yPos="26" height="36" width="60"/>
+	<Image name="img_9_chat_bg" xPos="45" yPos="143" height="64" width="8"/>
+	<Image name="img_9_chat_expand02" xPos="1" yPos="208" height="138" width="122"/>
+	<Image name="img_9_enter" xPos="6" yPos="1" height="4" width="4"/>
+</Imageset>

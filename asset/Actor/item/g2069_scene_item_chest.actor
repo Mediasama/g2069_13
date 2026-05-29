@@ -1,0 +1,35 @@
+<ActorTemplates>
+	<ActorTemplate Alpha="1" AttackScale="1" IntervalTime="2" IsShowShadow="false" MaxDistance="16" MinDistance="1" name="111.actor" Originalscale="1.5 1.5 1.5" SelectedRingSize="1" Skeleton="g2069_none.skel" SoundFileNum="0" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" TextHeight="0" Volume="0.8" WoundAngle="25" WoundBone="">
+		<Anims/>
+		<BodyParts>
+			<BodyPart ColorParams="1 1 1 1" DefaultUse="true" EdgeColor="1 1 1 1" MasterName="mutex_name_0" SlaveName="group0">
+				<StaticMesh DiscardAlpha="0" LocalAlpha="1" type_name="g2069_scene_item_chest">
+					<EdgeColor value="1.0 0 0 1.0"/>
+					<FileName value="asset/Mesh/scene_box/g2069_scene_item_chest.mesh"/>
+					<LocalBrightnessScale value="1.0"/>
+					<OverlayColor value="1.0 1.0 1.0 1.0"/>
+					<pitch value="0"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<roll value="0"/>
+					<Scale_X value="1"/>
+					<Scale_Y value="1"/>
+					<Scale_Z value="1"/>
+					<SocketName value="Origin197011"/>
+					<SpecularCoef value="0.15"/>
+					<SpecularColor value="1.0 1.0 1.0 1.0"/>
+					<SpecularStrength value="1.0"/>
+					<UseBloom value="false"/>
+					<UseEdge value="false"/>
+					<UseOriginalcolor value="false"/>
+					<UseOverlayColorReplaceMode value="false"/>
+					<UseReflect value="false"/>
+					<UseTransparentNearestSlice value="false"/>
+					<yaw value="0"/>
+				</StaticMesh>
+			</BodyPart>
+		</BodyParts>
+		<Skills/>
+	</ActorTemplate>
+</ActorTemplates>

@@ -1,0 +1,10 @@
+n_id	s_mapName	s_name	s_info	s_camera_path	s_sound
+序号	场景名	场景名称	信息	镜头策略	背景音乐
+1	map_muye	g2069_map_muye	1001#1003@g2069_map_endervalley	muye	map_muye_bgm
+2	map_windmilltown	g2069_map_windmilltown	2001#2002@g2069_map_endervalley	windmilltown	map_muye_bgm
+3	map_endervalley	g2069_map_endervalley	3001#3002#3003@g2069_map_windmilltown#g2069_map_muye#navytown#g2069_map_desertpalce	endervalley	map_muye_bgm
+4	navytown	g2069_navytown	4001#4002#4003@g2069_map_desertpalce#g2069_map_endervalley	navytown	map_muye_bgm
+5	map_desertpalce	g2069_map_desertpalce	5001#5001#5003@g2069_map_endervalley#g2069_navytown#g2069_map_icebergvillage	desertpalce	map_muye_bgm
+6	map_born	map_born	1001	born	map_muye_bgm
+7	map_icebergvillage	g2069_map_icebergvillage	6001#6001#6003@g2069_map_desertpalce#g2069_map_volcanovillage	icebergvillage	map_muye_bgm
+8	map_volcanovillage	g2069_map_volcanovillage	7001#7001#7003@g2069_map_icebergvillage#g2069_map_unknow	volcanovillage	map_muye_bgm

@@ -1,0 +1,6 @@
+time	ambientSkyColor	ambientEquatorColor	ambientIntensity	dirLightColor	dirLightRotation	dirLightIntensity	fogData	fogColor
+时间(时#分)	环境光GlobalLight(红#绿#蓝)skyColor	环境光GlobalLight(红#绿#蓝)skyLineColor	环境光强度GlobalLight - lightBrightness	平行光颜色 DirectionalLight  lightColor	平行光朝向	平行光强度	density#start#end#alpha#type 不填-默认值0#0#0#0#0	雾气颜色x#y#z
+5#0	r:0.6 g:0.61 b:0.62 a:1.0	r:0.47 g:0.47 b:0.47 a:1.0	0.7	r:0.68 g:0.84 b:0.89 a:1.0	x:50 y:166 z:0	0.35	0.5#80#200#1	r:0.0627450980392157 g:0.137254901960784 b:0.349019607843137 a:1.0
+7#0	r:0.91 g:0.83 b:0.78 a:1.0	r:0.47 g:0.47 b:0.47 a:1.0	0.7	r:0.66 g:0.66 b:0.66 a:1.0	x:50 y:166 z:0	0.9	0.4#80#250#1	r:0.87843137254902 g:1.0 b:1.0 a:1.0 
+18#0	r:0.91 g:0.83 b:0.78 a:1.0	r:0.47 g:0.47 b:0.47 a:1.0	0.7	r:0.68 g:0.84 b:0.89 a:1.0	x:50 y:166 z:0	0.9	0.4#80#250#1	r:0.87843137254902 g:1.0 b:1.0 a:1.0 
+20#0	r:0.6 g:0.61 b:0.62 a:1.0	r:0.47 g:0.47 b:0.47 a:1.0	0.7	r:0.470588235294118 g:0.87843137254902 b:1.0 a:1.0	x:50 y:166 z:0	0.35	0.5#80#200#1	r:0.0431372549019608 g:0.0509803921568627 b:0.12156862745098 a:1.0

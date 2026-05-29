@@ -1,0 +1,163 @@
+<ActorTemplates>
+	<ActorTemplate Alpha="1" AttackScale="1" IntervalTime="2" IsShowShadow="true" MaxDistance="16" MinDistance="1" name="111.actor" Originalscale="8 8 8" SelectedRingSize="1" Skeleton="g2033_Boss_yiweishouhe.skel" SoundFileNum="0" SoundName1="" SoundName2="" SoundName3="" SoundName4="" SoundName5="" TextHeight="0" Volume="0.8" WoundAngle="25" WoundBone="">
+		<Anims>
+			<Anim Name="asset/Actor/monster/monster_anim/g2069_skill_yiwei_01.anim"/>
+			<Anim Name="asset/Actor/monster/monster_anim/g2069_skill_yiwei_02.anim"/>
+			<Anim Name="asset/Actor/monster/monster_anim/g2069_skill_yiwei_03.anim"/>
+			<Anim Name="asset/Actor/monster/monster_anim/g2069_skill_yiwei_04.anim"/>
+			<Anim Name="asset/Actor/monster/monster_anim/g2069_skill_yiwei_a1.anim"/>
+			<Anim Name="asset/Actor/monster/monster_anim/g2069_yiwei_die.anim"/>
+			<Anim Name="asset/Actor/monster/monster_anim/g2069_yiwei_hurt.anim"/>
+			<Anim Name="g2033_boss_yiweishouhe_attack.anim"/>
+			<Anim Name="g2033_boss_yiweishouhe_idle.anim"/>
+			<Anim Name="g2033_boss_yiweishouhe_move.anim"/>
+		</Anims>
+		<BodyParts>
+			<BodyPart ColorParams="1 1 1 1" DefaultUse="true" EdgeColor="1 1 1 1" MasterName="body" SlaveName="1">
+				<Skin ChangeColor="1.4013e-45 -0.487196 0.0893673 -0.567287" DiscardAlpha="0" EdgeColor="1.0 0 0 1.0" LocalAlpha="1" LocalBrightnessScale="1" MeshName="g2033_Boss_yiweishouhe.skin" OverlayColor="1 1 1 1" SpecularCoef="0.15" SpecularColor="1.0 1.0 1.0 1.0" SpecularStrength="1" type_name="g2033_Boss_yiweishouhe" UseBloom="false" UseEdge="false" UseOriginalcolor="true" UseOverlayColorReplaceMode="false" UseReflect="false" UseTransparentNearestSlice="false" UVSpeed="0 0"/>
+			</BodyPart>
+		</BodyParts>
+		<Skills>
+			<Skill EnableWound="false" Name="attack" TextMode="0" UserDefineTime="-2">
+				<ActorScaleChange beginScale="1" endScale="1"/>
+				<Animation BeginTime="0" Channel="" FadeTime="0.25" Length="1.233" Name="g2033_boss_yiweishouhe_attack.anim" Times="1" TimeScale="1"/>
+			</Skill>
+			<Skill EnableWound="false" Name="attack2" TextMode="0" UserDefineTime="-2">
+				<Animation BeginTime="0" Channel="" FadeTime="0.25" Length="1.233" Name="g2033_boss_yiweishouhe_attack.anim" Times="1" TimeScale="1"/>
+				<Effect>
+					<Alpha value="1"/>
+					<BeginTime value="0.58"/>
+					<CycleTime value="-1"/>
+					<FileName value="g2033_skill_boss_yiwei.effect"/>
+					<FollowActor value="true"/>
+					<pitch value="0"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<roll value="0"/>
+					<Scale_X value="1"/>
+					<Scale_Y value="1"/>
+					<Scale_Z value="1"/>
+					<SocketName value="BuSuiFu"/>
+					<Times value="1"/>
+					<TimeScale value="1"/>
+					<type_name value="g2033_skill_boss_yiwei"/>
+					<yaw value="0"/>
+				</Effect>
+			</Skill>
+			<Skill EnableWound="false" Name="die" TextMode="0" UserDefineTime="-2">
+				<Animation BeginTime="0" Channel="" FadeTime="0.25" Length="1.2" Name="asset/Actor/monster/monster_anim/g2069_yiwei_die.anim" Times="1" TimeScale="0.7"/>
+			</Skill>
+			<Skill EnableWound="false" Name="g2069_skill_yiwei_01" TextMode="0" UserDefineTime="-2">
+				<Animation BeginTime="0" Channel="" FadeTime="0.15" Length="0.9" Name="asset/Actor/monster/monster_anim/g2069_skill_yiwei_01.anim" Times="1" TimeScale="1"/>
+				<Effect>
+					<Alpha value="1"/>
+					<BeginTime value="0.46"/>
+					<CycleTime value="-1"/>
+					<FileName value="g2069_skill_woailuo_02.effect"/>
+					<FollowActor value="true"/>
+					<pitch value="3.26827"/>
+					<Position_X value="0"/>
+					<Position_Y value="-0.291657"/>
+					<Position_Z value="0.401226"/>
+					<roll value="4.42601"/>
+					<Scale_X value="1"/>
+					<Scale_Y value="1"/>
+					<Scale_Z value="1"/>
+					<SocketName value="BuSuiFu"/>
+					<Times value="1"/>
+					<TimeScale value="0.7"/>
+					<type_name value="g2069_skill_woailuo_02"/>
+					<yaw value="-36.3737"/>
+				</Effect>
+			</Skill>
+			<Skill EnableWound="false" Name="g2069_skill_yiwei_02" TextMode="0" UserDefineTime="-2">
+				<Animation BeginTime="0" Channel="" FadeTime="0.15" Length="0.966" Name="asset/Actor/monster/monster_anim/g2069_skill_yiwei_02.anim" Times="1" TimeScale="1"/>
+				<Effect>
+					<Alpha value="1"/>
+					<BeginTime value="0.46"/>
+					<CycleTime value="-1"/>
+					<FileName value="g2069_skill_woailuo_01.effect"/>
+					<FollowActor value="true"/>
+					<pitch value="0"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<roll value="0"/>
+					<Scale_X value="1"/>
+					<Scale_Y value="1"/>
+					<Scale_Z value="1"/>
+					<SocketName value="BuSuiFu"/>
+					<Times value="1"/>
+					<TimeScale value="0.7"/>
+					<type_name value="g2069_skill_woailuo_01"/>
+					<yaw value="21.5"/>
+				</Effect>
+			</Skill>
+			<Skill EnableWound="false" Name="g2069_skill_yiwei_03" TextMode="0" UserDefineTime="-2">
+				<Animation BeginTime="0" Channel="" FadeTime="0.15" Length="1.233" Name="asset/Actor/monster/monster_anim/g2069_skill_yiwei_03.anim" Times="1" TimeScale="1.2"/>
+				<Effect>
+					<Alpha value="1"/>
+					<BeginTime value="0.4"/>
+					<CycleTime value="-1"/>
+					<FileName value="g2069_skill_woailuo_04.effect"/>
+					<FollowActor value="true"/>
+					<pitch value="0"/>
+					<Position_X value="0"/>
+					<Position_Y value="0.229789"/>
+					<Position_Z value="0"/>
+					<roll value="0"/>
+					<Scale_X value="1"/>
+					<Scale_Y value="1"/>
+					<Scale_Z value="1"/>
+					<SocketName value="BuSuiFu"/>
+					<Times value="1"/>
+					<TimeScale value="1"/>
+					<type_name value="g2069_skill_woailuo_04"/>
+					<yaw value="-0.5"/>
+				</Effect>
+			</Skill>
+			<Skill EnableWound="false" Name="g2069_skill_yiwei_04" TextMode="0" UserDefineTime="-2">
+				<Animation BeginTime="0" Channel="" FadeTime="0.15" Length="2.066" Name="asset/Actor/monster/monster_anim/g2069_skill_yiwei_04.anim" Times="1" TimeScale="1.2"/>
+				<Effect>
+					<Alpha value="1"/>
+					<BeginTime value="0.56"/>
+					<CycleTime value="-1"/>
+					<FileName value="g2069_skill_woailuo_03.effect"/>
+					<FollowActor value="true"/>
+					<pitch value="0"/>
+					<Position_X value="0"/>
+					<Position_Y value="0"/>
+					<Position_Z value="0"/>
+					<roll value="0"/>
+					<Scale_X value="1"/>
+					<Scale_Y value="1"/>
+					<Scale_Z value="1"/>
+					<SocketName value="BuSuiFu"/>
+					<Times value="1"/>
+					<TimeScale value="0.7"/>
+					<type_name value="g2069_skill_woailuo_03"/>
+					<yaw value="0"/>
+				</Effect>
+			</Skill>
+			<Skill EnableWound="false" Name="g2069_skill_yiwei_a" TextMode="0" UserDefineTime="-2">
+				<Animation BeginTime="0" Channel="" FadeTime="0" Length="0.9" Name="asset/Actor/monster/monster_anim/g2069_skill_yiwei_a1.anim" Times="1" TimeScale="1.3"/>
+			</Skill>
+			<Skill EnableWound="false" Name="g2069_skill_yiwei_b" TextMode="0" UserDefineTime="-2">
+				<Animation BeginTime="0" Channel="" FadeTime="0.25" Length="1.233" Name="asset/Actor/monster/monster_anim/g2069_skill_yiwei_03.anim" Times="1" TimeScale="1"/>
+			</Skill>
+			<Skill EnableWound="false" Name="hurt" TextMode="0" UserDefineTime="-2">
+				<Animation BeginTime="0" Channel="" FadeTime="0.25" Length="0.366" Name="asset/Actor/monster/monster_anim/g2069_yiwei_hurt.anim" Times="1" TimeScale="1"/>
+			</Skill>
+			<Skill EnableWound="false" Name="idle" TextMode="0" UserDefineTime="-2">
+				<ActorScaleChange beginScale="0.5" endScale="0.5"/>
+				<Animation BeginTime="0" Channel="" FadeTime="0.25" Length="1.7" Name="g2033_boss_yiweishouhe_idle.anim" Times="-1" TimeScale="1"/>
+			</Skill>
+			<Skill EnableWound="false" Name="run" TextMode="0" UserDefineTime="-2">
+				<ActorScaleChange beginScale="0.5" endScale="0.5"/>
+				<Animation BeginTime="0" Channel="" FadeTime="0.25" Length="1.233" Name="g2033_boss_yiweishouhe_move.anim" Times="-1" TimeScale="0.85"/>
+			</Skill>
+		</Skills>
+		<SubActors/>
+	</ActorTemplate>
+</ActorTemplates>

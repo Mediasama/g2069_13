@@ -1,0 +1,81 @@
+{
+  "__OBJ_ID": "62d23d4d-feca-4dc6-a6e0-87cb1e187984",
+  "__OBJ_TYPE": "Instance_Part_Storage",
+  "AddCustom": {
+    "attrs": [
+      {
+        "__OBJ_ID": "c95ddb73-4684-48f5-bb20-b0214154e41f",
+        "key": "teleport_id",
+        "val": {
+          "__OBJ_ID": "5e129686-eb97-4391-8e62-55b4c877b754",
+          "__OBJ_TYPE": "T_String",
+          "rawval": "1"
+        }
+      },
+      {
+        "__OBJ_ID": "03e051b9-2da7-41ab-812b-861ccdd71bd6",
+        "key": "teleport_map",
+        "val": {
+          "__OBJ_ID": "c22ddffe-7fea-440e-9da0-4cfec1373099",
+          "__OBJ_TYPE": "T_String",
+          "rawval": "map_endervalley"
+        }
+      },
+      {
+        "__OBJ_ID": "9a81f897-232a-42b9-b543-c888a9d60813",
+        "key": "to_teleport_id",
+        "val": {
+          "__OBJ_ID": "4850520b-30d6-4c41-ba4d-8f82f7371fa3",
+          "__OBJ_TYPE": "T_String",
+          "rawval": "1"
+        }
+      }
+    ]
+  },
+  "cameraCollideEnable": false,
+  "children": [
+    {
+      "__OBJ_ID": "bf38afc3-cd37-40de-a734-de336cbe98ed",
+      "__OBJ_TYPE": "Instance_EffectPart",
+      "csgShapeEffect": {
+        "asset": "asset/custom_effect/g2069_scene_item_portal.effect"
+      },
+      "enableScaleByParent": true,
+      "id": "9168873740571836417",
+      "position": {
+        "x": -0.264997929334641,
+        "y": -4.6160774230957,
+        "z": -63.7009887695312
+      },
+      "size": {
+        "x": 8.56918907165527,
+        "y": 23.9999980926514,
+        "z": 8.66275405883789
+      },
+      "templateId": "9168873707569364993"
+    }
+  ],
+  "collisionGroup": "8",
+  "density": 2.2,
+  "friction": 0.37,
+  "id": "9168873740579995649",
+  "massCenter": {
+    "x": -0.264997929334641,
+    "y": -4.6160774230957,
+    "z": -63.7009887695312
+  },
+  "material": {
+    "alpha": 0
+  },
+  "name": "teleport_1",
+  "needSync": false,
+  "position": {
+    "x": -0.264997929334641,
+    "y": -4.6160774230957,
+    "z": -63.7009887695312
+  },
+  "restitution": 0.3,
+  "templateId": "9168873707575427073",
+  "useCollide": false,
+  "useGravity": false
+}

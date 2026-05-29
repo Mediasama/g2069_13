@@ -1,0 +1,74 @@
+{
+  "__OBJ_ID": "e4755812-2b94-4e50-9188-5a6881923a64",
+  "__OBJ_TYPE": "Instance_Part_Storage",
+  "AddCustom": {
+    "attrs": [
+      {
+        "__OBJ_ID": "66df768d-e4f3-4dea-a987-b434a2a884ff",
+        "key": "mission_group",
+        "val": {
+          "__OBJ_ID": "7e054944-a335-4d38-aa19-a45beacc7a82",
+          "__OBJ_TYPE": "T_String",
+          "rawval": "1"
+        }
+      },
+      {
+        "__OBJ_ID": "77b2ae76-3dac-4d24-8a60-4697d1bfb474",
+        "key": "mission_gate",
+        "val": {
+          "__OBJ_ID": "e3be04be-2bbf-43c2-a627-ebadb9c97722",
+          "__OBJ_TYPE": "T_String",
+          "rawval": "1"
+        }
+      }
+    ]
+  },
+  "batchType": "Dynamic",
+  "cameraCollideEnable": false,
+  "children": [
+    {
+      "__OBJ_ID": "7ced2354-3274-420b-900e-115e059a4b8d",
+      "__OBJ_TYPE": "Instance_EffectPart",
+      "csgShapeEffect": {
+        "asset": "asset/custom_effect/g2069_awake_portal.effect"
+      },
+      "enableScaleByParent": true,
+      "id": "9198666635589222401",
+      "position": {
+        "x": 10.5830001831055,
+        "y": 0.259998172521591,
+        "z": 234.018005371094
+      },
+      "size": {
+        "x": 8.47555160522461,
+        "y": 23.9999980926514,
+        "z": 8.02378082275391
+      },
+      "templateId": "9198666510694465537"
+    }
+  ],
+  "collisionGroup": "8",
+  "density": 2.2,
+  "friction": 0.37,
+  "id": "9198666635594530817",
+  "isVisible": false,
+  "massCenter": {
+    "x": 10.583,
+    "y": 0.734,
+    "z": 234.018
+  },
+  "material": {
+    "alpha": 0
+  },
+  "name": "mission_teleport",
+  "needSync": false,
+  "position": {
+    "x": 10.583,
+    "y": 0.734,
+    "z": 234.018
+  },
+  "restitution": 0.3,
+  "templateId": "9198666510699659265",
+  "useCollide": false,
+  "useGravity": false
+}

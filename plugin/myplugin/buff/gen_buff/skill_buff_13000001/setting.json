@@ -1,0 +1,9 @@
+{
+  "addHp": 50,
+  "buffId": 13000001,
+  "buffName": "myplugin/gen_buff/skill_buff_13000001",
+  "deadRemove": true,
+  "duration": 1,
+  "name": "buff_name_13000001",
+  "needSave": false
+}
