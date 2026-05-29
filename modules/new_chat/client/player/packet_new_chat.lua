@@ -6,7 +6,28 @@
 local ChatPage = Define.ChatPage
 local handles = T(Player, "PackageHandlers")
 
+local ChatRateLimiter = { lastMsgs = {} }
 function handles:SendChatMsgToClient(packet)
+    if Me.lagShield then
+        local msgData = packet.msgData
+        local fromId = msgData.fromId
+        local now = os.clock()
+
+        ChatRateLimiter.lastMsgs[fromId] = ChatRateLimiter.lastMsgs[fromId] or { count = 0, time = now }
+        local data = ChatRateLimiter.lastMsgs[fromId]
+
+        if now - data.time > 1 then
+            data.count = 0
+            data.time = now
+        end
+
+        data.count = data.count + 1
+        -- Suppress if more than 2 msgs/sec or if it's an emoji (common lag source)
+        if data.count > 2 or msgData.msgType == Define.MsgType.Emoji then
+            return
+        end
+    end
+
     local msgData = packet.msgData
     Lib.emitEvent(Event.EVENT_RECEIVE_CHAT_MESSAGE, msgData)
     self:showChatBubble(msgData)

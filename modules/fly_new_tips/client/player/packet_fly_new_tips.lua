@@ -8,6 +8,18 @@ local handles = T(Player, "PackageHandlers")
 ---@type FlyNewTipsHelper
 local FlyNewTipsHelper = T(Lib, "FlyNewTipsHelper")
 
+local TipsRateLimiter = { lastTime = 0, count = 0 }
 function handles:SyncClientShowOneFlyTips(packet)
+    if Me.lagShield then
+        local now = os.clock()
+        if now - TipsRateLimiter.lastTime > 1 then
+            TipsRateLimiter.count = 0
+            TipsRateLimiter.lastTime = now
+        end
+        TipsRateLimiter.count = TipsRateLimiter.count + 1
+        if TipsRateLimiter.count > 5 then -- Max 5 tips per second
+            return
+        end
+    end
     FlyNewTipsHelper:pushOneFlyNewTipsItem(packet.itemInfo)
 end
