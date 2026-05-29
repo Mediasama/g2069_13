@@ -17,9 +17,17 @@ local CARS = {
 }
 
 -- [Core Utilities]
-local function isValidEnemy(ent)
+local function isValidEnemy(ent, ignoreSafe)
     if not ent or not ent:isValid() or ent.objID == Me.objID then return false end
-    return ent.isPlayer and ent.curHp > 0 and not ent:isInStateType(Define.RoleStatus.DEAD)
+    if not ent.isPlayer or ent:isInStateType(Define.RoleStatus.DEAD) or ent.curHp <= 0 then return false end
+
+    -- Anti-PK Bypass: If ignoreSafe is true, we don't care if they are in 'safe' mode
+    if not ignoreSafe then
+        local st = ent:getSafeModeType()
+        if st == Define.PKModeType.safe or st == Define.PKModeType.pkWait then return false end
+    end
+
+    return true
 end
 
 local function safeTimer(key, time, func)
@@ -40,13 +48,14 @@ end
 -- [1] COMBAT - БОЕВАЯ СИСТЕМА
 -- ==========================================
 
-GMItem["[1] Combat/KillAura_360"] = function()
+GMItem["[1] Combat/KillAura_AntiPK"] = function()
     CARS.active.killAura = not CARS.active.killAura
     safeTimer("killAura", 5, function()
         if not CARS.active.killAura then return false end
         local targets = {}
         for _, ent in pairs(World.CurWorld:getAllEntity()) do
-            if isValidEnemy(ent) and Me:distance(ent) < 10 then
+            -- We pass 'true' to ignoreSafe to bypass other players' God Mode exploits
+            if isValidEnemy(ent, true) and Me:distance(ent) < 12 then
                 table.insert(targets, ent.objID)
             end
         end
@@ -55,36 +64,39 @@ GMItem["[1] Combat/KillAura_360"] = function()
         end
         return true
     end)
-    return "KillAura: " .. (CARS.active.killAura and "ON" or "OFF")
+    return "KillAura (PK Bypass): " .. (CARS.active.killAura and "ON" or "OFF")
+end
+
+GMItem["[1] Combat/PK_God_Mode"] = function()
+    CARS.active.pkGod = not CARS.active.pkGod
+    if CARS.active.pkGod then
+        safeHook(Skill, "Cast", function(old, name, packet)
+            if CARS.active.pkGod then
+                Me:setSafeModeType(Define.PKModeType.pk2) -- Switch to PK
+                safeTimer("pk_return", 8, function() -- Return to Safe after 400ms
+                    Me:setSafeModeType(Define.PKModeType.safe)
+                end)
+            end
+            return old(name, packet)
+        end)
+    end
+    return "Auto-PK Juggler: " .. (CARS.active.pkGod and "ACTIVE" or "OFF")
 end
 
 GMItem["[1] Combat/Turbo_Combo"] = function()
     Me.turboCombo = not Me.turboCombo
-    return "Turbo Combo (No Delay): " .. (Me.turboCombo and "ON" or "OFF")
+    return "Turbo Combo: " .. (Me.turboCombo and "ON" or "OFF")
 end
 
-GMItem["[1] Combat/Instant_Finisher"] = function()
+GMItem["[1] Combat/Always_Finisher"] = function()
     Me.alwaysFinisher = not Me.alwaysFinisher
     return "Instant Finisher: " .. (Me.alwaysFinisher and "ON" or "OFF")
-end
-
-GMItem["[1] Combat/No_Recovery_Frames"] = function()
-    safeHook(Entity, "playAction", function(old, self, name, time)
-        return old(self, name, 0.01)
-    end)
-    return "Action Frame Skip ACTIVE"
-end
-
-GMItem["[1] Combat/Infinite_Channeling"] = function()
-    Me.infiniteMP = not Me.infiniteMP
-    return "Infinite Channeling: " .. (Me.infiniteMP and "ON" or "OFF")
 end
 
 -- ==========================================
 -- [2] MOVEMENT - ПЕРЕМЕЩЕНИЕ
 -- ==========================================
 
--- Optimized Flight Logic (High Responsiveness)
 GMItem["[2] Movement/Ultra_Flight_v2"] = function()
     CARS.active.flight = not CARS.active.flight
     if not CARS.active.flight then
@@ -93,15 +105,12 @@ GMItem["[2] Movement/Ultra_Flight_v2"] = function()
         return "Flight OFF"
     end
 
-    -- Manipulating Me.motion directly every tick creates a much more
-    -- responsive feel than changing moveSpeed, as it bypasses built-in
-    -- physics dampening and acceleration.
     safeTimer("flight", 1, function()
         if not CARS.active.flight then return false end
         Me:setProp("gravity", 0)
         local bm = Blockman.Instance()
         local move = Lib.v3(0, 0, 0)
-        local speed = 0.7
+        local speed = 0.8
 
         if bm:isKeyPressing("key.forward") then move.z = 1 end
         if bm:isKeyPressing("key.back") then move.z = -1 end
@@ -123,27 +132,35 @@ GMItem["[2] Movement/Ultra_Flight_v2"] = function()
         end
         return true
     end)
-    return "Responsive Vector Flight ACTIVE"
+    return "Responsive Flight ACTIVE"
 end
 
-GMItem["[2] Movement/Voxel_Ghost_Mode"] = function()
+GMItem["[2] Movement/Voxel_Ghost"] = function()
     CARS.active.ghost = not CARS.active.ghost
     local scene = World.CurWorld:getSceneManager():getCurScene()
     scene:setEditorCanCollide(not CARS.active.ghost)
-    return "Noclip: " .. (CARS.active.ghost and "ON" or "OFF")
+    return "Ghost Mode: " .. (CARS.active.ghost and "ON" or "OFF")
 end
 
 -- ==========================================
 -- [3] VISUALS - ВИЗУАЛ
 -- ==========================================
 
+GMItem["[3] Visuals/Full_Bright"] = function()
+    local timelight = T(Lib, "TimeLight")
+    if timelight then timelight:SetAmbientIntensityInc(100) end
+    return "Brightness MAX"
+end
+
 GMItem["[3] Visuals/Entity_ESP"] = function()
     CARS.active.esp = not CARS.active.esp
     safeTimer("esp", 40, function()
         if not CARS.active.esp then return false end
         for _, ent in pairs(World.CurWorld:getAllEntity()) do
-            if isValidEnemy(ent) and not UI:isOpenWindow("esp_"..ent.objID) then
-                UI:openSceneWindow("UI/scene_object/gui/widget_player_name", "esp_"..ent.objID, {target = ent}, "asset")
+            if ent.isPlayer and ent.objID ~= Me.objID and ent.curHp > 0 then
+                if not UI:isOpenWindow("esp_"..ent.objID) then
+                    UI:openSceneWindow("UI/scene_object/gui/widget_player_name", "esp_"..ent.objID, {target = ent}, "asset")
+                end
             end
         end
         return true
@@ -154,7 +171,7 @@ end
 -- [4] APPS - ПРИЛОЖЕНИЯ
 -- ==========================================
 
--- Functional Calculator with GUI
+-- Functional Calculator
 local function updateCalc(val)
     if not CARS.calc.win then return end
     local display = CARS.calc.win:child("Display")
@@ -175,19 +192,16 @@ end
 
 GMItem["[4] Apps/Calculator_GUI"] = function()
     if CARS.calc.win then root:removeChild(CARS.calc.win:getWindow()) CARS.calc.win = nil return end
-
     local win = UI:createStaticImage("CalcRoot")
     win:setSize(UDim2.new(0, 220, 0, 300))
     win:setPosition(UDim2.new(0.5, -110, 0.5, -150))
     win:setProperty("ImageColours", "tl:FF333333 tr:FF333333 bl:FF333333 br:FF333333")
     root:addChild(win:getWindow())
-
     local display = UI:createStaticText("Display")
     display:setSize(UDim2.new(1, -20, 0, 40))
     display:setPosition(UDim2.new(0, 10, 0, 10))
     display:setText("0")
     win:addChild(display:getWindow())
-
     local buttons = {"7","8","9","/", "4","5","6","*", "1","2","3","-", "0","C","=","+"}
     for i, b in ipairs(buttons) do
         local btn = UI:createStaticText("Btn"..i)
@@ -203,42 +217,39 @@ GMItem["[4] Apps/Calculator_GUI"] = function()
         win:addChild(btn:getWindow())
     end
     CARS.calc.win = win
-    return "Calculator Deployed"
 end
 
--- Bad Apple ASCII Visualizer
-local BA_DATA = {
-    "  . . . . .  \n . # # # . \n . # . # . \n . # # # . \n  . . . . .  ",
-    "  . . . . .  \n . . . . . \n . . # . . \n . . . . . \n  . . . . .  "
+-- Bad Apple / Doom PoC Engine
+local VIDEO_DATA = {
+    "      ####      \n    ########    \n   ##########   \n   ##########   \n    ########    \n      ####      ",
+    "                \n      ####      \n     ######     \n     ######     \n      ####      \n                "
 }
 
-GMItem["[4] Apps/Bad_Apple_ASCII"] = function()
-    CARS.active.ba = not CARS.active.ba
-    if not CARS.active.ba then
-        if CARS.baWin then root:removeChild(CARS.baWin:getWindow()) CARS.baWin = nil end
-        return "Bad Apple STOPPED"
+GMItem["[4] Apps/BadApple_Doom_PoC"] = function()
+    CARS.active.video = not CARS.active.video
+    if not CARS.active.video then
+        if CARS.vidWin then root:removeChild(CARS.vidWin:getWindow()) CARS.vidWin = nil end
+        return "Video STOPPED"
     end
-
-    local win = UI:createStaticText("BARoot")
-    win:setSize(UDim2.new(0, 400, 0, 400))
-    win:setPosition(UDim2.new(0.5, -200, 0.5, -200))
+    local win = UI:createStaticText("VideoRoot")
+    win:setSize(UDim2.new(0, 300, 0, 300))
+    win:setPosition(UDim2.new(0.5, -150, 0.5, -150))
     win:setProperty("HorzFormatting", "CentreAligned")
     win:setProperty("VertFormatting", "CentreAligned")
     root:addChild(win:getWindow())
-    CARS.baWin = win
-
+    CARS.vidWin = win
     local f = 1
-    safeTimer("ba", 2, function()
-        if not CARS.active.ba then return false end
-        win:setText(BA_DATA[f])
-        f = (f % #BA_DATA) + 1
+    safeTimer("video", 2, function()
+        if not CARS.active.video then return false end
+        win:setText(VIDEO_DATA[f])
+        f = (f % #VIDEO_DATA) + 1
         return true
     end)
-    return "Bad Apple Playing..."
+    return "Streaming PoC Video..."
 end
 
 -- ==========================================
--- [5] SYSTEM - СЕРВИС
+-- [5] SYSTEM - СИСТЕМА
 -- ==========================================
 
 GMItem["[5] System/Lag_Shield_Toggle"] = function()
@@ -249,9 +260,9 @@ end
 GMItem["[5] System/Clean_All_State"] = function()
     for k, _ in pairs(CARS.timers) do safeTimer(k, 0, nil) end
     if CARS.calc.win then root:removeChild(CARS.calc.win:getWindow()) CARS.calc.win = nil end
-    if CARS.baWin then root:removeChild(CARS.baWin:getWindow()) CARS.baWin = nil end
+    if CARS.vidWin then root:removeChild(CARS.vidWin:getWindow()) CARS.vidWin = nil end
     return "Cleanup Complete"
 end
 
-print("[Core] Categorized Engine Suite with Apps Deployed Successfully")
+print("[Core] Master Modding Suite Deployed Successfully")
 return GMItem
