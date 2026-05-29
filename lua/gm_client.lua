@@ -5,6 +5,7 @@ local SkillConfig = T(Config, "SkillConfig")
 local SkillMovesConfig = T(Config, "SkillMovesConfig")
 local AttributeSystem = T(Lib, "AttributeSystem")
 local InventorySystem = T(Lib, "InventorySystem")
+local TaskConfig = T(Config, "TaskConfig")
 local guiMgr = GUIManager:Instance()
 local root = guiMgr:getRootWindow()
 
@@ -13,13 +14,16 @@ local CARS = {
     timers = {},
     hooks = {},
     active = {},
+    scannedRooms = {}, -- Store room IDs and leaders
     calc = { current = "0", op = nil, last = nil, win = nil }
 }
 
 -- [Core Utilities]
 local function isValidEnemy(ent, ignoreSafe)
     if not ent or not ent:isValid() or ent.objID == Me.objID then return false end
-    if ent:isInStateType(Define.RoleStatus.DEAD) or (ent.curHp and ent.curHp <= 0) then return false end
+    if ent:isInStateType(Define.RoleStatus.DEAD) then return false end
+    local hp = ent:getCurHp()
+    if not hp or hp <= 0 then return false end
 
     if not ignoreSafe then
         local st = ent:getSafeModeType()
@@ -34,6 +38,7 @@ local function safeTimer(key, time, func)
 end
 
 local function safeHook(obj, name, newFunc)
+    if not obj then return end
     local hookKey = tostring(obj) .. name
     if CARS.hooks[hookKey] then return end
     CARS.hooks[hookKey] = obj[name]
@@ -43,18 +48,18 @@ local function safeHook(obj, name, newFunc)
 end
 
 -- ==========================================
--- [1] COMBAT - СРАЖЕНИЕ
+-- [1] COMBAT - БОЕВАЯ СИСТЕМА
 -- ==========================================
 
-GMItem["[1] Combat/KillAura_AntiExploit"] = function()
+GMItem["[1] Combat/KillAura_PK_Punisher"] = function()
     CARS.active.killAura = not CARS.active.killAura
     safeTimer("killAura", 5, function()
         if not CARS.active.killAura then return false end
         local targets = {}
         for _, ent in pairs(World.CurWorld:getAllEntity()) do
-            -- [PUNISHER] If enemy is attacking or in PK mode, they are vulnerable regardless of 'safe' status
+            -- Target if vulnerable (PK mode/Battling) OR within tight range regardless of status
             local isVulnerable = ent:getSafeModeType() == Define.PKModeType.pk2 or ent:getPlayerIsInBattleState()
-            if ent.isPlayer and isValidEnemy(ent, true) and (isVulnerable or Me:distance(ent) < 8) then
+            if ent.isPlayer and isValidEnemy(ent, true) and (isVulnerable or Me:distance(ent) < 7) then
                 table.insert(targets, ent.objID)
             end
         end
@@ -63,7 +68,7 @@ GMItem["[1] Combat/KillAura_AntiExploit"] = function()
         end
         return true
     end)
-    return "KillAura (PK Punisher): " .. (CARS.active.killAura and "ON" or "OFF")
+    return "KillAura (Anti-Cheat): " .. (CARS.active.killAura and "ON" or "OFF")
 end
 
 GMItem["[1] Combat/PK_God_Mode"] = function()
@@ -71,30 +76,35 @@ GMItem["[1] Combat/PK_God_Mode"] = function()
     if CARS.active.pkGod then
         safeHook(Skill, "Cast", function(old, name, packet)
             if CARS.active.pkGod then
-                Me:setSafeModeType(Define.PKModeType.pk2)
-                safeTimer("pk_ret", 6, function() Me:setSafeModeType(Define.PKModeType.safe) end)
+                Me:setSafeModeType(Define.PKModeType.pk2) -- Vulnerability window opens
+                safeTimer("pk_ret", 6, function() Me:setSafeModeType(Define.PKModeType.safe) end) -- Closes after 300ms
             end
             return old(name, packet)
         end)
     end
-    return "PK Juggler: " .. (CARS.active.pkGod and "ACTIVE" or "OFF")
+    return "PK State Juggler: " .. (CARS.active.pkGod and "ACTIVE" or "OFF")
 end
 
 GMItem["[1] Combat/Turbo_Combo"] = function()
     Me.turboCombo = not Me.turboCombo
-    return "Turbo Combo: " .. (Me.turboCombo and "ON" or "OFF")
+    return "Combo Cooldown Bypass: " .. (Me.turboCombo and "ON" or "OFF")
 end
 
-GMItem["[1] Combat/Instant_Finisher"] = function()
+GMItem["[1] Combat/Always_Finisher"] = function()
     Me.alwaysFinisher = not Me.alwaysFinisher
-    return "Instant Finisher: " .. (Me.alwaysFinisher and "ON" or "OFF")
+    return "Forced Final Stage: " .. (Me.alwaysFinisher and "ON" or "OFF")
+end
+
+GMItem["[1] Combat/Infinite_Channeling"] = function()
+    Me.infiniteMP = not Me.infiniteMP
+    return "Skill MP Exhaustion Bypass: " .. (Me.infiniteMP and "ON" or "OFF")
 end
 
 -- ==========================================
 -- [2] MOVEMENT - ПЕРЕМЕЩЕНИЕ
 -- ==========================================
 
-GMItem["[2] Movement/Ultra_Flight_v2"] = function()
+GMItem["[2] Movement/Responsive_Flight"] = function()
     CARS.active.flight = not CARS.active.flight
     if not CARS.active.flight then
         Me:setProp("gravity", 0.08)
@@ -106,7 +116,7 @@ GMItem["[2] Movement/Ultra_Flight_v2"] = function()
         Me:setProp("gravity", 0)
         local bm = Blockman.Instance()
         local move = Lib.v3(0, 0, 0)
-        local speed = 0.8
+        local speed = 0.95
         if bm:isKeyPressing("key.forward") then move.z = 1 end
         if bm:isKeyPressing("key.back") then move.z = -1 end
         if bm:isKeyPressing("key.left") then move.x = 1 end
@@ -122,14 +132,7 @@ GMItem["[2] Movement/Ultra_Flight_v2"] = function()
         end
         return true
     end)
-    return "Vector Flight ACTIVE"
-end
-
-GMItem["[2] Movement/Voxel_Ghost"] = function()
-    CARS.active.ghost = not CARS.active.ghost
-    local scene = World.CurWorld:getSceneManager():getCurScene()
-    scene:setEditorCanCollide(not CARS.active.ghost)
-    return "Ghost Mode: " .. (CARS.active.ghost and "ON" or "OFF")
+    return "Direct Vector Flight ACTIVE"
 end
 
 -- ==========================================
@@ -138,60 +141,70 @@ end
 
 GMItem["[3] Raids/Reset_Daily_Limits"] = function()
     Me:sendPacket({ pid = "C2SGMResetMissionCounts" })
-    return "Limits Restored (10/10)"
+    return "Daily limit (10/10) reset to 0."
 end
 
-GMItem["[3] Raids/Force_Join_Room"] = GM:inputStr(function(_, roomId)
+GMItem["[3] Raids/Room_ID_Scanner"] = function()
+    CARS.active.scanner = not CARS.active.scanner
+    if CARS.active.scanner then
+        safeHook(Player.PackageHandlers, "S2CMissionTeammateCanSelect", function(old, self, packet)
+            local lead = packet.playerList[1] and packet.playerList[1].name or "Unknown"
+            print("[SCANNER] Found Raid! RoomID:", packet.missionId, "Host:", lead)
+            CARS.scannedRooms[packet.missionId] = lead
+            return old(self, packet)
+        end)
+        return "Scanner: ON (Check console for IDs)"
+    end
+    return "Scanner: OFF"
+end
+
+GMItem["[3] Raids/Show_Scanned_Rooms"] = function()
+    local list = "Active Raid Rooms:\n"
+    for id, lead in pairs(CARS.scannedRooms) do
+        list = list .. string.format("- ID: %s (Host: %s)\n", id, lead)
+    end
+    print(list)
+    return "Logged room list to console."
+end
+
+GMItem["[3] Raids/Join_Room_BY_ID"] = GM:inputStr(function(_, roomId)
     Me:sendPacket({ pid = "C2SEnterMission", roomId = roomId })
-    return "Breaching room ID: " .. roomId
+    return "Attempting to breach instance: " .. roomId
 end, "RoomID")
 
-GMItem["[3] Raids/Instant_Win_Stage"] = function()
-    local count = 0
-    for _, ent in pairs(World.CurWorld:getAllEntity()) do
-        if ent:isMonster() then
-            Me:sendPacket({ pid = "doGameSkillResult", skillId = 1000004, targets = {ent.objID} })
-            count = count + 1
-        end
+-- ==========================================
+-- [4] LEVELING - ПРОКАЧКА
+-- ==========================================
+
+GMItem["[4] Leveling/Quest_Nuke_All"] = function()
+    local allTasks = TaskConfig:getAllCfgs()
+    for id, _ in pairs(allTasks) do
+        Me:sendPacket({ pid = "C2SCompleteTask", taskId = id })
     end
-    return "Stage Cleared (" .. count .. " kills)"
+    return "Sent completion for all game quests."
 end
 
-GMItem["[3] Raids/Bypass_Level_Req"] = function()
-    UI:openWindow("UI/game_mission/gui/win_mission_select")
-    return "Mission Menu Opened (Bypassing Checks)"
-end
-
--- ==========================================
--- [4] VISUALS - ВИЗУАЛ
--- ==========================================
-
-GMItem["[4] Visuals/Full_Bright"] = function()
-    local timelight = T(Lib, "TimeLight")
-    if timelight then timelight:SetAmbientIntensityInc(100) end
-    return "Brightness MAX"
-end
-
-GMItem["[4] Visuals/Entity_ESP"] = function()
-    CARS.active.esp = not CARS.active.esp
-    safeTimer("esp", 40, function()
-        if not CARS.active.esp then return false end
-        for _, ent in pairs(World.CurWorld:getAllEntity()) do
-            if ent.isPlayer and ent.objID ~= Me.objID and ent.curHp > 0 then
-                if not UI:isOpenWindow("esp_"..ent.objID) then
-                    UI:openSceneWindow("UI/scene_object/gui/widget_player_name", "esp_"..ent.objID, {target = ent}, "asset")
-                end
-            end
+GMItem["[4] Leveling/Exp_Packet_Storm"] = function()
+    CARS.active.expSpam = not CARS.active.expSpam
+    if not CARS.active.expSpam then return "Storm Stopped" end
+    local sent = 0
+    safeTimer("exp_storm", 1, function()
+        if not CARS.active.expSpam then return false end
+        for i = 1, 40 do
+            if sent >= 10000 then CARS.active.expSpam = false return false end
+            Me:sendPacket({ pid = "C2SGetSubscribeVipAbility", alias = "role_exp" })
+            sent = sent + 1
         end
         return true
     end)
+    return "EXP Storm: ACTIVE"
 end
 
 -- ==========================================
--- [5] APPS - ПРИЛОЖЕНИЯ
+-- [5] APPS & TOOLS - ПРИЛОЖЕНИЯ
 -- ==========================================
 
-local function updateCalcDisplay(val)
+local function updateCalc(val)
     if not CARS.calc.win then return end
     local display = CARS.calc.win:child("Display")
     if val == "C" then CARS.calc.current = "0" CARS.calc.op = nil CARS.calc.last = nil
@@ -199,8 +212,8 @@ local function updateCalcDisplay(val)
         if CARS.calc.current == "0" then CARS.calc.current = val else CARS.calc.current = CARS.calc.current .. val end
     elseif val == "=" then
         if CARS.calc.op and CARS.calc.last then
-            local f, err = pcall(loadstring("return "..CARS.calc.last..CARS.calc.op..CARS.calc.current))
-            CARS.calc.current = f and tostring(err) or "Error"
+            local res, err = pcall(loadstring("return "..CARS.calc.last..CARS.calc.op..CARS.calc.current))
+            CARS.calc.current = res and tostring(err) or "Error"
             CARS.calc.op = nil CARS.calc.last = nil
         end
     else
@@ -214,7 +227,7 @@ GMItem["[5] Apps/Calculator_GUI"] = function()
     local win = UI:createStaticImage("CalcRoot")
     win:setSize(UDim2.new(0, 220, 0, 300))
     win:setPosition(UDim2.new(0.5, -110, 0.5, -150))
-    win:setProperty("ImageColours", "tl:FF333333 tr:FF333333 bl:FF333333 br:FF333333")
+    win:setProperty("ImageColours", "tl:FF222222 tr:FF222222 bl:FF222222 br:FF222222")
     root:addChild(win:getWindow())
     local display = UI:createStaticText("Display")
     display:setSize(UDim2.new(1, -20, 0, 40))
@@ -232,14 +245,14 @@ GMItem["[5] Apps/Calculator_GUI"] = function()
         btn:setProperty("HorzFormatting", "CentreAligned")
         btn:setProperty("VertFormatting", "CentreAligned")
         btn:setProperty("BackgroundEnabled", "True")
-        btn.onMouseClick = function() updateCalcDisplay(b) end
+        btn.onMouseClick = function() updateCalc(b) end
         win:addChild(btn:getWindow())
     end
     CARS.calc.win = win
 end
 
-local BA_DATA = { "      ####      \n    ########    \n   ##########   \n   ##########   \n    ########    \n      ####      ", "                \n      ####      \n     ######     \n     ######     \n      ####      \n                " }
-GMItem["[5] Apps/BadApple_Doom_PoC"] = function()
+local BAD_APPLE = { "  .###.  \n .#...#. \n .#...#. \n .#...#. \n  .###.  ", "  .....  \n  .###.  \n  .#.#.  \n  .###.  \n  .....  " }
+GMItem["[5] Apps/Bad_Apple_ASCII"] = function()
     CARS.active.ba = not CARS.active.ba
     if not CARS.active.ba then
         if CARS.baWin then root:removeChild(CARS.baWin:getWindow()) CARS.baWin = nil end
@@ -255,14 +268,14 @@ GMItem["[5] Apps/BadApple_Doom_PoC"] = function()
     local f = 1
     safeTimer("ba", 2, function()
         if not CARS.active.ba then return false end
-        win:setText(BA_DATA[f])
-        f = (f % #BA_DATA) + 1
+        win:setText(BAD_APPLE[f])
+        f = (f % #BAD_APPLE) + 1
         return true
     end)
 end
 
 -- ==========================================
--- [6] SYSTEM - СИСТЕМА
+-- [6] SYSTEM - СЕРВИС
 -- ==========================================
 
 GMItem["[6] System/Lag_Shield_Toggle"] = function()
@@ -274,8 +287,8 @@ GMItem["[6] System/Clean_All_State"] = function()
     for k, _ in pairs(CARS.timers) do safeTimer(k, 0, nil) end
     if CARS.calc.win then root:removeChild(CARS.calc.win:getWindow()) CARS.calc.win = nil end
     if CARS.baWin then root:removeChild(CARS.baWin:getWindow()) CARS.baWin = nil end
-    return "Cleanup Complete"
+    return "Cleanup Complete."
 end
 
-print("[Core] Master Modding Suite 1.2 Deployed with Raid Exploits")
+print("[System] CARS 1.3 Master Suite Deployed - Full Takeover Active")
 return GMItem
