@@ -1,0 +1,87 @@
+import os
+import shutil
+import subprocess
+
+SOURCE_DIR = "/storage/emulated/0/g2025_13/g2055"
+OUTPUT_DIR = "/storage/emulated/0/g2025_13/g2055_decompiled"
+UNLUAC_PATH = os.path.expanduser("~/unluac.jar")
+
+def decompile_lbc(src_path, dest_path):
+    """Декомпиляция Lua Bytecode (.lbc)"""
+    # Создаем имя файла с расширением .lua, заменяя .lbc/.LBC
+    base_path = os.path.splitext(dest_path)[0]
+    lua_dest_path = base_path + ".lua"
+    
+    try:
+        result = subprocess.run(
+            ["java", "-jar", UNLUAC_PATH, src_path],
+            capture_output=True,
+            text=True
+        )
+        
+        if result.returncode == 0 and result.stdout.strip():
+            with open(lua_dest_path, "w", encoding="utf-8", errors="ignore") as f:
+                f.write(result.stdout)
+            print(f"[УСПЕХ] Декомпилирован: {os.path.basename(src_path)} -> {os.path.basename(lua_dest_path)}")
+            return True
+        else:
+            print(f"[ОШИБКА unluac] Не удалось разгрузить {os.path.basename(src_path)}. Копирую оригинал.")
+            return False
+    except Exception as e:
+        print(f"[ИСКЛЮЧЕНИЕ] Ошибка на файле {os.path.basename(src_path)}: {e}")
+        return False
+
+def process_folder(current_src_dir):
+    """Рекурсивная функция обхода папок (надежнее, чем os.walk для Android)"""
+    print(f"\n[ОБХОД ПАПКИ] Сканирую: {current_src_dir}")
+    
+    try:
+        items = os.listdir(current_src_dir)
+    except Exception as e:
+        print(f"[ОШИБКА ДОСТУПА] Не удалось прочитать папку {current_src_dir}: {e}")
+        return
+
+    for item in items:
+        src_item_path = os.path.join(current_src_dir, item)
+        
+        # Вычисляем относительный путь для точной копии
+        rel_path = os.path.relpath(src_item_path, SOURCE_DIR)
+        dest_item_path = os.path.join(OUTPUT_DIR, rel_path)
+
+        if os.path.isdir(src_item_path):
+            # Если это папка, создаем ее в целевой директории и идем внутрь
+            os.makedirs(dest_item_path, exist_ok=True)
+            process_folder(src_item_path) # Рекурсивный вызов для глубоких папок
+            
+        elif os.path.isfile(src_item_path):
+            # Проверяем расширение файла в нижнем регистре
+            file_lower = item.lower()
+            
+            if file_lower.endswith(".lbc"):
+                # Пытаемся декомпилировать lbc
+                success = decompile_lbc(src_item_path, dest_item_path)
+                if not success:
+                    # Если не вышло — просто копируем как есть
+                    shutil.copy2(src_item_path, dest_item_path)
+                    
+            elif file_lower.endswith(".lua"):
+                # Обычные Lua файлы просто копируем (и пишем об этом)
+                shutil.copy2(src_item_path, dest_item_path)
+                print(f"[КОПИРОВАНИЕ] Lua скрипт: {item}")
+                
+            else:
+                # Все остальные ассеты
+                shutil.copy2(src_item_path, dest_item_path)
+
+def main():
+    if not os.path.exists(SOURCE_DIR):
+        print(f"Ошибка: Исходная папка {SOURCE_DIR} не найдена!")
+        return
+
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    print("=== СТАРТ ГЛУБОКОЙ ДЕКОМПИЛЯЦИИ ===")
+    process_folder(SOURCE_DIR)
+    print(f"\n=== ВСЁ ГОТОВО! ===\nРезультат сохранен в: {OUTPUT_DIR}")
+
+if __name__ == "__main__":
+    main()
