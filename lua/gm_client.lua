@@ -5,12 +5,15 @@ local SkillConfig = T(Config, "SkillConfig")
 local SkillMovesConfig = T(Config, "SkillMovesConfig")
 local AttributeSystem = T(Lib, "AttributeSystem")
 local InventorySystem = T(Lib, "InventorySystem")
+local guiMgr = GUIManager:Instance()
+local root = guiMgr:getRootWindow()
 
--- [CARS State & Lifecycle Management]
+-- [CARS Lifecycle & State Management]
 local CARS = {
     timers = {},
     hooks = {},
-    active = {}
+    active = {},
+    calc = { current = "0", op = nil, last = nil, win = nil }
 }
 
 -- [Core Utilities]
@@ -34,10 +37,10 @@ local function safeHook(obj, name, newFunc)
 end
 
 -- ==========================================
--- 1. COMBAT & HITBOX MANIPULATION
+-- [1] COMBAT - БОЕВАЯ СИСТЕМА
 -- ==========================================
 
-GMItem["CARS/Combat/KillAura_360"] = function()
+GMItem["[1] Combat/KillAura_360"] = function()
     CARS.active.killAura = not CARS.active.killAura
     safeTimer("killAura", 5, function()
         if not CARS.active.killAura then return false end
@@ -55,93 +58,86 @@ GMItem["CARS/Combat/KillAura_360"] = function()
     return "KillAura: " .. (CARS.active.killAura and "ON" or "OFF")
 end
 
-GMItem["CARS/Combat/No_Recovery_Frames"] = function()
+GMItem["[1] Combat/Turbo_Combo"] = function()
+    Me.turboCombo = not Me.turboCombo
+    return "Turbo Combo (No Delay): " .. (Me.turboCombo and "ON" or "OFF")
+end
+
+GMItem["[1] Combat/Instant_Finisher"] = function()
+    Me.alwaysFinisher = not Me.alwaysFinisher
+    return "Instant Finisher: " .. (Me.alwaysFinisher and "ON" or "OFF")
+end
+
+GMItem["[1] Combat/No_Recovery_Frames"] = function()
     safeHook(Entity, "playAction", function(old, self, name, time)
-        return old(self, name, 0.01) -- Force all actions to finish in 1 tick
+        return old(self, name, 0.01)
     end)
-    return "Recovery Frames Nuked"
+    return "Action Frame Skip ACTIVE"
 end
 
-GMItem["CARS/Combat/Anti_Knockback"] = function()
-    safeHook(Entity, "enterStateType", function(old, self, state, ...)
-        if state == Define.RoleStatus.BLOW_AWAY then return end
-        return old(self, state, ...)
-    end)
-    return "Knockback Immune"
-end
-
-GMItem["CARS/Combat/Hitbox_Expander"] = GM:inputStr(function(_, val)
-    local scale = tonumber(val) or 3.0
-    for _, ent in pairs(World.CurWorld:getAllEntity()) do
-        if ent.isPlayer and ent.objID ~= Me.objID then
-            ent:setProp("modelScale", scale)
-        end
-    end
-    return "Hitboxes set to " .. scale
-end, "3.0")
-
-GMItem["CARS/Combat/Overclock_Skills"] = function()
-    for _, cfg in pairs(SkillConfig:getAllCfgs()) do
-        cfg.hitRange = 100
-        cfg.skillCd = 0
-        cfg.mpCost = 0
-    end
-    return "All Skills: 100m, 0 CD, 0 MP"
+GMItem["[1] Combat/Infinite_Channeling"] = function()
+    Me.infiniteMP = not Me.infiniteMP
+    return "Infinite Channeling: " .. (Me.infiniteMP and "ON" or "OFF")
 end
 
 -- ==========================================
--- 2. MOVEMENT & MAP EXPLOITS
+-- [2] MOVEMENT - ПЕРЕМЕЩЕНИЕ
 -- ==========================================
 
-GMItem["CARS/Map/Voxel_Ghost_Mode"] = function()
-    CARS.active.ghost = not CARS.active.ghost
-    Me:setFlyMode(CARS.active.ghost and 1 or 0)
-    local scene = World.CurWorld:getSceneManager():getCurScene()
-    scene:setEditorCanCollide(not CARS.active.ghost)
-    return "Ghost Mode: " .. (CARS.active.ghost and "ACTIVE" or "OFF")
-end
-
-GMItem["CARS/Map/Teleport_Treasure"] = function()
-    for _, part in pairs(World.CurWorld:getAllStaticPart()) do
-        if part.name:find("treasure") or part.name:find("chest") then
-            Me:setPosition(part:getPosition())
-            return "Teleported to " .. part.name
-        end
+-- Optimized Flight Logic (High Responsiveness)
+GMItem["[2] Movement/Ultra_Flight_v2"] = function()
+    CARS.active.flight = not CARS.active.flight
+    if not CARS.active.flight then
+        Me:setProp("gravity", 0.08)
+        safeTimer("flight", 0, nil)
+        return "Flight OFF"
     end
-    return "No treasure found"
-end
 
-GMItem["CARS/Map/Speed_Overdrive"] = GM:inputStr(function(_, val)
-    Me:setProp("moveSpeed", tonumber(val) or 1.2)
-    return "Speed set to " .. val
-end, "1.2")
-
-GMItem["CARS/Map/Air_Walk"] = function()
-    CARS.active.airWalk = not CARS.active.airWalk
-    safeTimer("airWalk", 1, function()
-        if not CARS.active.airWalk then return false end
+    -- Manipulating Me.motion directly every tick creates a much more
+    -- responsive feel than changing moveSpeed, as it bypasses built-in
+    -- physics dampening and acceleration.
+    safeTimer("flight", 1, function()
+        if not CARS.active.flight then return false end
         Me:setProp("gravity", 0)
-        Me.motion.y = 0
+        local bm = Blockman.Instance()
+        local move = Lib.v3(0, 0, 0)
+        local speed = 0.7
+
+        if bm:isKeyPressing("key.forward") then move.z = 1 end
+        if bm:isKeyPressing("key.back") then move.z = -1 end
+        if bm:isKeyPressing("key.left") then move.x = 1 end
+        if bm:isKeyPressing("key.right") then move.x = -1 end
+        if bm:isKeyPressing("key.jump") then move.y = 1 end
+        if bm:isKeyPressing("key.sneak") then move.y = -1 end
+
+        if move:len() > 0 then
+            local yaw = math.rad(bm:getViewerYaw())
+            local rotatedMove = Lib.v3(
+                move.x * math.cos(yaw) - move.z * math.sin(yaw),
+                move.y,
+                move.x * math.sin(yaw) + move.z * math.cos(yaw)
+            )
+            Me.motion = rotatedMove * speed
+        else
+            Me.motion = Lib.v3(0, 0, 0)
+        end
         return true
     end)
+    return "Responsive Vector Flight ACTIVE"
 end
 
-GMItem["CARS/Map/Bypass_Distance"] = function()
-    World.cfg.interactDistance = 9999
-    return "Interact Distance: INFINITE"
+GMItem["[2] Movement/Voxel_Ghost_Mode"] = function()
+    CARS.active.ghost = not CARS.active.ghost
+    local scene = World.CurWorld:getSceneManager():getCurScene()
+    scene:setEditorCanCollide(not CARS.active.ghost)
+    return "Noclip: " .. (CARS.active.ghost and "ON" or "OFF")
 end
 
 -- ==========================================
--- 3. UI, VISUALS & ECONOMY
+-- [3] VISUALS - ВИЗУАЛ
 -- ==========================================
 
-GMItem["CARS/Visual/Full_Bright"] = function()
-    local timelight = T(Lib, "TimeLight")
-    if timelight then timelight:SetAmbientIntensityInc(100) end
-    return "Full Bright Active"
-end
-
-GMItem["CARS/Visual/Entity_ESP"] = function()
+GMItem["[3] Visuals/Entity_ESP"] = function()
     CARS.active.esp = not CARS.active.esp
     safeTimer("esp", 40, function()
         if not CARS.active.esp then return false end
@@ -154,84 +150,108 @@ GMItem["CARS/Visual/Entity_ESP"] = function()
     end)
 end
 
-GMItem["CARS/Economy/Unlock_Shops"] = function()
-    for i = 1, 30 do
-        pcall(function() UI:openWindow("UI/game_business/gui/win_game_shop", "shop_"..i, nil, {shopId = i}) end)
+-- ==========================================
+-- [4] APPS - ПРИЛОЖЕНИЯ
+-- ==========================================
+
+-- Functional Calculator with GUI
+local function updateCalc(val)
+    if not CARS.calc.win then return end
+    local display = CARS.calc.win:child("Display")
+    if val == "C" then CARS.calc.current = "0" CARS.calc.op = nil CARS.calc.last = nil
+    elseif tonumber(val) then
+        if CARS.calc.current == "0" then CARS.calc.current = val else CARS.calc.current = CARS.calc.current .. val end
+    elseif val == "=" then
+        if CARS.calc.op and CARS.calc.last then
+            local res, err = pcall(loadstring("return "..CARS.calc.last..CARS.calc.op..CARS.calc.current))
+            CARS.calc.current = res and tostring(err) or "Error"
+            CARS.calc.op = nil CARS.calc.last = nil
+        end
+    else
+        CARS.calc.op = val CARS.calc.last = CARS.calc.current CARS.calc.current = "0"
     end
+    display:setText(CARS.calc.current)
 end
 
-GMItem["CARS/Visual/Skin_Stealer"] = function()
-    for _, ent in pairs(World.CurWorld:getAllEntity()) do
-        if ent.isPlayer and ent.objID ~= Me.objID then
-            Me:setProp("actorName", ent:getProp("actorName"))
-            return "Stolen appearance from " .. ent.name
-        end
+GMItem["[4] Apps/Calculator_GUI"] = function()
+    if CARS.calc.win then root:removeChild(CARS.calc.win:getWindow()) CARS.calc.win = nil return end
+
+    local win = UI:createStaticImage("CalcRoot")
+    win:setSize(UDim2.new(0, 220, 0, 300))
+    win:setPosition(UDim2.new(0.5, -110, 0.5, -150))
+    win:setProperty("ImageColours", "tl:FF333333 tr:FF333333 bl:FF333333 br:FF333333")
+    root:addChild(win:getWindow())
+
+    local display = UI:createStaticText("Display")
+    display:setSize(UDim2.new(1, -20, 0, 40))
+    display:setPosition(UDim2.new(0, 10, 0, 10))
+    display:setText("0")
+    win:addChild(display:getWindow())
+
+    local buttons = {"7","8","9","/", "4","5","6","*", "1","2","3","-", "0","C","=","+"}
+    for i, b in ipairs(buttons) do
+        local btn = UI:createStaticText("Btn"..i)
+        btn:setSize(UDim2.new(0, 45, 0, 45))
+        local x = ((i-1) % 4) * 50 + 10
+        local y = math.floor((i-1) / 4) * 50 + 60
+        btn:setPosition(UDim2.new(0, x, 0, y))
+        btn:setText(b)
+        btn:setProperty("HorzFormatting", "CentreAligned")
+        btn:setProperty("VertFormatting", "CentreAligned")
+        btn:setProperty("BackgroundEnabled", "True")
+        btn.onMouseClick = function() updateCalc(b) end
+        win:addChild(btn:getWindow())
     end
+    CARS.calc.win = win
+    return "Calculator Deployed"
 end
 
--- ==========================================
--- 4. AUTOMATION & MACROS
--- ==========================================
+-- Bad Apple ASCII Visualizer
+local BA_DATA = {
+    "  . . . . .  \n . # # # . \n . # . # . \n . # # # . \n  . . . . .  ",
+    "  . . . . .  \n . . . . . \n . . # . . \n . . . . . \n  . . . . .  "
+}
 
-GMItem["CARS/Auto/Vacuum_Loot"] = function()
-    CARS.active.vacuum = not CARS.active.vacuum
-    safeTimer("vacuum", 20, function()
-        if not CARS.active.vacuum then return false end
-        for _, ent in pairs(World.CurWorld:getAllEntity()) do
-            if ent.type == "drop_item" then
-                Me:sendPacket({ pid = "C2SPickupItem", objID = ent.objID })
-            end
-        end
+GMItem["[4] Apps/Bad_Apple_ASCII"] = function()
+    CARS.active.ba = not CARS.active.ba
+    if not CARS.active.ba then
+        if CARS.baWin then root:removeChild(CARS.baWin:getWindow()) CARS.baWin = nil end
+        return "Bad Apple STOPPED"
+    end
+
+    local win = UI:createStaticText("BARoot")
+    win:setSize(UDim2.new(0, 400, 0, 400))
+    win:setPosition(UDim2.new(0.5, -200, 0.5, -200))
+    win:setProperty("HorzFormatting", "CentreAligned")
+    win:setProperty("VertFormatting", "CentreAligned")
+    root:addChild(win:getWindow())
+    CARS.baWin = win
+
+    local f = 1
+    safeTimer("ba", 2, function()
+        if not CARS.active.ba then return false end
+        win:setText(BA_DATA[f])
+        f = (f % #BA_DATA) + 1
         return true
     end)
-end
-
-GMItem["CARS/Auto/Infinite_Potions"] = function()
-    local sent = 0
-    safeTimer("potions", 1, function()
-        for i = 1, 20 do
-            if sent >= 1000 then return false end
-            Me:sendPacket({ pid = "C2SGetSubscribeVipAbility", alias = "hp_pct_5_buff_card" })
-            sent = sent + 1
-        end
-        return true
-    end)
-end
-
-GMItem["CARS/Auto/Auto_Heal_99"] = function()
-    CARS.active.autoHeal = not CARS.active.autoHeal
-    safeTimer("autoHeal", 10, function()
-        if not CARS.active.autoHeal then return false end
-        if Me:getCurHp() < Me:getMaxHp() then
-            Me:sendPacket({ pid = "C2SUseItem", itemId = 13100001, id = 0 })
-        end
-        return true
-    end)
+    return "Bad Apple Playing..."
 end
 
 -- ==========================================
--- 5. SHIELD & COMBO (CORE HOOKS)
+-- [5] SYSTEM - СЕРВИС
 -- ==========================================
 
-GMItem["CARS/Shield/Lag_Shield_Toggle"] = function()
+GMItem["[5] System/Lag_Shield_Toggle"] = function()
     Me.lagShield = not Me.lagShield
     return "Lag Shield: " .. (Me.lagShield and "ON" or "OFF")
 end
 
-GMItem["CARS/Combo/Turbo_Combo"] = function()
-    Me.turboCombo = not Me.turboCombo
-    return "Turbo Combo: " .. (Me.turboCombo and "ON" or "OFF")
+GMItem["[5] System/Clean_All_State"] = function()
+    for k, _ in pairs(CARS.timers) do safeTimer(k, 0, nil) end
+    if CARS.calc.win then root:removeChild(CARS.calc.win:getWindow()) CARS.calc.win = nil end
+    if CARS.baWin then root:removeChild(CARS.baWin:getWindow()) CARS.baWin = nil end
+    return "Cleanup Complete"
 end
 
-GMItem["CARS/Combo/Always_Finisher"] = function()
-    Me.alwaysFinisher = not Me.alwaysFinisher
-    return "Instant Finisher: " .. (Me.alwaysFinisher and "ON" or "OFF")
-end
-
-GMItem["CARS/Skill/Infinite_Channeling"] = function()
-    Me.infiniteMP = not Me.infiniteMP
-    return "Infinite Channeling (No MP Stop): " .. (Me.infiniteMP and "ON" or "OFF")
-end
-
-print("[System] CARS Core Framework 1.1 Successfully Deployed")
+print("[Core] Categorized Engine Suite with Apps Deployed Successfully")
 return GMItem
