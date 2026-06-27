@@ -105,10 +105,10 @@
           "z": 0
         },
         "viewFovAngle": 65,
-        "?horizontalFollow": true,
-        "?cameraHorizontalFollowWaitTime": 1000,
-        "minPitch":-50,
-        "maxPitch":60
+        "horizontalFollow": true,
+        "cameraHorizontalFollowWaitTime": 0,
+        "minPitch": -50,
+        "maxPitch": 89
       },
       {
         "enable": true,

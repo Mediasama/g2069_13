@@ -140,10 +140,14 @@ safeHook(GameSkillHelper, "doGameSkillResult", function(old, self, freeEntity, s
 end)
 
 -- [Hook] Camera-Pitch Projectile Aiming
+-- [Hook] Camera-Decoupled Origin & Pitch Aiming
 safeHook(GameSkillHelper, "doFreeSkillContent", function(old, self, freeEntity, skill, context)
     if freeEntity.objID == Me.objID and CARS.active.aimAssist then
-        -- Inject camera pitch into the skill object before it's used for bullet math
+        -- [Override] Link projectile pitch to camera pitch
         skill.bulletPitch = -Blockman.Instance():getViewerPitch()
+        -- [Override] Force skill origin to camera position (True Point-of-View Aiming)
+        context = context or {}
+        context.startPos = Blockman.Instance():getViewerPos()
     end
     return old(self, freeEntity, skill, context)
 end)
