@@ -136,10 +136,21 @@ In Blockman Go, the camera view is not just a perspective; it defines the **Rayc
     - **Advantage**: Superior awareness of the surrounding environment.
     - **Disadvantage**: Significant **Parallax Error**. The projectile/skill origin point is offset from the camera, which can cause "misses" at point-blank range. Pitch is also restricted by default to prevent "top-down" viewing.
 
-### Precision Exploits:
-1. **Pitch Unlocking**: By overriding `viewCfg.minPitch` and `viewCfg.maxPitch` to -89/89, players can aim skills directly upwards or downwards, enabling vertical tactical maneuvers (e.g., jumping skills used at extreme angles).
-2. **FOV Overdrive**: Setting FOV to 110-120 increases the effective "Peripheral Detection Zone," acting as a legal situational awareness hack.
-3. **Drone Recon**: Expanding `cameraDistanceMax` allows for an RTS-like view of the entire map, identifying raid entrances, chest spawns, and enemy rotations from safe distances.
+### Precision & Movement Exploits:
+1. **Body Rotation & Back-Dashing**:
+    - In **Mode 3 (Third Person)**, `lockBodyRotation` is `false`, meaning the entity turns 180° when moving backward. This disrupts frontal skill casting during retreat.
+    - In **Mode 1 (First Person)**, the body is locked to the camera yaw. This allows for **True Backpedaling**, enabling the use of dashes and frontal attacks while moving away from a target without losing eye contact.
+2. **Vertical Velocity (Pitch Advantage)**:
+    - Restricted pitch in Mode 3 (-50° to 60°) prevents looking straight up/down.
+    - In Mode 1, looking straight up (89°) focuses the entire `motion` vector into vertical lift during flight, resulting in faster ascents/descents compared to restricted modes where velocity is split into horizontal and vertical components.
+3. **Pitch Unlocking**: By overriding `viewCfg.minPitch` and `viewCfg.maxPitch` to -89/89, players can aim skills directly upwards or downwards, enabling vertical tactical maneuvers (e.g., jumping skills used at extreme angles).
+4. **FOV Overdrive**: Setting FOV to 110-120 increases the effective "Peripheral Detection Zone," acting as a legal situational awareness hack.
+5. **Drone Recon**: Expanding `cameraDistanceMax` allows for an RTS-like view of the entire map, identifying raid entrances, chest spawns, and enemy rotations from safe distances.
+
+### Pro-Tactics Summary:
+1. **The Vertical Escape**: If being chased, switch to **Mode 1**, look 90° up, and initiate flight/jump. Your vertical ascent will be mathematically faster than a player in Mode 3 due to vector alignment.
+2. **Kiting Dominance**: Use **Mode 1** to maintain DPS while retreating. Since you don't turn around to move backward, your skills remain oriented toward the enemy at all times.
+3. **Parallax Correction**: In close-quarters combat, **Mode 1** is mandatory. Mode 3's camera offset creates a "dead zone" where skills may pass through a target without registering a hit due to the raycast origin being behind and above the player.
 
 ---
 *End of Documentation*
