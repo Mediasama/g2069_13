@@ -3,7 +3,6 @@ local GMItem = GM:createGMItem()
 -- [Architectural Dependencies]
 local SkillConfig = T(Config, "SkillConfig")
 local TaskConfig = T(Config, "TaskConfig")
-local AttributeSystem = T(Lib, "AttributeSystem")
 local guiMgr = GUIManager:Instance()
 local root = guiMgr:getRootWindow()
 
@@ -14,30 +13,10 @@ local CARS = _G.CARS or {
     active = {},
     logLines = {},
     scannedRooms = {},
-    calc = { current = "0", op = nil, last = nil, win = nil }
+    calc = { current = "0", op = nil, last = nil, win = nil },
+    pro = { fov = 75 }
 }
 _G.CARS = CARS
-
--- [Utility] Terminal Redirection
-local MAX_LOG_LINES = 14
-if not CARS.hooks.print then
-    local old_print = _G.print
-    CARS.hooks.print = old_print
-    _G.print = function(...)
-        local args = {...}
-        local str = ""
-        for i, v in ipairs(args) do str = str .. tostring(v) .. "  " end
-        table.insert(CARS.logLines, 1, "[" .. os.date("%H:%M:%S") .. "] " .. str)
-        if #CARS.logLines > MAX_LOG_LINES then table.remove(CARS.logLines) end
-        if CARS.active.terminalWin then CARS:updateTerminalUI() end
-        old_print(unpack(args))
-    end
-end
-
-function CARS:updateTerminalUI()
-    if not self.active.terminalText then return end
-    self.active.terminalText:setText(table.concat(self.logLines, "\n"))
-end
 
 -- [Core Helpers]
 local function safeTimer(key, time, func)
@@ -66,10 +45,10 @@ local function isValidEnemy(ent, ignoreSafe)
 end
 
 -- ==========================================
--- [1] COMBAT - БОЕВАЯ СИСТЕМА
+-- [1] COMBAT - СРАЖЕНИЕ
 -- ==========================================
 
-GMItem["[1] Combat/KillAura_AntiPK"] = function()
+GMItem["[1] Combat/KillAura_AntiExploit"] = function()
     CARS.active.killAura = not CARS.active.killAura
     safeTimer("killAura", 5, function()
         if not CARS.active.killAura then return false end
@@ -100,9 +79,6 @@ GMItem["[1] Combat/PK_God_Mode"] = function()
     return "PK Juggler: " .. (CARS.active.pkGod and "ACTIVE" or "OFF")
 end
 
-GMItem["[1] Combat/Turbo_Combo"] = function() Me.turboCombo = not Me.turboCombo return "Turbo Combo: "..(Me.turboCombo and "ON" or "OFF") end
-GMItem["[1] Combat/Always_Finisher"] = function() Me.alwaysFinisher = not Me.alwaysFinisher return "Always Finisher: "..(Me.alwaysFinisher and "ON" or "OFF") end
-
 -- ==========================================
 -- [2] MOVEMENT - ПЕРЕМЕЩЕНИЕ
 -- ==========================================
@@ -132,139 +108,39 @@ GMItem["[2] Movement/Responsive_Flight"] = function()
 end
 
 -- ==========================================
--- [3] PROGRESS - ПРОКАЧКА И РЕЙДЫ
+-- [9] PRO-CONFIG - ТРАЙХАРД РЕЖИМ
 -- ==========================================
 
-GMItem["[3] Progress/Quest_Nuke"] = function()
-    for id, _ in pairs(TaskConfig:getAllCfgs()) do Me:sendPacket({ pid = "C2SCompleteTask", taskId = id }) end
-    return "All Quests Nuked"
-end
-
-GMItem["[3] Progress/Exp_Storm"] = function()
-    CARS.active.expSpam = not CARS.active.expSpam
-    local sent = 0
-    safeTimer("exp_storm", 1, function()
-        if not CARS.active.expSpam then return false end
-        for i = 1, 40 do
-            if sent >= 5000 then CARS.active.expSpam = false return false end
-            Me:sendPacket({ pid = "C2SGetSubscribeVipAbility", alias = "role_exp" })
-            sent = sent + 1
+GMItem["[9] Pro/Unlock_Camera_Limits"] = function()
+    local cam = Blockman.Instance()
+    cam:setCameraDistanceMax(100)
+    cam:setCameraDistanceMin(0)
+    -- Pitch bypass for all view modes
+    for i = 0, 4 do
+        local info = cam:getCameraInfo(i)
+        if info and info.viewCfg then
+            info.viewCfg.minPitch = -89
+            info.viewCfg.maxPitch = 89
         end
-        return true
-    end)
-end
-
-GMItem["[3] Progress/Raid_ID_Scanner"] = function()
-    CARS.active.scanner = not CARS.active.scanner
-    if CARS.active.scanner then
-        safeHook(Player.PackageHandlers, "S2CMissionTeammateCanSelect", function(old, self, packet)
-            print("[Raid] Intercepted ID:", packet.missionId)
-            CARS.scannedRooms[packet.missionId] = true
-            return old(self, packet)
-        end)
     end
-    return "Raid Scanner: " .. (CARS.active.scanner and "ON" or "OFF")
+    return "Camera Pitch Unlocked (-89 to 89)"
 end
 
--- ==========================================
--- [4] VISUALS - ВИЗУАЛ
--- ==========================================
-
-GMItem["[4] Visuals/Full_Bright"] = function()
-    local timelight = T(Lib, "TimeLight")
-    if timelight then timelight:SetAmbientIntensityInc(100) end
-    return "Luminance MAX"
+GMItem["[9] Pro/Wide_FOV_110"] = function()
+    CARS.pro.fov = (CARS.pro.fov == 110) and 75 or 110
+    Blockman.Instance():setViewFovAngle(CARS.pro.fov)
+    return "FOV toggled to: " .. CARS.pro.fov
 end
 
-GMItem["[4] Visuals/Tactical_Crosshair"] = function()
-    CARS.active.cross = not CARS.active.cross
-    if not CARS.active.cross then if CARS.crossWin then root:removeChild(CARS.crossWin:getWindow()) end return "Crosshair OFF" end
-    local win = UI:createStaticImage("Crosshair")
-    win:setSize(UDim2.new(0, 10, 0, 10))
-    win:setPosition(UDim2.new(0.5, -5, 0.5, -5))
-    win:setProperty("ImageColours", "tl:FFFF0000 tr:FFFF0000 bl:FFFF0000 br:FFFF0000")
-    win:setImage("set:common.json image:img_0_item_white")
-    root:addChild(win:getWindow())
-    CARS.crossWin = win
+GMItem["[9] Pro/Drone_View_Toggle"] = function()
+    CARS.active.drone = not CARS.active.drone
+    Blockman.Instance():setCameraDistance(CARS.active.drone and 45 or 8)
+    return "Drone Mode: " .. (CARS.active.drone and "ON" or "OFF")
 end
 
--- ==========================================
--- [5] APPS - ПРИЛОЖЕНИЯ
--- ==========================================
-
-local function updateCalc(val)
-    if not CARS.calc.win then return end
-    local display = CARS.calc.win:child("Display")
-    if val == "C" then CARS.calc.current = "0" CARS.calc.op = nil CARS.calc.last = nil
-    elseif tonumber(val) then
-        if CARS.calc.current == "0" then CARS.calc.current = val else CARS.calc.current = CARS.calc.current .. val end
-    elseif val == "=" then
-        if CARS.calc.op and CARS.calc.last then
-            local res, err = pcall(loadstring("return "..CARS.calc.last..CARS.calc.op..CARS.calc.current))
-            CARS.calc.current = res and tostring(err) or "Error"
-            CARS.calc.op = nil CARS.calc.last = nil
-        end
-    else
-        CARS.calc.op = val CARS.calc.last = CARS.calc.current CARS.calc.current = "0"
-    end
-    display:setText(CARS.calc.current)
-end
-
-GMItem["[5] Apps/Calculator_GUI"] = function()
-    if CARS.calc.win then root:removeChild(CARS.calc.win:getWindow()) CARS.calc.win = nil return end
-    local win = UI:createStaticImage("CalcRoot")
-    win:setSize(UDim2.new(0, 220, 0, 300))
-    win:setPosition(UDim2.new(0.5, -110, 0.5, -150))
-    win:setProperty("ImageColours", "tl:FF222222 tr:FF222222 bl:FF222222 br:FF222222")
-    root:addChild(win:getWindow())
-    local display = UI:createStaticText("Display")
-    display:setSize(UDim2.new(1, -20, 0, 40))
-    display:setPosition(UDim2.new(0, 10, 0, 10))
-    display:setText("0")
-    win:addChild(display:getWindow())
-    local buttons = {"7","8","9","/", "4","5","6","*", "1","2","3","-", "0","C","=","+"}
-    for i, b in ipairs(buttons) do
-        local btn = UI:createStaticText("Btn"..i)
-        btn:setSize(UDim2.new(0, 45, 0, 45))
-        local x, y = ((i-1) % 4) * 50 + 10, math.floor((i-1) / 4) * 50 + 60
-        btn:setPosition(UDim2.new(0, x, 0, y))
-        btn:setText(b)
-        btn:setProperty("HorzFormatting", "CentreAligned")
-        btn:setProperty("VertFormatting", "CentreAligned")
-        btn:setProperty("BackgroundEnabled", "True")
-        btn.onMouseClick = function() updateCalc(b) end
-        win:addChild(btn:getWindow())
-    end
-    CARS.calc.win = win
-end
-
--- ==========================================
--- [8] TERMINAL - ЛОГ И ИНСПЕКТОР
--- ==========================================
-
-GMItem["[8] Terminal/Object_Inspector"] = function()
-    CARS.active.inspector = not CARS.active.inspector
-    return "Inspector: " .. (CARS.active.inspector and "ACTIVE (Click Parts)" or "OFF")
-end
-
-GMItem["[8] Terminal/Show_Console"] = function()
-    CARS.active.terminal = not CARS.active.terminal
-    if not CARS.active.terminal then if CARS.active.terminalWin then root:removeChild(CARS.active.terminalWin:getWindow()) end return "Console Hidden" end
-    local win = UI:createStaticImage("Terminal")
-    win:setSize(UDim2.new(0, 500, 0, 250))
-    win:setPosition(UDim2.new(0, 10, 1, -260))
-    win:setProperty("ImageColours", "tl:CC000000 tr:CC000000 bl:CC000000 br:CC000000")
-    root:addChild(win:getWindow())
-    local txt = UI:createStaticText("Logs")
-    txt:setSize(UDim2.new(1, -10, 1, -10))
-    txt:setPosition(UDim2.new(0, 5, 0, 5))
-    txt:setProperty("TextColours", "tl:FF00FF00 tr:FF00FF00 bl:FF00FF00 br:FF00FF00")
-    txt:setProperty("VertFormatting", "TopAligned")
-    txt:setProperty("WordWrap", "True")
-    win:addChild(txt:getWindow())
-    CARS.active.terminalWin = win
-    CARS.active.terminalText = txt
-    CARS:updateTerminalUI()
+GMItem["[9] Pro/Input_Latency_Fix"] = function()
+    Blockman.instance.gameSettings:setCameraSensitive(1.25)
+    return "Sensitivity Boosted (Fast Response)"
 end
 
 -- ==========================================
@@ -274,11 +150,9 @@ end
 GMItem["[0] System/Clean_All"] = function()
     for k, _ in pairs(CARS.timers) do safeTimer(k, 0, nil) end
     if CARS.active.terminalWin then root:removeChild(CARS.active.terminalWin:getWindow()) end
-    if CARS.calc.win then root:removeChild(CARS.calc.win:getWindow()) end
-    if CARS.crossWin then root:removeChild(CARS.crossWin:getWindow()) end
     CARS.active = {}
     return "State Purged"
 end
 
-print("[System] CARS Tactical HUD 2.0 Fully Integrated")
+print("[System] Tryhard Pro-Config Integrated into CARS Suite")
 return GMItem

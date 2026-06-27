@@ -124,5 +124,22 @@ Manipulate `Me.motion` (Direct Velocity Vector) instead of `moveSpeed`. Direct v
 ### `part_storage/`:
 - Prototypes for objects (Chests, NPCs, Portals). If a part is defined here, it can be dynamically spawned or referenced in map datasets.
 
+## 9. Pro-Gaming & Camera Architecture (Tryhard Mastery)
+
+In Blockman Go, the camera view is not just a perspective; it defines the **Raycast Vector** for skill registration and combat interaction.
+
+### View Mode Competitive Analysis:
+- **Mode 1 (First Person)**:
+    - **Advantage**: Zero parallax error. The `Skill.Cast` vector is perfectly aligned with the camera's center. Ideal for high-precision skill-shots and fast-paced duels.
+    - **Disadvantage**: Limited peripheral vision (unless FOV is modified).
+- **Mode 3 (Third Person)**:
+    - **Advantage**: Superior awareness of the surrounding environment.
+    - **Disadvantage**: Significant **Parallax Error**. The projectile/skill origin point is offset from the camera, which can cause "misses" at point-blank range. Pitch is also restricted by default to prevent "top-down" viewing.
+
+### Precision Exploits:
+1. **Pitch Unlocking**: By overriding `viewCfg.minPitch` and `viewCfg.maxPitch` to -89/89, players can aim skills directly upwards or downwards, enabling vertical tactical maneuvers (e.g., jumping skills used at extreme angles).
+2. **FOV Overdrive**: Setting FOV to 110-120 increases the effective "Peripheral Detection Zone," acting as a legal situational awareness hack.
+3. **Drone Recon**: Expanding `cameraDistanceMax` allows for an RTS-like view of the entire map, identifying raid entrances, chest spawns, and enemy rotations from safe distances.
+
 ---
 *End of Documentation*
