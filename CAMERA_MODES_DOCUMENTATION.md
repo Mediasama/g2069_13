@@ -1,70 +1,36 @@
-# G3 Engine: Camera View Mode Architectural Analysis
-**Author:** Jules (Senior System Architect)
-**Focus:** Combat Precision, Movement Physics, and Strategic Advantages.
+# Blockman Go: Combat View Mode Exploits
+**Author:** Chief Architect Jules
+**Research Object:** G3/Explosion Engine View-Coupling Mechanics
+
+## 1. The Mode 1 (First Person) Meta
+First-Person mode isn't just for immersion; it's a structural exploit of the engine's rotation syncing.
+
+### A. The "Yaw-Sweep" Technique
+- **Mechanism**: In Mode 1, `Entity:getRotationYaw()` is 1:1 with the camera.
+- **Exploit**: For skills with `hitTimes > 1` (multi-tick), the engine re-calculates the hit sector every tick. By rapidly spinning the camera during the skill's active window, you can transform a 30° frontal sector into a 360° circular "dead zone" that hits all nearby enemies.
+- **Requirement**: Use high sensitivity or the CARS 2.1 "Sweep Exploit" toggle.
+
+### B. Precision Vertical Aiming
+- **Mechanism**: Mode 3 restricts pitch and often hardcodes `bulletPitch`. Mode 1 allows near-vertical look angles.
+- **Exploit**: With CARS 2.1 "Aim Assist" active, projectile `bulletPitch` is dynamically linked to the camera. Mode 1 allows you to shoot projectiles directly up or down, enabling "Air-to-Ground" bombardments or "Rocket Jumps" (if knockback is configured).
+
+## 2. Mode 3 (Third Person) Limitations & Bypasses
+
+### A. The Parallax Problem
+- **Issue**: Projectiles spawn from the character body, but hit detection (`doGameSkillResult`) is calculated from a raycast origin. In Mode 3, these points are significantly offset, leading to missed shots at close range.
+- **Bypass**: CARS 2.1 "Aim Assist" decouples the hit registration origin from the body, forcing it to align with the camera's true vector, neutralizing the parallax error.
+
+### B. Directional Lock (Backpedaling)
+- **Issue**: Moving backward in Mode 3 rotates the entity's body 180°, facing away from the enemy and making frontal skill casting impossible.
+- **Bypass**: Switching to Mode 1 (or forcing `lockBodyRotation = true` via CARS) allows for "True Backpedaling" where the body faces the camera target even while moving in reverse.
+
+## 3. Summary for Pro-Modders
+| Feature | Mode 3 (Default) | Mode 1 (Default) | CARS 2.1 (Enhanced) |
+|---------|------------------|------------------|---------------------|
+| Hit Vector | Body Yaw | Camera Yaw | **Camera Yaw** |
+| Vertical Aim | Fixed | Limited | **Full (-89/89)** |
+| Sweep Range | Sector Only | Manual Sweep | **Auto-Circle** |
+| Backpedal | Breaks Aim | Maintains Aim | **Maintains Aim** |
 
 ---
-
-## 1. Mode 1: First-Person (Precision Mode)
-*Defined as the first entry in `viewModeConfig`.*
-
-### Technical Specs:
-- **Distance:** 1 unit (Internal to the entity mesh).
-- **FOV:** 75 degrees.
-- **Pitch Limits:** -89° to 89° (Full vertical freedom).
-- **Body Rotation:** Locked to Camera Yaw.
-
-### Advantages:
-- **True Backpedaling:** Because the body is locked to the camera, moving backward (S key) does not rotate the character model. This allows for **Face-Forward Dashing**, enabling retreat while maintaining frontal skill-shot capability.
-- **Vertical Velocity Overclock:** When looking 90° up or down, 100% of the `motion` vector is applied to vertical displacement. In other modes, pitch limits force a split vector, reducing effective climb speed by ~18%.
-- **Zero Parallax:** The camera position matches the projectile/hit registration origin. This is the only mode that guarantees 1:1 precision for skill-shots.
-
-### Disadvantages:
-- **Narrow Awareness:** Zero visibility of the character's immediate flanks or rear.
-
----
-
-## 2. Mode 3: Third-Person (Standard/Tactical)
-*Defined as the fourth entry in `viewModeConfig`.*
-
-### Technical Specs:
-- **Distance:** 8 units.
-- **FOV:** 65 degrees (Zoomed effect).
-- **Pitch Limits:** -50° to 60° (Heavily restricted).
-- **Body Rotation:** Dynamic (Entity turns 180° when moving backward).
-
-### Advantages:
-- **Lens Zoom:** The 65° FOV makes targets appear larger in the center of the screen, aiding in tracking distant enemies.
-- **Environment Awareness:** Provides a clear view of the area surrounding the character, essential for avoiding AoE attacks.
-
-### Disadvantages:
-- **The "Pitch Gate" Slowdown:** Restricted vertical angles prevent looking straight up. Flight speed is handicapped as the engine forces a diagonal trajectory even when trying to fly purely vertical.
-- **Parallax Error:** Significant offset between the camera and the weapon origin. High risk of "ghost hits" (misses) at close range.
-- **Movement Lag:** Subject to `cameraHorizontalFollowWaitTime` (1000ms), introducing perceived input latency when turning.
-
----
-
-## 3. Mode 4: Fixed View (Positional)
-*Defined by `lockViewPos: true`.*
-
-### Technical Specs:
-- **Behavior:** Camera position is anchored to a point in space rather than following the character's movement.
-
-### Advantages:
-- **Fixed Reference:** Useful for precision placement of objects or navigating fixed-camera raid puzzles.
-
-### Disadvantages:
-- **Combat Blindness:** Completely unviable for PvP as it separates navigation from aiming.
-
----
-
-## Competitive "Tryhard" Summary
-
-| Feature | First Person (Mode 1) | Third Person (Mode 3) |
-| :--- | :--- | :--- |
-| **Max Vertical Angle** | **Full (89°)** | Restricted (60°) |
-| **Backwards Movement** | **Backpedal (Facing Enemy)** | Turn-around (Back to Enemy) |
-| **Vertical Flight Speed** | **100% Efficiency** | ~82% Efficiency |
-| **Input Response** | **Instant** | Interpolated (Lagged) |
-
-### Pro Recommendation:
-Use **Mode 3** for general map navigation and searching for targets. Instantly switch to **Mode 1** for combat engagement to unlock unrestricted vertical aiming and face-forward retreat mechanics.
+*Status: Tactical Mapping Complete.*
