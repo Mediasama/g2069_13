@@ -11,12 +11,11 @@ local root = guiMgr:getRootWindow()
 local CARS = _G.CARS or {
     timers = {},
     hooks = {},
-    active = {},
+    active = { kitingCompromise = true },
     logLines = {},
     scannedRooms = {},
     pro = { fov = 75 },
     waypoints = {},
-    badApple = { frame = 0, active = false }
 }
 _G.CARS = CARS
 
@@ -119,9 +118,9 @@ GMItem["[2] Movement/1. Responsive Flight"] = function()
     return "Flight: ON"
 end
 
-GMItem["[2] Movement/20. Enhanced Sprint (Joy-Aligned)"] = function()
-    CARS.active.joySprint = not CARS.active.joySprint
-    return "Joy Sprint: " .. (CARS.active.joySprint and "ON" or "OFF")
+GMItem["[2] Movement/20. Kiting Compromise"] = function()
+    CARS.active.kitingCompromise = not CARS.active.kitingCompromise
+    return "Kiting Mod: " .. (CARS.active.kitingCompromise and "ON" or "OFF")
 end
 
 -- ==========================================
@@ -153,19 +152,20 @@ safeHook(GameSkillHelper, "doFreeSkillContent", function(old, self, freeEntity, 
     return old(self, freeEntity, skill, context)
 end)
 
--- [Hook] Sprint/Dash Joystick Compromise
-local SprintSkillHelper = T(Lib, "SprintSkillHelper")
+-- [Hook] Kiting Compromise (Align Dash/Movement to Camera, not Body)
 safeHook(Me, "moveUntilCollide", function(old, self, movePos)
-    if CARS.active.joySprint and self.objID == Me.objID and self:isInStateType(Define.RoleStatus.SPRINT) then
+    if CARS.active.kitingCompromise and self.objID == Me.objID then
         local bm = Blockman.Instance()
         local pf = bm.gameSettings.poleForward
         local ps = bm.gameSettings.poleStrafe
+        -- If player is using joystick, force movement vector to align with camera yaw
         if math.abs(pf) > 0.1 or math.abs(ps) > 0.1 then
             local yaw = math.rad(bm:getViewerYaw())
             local speed = movePos:len()
             local moveVec = Lib.v3(ps*math.cos(yaw)-pf*math.sin(yaw), 0, ps*math.sin(yaw)+pf*math.cos(yaw))
+            local vertical = movePos.y
             movePos = moveVec:normalize() * speed
-            movePos.y = 0 -- Keep it horizontal
+            movePos.y = vertical
         end
     end
     return old(self, movePos)
@@ -202,17 +202,7 @@ safeHook(Entity, "checkCanFreeSkillMove", function(old, self, ignoreSkillAction,
     return old(self, ignoreSkillAction, isSprintSkill, skillMoveId)
 end)
 
--- [Hook] Global LockBodyRotation Override
-safeHook(Player, "setPlayerBodyRotation", function(old, self, value, priority)
-    if self.objID == Me.objID then
-        -- Force lockBodyRotation to FALSE always for responsive kiting
-        Blockman.instance.gameSettings:setLockBodyRotation(false)
-        return
-    end
-    return old(self, value, priority)
-end)
-
--- Initialize other placeholder items
+-- Placeholder initialization
 for i=1, 20 do
     local cat = (i % 3 == 0) and "[1] Combat/" or ((i % 3 == 1) and "[2] Movement/" or "[3] Utility/")
     if not GMItem[cat .. "Feature_" .. i] then
@@ -220,5 +210,5 @@ for i=1, 20 do
     end
 end
 
-print("[CARS 2.2] Architecture Compromise: Joy-Sprint, No-Shake, No-Collision")
+print("[CARS 2.3] Kiting Compromise & CSV-Level MP Fix Active")
 return GMItem
