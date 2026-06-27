@@ -22,7 +22,7 @@ function SkillConfig:init()
             data.skillId = tonumber(vConfig.skillId) or 0
             data.skillCd = tonumber(vConfig.skillCd) or 0
             data.sprintRecoverCD = tonumber(vConfig.sprintRecoverCD) or 0
-            data.mpCost = 0.001
+            data.mpCost = 1
             data.skillMode = tonumber(vConfig.skillMode) or 1
             data.image = vConfig.image or ""
             data.desc = vConfig.desc or ""

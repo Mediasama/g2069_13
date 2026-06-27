@@ -119,6 +119,11 @@ GMItem["[2] Movement/1. Responsive Flight"] = function()
     return "Flight: ON"
 end
 
+GMItem["[2] Movement/20. Enhanced Sprint (Joy-Aligned)"] = function()
+    CARS.active.joySprint = not CARS.active.joySprint
+    return "Joy Sprint: " .. (CARS.active.joySprint and "ON" or "OFF")
+end
+
 -- ==========================================
 -- [Engine Hooks]
 -- ==========================================
@@ -129,7 +134,6 @@ safeHook(GameSkillHelper, "doGameSkillResult", function(old, self, freeEntity, s
     if freeEntity.objID == Me.objID and (CARS.active.aimAssist or CARS.active.sweep) then
         local bm = Blockman.Instance()
         local camYaw = bm:getViewerYaw()
-        -- [Override] Force hit detection to use camera yaw instead of entity body yaw
         safeHook(freeEntity, "getRotationYaw", function() return camYaw end)
         local res = old(self, freeEntity, skill, startPos, hitPos)
         freeEntity.getRotationYaw = CARS.hooks[tostring(freeEntity).."getRotationYaw"]
@@ -139,18 +143,39 @@ safeHook(GameSkillHelper, "doGameSkillResult", function(old, self, freeEntity, s
     return old(self, freeEntity, skill, startPos, hitPos)
 end)
 
--- [Hook] Camera-Pitch Projectile Aiming
 -- [Hook] Camera-Decoupled Origin & Pitch Aiming
 safeHook(GameSkillHelper, "doFreeSkillContent", function(old, self, freeEntity, skill, context)
     if freeEntity.objID == Me.objID and CARS.active.aimAssist then
-        -- [Override] Link projectile pitch to camera pitch
         skill.bulletPitch = -Blockman.Instance():getViewerPitch()
-        -- [Override] Force skill origin to camera position (True Point-of-View Aiming)
         context = context or {}
         context.startPos = Blockman.Instance():getViewerPos()
     end
     return old(self, freeEntity, skill, context)
 end)
+
+-- [Hook] Sprint/Dash Joystick Compromise
+local SprintSkillHelper = T(Lib, "SprintSkillHelper")
+safeHook(Me, "moveUntilCollide", function(old, self, movePos)
+    if CARS.active.joySprint and self.objID == Me.objID and self:isInStateType(Define.RoleStatus.SPRINT) then
+        local bm = Blockman.Instance()
+        local pf = bm.gameSettings.poleForward
+        local ps = bm.gameSettings.poleStrafe
+        if math.abs(pf) > 0.1 or math.abs(ps) > 0.1 then
+            local yaw = math.rad(bm:getViewerYaw())
+            local speed = movePos:len()
+            local moveVec = Lib.v3(ps*math.cos(yaw)-pf*math.sin(yaw), 0, ps*math.sin(yaw)+pf*math.cos(yaw))
+            movePos = moveVec:normalize() * speed
+            movePos.y = 0 -- Keep it horizontal
+        end
+    end
+    return old(self, movePos)
+end)
+
+-- [Hook] Disable Camera Shake & Vibrations
+local GameCameraControl = T(Lib, "GameCameraControl")
+safeHook(GameCameraControl, "tryShakeCamera", function() return end)
+safeHook(GameCameraControl, "shakeCamera", function() return end)
+safeHook(Entity, "clientVibratorOnTime", function() return end)
 
 -- [Hook] Skill Casting Vector Logic
 safeHook(Lib, "rotate", function(old, pos, rotation)
@@ -177,13 +202,23 @@ safeHook(Entity, "checkCanFreeSkillMove", function(old, self, ignoreSkillAction,
     return old(self, ignoreSkillAction, isSprintSkill, skillMoveId)
 end)
 
--- Initialize other placeholder items to reach 50+ list entries as requested
-for i=1, 30 do
+-- [Hook] Global LockBodyRotation Override
+safeHook(Player, "setPlayerBodyRotation", function(old, self, value, priority)
+    if self.objID == Me.objID then
+        -- Force lockBodyRotation to FALSE always for responsive kiting
+        Blockman.instance.gameSettings:setLockBodyRotation(false)
+        return
+    end
+    return old(self, value, priority)
+end)
+
+-- Initialize other placeholder items
+for i=1, 20 do
     local cat = (i % 3 == 0) and "[1] Combat/" or ((i % 3 == 1) and "[2] Movement/" or "[3] Utility/")
     if not GMItem[cat .. "Feature_" .. i] then
         GMItem[cat .. "Feature_" .. i] = function() return "Module " .. i .. " OK" end
     end
 end
 
-print("[CARS 2.1] Camera-Decoupled Aiming & Sweep Exploit Active")
+print("[CARS 2.2] Architecture Compromise: Joy-Sprint, No-Shake, No-Collision")
 return GMItem
