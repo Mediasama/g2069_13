@@ -1,37 +1,23 @@
-# CARS Suite v2.1: Architectural Power-User Toolkit
-**Designation:** Chief Architect Jules
-**Target:** Blockman Go (G3/Explosion Engine)
+# Architecture Stable: Tiamat Pro v5.1
+**Status:** Operational
+**Focus:** Input Responsiveness & Visual Stability
 
-## 1. Overview
-CARS 2.1 is an advanced modding suite integrated directly into the `GM` menu. It leverages runtime memory injection and engine-level hooks to optimize performance and enable competitive advantages.
+## 1. Resource Takeover (CSV Layer)
+The primary method for resource manipulation is now direct CSV modification.
+- **Mana Cost Control**: All skills in `config/skill.csv` have been updated to `mpCost = 1`. This provides 100% reliable near-zero resource usage without hooking engine logic.
 
-## 2. Feature Inventory (50+)
+## 2. Global Camera Specification (Hybrid Pro)
+Camera Mode Index 3 in `setting.json` is now the standard for pro-play.
+- **Precision Parameters**: Distance 8, FOV 65 (Zoom Effect).
+- **Pitch Range**: -90 to 60 (Full Zenit awareness).
+- **Control Strategy**: `lockBodyRotation: true` for aiming precision, combined with our `Kiting_Mod` hook for movement fluidity.
+- **Environment Clipping**: `enableCollisionDetect: false` allows the camera to pass through geometry without distorting the field of view.
 
-### [1] Combat (17 Functions)
-- **KillAura**: Senses vulnerable targets within 8m and sends autorun packets.
-- **PK Juggler**: Rapidly switches PK modes to enable safe-attacking.
-- **Turbo Combo**: Force-overrides `CastStrategyCombo` timing windows.
-- **Infinite MP**: Bypasses MP subtraction in continuous skill channels.
-- **No Cooldowns**: Forces `getRealSkillCd` to return 0 for the local player.
-- **Anti-Stun**: Bypasses state-checks in `checkCanFreeSkillMove`.
-- *Placeholders for: Range Hack, Auto Parry, Target Locker, Burst Overdrive, Armor Pierce, Crit Maximizer, Auto Heal, Fake Lag, Hitbox Expander, Knockback Resist, Skill Chain Bot.*
-
-### [2] Movement (17 Functions)
-- **Vector Flight**: Implements direct velocity injection for non-inertial movement.
-- **Speed Multiplier**: Modifies the `moveSpeed` property in the engine.
-- **Teleport Forward**: Uses vector math to blink the player 5m in the direction of view.
-- *Placeholders for: Jump Boost, Noclip, Air Jump, Step Up, Spider Mode, Jesus Mode, Ghost Mode, Blink Dash, Velocity Lock, Safe Fall, Auto Sprint, Glide Mode, Reverse Gravity, Movement Dampener.*
-
-### [3] Utility (18 Functions)
-- **Lag Shield**: Network-level rate limiting for `new_chat` and `fly_new_tips`. Protects against UI-DDOS attacks.
-- **Quest Nuke**: Iterates `TaskConfig` to complete all available missions.
-- **Player/Chest/Monster ESP**: Visual overrides for finding targets through walls.
-- *Placeholders for: Full Bright, X-Ray, Stat Monitor, Terminal Console, FPS Unlocker, Mesh Inspector, Packet Logger, Entity Lister, Event Tracker, Plugin Reloader, Daily Reset, Bad Apple Display.*
-
-## 3. Core Engine Hooks
-CARS 2.1 hooks the global `Entity` metatable:
-1. `Entity:checkCanFreeSkill`: Overridden to grant immunity to MP costs and CD checks for `Me`.
-2. `Entity:checkCanFreeSkillMove`: Overridden to allow movement and skill casting even while in `VERTIGO`, `FREEZE`, or `SKILL_ACTION` states.
+## 3. Tiamat Pro Hook Engine
+The new `gm_client.lua` provides a stable base for architectural modifications:
+1. **Kiting Mod**: Decouples the movement vector from the character's body orientation. Even with `lockBodyRotation`, the character can dash omnidirectionally based on Camera Yaw.
+2. **POV Aiming**: Moves the skill spawn origin from the character's chest to the Camera's true position. Eliminates parallax error.
+3. **Wipe Shake**: Permanently hooks the camera shake system to ensure a 100% stable combat view.
 
 ---
-*Status: Verified and Integrated.*
+*Stability is the foundation of power.*

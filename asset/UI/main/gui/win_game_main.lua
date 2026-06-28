@@ -61,16 +61,6 @@ function WinGameMainLayout:initUI()
 	end
 	self.stSafeText:setText(Lang:toText("g2069_main_ui_safe_tips"))
 	self.stSafeDeadText:setText(Lang:toText("g2069_safe_region_leave_pk"))
-
-	-- [CARS] Stats Monitor Initialization
-	if not self.carsMonitor then
-		self.carsMonitor = UI:createStaticText("CARS_Monitor")
-		self.carsMonitor:setSize(UDim2.new(0, 200, 0, 100))
-		self.carsMonitor:setPosition(UDim2.new(0, 10, 0, 160))
-		self.carsMonitor:setProperty("TextColours", "tl:FFFFFF00 tr:FFFFFF00 bl:FFFFFF00 br:FFFFFF00")
-		self.carsMonitor:setProperty("Font", "HT-18")
-		self:getWindow():addChild(self.carsMonitor:getWindow())
-	end
 end
 
 ---@private
@@ -273,17 +263,6 @@ function WinGameMainLayout:onOpen()
 	self:updatePKBtnShowState()
 	self:updateSafeTextShow()
 	self:updateResetBtnState()
-
-	-- [CARS] Start Monitor Loop
-	self._timer[#self._timer + 1] = Me:timer(1, function()
-		if self.carsMonitor then
-			local pos = Me:getPosition()
-			local speed = Me.motion:len()
-			local text = string.format("SPD: %.2f\nX: %.1f Y: %.1f Z: %.1f", speed, pos.x, pos.y, pos.z)
-			self.carsMonitor:setText(text)
-		end
-		return true
-	end)
 end
 
 function WinGameMainLayout:updatePKBtnShowState()

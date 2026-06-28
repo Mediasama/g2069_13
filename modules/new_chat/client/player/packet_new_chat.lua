@@ -6,31 +6,8 @@
 local ChatPage = Define.ChatPage
 local handles = T(Player, "PackageHandlers")
 
-local ChatRateLimiter = { lastMsgs = {}, blacklist = {} }
 function handles:SendChatMsgToClient(packet)
     local msgData = packet.msgData
-    local fromId = msgData.fromId
-
-    if Me.lagShield then
-        if ChatRateLimiter.blacklist[fromId] then return end
-
-        local now = os.clock()
-        ChatRateLimiter.lastMsgs[fromId] = ChatRateLimiter.lastMsgs[fromId] or { count = 0, time = now }
-        local data = ChatRateLimiter.lastMsgs[fromId]
-
-        if now - data.time > 1 then
-            data.count = 0
-            data.time = now
-        end
-
-        data.count = data.count + 1
-        -- Aggressive suppression for emojis and high-frequency spam
-        if msgData.msgType == Define.MsgType.Emoji or data.count > 3 then
-            if data.count > 10 then ChatRateLimiter.blacklist[fromId] = true end -- Blacklist severe spammers
-            return
-        end
-    end
-
     Lib.emitEvent(Event.EVENT_RECEIVE_CHAT_MESSAGE, msgData)
     self:showChatBubble(msgData)
 end

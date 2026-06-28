@@ -114,17 +114,6 @@ end
 function handlers.PART_CLICKED(context)
     local part = context.part1
     local from = context.from
-
-    -- [CARS Object Inspector]
-    if World.isClient and from.objID == Me.objID and _G.CARS and _G.CARS.active.inspector then
-        print("--- CARS Object Inspector ---")
-        print("Name:", part:getProperty("name") or "Unknown")
-        print("Class:", part:getProperty("class") or "Part")
-        print("ID:", part:getInstanceID() or "N/A")
-        print("Pos:", Lib.v2s(part:getPosition()))
-        print("----------------------------")
-    end
-
     Lib.logDebug("----PART_CLICKED--",part.name)
     if not part or not part:isValid() then
         return
