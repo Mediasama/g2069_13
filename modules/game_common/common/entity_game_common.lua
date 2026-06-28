@@ -138,7 +138,7 @@ function Entity:checkCanFreeSkillMove(ignoreSkillAction,isSprintSkill,skillMoveI
     if self:isInStateType(Define.RoleStatus.DEAD) or
         self:isInStateType(Define.RoleStatus.VERTIGO) or
         self:isInStateType(Define.RoleStatus.FREEZE) or
-        self:isInStateType(Define.RoleStatus.IN_TELEPORT) or
+        -- self:isInStateType(Define.RoleStatus.IN_TELEPORT) or
         self:isInStateType(Define.RoleStatus.DRAG) then
         return false
     end

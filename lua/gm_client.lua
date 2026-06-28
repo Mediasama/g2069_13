@@ -26,6 +26,15 @@ end
 -- [MOVEMENT COMPROMISE]
 -- ==========================================
 
+-- Hook: Sprint/Dash Macro (Auto-Jump + Responsive Vector)
+safeHook(SprintSkillHelper, "enterSprintSkillState", function(old, self, freeEntity)
+    if freeEntity.objID == Me.objID then
+        -- Auto-trigger jump event when dashing
+        Lib.emitEvent(Event.EVENT_CLIENT_PLAYER_JUMP)
+    end
+    return old(self, freeEntity)
+end)
+
 -- Hook: Decouple Sprint/Dash from Body Yaw (Follow Camera/Joystick instead)
 safeHook(Me, "moveUntilCollide", function(old, self, movePos)
     if active.joySprint and self.objID == Me.objID and self:isInStateType(Define.RoleStatus.SPRINT) then

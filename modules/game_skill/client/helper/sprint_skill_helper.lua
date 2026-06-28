@@ -75,7 +75,7 @@ function SprintSkillHelper:updateSprintRunState(freeEntity)
         Me:setPlayerBodyRotation(false,Define.BodyRotationPriority.FlyLimit)
         local forwardSpeed = World.cfg.game_skillSetting.initSprintSpeed
         self.sprintTimer = World.LightTimer("SprintSkillHelper:enterSprintSkillState", 1, function()
-            currentYaw = -Me:getBodyYaw()
+            currentYaw = -Blockman.Instance():getViewerYaw()
             if forwardSpeed < World.cfg.game_skillSetting.maxSprintSpeed then
                 forwardSpeed = forwardSpeed + World.cfg.game_skillSetting.accelerationSprint
             end
