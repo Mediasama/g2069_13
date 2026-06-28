@@ -94,8 +94,8 @@
       {
         "distance": 8,
         "enable": true,
-        "enableCollisionDetect": true,
-        "lockBodyRotation": false,
+        "enableCollisionDetect": false,
+        "lockBodyRotation": true,
         "lockSlideScreen": false,
         "offset": {
           "__OBJ_ID": "85d8907f-941f-448b-9b27-9b32c376d206",
@@ -105,10 +105,10 @@
           "z": 0
         },
         "viewFovAngle": 65,
-        "?horizontalFollow": true,
-        "?cameraHorizontalFollowWaitTime": 1000,
-        "minPitch":-50,
-        "maxPitch":60
+        "horizontalFollow": true,
+        "cameraHorizontalFollowWaitTime": 0,
+        "minPitch": -90,
+        "maxPitch": 60
       },
       {
         "enable": true,

@@ -74,6 +74,7 @@ function GameCameraControl:tryShakeCamera(shakeCameraCfg)
 end
 
 function GameCameraControl:shakeCamera(duration,onceDuration,amplitude,reduce)
+    do return end
     if not duration or not onceDuration or not amplitude or not reduce then
         Lib.logError("GameCameraControl:shakeCamera(),param is nil!")
         return

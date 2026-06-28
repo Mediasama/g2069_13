@@ -39,7 +39,7 @@ if World.isClient then
             Me.loadWordTimer()
             Me.loadWordTimer = nil
         end
-        UI:openWindow("UI/main/gui/win_map_mask")
+        -- UI:openWindow("UI/main/gui/win_map_mask")
     end)
 
     Lib.subscribeEvent(Event.EVENT_LOAD_WORLD_END, function()

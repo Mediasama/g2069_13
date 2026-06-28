@@ -180,61 +180,26 @@ function WinGameMainLayout:updateResetBtnState()
 end
 
 function WinGameMainLayout:playerResetPosition()
-	if Me:getPlayerIsInBattleState() then
-		Me:showGameTopTips(Lang:toText("g2069_reset_location_battle"))
-		return
-	end
-	if Me:isInStateType(Define.RoleStatus.IN_TELEPORT) or Me:isInMissionRoom() then
-		return
-	end
-
-	local curTime = os.time()
-	local resetPosTime = Me:getResetPosTime()
-	if resetPosTime > 0 then
-		local delta = math.clamp(World.cfg.resetPosTime - (curTime - resetPosTime), 0, World.cfg.resetPosTime)
-		if delta > 0 then
-			--- 弹出提示
-			Me:showGameTopTips(Lang:toText({ "g2069_reset_location_cdtips", GameLib.formatLeftTime(delta) }))
-			return
+	local map = Me.map
+	if map and map.name ~= "map_born" then
+		local mapName = map.name
+		local config = PlayerBornConfig:getCfgByMapName(mapName)
+		local position = nil
+		local rebornPositions = config.rebornPositions
+		local len = #rebornPositions
+		if len > 0 then
+			local index = 1
+			if len > 1 then
+				index = math.random(1, len)
+			end
+			position = rebornPositions[index]
 		end
-	end
-
-	Me:showConfirm(
-		"",
-		Lang:toText("g2069_reset_location_confirm"),
-		function()
-			if Me:getPlayerIsInBattleState() then
-				Me:showGameTopTips(Lang:toText("g2069_reset_location_battle"))
-				return
-			end
-			if Me:isInStateType(Define.RoleStatus.IN_TELEPORT) or Me:isInMissionRoom() then
-				return
-			end
-			local map = Me.map
-			if map and map.name ~= "map_born" then
-				local mapName = map.name
-				local config = PlayerBornConfig:getCfgByMapName(mapName)
-				local position = nil
-				local rebornPositions = config.rebornPositions
-				local len = #rebornPositions
-				if len > 0 then
-					local index = 1
-					if len > 1 then
-						index = math.random(1, len)
-					end
-					position = rebornPositions[index]
-				end
-				if not position then
-					position = config.bornPosition
-				end
-				Me:teleportToMapPosition(mapName, position, function(success)
-					if success then
-						Me:setResetPosTime(os.time())
-					end
-				end)
-			end
+		if not position then
+			position = config.bornPosition
 		end
-	)
+		Me:teleportToMapPosition(mapName, position, function(success)
+		end)
+	end
 end
 
 function WinGameMainLayout:initView()
